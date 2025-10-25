@@ -31,12 +31,12 @@ const papersData = {
       "image_url": "image/2510.18234v1.png",
       "universal_paper_id": "2510.18234",
       "metrics": {
-        "total_votes": 169,
+        "total_votes": 171,
         "visits_count": {
           "all": 4744,
           "last_7_days": 4744
         },
-        "public_total_votes": 291
+        "public_total_votes": 293
       },
       "first_publication_date": "2025-10-21T02:41:44.000Z",
       "publication_date": "2025-10-21T02:41:44.000Z",
@@ -94,12 +94,12 @@ const papersData = {
       "image_url": "image/2510.18866v1.png",
       "universal_paper_id": "2510.18866",
       "metrics": {
-        "total_votes": 7,
+        "total_votes": 8,
         "visits_count": {
           "all": 487,
           "last_7_days": 487
         },
-        "public_total_votes": 49
+        "public_total_votes": 50
       },
       "first_publication_date": "2025-10-21T17:58:17.000Z",
       "publication_date": "2025-10-21T17:58:17.000Z",
@@ -299,12 +299,12 @@ const papersData = {
       "image_url": "image/2510.18871v1.png",
       "universal_paper_id": "2510.18871",
       "metrics": {
-        "total_votes": 3,
+        "total_votes": 4,
         "visits_count": {
           "all": 183,
           "last_7_days": 183
         },
-        "public_total_votes": 21
+        "public_total_votes": 22
       },
       "first_publication_date": "2025-10-21T17:59:05.000Z",
       "publication_date": "2025-10-21T17:59:05.000Z",
@@ -435,12 +435,12 @@ const papersData = {
       "image_url": "image/2510.19338v1.png",
       "universal_paper_id": "2510.19338",
       "metrics": {
-        "total_votes": 4,
+        "total_votes": 5,
         "visits_count": {
           "all": 246,
           "last_7_days": 246
         },
-        "public_total_votes": 32
+        "public_total_votes": 33
       },
       "first_publication_date": "2025-10-22T07:59:38.000Z",
       "publication_date": "2025-10-22T07:59:38.000Z",
@@ -467,44 +467,6 @@ const papersData = {
       "author_info": [],
       "github_stars": null,
       "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
-      "paper_group_id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
-      "title": "Real Deep Research for AI, Robotics and Beyond",
-      "abstract": "With the rapid growth of research in AI and robotics now producing over 10,000 papers annually it has become increasingly difficult for researchers to stay up to date. Fast evolving trends, the rise of interdisciplinary work, and the need to explore domains beyond one's expertise all contribute to this challenge. To address these issues, we propose a generalizable pipeline capable of systematically analyzing any research area: identifying emerging trends, uncovering cross domain opportunities, and offering concrete starting points for new inquiry. In this work, we present Real Deep Research (RDR) a comprehensive framework applied to the domains of AI and robotics, with a particular focus on foundation models and robotics advancements. We also briefly extend our analysis to other areas of science. The main paper details the construction of the RDR pipeline, while the appendix provides extensive results across each analyzed topic. We hope this work sheds light for researchers working in the field of AI and beyond.",
-      "paper_summary": null,
-      "image_url": "image/2510.20809v1.png",
-      "universal_paper_id": "2510.20809",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 57,
-          "last_7_days": 57
-        },
-        "public_total_votes": 7
-      },
-      "first_publication_date": "2025-10-23T17:59:05.000Z",
-      "publication_date": "2025-10-23T17:59:05.000Z",
-      "updated_at": "2025-10-24T16:11:10.700Z",
-      "topics": [
-        "clustering-algorithms",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.LG",
-        "human-ai-interaction",
-        "information-extraction",
-        "ml-systems",
-        "recommender-systems",
-        "text-classification"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 1,
-      "github_url": "https://github.com/realdeepresearch/realdeepresearch.github.io",
       "distance": 1
     },
     {
@@ -538,12 +500,12 @@ const papersData = {
       "image_url": "image/2510.20270v1.png",
       "universal_paper_id": "2510.20270",
       "metrics": {
-        "total_votes": 2,
+        "total_votes": 3,
         "visits_count": {
           "all": 63,
           "last_7_days": 63
         },
-        "public_total_votes": 11
+        "public_total_votes": 12
       },
       "first_publication_date": "2025-10-23T06:58:32.000Z",
       "publication_date": "2025-10-23T06:58:32.000Z",
@@ -566,6 +528,44 @@ const papersData = {
       "author_info": [],
       "github_stars": 1,
       "github_url": "https://github.com/safety-research/impossiblebench",
+      "distance": 1
+    },
+    {
+      "id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
+      "paper_group_id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
+      "title": "Real Deep Research for AI, Robotics and Beyond",
+      "abstract": "With the rapid growth of research in AI and robotics now producing over 10,000 papers annually it has become increasingly difficult for researchers to stay up to date. Fast evolving trends, the rise of interdisciplinary work, and the need to explore domains beyond one's expertise all contribute to this challenge. To address these issues, we propose a generalizable pipeline capable of systematically analyzing any research area: identifying emerging trends, uncovering cross domain opportunities, and offering concrete starting points for new inquiry. In this work, we present Real Deep Research (RDR) a comprehensive framework applied to the domains of AI and robotics, with a particular focus on foundation models and robotics advancements. We also briefly extend our analysis to other areas of science. The main paper details the construction of the RDR pipeline, while the appendix provides extensive results across each analyzed topic. We hope this work sheds light for researchers working in the field of AI and beyond.",
+      "paper_summary": null,
+      "image_url": "image/2510.20809v1.png",
+      "universal_paper_id": "2510.20809",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 57,
+          "last_7_days": 57
+        },
+        "public_total_votes": 8
+      },
+      "first_publication_date": "2025-10-23T17:59:05.000Z",
+      "publication_date": "2025-10-23T17:59:05.000Z",
+      "updated_at": "2025-10-24T16:11:10.700Z",
+      "topics": [
+        "clustering-algorithms",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG",
+        "human-ai-interaction",
+        "information-extraction",
+        "ml-systems",
+        "recommender-systems",
+        "text-classification"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 1,
+      "github_url": "https://github.com/realdeepresearch/realdeepresearch.github.io",
       "distance": 1
     },
     {
@@ -599,12 +599,12 @@ const papersData = {
       "image_url": "image/2510.18927v1.png",
       "universal_paper_id": "2510.18927",
       "metrics": {
-        "total_votes": 2,
+        "total_votes": 3,
         "visits_count": {
           "all": 226,
           "last_7_days": 226
         },
-        "public_total_votes": 25
+        "public_total_votes": 26
       },
       "first_publication_date": "2025-10-21T12:55:04.000Z",
       "publication_date": "2025-10-21T12:55:04.000Z",
@@ -874,12 +874,12 @@ const papersData = {
       "image_url": "image/2510.19818v1.png",
       "universal_paper_id": "2510.19818",
       "metrics": {
-        "total_votes": 2,
+        "total_votes": 3,
         "visits_count": {
           "all": 88,
           "last_7_days": 88
         },
-        "public_total_votes": 15
+        "public_total_votes": 16
       },
       "first_publication_date": "2025-10-22T17:53:45.000Z",
       "publication_date": "2025-10-22T17:53:45.000Z",
@@ -1895,12 +1895,12 @@ const papersData = {
       "image_url": "image/2510.20668v1.png",
       "universal_paper_id": "2510.20668",
       "metrics": {
-        "total_votes": 1,
+        "total_votes": 2,
         "visits_count": {
           "all": 26,
           "last_7_days": 26
         },
-        "public_total_votes": 7
+        "public_total_votes": 8
       },
       "first_publication_date": "2025-10-23T15:46:44.000Z",
       "publication_date": "2025-10-23T15:46:44.000Z",
@@ -1974,12 +1974,12 @@ const papersData = {
       "image_url": "image/2510.20187v1.png",
       "universal_paper_id": "2510.20187",
       "metrics": {
-        "total_votes": 1,
+        "total_votes": 2,
         "visits_count": {
           "all": 32,
           "last_7_days": 32
         },
-        "public_total_votes": 7
+        "public_total_votes": 8
       },
       "first_publication_date": "2025-10-23T04:15:22.000Z",
       "publication_date": "2025-10-23T04:15:22.000Z",
@@ -2009,74 +2009,6 @@ const papersData = {
       "author_info": [],
       "github_stars": null,
       "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
-      "paper_group_id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
-      "title": "Collective Communication for 100k+ GPUs",
-      "abstract": "The increasing scale of large language models (LLMs) necessitates highly efficient collective communication frameworks, particularly as training workloads extend to hundreds of thousands of GPUs. Traditional communication methods face significant throughput and latency limitations at this scale, hindering both the development and deployment of state-of-the-art models. This paper presents the NCCLX collective communication framework, developed at Meta, engineered to optimize performance across the full LLM lifecycle, from the synchronous demands of large-scale training to the low-latency requirements of inference. The framework is designed to support complex workloads on clusters exceeding 100,000 GPUs, ensuring reliable, high-throughput, and low-latency data exchange. Empirical evaluation on the Llama4 model demonstrates substantial improvements in communication efficiency. This research contributes a robust solution for enabling the next generation of LLMs to operate at unprecedented scales.",
-      "paper_summary": {
-        "summary": "Meta's NCCLX introduces a new collective communication framework, building a host-driven, zero-copy, and SM-free communication stack called CTran to support training and deploying next-generation Large Language Models like Llama4 on clusters exceeding 100,000 GPUs. The framework improves Llama4 training step latency by up to 12%, accelerates training startup by up to 11x at 96K GPU scale, and enhances Llama4 Maverick inference decoding latency by 15% to 80% across configurations.",
-        "originalProblem": [
-          "Existing GPU communication libraries like NVIDIA NCCL face scalability and flexibility limitations when applied to multi-dimensional parallelism of LLMs at 100,000+ GPU scales.",
-          "NCCL's host-initiated, kernel-driven, copy-based model incurs overheads from CPU scheduling, GPU-to-CPU synchronizations for dynamic arguments, and GPU resource consumption for internal buffer copies.",
-          "NVSHMEM offers device-initiated communication but is constrained by symmetric memory region requirements and limited flexibility within the PyTorch ecosystem."
-        ],
-        "solution": [
-          "Introduced NCCLX, a unified host-driven, zero-copy, and SM-free collective communication framework built on a custom transport layer called CTran, designed for 100,000+ GPUs.",
-          "CTran employs host-driven CPU background threads for scheduling, enabling rapid deployment of HPC algorithms, co-design with model algorithms, and direct RDMA operations to bypass GPU kernel involvement.",
-          "Leverages modern GPU hardware features for zero-copy data transfers, issuing RDMA operations directly between user buffers, eliminating intermediate FIFO buffer copies and freeing up GPU SMs and HBM bandwidth."
-        ],
-        "keyInsights": [
-          "A host-driven communication framework with zero-copy data transfers can fundamentally overcome the scalability and flexibility limitations of traditional GPU communication libraries for ultra-large-scale LLM workloads.",
-          "Co-designing the communication stack with PyTorch's memory management and network hardware is crucial for maximizing efficiency and adaptability in production environments.",
-          "Addressing operational challenges like scalable initialization, fault tolerance, and comprehensive performance observability tools are as critical as raw communication throughput for robust large-scale AI system deployment."
-        ],
-        "results": [
-          "NCCLX reduced steady training step latency for Llama4 models by up to 12% and achieved up to 11x faster training startup time at 96K GPU scale compared to baseline NCCL.",
-          "For Llama4 Maverick inference, NCCLX demonstrated 15% to 80% improvements in end-to-end decoding latency across various distributed configurations.",
-          "Zero-copy CTran point-to-point communication achieved 1.09x to 2.7x speedup for medium message sizes over copy-based NCCL, while internal memory management reduced NCCL GPU memory usage by almost 2x."
-        ]
-      },
-      "image_url": "image/2510.20171v1.png",
-      "universal_paper_id": "2510.20171",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 22,
-          "last_7_days": 22
-        },
-        "public_total_votes": 5
-      },
-      "first_publication_date": "2025-10-23T03:32:04.000Z",
-      "publication_date": "2025-10-23T03:32:04.000Z",
-      "updated_at": "2025-10-24T01:51:24.045Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.DC",
-        "cs.NI",
-        "distributed-learning",
-        "efficient-transformers",
-        "hardware-aware-algorithms",
-        "inference-optimization",
-        "ml-systems",
-        "model-deployment-systems",
-        "model-serving-infrastructure",
-        "optimization-methods",
-        "training-orchestration",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Meta",
-          "image": "images/organizations/meta.png"
-        }
-      ],
-      "author_info": [],
-      "github_stars": 131,
-      "github_url": "https://github.com/meta-pytorch/torchcomms",
       "distance": 1
     },
     {
@@ -2126,6 +2058,74 @@ const papersData = {
       "author_info": [],
       "github_stars": 3,
       "github_url": "https://github.com/MazelTovy/AMRC",
+      "distance": 1
+    },
+    {
+      "id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
+      "paper_group_id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
+      "title": "Collective Communication for 100k+ GPUs",
+      "abstract": "The increasing scale of large language models (LLMs) necessitates highly efficient collective communication frameworks, particularly as training workloads extend to hundreds of thousands of GPUs. Traditional communication methods face significant throughput and latency limitations at this scale, hindering both the development and deployment of state-of-the-art models. This paper presents the NCCLX collective communication framework, developed at Meta, engineered to optimize performance across the full LLM lifecycle, from the synchronous demands of large-scale training to the low-latency requirements of inference. The framework is designed to support complex workloads on clusters exceeding 100,000 GPUs, ensuring reliable, high-throughput, and low-latency data exchange. Empirical evaluation on the Llama4 model demonstrates substantial improvements in communication efficiency. This research contributes a robust solution for enabling the next generation of LLMs to operate at unprecedented scales.",
+      "paper_summary": {
+        "summary": "Meta's NCCLX introduces a new collective communication framework, building a host-driven, zero-copy, and SM-free communication stack called CTran to support training and deploying next-generation Large Language Models like Llama4 on clusters exceeding 100,000 GPUs. The framework improves Llama4 training step latency by up to 12%, accelerates training startup by up to 11x at 96K GPU scale, and enhances Llama4 Maverick inference decoding latency by 15% to 80% across configurations.",
+        "originalProblem": [
+          "Existing GPU communication libraries like NVIDIA NCCL face scalability and flexibility limitations when applied to multi-dimensional parallelism of LLMs at 100,000+ GPU scales.",
+          "NCCL's host-initiated, kernel-driven, copy-based model incurs overheads from CPU scheduling, GPU-to-CPU synchronizations for dynamic arguments, and GPU resource consumption for internal buffer copies.",
+          "NVSHMEM offers device-initiated communication but is constrained by symmetric memory region requirements and limited flexibility within the PyTorch ecosystem."
+        ],
+        "solution": [
+          "Introduced NCCLX, a unified host-driven, zero-copy, and SM-free collective communication framework built on a custom transport layer called CTran, designed for 100,000+ GPUs.",
+          "CTran employs host-driven CPU background threads for scheduling, enabling rapid deployment of HPC algorithms, co-design with model algorithms, and direct RDMA operations to bypass GPU kernel involvement.",
+          "Leverages modern GPU hardware features for zero-copy data transfers, issuing RDMA operations directly between user buffers, eliminating intermediate FIFO buffer copies and freeing up GPU SMs and HBM bandwidth."
+        ],
+        "keyInsights": [
+          "A host-driven communication framework with zero-copy data transfers can fundamentally overcome the scalability and flexibility limitations of traditional GPU communication libraries for ultra-large-scale LLM workloads.",
+          "Co-designing the communication stack with PyTorch's memory management and network hardware is crucial for maximizing efficiency and adaptability in production environments.",
+          "Addressing operational challenges like scalable initialization, fault tolerance, and comprehensive performance observability tools are as critical as raw communication throughput for robust large-scale AI system deployment."
+        ],
+        "results": [
+          "NCCLX reduced steady training step latency for Llama4 models by up to 12% and achieved up to 11x faster training startup time at 96K GPU scale compared to baseline NCCL.",
+          "For Llama4 Maverick inference, NCCLX demonstrated 15% to 80% improvements in end-to-end decoding latency across various distributed configurations.",
+          "Zero-copy CTran point-to-point communication achieved 1.09x to 2.7x speedup for medium message sizes over copy-based NCCL, while internal memory management reduced NCCL GPU memory usage by almost 2x."
+        ]
+      },
+      "image_url": "image/2510.20171v1.png",
+      "universal_paper_id": "2510.20171",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 22,
+          "last_7_days": 22
+        },
+        "public_total_votes": 6
+      },
+      "first_publication_date": "2025-10-23T03:32:04.000Z",
+      "publication_date": "2025-10-23T03:32:04.000Z",
+      "updated_at": "2025-10-24T01:51:24.045Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.DC",
+        "cs.NI",
+        "distributed-learning",
+        "efficient-transformers",
+        "hardware-aware-algorithms",
+        "inference-optimization",
+        "ml-systems",
+        "model-deployment-systems",
+        "model-serving-infrastructure",
+        "optimization-methods",
+        "training-orchestration",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Meta",
+          "image": "images/organizations/meta.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 131,
+      "github_url": "https://github.com/meta-pytorch/torchcomms",
       "distance": 1
     }
   ],
