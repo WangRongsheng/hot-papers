@@ -75,15 +75,24 @@ jobs:
           echo "强制标记为有变化，确保执行上传。"
 
       # 6. 提交更改
-      - name: Commit and push if changed
-        if: steps.git-check.outputs.changed == 'true'
+      # - name: Commit and push if changed
+      #   if: steps.git-check.outputs.changed == 'true'
+      #   run: |
+      #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --local user.name "github-actions[bot]"
+      #     git add day_paper_info.js
+      #     git commit -m "🤖 Auto update papers - $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')"
+      #     # 【关键修改】明确推送到 main 分支
+      #     git push origin HEAD:main
+      - name: Commit and push
+        if: steps.git-check.outputs.changed == 'true' 
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add day_paper_info.js
-          git commit -m "🤖 Auto update papers - $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')"
-          # 【关键修改】明确推送到 main 分支
-          git push origin HEAD:main
+          # 关键修改：如果 git commit 因为没有改动而失败，则执行 echo 命令，让整个步骤成功
+          git commit -m "Auto-update daily paper info" || echo "No changes to commit."
+          git push
       
       # 7. 上传为 artifact（用于调试，不影响仓库代码）
       - name: Upload papers data as artifact
