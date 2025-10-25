@@ -48,15 +48,26 @@ jobs:
       # 4. 运行爬虫脚本
       - name: Fetch papers data
         run: |
-          python fetch_papers.py
+          # 将手动输入的参数传递给脚本（如果您的脚本支持）
+          python fetch_papers.py --page-size "${{ github.event.inputs.page_size }}" --sort_by "${{ github.event.inputs.sort_by }}"
+          
+          # 调试：检查文件是否生成
+          echo "--- 检查生成的文件 ---"
+          ls -l day_paper_info.js
         env:
-          TZ: 'Asia/Shanghai'  # 设置时区为北京时间
+          TZ: 'Asia/Shanghai'
       
       # 5. 检查是否有变化
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code day_paper_info.js || echo "changed=true" >> $GITHUB_OUTPUT
+          if [ -n "$(git status --porcelain day_paper_info.js)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "检测到文件有变化。"
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "文件无变化。"
+          fi
       
       # 6. 提交更改
       - name: Commit and push if changed
@@ -66,10 +77,11 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add day_paper_info.js
           git commit -m "🤖 Auto update papers - $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')"
-          git push
+          # 【关键修改】明确推送到 main 分支
+          git push origin HEAD:main
       
-      # 7. 上传为 artifact（可选）
-      - name: Upload papers data
+      # 7. 上传为 artifact（用于调试，不影响仓库代码）
+      - name: Upload papers data as artifact
         uses: actions/upload-artifact@v4
         with:
           name: papers-data-${{ github.run_number }}
