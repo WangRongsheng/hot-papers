@@ -58,17 +58,22 @@ jobs:
           TZ: 'Asia/Shanghai'
       
       # 5. 检查是否有变化
+      # - name: Check for changes
+      #   id: git-check
+      #   run: |
+      #     if [ -n "$(git status --porcelain day_paper_info.js)" ]; then
+      #       echo "changed=true" >> $GITHUB_OUTPUT
+      #       echo "检测到文件有变化。"
+      #     else
+      #       echo "changed=false" >> $GITHUB_OUTPUT
+      #       echo "文件无变化。"
+      #     fi
       - name: Check for changes
         id: git-check
         run: |
-          if [ -n "$(git status --porcelain day_paper_info.js)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "检测到文件有变化。"
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "文件无变化。"
-          fi
-      
+          echo "changed=true" >> $GITHUB_OUTPUT
+          echo "强制标记为有变化，确保执行上传。"
+
       # 6. 提交更改
       - name: Commit and push if changed
         if: steps.git-check.outputs.changed == 'true'
