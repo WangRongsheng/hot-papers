@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔥今日热门论文</title>
-    <link rel="icon" type="image/png" href="/static/logo.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/WangRongsheng/hot-papers/main/static/logo.png">
     <style>
         * {
             margin: 0;
@@ -155,6 +155,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
         }
 
         .paper-card:hover {
@@ -179,6 +180,12 @@
             margin-bottom: 12px;
             font-weight: 700;
             line-height: 1.3;
+            padding-right: 80px; /* 为分享按钮留出空间 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 最多显示2行 */
+            -webkit-box-orient: vertical;
         }
 
         .paper-id {
@@ -447,6 +454,113 @@
             font-weight: 700;
         }
 
+        .share-button {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 6px 10px;
+            gap: 6px;
+        }
+
+        .share-button:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(102, 126, 234, 0.4);
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .share-button svg {
+            width: 16px;
+            height: 16px;
+            fill: #667eea;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .share-button:hover svg {
+            fill: #5a67d8;
+        }
+
+        .share-button span {
+            font-size: 12px;
+            font-weight: 500;
+            color: #667eea;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .share-button:hover span {
+            color: #5a67d8;
+        }
+
+        .share-button.success {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .share-button.success svg {
+            fill: #10b981;
+            animation: checkmark 0.4s ease-out;
+        }
+
+        .share-button.success span {
+            color: #10b981;
+        }
+
+        @keyframes checkmark {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .share-tooltip {
+            position: absolute;
+            top: 50px;
+            right: 12px;
+            background: rgba(16, 185, 129, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s ease;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .share-tooltip.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -627,6 +741,14 @@
             card.innerHTML = `
                 ${paper.image_url ? `<img src="${paper.image_url}" alt="${paper.title}" class="paper-image" onerror="this.style.display='none'">` : ''}
                 
+                <div class="share-button" onclick="sharePaper('${paper.title.replace(/'/g, "\\'")}', '${paper.universal_paper_id}')" title="分享论文">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.91 9.9c-.54-.5-1.25-.81-2.04-.81-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z"/>
+                    </svg>
+                    <span>分享</span>
+                </div>
+                <div class="share-tooltip" id="tooltip-${paper.universal_paper_id}">复制成功</div>
+                
                 <div class="paper-content">
                     
                     <h2 class="paper-title">《${paper.title}》</h2>
@@ -705,6 +827,61 @@
                 abstract.classList.add('expanded');
                 button.textContent = '收起 ▲';
             }
+        }
+
+        function sharePaper(title, paperId) {
+            const shareText = `🌈 这是今天我读到的论文《${title}》，推荐给你读一下这篇论文，希望对你有启发： https://arxiv.org/abs/${paperId}`;
+            
+            // 创建临时文本区域来复制文本
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = shareText;
+            tempTextArea.style.position = 'fixed';
+            tempTextArea.style.opacity = '0';
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            
+            try {
+                document.execCommand('copy');
+                // 显示复制完成提示
+                const tooltip = document.getElementById(`tooltip-${paperId}`);
+                tooltip.textContent = '复制完成';
+                tooltip.classList.add('show');
+                
+                // 改变按钮图标为对号
+                const shareButton = document.querySelector(`[onclick="sharePaper('${title.replace(/'/g, "\\'")}', '${paperId}')"]`);
+                if (shareButton) {
+                    shareButton.classList.add('success');
+                    shareButton.innerHTML = `
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        <span>已分享</span>
+                    `;
+                }
+                
+                // 2秒后隐藏提示框
+                setTimeout(() => {
+                    tooltip.classList.remove('show');
+                }, 2000);
+                
+                // 3秒后恢复按钮图标
+                setTimeout(() => {
+                    if (shareButton) {
+                        shareButton.classList.remove('success');
+                        shareButton.innerHTML = `
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.91 9.9c-.54-.5-1.25-.81-2.04-.81-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.05 4.11c-.05.23-.09.46-.09.7 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                            <span>分享</span>
+                        `;
+                    }
+                }, 3000);
+            } catch (err) {
+                console.error('复制失败:', err);
+            }
+            
+            // 移除临时文本区域
+            document.body.removeChild(tempTextArea);
         }
 
         // 渲染所有论文卡片
