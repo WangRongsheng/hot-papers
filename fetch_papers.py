@@ -1,7 +1,179 @@
 import json
 import requests
+import os
+import time
 from datetime import datetime
 from typing import List, Dict, Optional
+from openai import OpenAI
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
+
+# 配置多个API密钥
+API_KEYS = [
+    "sk-REA3jPcwDpAnDH6O8aDbD6D9E9D54f448815378e44E9099a",
+    "sk-z2NbfLrmBG9lL5HZ5eD594A367314aA6B08f38F20830876d"
+]
+API_BASE_URL = 'https://api.ai-gaochao.cn/v1'
+
+# 线程锁用于进度显示
+progress_lock = Lock()
+progress_counter = {'current': 0, 'total': 0}
+
+def get_output(abstract: str, api_key: str) -> Optional[str]:
+    """
+    调用模型翻译
+    
+    参数:
+        abstract (str): 要翻译的英文摘要
+        api_key (str): OpenAI API密钥
+    
+    返回:
+        str: 翻译后的中文文本，失败时返回None
+    """
+    try:
+        # 每个线程创建独立的client
+        client = OpenAI(
+            api_key=api_key,
+            base_url=API_BASE_URL
+        )
+        
+        prompt = f"请你将下列内容翻译成流畅的中文，不要任何解释，直接翻译。 \n 英文内容为：{abstract}"
+        completion = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "user", "content": prompt},
+            ],
+            timeout=30
+        )
+        return completion.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"  翻译失败: {e}")
+        return None
+
+def translate_abstract_with_retry(abstract: str, max_retries: int = 2) -> str:
+    """
+    使用多个API密钥重试翻译
+    
+    参数:
+        abstract (str): 要翻译的英文摘要
+        max_retries (int): 每个API key的最大重试次数
+    
+    返回:
+        str: 翻译后的中文文本，所有尝试失败时返回原文
+    """
+    if not abstract or abstract.strip() == "":
+        return abstract
+    
+    # 遍历所有API密钥
+    for idx, api_key in enumerate(API_KEYS):
+        # 每个API key尝试多次
+        for retry in range(max_retries):
+            result = get_output(abstract, api_key)
+            
+            if result:
+                return result
+            
+            if retry < max_retries - 1:
+                wait_time = 1 + retry * 0.5  # 短暂等待
+                time.sleep(wait_time)
+    
+    # 所有API均失败，返回原文
+    return abstract
+
+def translate_single_paper(paper: Dict, index: int, total: int) -> Dict:
+    """
+    翻译单篇论文的摘要（线程工作函数）
+    
+    参数:
+        paper (dict): 论文数据
+        index (int): 论文索引
+        total (int): 论文总数
+    
+    返回:
+        dict: 翻译后的论文数据
+    """
+    abstract = paper.get('abstract', '')
+    title = paper.get('title', 'Unknown')[:50]
+    
+    if not abstract:
+        with progress_lock:
+            progress_counter['current'] += 1
+            current = progress_counter['current']
+        print(f"[{current}/{total}] 跳过（无摘要）: {title}...")
+        return paper
+    
+    # 开始翻译
+    print(f"[线程] 开始翻译: {title}...")
+    translated = translate_abstract_with_retry(abstract)
+    paper['abstract'] = translated
+    
+    # 更新进度
+    with progress_lock:
+        progress_counter['current'] += 1
+        current = progress_counter['current']
+    
+    status = "✅" if translated != abstract else "⚠️"
+    print(f"[{current}/{total}] {status} 完成: {title}...")
+    
+    return paper
+
+def translate_papers_abstracts_multithread(data: Dict, max_workers: int = 32) -> Dict:
+    """
+    使用多线程翻译所有论文的摘要
+    
+    参数:
+        data (dict): 包含papers的API数据
+        max_workers (int): 最大线程数，默认32
+    
+    返回:
+        dict: 翻译后的数据
+    """
+    papers = data.get('papers', [])
+    total = len(papers)
+    
+    if total == 0:
+        print("没有论文需要翻译")
+        return data
+    
+    # 重置进度计数器
+    progress_counter['current'] = 0
+    progress_counter['total'] = total
+    
+    print(f"\n{'='*60}")
+    print(f"开始使用 {max_workers} 个线程翻译 {total} 篇论文的摘要...")
+    print(f"{'='*60}\n")
+    
+    start_time = time.time()
+    
+    # 使用线程池并发翻译
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # 提交所有翻译任务
+        future_to_index = {
+            executor.submit(translate_single_paper, paper, idx, total): idx 
+            for idx, paper in enumerate(papers)
+        }
+        
+        # 收集结果
+        translated_papers = [None] * total
+        for future in as_completed(future_to_index):
+            idx = future_to_index[future]
+            try:
+                translated_paper = future.result()
+                translated_papers[idx] = translated_paper
+            except Exception as e:
+                print(f"❌ 线程执行出错 (索引 {idx}): {e}")
+                # 发生错误时保留原始数据
+                translated_papers[idx] = papers[idx]
+    
+    # 更新数据
+    data['papers'] = translated_papers
+    
+    elapsed_time = time.time() - start_time
+    print(f"\n{'='*60}")
+    print(f"✅ 翻译完成！耗时: {elapsed_time:.2f} 秒")
+    print(f"{'='*60}\n")
+    
+    return data
 
 def fetch_papers_from_api(page_num: int = 0, page_size: int = 3, sort_by: str = 'Hot') -> Optional[Dict]:
     """
@@ -147,11 +319,24 @@ if __name__ == "__main__":
     page_num = 0
     page_size = 30
     sort_by = 'Hot'  # 可选: Hot/Comments/Views/Likes/Github
+    max_workers = 32  # 线程数
     
-    # 获取原始数据并直接保存为JS文件
+    print("=" * 60)
+    print("开始获取论文数据...")
+    print("=" * 60)
+    
+    # 获取原始数据
     api_data = fetch_papers_from_api(page_num, page_size, sort_by)
     
     if api_data:
-        save_to_js(api_data, 'day_paper_info.js')
+        # 使用多线程翻译所有论文的摘要
+        translated_data = translate_papers_abstracts_multithread(api_data, max_workers=max_workers)
+        
+        # 保存为JS文件
+        save_to_js(translated_data, 'day_paper_info.js')
+        
+        print("=" * 60)
+        print("✅ 所有任务完成！")
+        print("=" * 60)
     else:
         print("❌ 未能获取数据")
