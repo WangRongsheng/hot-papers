@@ -575,7 +575,12 @@
             }
 
             .paper-title {
-                font-size: 1.3em;
+                font-size: 1.1em;
+                line-height: 1.4;
+                -webkit-line-clamp: 4; /* 移动端显示4行 */
+                padding-right: 70px; /* 减少分享按钮的空间 */
+                max-height: none; /* 移除最大高度限制 */
+                overflow: visible; /* 确保内容可见 */
             }
 
             .metrics {
