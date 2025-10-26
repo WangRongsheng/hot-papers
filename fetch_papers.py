@@ -2,18 +2,59 @@ import json
 import requests
 import os
 import time
+import argparse
 from datetime import datetime
 from typing import List, Dict, Optional
 from openai import OpenAI
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 
-# 配置多个API密钥
-API_KEYS = [
-    "sk-REA3jPcwDpAnDH6O8aDbD6D9E9D54f448815378e44E9099a",
-    "sk-z2NbfLrmBG9lL5HZ5eD594A367314aA6B08f38F20830876d"
-]
-API_BASE_URL = 'https://api.ai-gaochao.cn/v1'
+# 从环境变量获取API密钥列表
+def get_api_keys() -> List[str]:
+    """
+    从环境变量获取API密钥列表
+    支持两种格式：
+    1. OPENAI_API_KEYS: JSON数组格式 ["key1", "key2"]
+    2. OPENAI_API_KEY_1, OPENAI_API_KEY_2...: 独立环境变量
+    """
+    api_keys = []
+    
+    # 方法1: 从JSON数组格式的环境变量读取
+    keys_json = os.getenv('OPENAI_API_KEYS')
+    if keys_json:
+        try:
+            api_keys = json.loads(keys_json)
+            print(f"✅ 从 OPENAI_API_KEYS 读取到 {len(api_keys)} 个API密钥")
+            return api_keys
+        except json.JSONDecodeError:
+            print("⚠️  OPENAI_API_KEYS 格式错误，尝试其他方式")
+    
+    # 方法2: 从独立环境变量读取 (OPENAI_API_KEY_1, OPENAI_API_KEY_2, ...)
+    index = 1
+    while True:
+        key = os.getenv(f'OPENAI_API_KEY_{index}')
+        if key:
+            api_keys.append(key)
+            index += 1
+        else:
+            break
+    
+    if api_keys:
+        print(f"✅ 从 OPENAI_API_KEY_* 读取到 {len(api_keys)} 个API密钥")
+        return api_keys
+    
+    # 方法3: 从单个环境变量读取
+    single_key = os.getenv('OPENAI_API_KEY')
+    if single_key:
+        print(f"✅ 从 OPENAI_API_KEY 读取到 1 个API密钥")
+        return [single_key]
+    
+    print("❌ 未找到任何API密钥，请设置环境变量")
+    return []
+
+# 获取API密钥
+API_KEYS = get_api_keys()
+API_BASE_URL = os.getenv('OPENAI_BASE_URL', 'https://api.ai-gaochao.cn/v1')
 
 # 线程锁用于进度显示
 progress_lock = Lock()
@@ -62,6 +103,10 @@ def translate_abstract_with_retry(abstract: str, max_retries: int = 2) -> str:
         str: 翻译后的中文文本，所有尝试失败时返回原文
     """
     if not abstract or abstract.strip() == "":
+        return abstract
+    
+    if not API_KEYS:
+        print("  ⚠️  没有可用的API密钥，保持英文")
         return abstract
     
     # 遍历所有API密钥
@@ -135,12 +180,17 @@ def translate_papers_abstracts_multithread(data: Dict, max_workers: int = 32) ->
         print("没有论文需要翻译")
         return data
     
+    if not API_KEYS:
+        print("⚠️  没有可用的API密钥，跳过翻译")
+        return data
+    
     # 重置进度计数器
     progress_counter['current'] = 0
     progress_counter['total'] = total
     
     print(f"\n{'='*60}")
     print(f"开始使用 {max_workers} 个线程翻译 {total} 篇论文的摘要...")
+    print(f"可用API密钥数量: {len(API_KEYS)}")
     print(f"{'='*60}\n")
     
     start_time = time.time()
@@ -315,25 +365,32 @@ def save_to_js(data: Dict, filename: str = 'day_paper_info.js'):
 
 # 示例使用
 if __name__ == "__main__":
-    # 配置参数
-    page_num = 0
-    page_size = 30
-    sort_by = 'Hot'  # 可选: Hot/Comments/Views/Likes/Github
-    max_workers = 32  # 线程数
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description='获取并翻译论文数据')
+    parser.add_argument('--page-num', type=int, default=0, help='页码，默认0')
+    parser.add_argument('--page-size', type=int, default=30, help='每页数量，默认30')
+    parser.add_argument('--sort-by', type=str, default='Hot', 
+                        choices=['Hot', 'Comments', 'Views', 'Likes', 'Github'],
+                        help='排序方式，默认Hot')
+    parser.add_argument('--max-workers', type=int, default=32, help='翻译线程数，默认32')
+    parser.add_argument('--output', type=str, default='day_paper_info.js', help='输出文件名')
+    
+    args = parser.parse_args()
     
     print("=" * 60)
     print("开始获取论文数据...")
+    print(f"配置: page_num={args.page_num}, page_size={args.page_size}, sort_by={args.sort_by}")
     print("=" * 60)
     
     # 获取原始数据
-    api_data = fetch_papers_from_api(page_num, page_size, sort_by)
+    api_data = fetch_papers_from_api(args.page_num, args.page_size, args.sort_by)
     
     if api_data:
         # 使用多线程翻译所有论文的摘要
-        translated_data = translate_papers_abstracts_multithread(api_data, max_workers=max_workers)
+        translated_data = translate_papers_abstracts_multithread(api_data, max_workers=args.max_workers)
         
         # 保存为JS文件
-        save_to_js(translated_data, 'day_paper_info.js')
+        save_to_js(translated_data, args.output)
         
         print("=" * 60)
         print("✅ 所有任务完成！")
