@@ -4,7 +4,7 @@ const papersData = {
       "id": "019a23e5-088e-7cbd-828d-79523c0470c9",
       "paper_group_id": "019a23e5-088e-7cbd-828d-79523c0470c9",
       "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
-      "abstract": "大型推理模型展现了强大的问题解决能力，但现实世界的任务往往需要外部工具和长期的互动。现有的代理框架通常遵循预定义的工作流程，这限制了自主和全局任务的完成。在本文中，我们介绍了DeepAgent，一个端到端的深度推理代理，能够在单一、连贯的推理过程中执行自主思考、工具发现和行动执行。为了应对长期互动的挑战，特别是由于多次调用工具而导致的上下文长度爆炸和互动历史的积累，我们引入了一种自主记忆折叠机制，将过往互动压缩成结构化的情节记忆、工作记忆和工具记忆，从而减少错误积累，同时保留关键信息。为了有效且稳定地教授通用工具的使用，我们开发了一种端到端的强化学习策略，即ToolPO，该策略利用LLM模拟的API，并应用工具调用优势归因，将细粒度的信用分配给工具调用令牌。我们在八个基准测试上进行了大量实验，包括通用工具使用任务（ToolBench、API-Bank、TMDB、Spotify、ToolHop）和下游应用（ALFWorld、WebShop、GAIA、HLE），结果表明DeepAgent在标记工具和开放集工具检索场景中均持续优于基线方法。本工作朝着开发更通用和更强大的现实世界应用代理迈出了重要的一步。代码和演示可在此HTTPS网址获取。",
+      "abstract": "大型推理模型展示了强大的问题解决能力，但现实世界的任务往往需要外部工具和长时间的交互。现有的智能体框架通常遵循预定义的工作流程，这限制了自主和全局任务的完成。在本文中，我们介绍了DeepAgent，这是一种端到端的深度推理智能体，在单一、连贯的推理过程中进行自主思考、工具发现和行动执行。为了解决长时间交互带来的挑战，特别是多次工具调用引起的上下文长度爆炸和交互历史的累积，我们引入了一种自主记忆折叠机制，将过去的交互压缩为结构化的情节记忆、工作记忆和工具记忆，在保留关键信息的同时减少错误累积。为了高效而稳定地教授通用工具使用，我们开发了一种端到端的强化学习策略，即ToolPO，该策略利用LLM模拟的API并应用工具调用优势归因，以便为工具调用令牌分配细致的信用。在八个基准测试上的大量实验，包括通用工具使用任务（ToolBench、API-Bank、TMDB、Spotify、ToolHop）和下游应用（ALFWorld、WebShop、GAIA、HLE），显示DeepAgent在标签工具和开放集合工具检索场景中始终优于基线。该工作向实现更通用和更强大的智能体用于现实世界应用迈出了重要一步。代码和演示可以在此HTTPS URL获取。",
       "paper_summary": {
         "summary": "DeepAgent is presented as an end-to-end reasoning agent that leverages large language models for autonomous thinking, dynamic tool discovery, and action execution from scalable toolsets. The framework significantly outperforms previous workflow-based methods, achieving up to 36.4% higher success rates on general tool-use benchmarks and state-of-the-art results on complex downstream applications, supported by novel memory management and a tailored reinforcement learning strategy.",
         "originalProblem": [
@@ -32,12 +32,12 @@ const papersData = {
       "image_url": "image/2510.21618v1.png",
       "universal_paper_id": "2510.21618",
       "metrics": {
-        "total_votes": 11,
+        "total_votes": 23,
         "visits_count": {
-          "all": 343,
-          "last_7_days": 343
+          "all": 969,
+          "last_7_days": 969
         },
-        "public_total_votes": 35
+        "public_total_votes": 69
       },
       "first_publication_date": "2025-10-24T16:24:01.000Z",
       "publication_date": "2025-10-24T16:24:01.000Z",
@@ -76,7 +76,7 @@ const papersData = {
       "id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
       "paper_group_id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
       "title": "Real Deep Research for AI, Robotics and Beyond",
-      "abstract": "随着人工智能和机器人研究的快速增长，每年产生超过10,000篇论文，研究人员保持最新信息变得越来越困难。快速演变的趋势、多学科工作的兴起以及探索超出自己专业领域的需求都对这一挑战有所贡献。为了解决这些问题，我们提出了一个通用的流程，能够系统地分析任何研究领域：识别新兴趋势、发现跨领域机会，并提供具体的新研究起点。在这项工作中，我们介绍了“真实深度研究”（Real Deep Research，简称RDR），这是一种适用于人工智能和机器人领域的综合框架，特别关注基础模型和机器人技术的进展。我们还简要将我们的分析扩展到其他科学领域。主要论文详细阐述了RDR流程的构建，而附录则提供了对每个分析主题的广泛结果。我们希望这项工作能为从事人工智能及其他领域研究的研究人员提供启发。",
+      "abstract": "随着人工智能和机器人研究的快速增长，每年产生超过10,000篇论文，研究人员保持更新的难度越来越大。迅速发展的趋势、跨学科工作的崛起以及探索超出自己专业领域的需求，都对这一挑战贡献良多。为了解决这些问题，我们提出了一种可泛化的流程，能够系统地分析任何研究领域：识别新兴趋势、发掘跨领域机会，并为新的研究提供具体的起点。在这项工作中，我们呈现了“真实深度研究”（Real Deep Research，简称RDR），这是一个应用于人工智能和机器人领域的综合框架，特别关注基础模型和机器人技术的进展。我们还简要扩展了对其他科学领域的分析。主要论文详细介绍了RDR流程的构建，而附录则提供了每个分析主题的广泛结果。我们希望这项工作能为在人工智能及其相关领域工作的研究人员提供启示。",
       "paper_summary": {
         "summary": "Researchers from UC San Diego, NVIDIA, META, UW-Madison, and UNC developed Real Deep Research (RDR), a generalizable pipeline that systematically analyzes scientific literature using off-the-shelf large language and multimodal models. This framework creates high-quality, structured surveys, identifies research trends, and uncovers cross-domain opportunities, consistently outperforming commercial LLMs in expert evaluations.",
         "originalProblem": [
@@ -103,12 +103,12 @@ const papersData = {
       "image_url": "image/2510.20809v1.png",
       "universal_paper_id": "2510.20809",
       "metrics": {
-        "total_votes": 20,
+        "total_votes": 28,
         "visits_count": {
-          "all": 984,
-          "last_7_days": 984
+          "all": 1399,
+          "last_7_days": 1399
         },
-        "public_total_votes": 76
+        "public_total_votes": 103
       },
       "first_publication_date": "2025-10-23T17:59:05.000Z",
       "publication_date": "2025-10-23T17:59:05.000Z",
@@ -133,10 +133,68 @@ const papersData = {
       "distance": 1
     },
     {
+      "id": "019a2c20-a499-781f-b895-e0c2dc989b15",
+      "paper_group_id": "019a2c20-a499-781f-b895-e0c2dc989b15",
+      "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
+      "abstract": "强化学习（RL）在提升大型语言模型（LLMs）的推理能力方面展示了显著潜力。然而，RL在LLMs中的成功在很大程度上依赖于人工策划的数据集和可验证的奖励，这限制了其可扩展性和普适性。最近受游戏和围棋成功启发的自我对弈RL方法，旨在无需人工标注数据来增强LLM的推理能力。然而，它们的方法主要依赖于具有反馈的基础环境（例如，Python解释器或游戏引擎）；将它们扩展到一般领域仍然具有挑战性。为了解决这些挑战，我们提出了多智能体演化（MAE）框架，该框架使LLM能够在解决各种任务中自我演化，包括数学、推理和一般知识问答。MAE的核心设计基于三个相互作用的智能体（提议者、求解者、评判者），它们由单个LLM实例化，并应用强化学习来优化其行为。提议者生成问题，求解者尝试解决方案，评判者在共同演化的过程中评估两者。对Qwen2.5-3B-Instruct的实验表明，MAE在多个基准测试中实现了平均4.54%的提升。这些结果突显出MAE是一种可扩展、数据高效的方法，能够在最小程度上依赖人工策划的监督，从而增强LLM的一般推理能力。",
+      "paper_summary": {
+        "summary": "Multi-Agent Evolve (MAE) enables large language models (LLMs) to improve their reasoning and problem-solving abilities across general domains through a self-supervised, multi-agent co-evolutionary framework. The approach allows a 3B-parameter LLM to increase its overall average accuracy from 55.33% to 58.51% without human annotation and even outperform supervised fine-tuning with ground truth.",
+        "originalProblem": [
+          "Current LLM training with Reinforcement Learning heavily relies on costly human-curated datasets and verifiable reward signals, limiting scalability and generalizability.",
+          "Existing self-play methods for LLMs often require \"grounded environments\" to provide explicit feedback, restricting their application to open-ended language and reasoning tasks.",
+          "A lack of mechanisms for continuous, autonomous enhancement of LLM reasoning abilities across diverse tasks without human supervision."
+        ],
+        "solution": [
+          "A framework instantiating three co-evolving LLM agents (Proposer, Solver, Judge) from a single backbone model.",
+          "Domain-agnostic self-rewarding mechanisms are used, where the Judge agent evaluates questions and answers without external ground truth.",
+          "A continuous training loop with question quality filtering and synchronized updates using Task-Relative REINFORCE++ drives the self-evolutionary process."
+        ],
+        "keyInsights": [
+          "LLMs can autonomously achieve self-improvement in general domains by generating their own curriculum and feedback, eliminating reliance on human supervision or external verifiers.",
+          "Generating questions of \"desirable difficulty\" (challenging but feasible) is crucial for optimal and continuous performance enhancement.",
+          "The comprehensive interaction and co-evolution of distinct agent roles (Proposer, Solver, Judge) are essential for framework stability and achieving optimal self-improvement."
+        ],
+        "results": [
+          "MAE improved the Qwen2.5-3B-Instruct model's overall average accuracy from 55.33% to 58.51% without any reference questions, outperforming the AZR baseline.",
+          "MAE variants, including those without ground truth, significantly surpassed Supervised Fine-Tuning on the same dataset with ground truth, with MAE (half reference) achieving 59.87% overall average.",
+          "The framework demonstrated stable performance over 250 training steps, with continuous addition of high-quality questions preventing dataset degradation."
+        ]
+      },
+      "image_url": "image/2510.23595v1.png",
+      "universal_paper_id": "2510.23595",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 110,
+          "last_7_days": 110
+        },
+        "public_total_votes": 12
+      },
+      "first_publication_date": "2025-10-27T17:58:02.000Z",
+      "publication_date": "2025-10-27T17:58:02.000Z",
+      "updated_at": "2025-10-28T18:42:08.153Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "fine-tuning",
+        "multi-agent-learning",
+        "reasoning",
+        "reinforcement-learning",
+        "self-supervised-learning",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/ulab-uiuc/Multi-agent-Evolve",
+      "distance": 1
+    },
+    {
       "id": "019a2698-a848-7d12-b559-474738d7624c",
       "paper_group_id": "019a2698-a848-7d12-b559-474738d7624c",
       "title": "Huxley-Gödel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine",
-      "abstract": "近期的研究通过编码代理编辑自身代码库来实现自我改进。它们通过扩展策略生成自我修改的树，这些策略倾向于提高软件工程基准性能，假设这意味着更有前景的后续自我修改。然而，我们发现代理的自我改进潜力（元生产力）与其编码基准性能之间存在不匹配，即元生产力-性能不匹配。受哈克斯利的谱系概念启发，我们提出了一种指标（$\\mathrm{CMP}$），该指标将代理后代的基准性能汇总为其自我改进潜力的一个指示。我们展示，在我们的自我改进编码代理开发环境中，访问真实的 $\\mathrm{CMP}$ 足以模拟哥德尔机器在特定假设下的行为。我们引入了哈克斯利-哥德尔机器（HGM），它通过估计 $\\mathrm{CMP}$ 并将其作为指导，搜索自我修改的树。在SWE-bench Verified 和 Polyglot上，HGM outperform了先前的自我改进编码代理开发方法，同时使用了更少的墙时。最后但并非不重要的是，HGM在其他编码数据集和大型语言模型上显示了强大的迁移能力。通过HGM在SWE-bench Verified上使用GPT-5-mini优化的代理，并在SWE-bench Lite上使用GPT-5进行评估，达到了人类水平的性能，匹配了人类设计编码代理的最佳官方检查结果。我们的代码可在此链接获得。",
+      "abstract": "最近的研究通过编码代理自我编辑代码库来实现自我改进。它们通过扩展策略生成一棵自我修改的树，这些策略有利于更高的软件工程基准性能，假设这意味着更有前景的后续自我修改。然而，我们发现代理的自我改进潜力（元生产力）与其编码基准性能之间存在不匹配，即元生产力-性能不匹配。受到赫胥黎分类概念的启发，我们提出了一种度量标准（$\\mathrm{CMP}$），汇总代理后代的基准表现，以作为其自我改进潜力的指示。我们表明，在我们的自我改进编码代理开发环境中，获取真实的$\\mathrm{CMP}$足以模拟哥德尔机器在某些假设下的行为。我们引入赫胥黎-哥德尔机器（HGM），该机器通过估计$\\mathrm{CMP}$并将其作为指导，搜索自我修改的树。在SWE-bench Verified和Polyglot上，HGM在使用更少的实际时间的情况下，优于先前的自我改进编码代理开发方法。最后但同样重要的是，HGM在其他编码数据集和大型语言模型上表现出强大的迁移能力。在SWE-bench Verified上，HGM在GPT-5-mini的优化下，并在SWE-bench Lite上用GPT-5进行评估，达到了人类级别的表现，匹配了人类设计编码代理的最佳官方检查结果。我们的代码可在此链接获取。",
       "paper_summary": {
         "summary": "The Huxley-Gödel Machine (HGM) framework introduces Clade-Metaproductivity (CMP) to guide self-improving coding agents, overcoming the Metaproductivity–Performance Mismatch observed in prior methods. This approach enables the discovery of coding agents that achieve human-level performance on SWE-Bench benchmarks with greater efficiency and robustness.",
         "originalProblem": [
@@ -163,12 +221,12 @@ const papersData = {
       "image_url": "image/2510.21614v1.png",
       "universal_paper_id": "2510.21614",
       "metrics": {
-        "total_votes": 1,
+        "total_votes": 5,
         "visits_count": {
-          "all": 179,
-          "last_7_days": 179
+          "all": 392,
+          "last_7_days": 392
         },
-        "public_total_votes": 15
+        "public_total_votes": 33
       },
       "first_publication_date": "2025-10-24T16:19:41.000Z",
       "publication_date": "2025-10-24T16:19:41.000Z",
@@ -191,10 +249,1020 @@ const papersData = {
       "distance": 1
     },
     {
+      "id": "019a2d98-dd10-79a3-8241-720f043f888b",
+      "paper_group_id": "019a2d98-dd10-79a3-8241-720f043f888b",
+      "title": "The Principles of Diffusion Models",
+      "abstract": "本专著呈现了指导扩散模型发展的核心原则，追溯其起源并展示了多样化的公式是如何源于共享的数学思想。扩散建模首先定义了一个前向过程，该过程逐步将数据腐蚀为噪声，通过一系列中间分布将数据分布与一个简单的先验联系起来。其目标是学习一个反向过程，将噪声转变回数据，同时恢复相同的中间值。我们描述了三种互补的视角。变分视角受到变分自编码器的启发，将扩散视为逐步去除噪声的过程。基于评分的视角根植于基于能量的建模，学习不断演变的数据分布的梯度，指示如何将样本推向更可能的区域。基于流的视角与归一化流相关，将生成视为沿着一个光滑路径移动样本，从噪声到数据，遵循一个学习到的速度场。这些观点共享一个共同的基础：一个时间依赖的速度场，其流动将一个简单的先验传输到数据。采样则相当于解决一个沿着连续轨迹将噪声演变为数据的微分方程。在此基础上，本专著讨论了可控生成的指导、有效的数值求解器以及扩散激励的流映射模型，这些模型学习任意时间之间的直接映射。它为具有基本深度学习知识的读者提供了对扩散模型的概念性和数学基础的理解。",
+      "paper_summary": {
+        "summary": "Authored by leading researchers from Sony AI, OpenAI, and Stanford, this monograph synthesizes the rapidly evolving field of diffusion models by clarifying their theoretical foundations and unifying diverse formulations into a single continuous-time generative framework. It systematically covers the origins, unifies variational, score-based, and flow-based perspectives, and outlines advancements in sampling and generation techniques.",
+        "originalProblem": [
+          "The rapid proliferation of diverse diffusion model formulations (e.g., DDPM, NCSN, Flow Matching) led to a fragmented literature.",
+          "Researchers and practitioners found it challenging to grasp the underlying mathematical connections and theoretical coherence across different approaches.",
+          "A lack of a systematic and unified understanding hindered entry into the field and efficient progress in research."
+        ],
+        "solution": [
+          "The monograph provides a comprehensive and authoritative review, acting as a pedagogical guide for the field of diffusion models.",
+          "It rigorously demonstrates the mathematical equivalence of variational, score-based, and flow-based approaches under a continuous-time framework.",
+          "It clarifies the theoretical underpinnings, including the central roles of the score function, SDEs, ODEs, and the Fokker-Planck equation, and systematically covers practical advancements like guidance and efficient sampling."
+        ],
+        "keyInsights": [
+          "Variational, score-based, and flow-based diffusion models are mathematically equivalent formulations of a single continuous-time generative process, all implicitly or explicitly learning a time-dependent vector field.",
+          "The 'conditioning trick,' which transforms intractable marginal objectives into tractable conditional ones, is a foundational enabler for training across all major diffusion model formulations.",
+          "The generation process can be fundamentally understood as solving a differential equation (SDE or Probability Flow ODE), providing a principled basis for analyzing and accelerating sampling."
+        ],
+        "results": [
+          "The monograph conclusively demonstrates the mathematical equivalence between DDPM, NCSN/Score SDE, and Flow Matching paradigms, showing they are manifestations of a unified continuous-time generative process.",
+          "It establishes the Fokker-Planck equation as the universal underlying law governing the evolution of marginal probability densities in diffusion models, regardless of stochastic or deterministic dynamics.",
+          "The work systematically categorizes and explains advancements in diffusion models, including guidance mechanisms for controllable generation, training-free acceleration methods (numerical solvers), and training-based acceleration techniques (distillation, learning from scratch like Consistency Models)."
+        ]
+      },
+      "image_url": "image/2510.21890v1.png",
+      "universal_paper_id": "2510.21890",
+      "metrics": {
+        "total_votes": 12,
+        "visits_count": {
+          "all": 263,
+          "last_7_days": 263
+        },
+        "public_total_votes": 27
+      },
+      "first_publication_date": "2025-10-24T02:29:02.000Z",
+      "publication_date": "2025-10-24T02:29:02.000Z",
+      "updated_at": "2025-10-29T01:33:04.144Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
+        "generative-models",
+        "image-generation",
+        "optimization-methods",
+        "representation-learning",
+        "statistical-learning",
+        "unsupervised-learning"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 3,
+      "github_url": "https://github.com/Shiying-Zhang/diffusion-theory-discussion",
+      "distance": 1
+    },
+    {
+      "id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
+      "paper_group_id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
+      "title": "Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations",
+      "abstract": "人类通过多感官协同学习抽象概念，一旦形成，这种表征通常可以通过单一模态进行回忆。受到这一原则的启发，我们推出了Concerto，一种人类概念学习的极简模拟，旨在提升空间认知，结合了3D内模态自蒸馏和2D-3D跨模态联合嵌入。尽管其简单，Concerto仍能学习更具一致性和信息量的空间特征，这通过零样本可视化得到了证明。在3D场景感知的线性探测中，Concerto分别比独立的最先进的2D和3D自监督模型提高了14.2%和4.8%的性能，并且优于它们的特征连接。通过全面微调，Concerto在多个场景理解基准中创下新的最先进结果（例如，在ScanNet上达到80.7%的mIoU）。我们进一步推出了一个Concerto的变体，专门用于视频提升的点云空间理解，以及一个将Concerto表征线性投影到CLIP语言空间的翻译器，从而实现开放世界感知。这些结果突显了Concerto在空间表征中展现出优越的细粒度几何和语义一致性。",
+      "paper_summary": {
+        "summary": "Concerto, a joint 2D-3D self-supervised learning framework developed by researchers from The University of Hong Kong, The Chinese University of Hong Kong, and Harbin Institute of Technology, synergistically combines intra-modal 3D self-distillation and cross-modal 2D-3D joint embedding prediction. This approach learns unified spatial representations, achieving 80.7% mIoU for 3D semantic segmentation on ScanNet and demonstrating robust data efficiency.",
+        "originalProblem": [
+          "Representations learned independently from 2D images and 3D point clouds do not fully overlap, missing complementary spatial information.",
+          "3D self-supervised learning has historically lagged behind its 2D counterpart due to the sparse, unstructured, and often incomplete nature of point cloud data.",
+          "Existing multi-modal approaches often rely on simple feature concatenation or one-way distillation, failing to achieve true synergistic integration of modalities."
+        ],
+        "solution": [
+          "Concerto employs a dual-branch self-supervised learning framework combining 3D intra-modal self-distillation (extending Sonata) and 2D-3D cross-modal joint embedding prediction.",
+          "The 3D branch refines point cloud representations using a teacher-student clustering objective, while the 2D-3D branch trains the 3D encoder to predict features from a frozen 2D image encoder (DINOv2) using camera parameters for correspondence.",
+          "This approach enables a 'multisensory synergy' where modalities continuously inform and enhance each other, leading to emergent, unified spatial representations."
+        ],
+        "keyInsights": [
+          "Deep, joint self-supervised learning between 2D images and 3D point clouds can yield representations that are fundamentally richer and more coherent than those derived from individual modalities or simple fusions.",
+          "A 'minimalist simulation of human concept learning' through combined intra-modal refinement and cross-modal prediction fosters emergent spatial cognition in machines.",
+          "The learned spatial representations can be effectively aligned with human language via linear projection into a language space like CLIP, opening avenues for open-world 3D perception."
+        ],
+        "results": [
+          "Concerto achieved 77.3% mIoU for 3D semantic segmentation on ScanNet with linear probing, surpassing concatenated SOTA 2D and 3D features by 1.4%.",
+          "With full fine-tuning, it established new state-of-the-art with 80.7% mIoU on ScanNet and 39.2% on ScanNet200.",
+          "The framework demonstrated superior data efficiency, outperforming supervised methods across all protocols in the ScanNet Data Efficient benchmark, especially in data-limited scenarios."
+        ]
+      },
+      "image_url": "image/2510.23607v1.png",
+      "universal_paper_id": "2510.23607",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 130,
+          "last_7_days": 130
+        },
+        "public_total_votes": 17
+      },
+      "first_publication_date": "2025-10-27T17:59:59.000Z",
+      "publication_date": "2025-10-27T17:59:59.000Z",
+      "updated_at": "2025-10-28T03:49:52.885Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "geometric-deep-learning",
+        "multi-modal-learning",
+        "object-detection",
+        "representation-learning",
+        "self-supervised-learning",
+        "semantic-segmentation",
+        "transfer-learning",
+        "vision-language-models",
+        "zero-shot-learning"
+      ],
+      "organization_info": [
+        {
+          "name": "The Chinese University of Hong Kong",
+          "image": "images/organizations/chinesehongkong.png"
+        },
+        {
+          "name": "The University of Hong Kong",
+          "image": "images/organizations/hku.png"
+        },
+        {
+          "name": "Harbin Institute of Technology (Shenzhen)",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 58,
+      "github_url": "https://github.com/Pointcept/Concerto",
+      "distance": 1
+    },
+    {
+      "id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
+      "paper_group_id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
+      "title": "Tongyi DeepResearch Technical Report",
+      "abstract": "我们推出了Tongyi DeepResearch，这是一个具备自主能力的大型语言模型，专门设计用于长时间、深入的信息获取研究任务。为了激励自主深度研究能力，Tongyi DeepResearch通过一个端到端的训练框架开发，该框架结合了自主中期训练和自主后期训练，使得在复杂任务中能够进行可扩展的推理和信息获取。我们设计了一个高度可扩展的数据合成流程，完全自动化，无需依赖昂贵的人类标注，支持所有训练阶段。通过为每个阶段构建定制化环境，我们的系统能够在整个过程中实现稳定且一致的交互。Tongyi DeepResearch拥有305亿个参数，每个token仅激活33亿个，在一系列自主深度研究基准测试中实现了最先进的性能，包括人类最后的考试、BrowseComp、BrowseComp-ZH、WebWalkerQA、xbench-DeepSearch、FRAMES以及xbench-DeepSearch-2510。我们开源了模型、框架和完整解决方案，以支持社区发展。",
+      "paper_summary": {
+        "summary": "The Tongyi DeepResearch Team from Alibaba Group introduced an open-source model and an end-to-end agentic training framework for autonomous deep research agents, integrating agentic mid-training and post-training with a fully automated data synthesis pipeline. This approach achieves state-of-the-art performance on various benchmarks, including 32.9 on Humanity's Last Exam and 70.9 on GAIA, while activating only 3.3 billion parameters.",
+        "originalProblem": [
+          "Most frontier Deep Research AI systems are proprietary and closed-source, hindering scientific transparency, reproducibility, and collaborative development.",
+          "Developing Deep Research agents faces challenges in scalable training, data scarcity for multi-step reasoning, and managing complex environmental interactions efficiently.",
+          "Traditional LLM training lacks agentic inductive bias, making it difficult to effectively cultivate deep reasoning and information-seeking behaviors for complex tasks."
+        ],
+        "solution": [
+          "Developed an end-to-end agentic training framework that includes two stages: agentic mid-training (for foundational agentic bias) and agentic post-training (for refinement via RL).",
+          "Implemented a fully automated, highly scalable data synthesis pipeline to generate research-level questions, agentic behaviors, and function-calling data, eliminating reliance on human annotation.",
+          "Designed stage-specific, customized environments (Prior World, Simulated, Real-world) to provide stable and consistent interactions throughout the training process, balancing fidelity, cost, and scalability."
+        ],
+        "keyInsights": [
+          "Agentic mid-training serves as a crucial bridge, effectively transitioning LLMs from general pre-training to specialized agentic tasks by cultivating inherent agentic biases.",
+          "Synthetic data generation can produce 'super-human' level agent trajectories at scale, overcoming data scarcity and enabling efficient training without human annotation.",
+          "A stable reinforcement learning framework, coupled with novel environment designs and algorithmic modifications, ensures robust policy learning and prevents issues like policy collapse."
+        ],
+        "results": [
+          "Achieved state-of-the-art performance across numerous benchmarks, including 32.9 on Humanity's Last Exam (Avg@3), 70.9 on GAIA (Avg@3), and 75.0 on xbench-DeepSearch (Avg@3).",
+          "The model, based on Qwen3-30B, demonstrates remarkable efficiency by activating only 3.3 billion parameters per token, allowing for practical deployment.",
+          "The 'Heavy Mode' inference strategy further boosts performance, achieving 38.3% on Humanity's Last Exam and 58.3% on BrowseComp (Pass@1) by deploying parallel agents and an integrative synthesis model."
+        ]
+      },
+      "image_url": "image/2510.24701v1.png",
+      "universal_paper_id": "2510.24701",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 84,
+          "last_7_days": 84
+        },
+        "public_total_votes": 12
+      },
+      "first_publication_date": "2025-10-28T17:53:02.000Z",
+      "publication_date": "2025-10-28T17:53:02.000Z",
+      "updated_at": "2025-10-29T02:06:57.854Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG",
+        "cs.MA",
+        "data-curation",
+        "fine-tuning",
+        "information-extraction",
+        "lightweight-models",
+        "reasoning",
+        "synthetic-data",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Alibaba Group",
+          "image": "images/organizations/alibaba.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
+      "distance": 1
+    },
+    {
+      "id": "019a2a13-0030-7409-a686-26a34a0b7408",
+      "paper_group_id": "019a2a13-0030-7409-a686-26a34a0b7408",
+      "title": "Provable test-time adaptivity and distributional robustness of in-context learning",
+      "abstract": "我们研究上下文学习问题，其中一个变换器在由混合分布 $\\pi=\\sum_{\\alpha\\in\\mathcal{A}} \\lambda_{\\alpha} \\pi_{\\alpha}$ 生成的任务上进行了预训练，这被称为预训练先验，其中每个混合成分 $\\pi_{\\alpha}$ 是在特定难度级别 $\\alpha$ 上的任务分布。我们的目标是理解预训练变换器在不同测试分布 $\\mu$ 上的表现，$\\mu$ 由固定难度 $\\beta\\in\\mathcal{A}$ 的任务组成，并且相对于 $\\pi_\\beta$ 存在潜在的分布转变，前提是卡方散度 $\\chi^2(\\mu,\\pi_{\\beta})$ 至多为 $\\kappa$。特别地，我们考虑具有随机平滑性的非参数回归问题，以及具有随机平滑性和随机有效维度的多索引模型。我们证明，基于足够数据的大型变换器在与难度级别 $\\beta$ 对应的最佳收敛速率上取得了成功，这一结果对卡方散度球内的测试分布 $\\mu$ 是均匀成立的。因此，预训练的变换器能够在简单任务上以更快的收敛速率取得成功，并且在测试时对分布转变具有鲁棒性。最后，我们证明，即使一个估计量能够访问测试分布 $\\mu$，其在 $\\mu$ 上的期望风险的收敛速率也不能快于我们预训练变换器的速率，从而提供了比最小最大下界更合适的最优性保证。",
+      "paper_summary": {
+        "summary": "Researchers at the Statistical Laboratory, University of Cambridge, and LSE provide theoretical guarantees for in-context learning, demonstrating that Transformers pretrained on diverse tasks can adapt to varying test-time difficulties and maintain optimal performance under distribution shifts. The framework shows models achieve convergence rates matching an oracle estimator, robust to chi-squared divergence in test distributions.",
+        "originalProblem": [
+          "Most existing theoretical analyses of in-context learning (ICL) assume identical pretraining and test data distributions, limiting their applicability to real-world scenarios.",
+          "A lack of rigorous, provable guarantees for Transformers' observed ability to adapt to varying task difficulties and maintain performance under distributional shifts existed.",
+          "Quantifying the degree to which pretrained Transformers can tolerate shifts in the test distribution without performance degradation was an open theoretical challenge."
+        ],
+        "solution": [
+          "Developed a theoretical framework modeling pretraining with mixture priors (representing different difficulty levels) and test-time distribution shifts quantified by chi-squared divergence.",
+          "Decomposed the in-context learning (ICL) excess risk into components that isolate the impact of approximation error, distribution shift, and posterior contraction.",
+          "Utilized universal approximation theory for Transformers and a modified Bayesian posterior contraction theory to derive finite-sample performance guarantees."
+        ],
+        "keyInsights": [
+          "The total ICL excess risk can be analytically decomposed, allowing for a clear separation and quantification of the effects of distribution shift from intrinsic statistical difficulty.",
+          "Transformers implicitly construct an adaptive 'universal prior' from diverse pretraining data, enabling them to specialize efficiently to specific test-time task difficulties without explicit instruction.",
+          "The statistical efficiency of in-context learning in pretrained Transformers can match that of an oracle estimator with full knowledge of the test distribution."
+        ],
+        "results": [
+          "Proved that pretrained Transformers achieve optimal convergence rates (n^(-2β/(2β+d))) for nonparametric regression, adaptively matching the specific smoothness (β) of the test task.",
+          "Demonstrated similar optimal and adaptive rates (n^(-2β/(2β+r))) for multi-index models, adapting to both smoothness (β) and effective dimension (r) of the test function.",
+          "The derived optimal convergence rates hold uniformly over test distributions exhibiting bounded chi-squared divergence, providing formal guarantees of robustness to moderate distribution shifts."
+        ]
+      },
+      "image_url": "image/2510.23254v1.png",
+      "universal_paper_id": "2510.23254",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 102,
+          "last_7_days": 102
+        },
+        "public_total_votes": 15
+      },
+      "first_publication_date": "2025-10-27T12:16:49.000Z",
+      "publication_date": "2025-10-27T12:16:49.000Z",
+      "updated_at": "2025-10-28T09:07:59.664Z",
+      "topics": [
+        "Computer Science",
+        "cs.LG",
+        "domain-adaptation",
+        "Mathematics",
+        "math.ST",
+        "meta-learning",
+        "representation-learning",
+        "statistical-learning",
+        "Statistics",
+        "stat.ML",
+        "transfer-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "University of Cambridge",
+          "image": "images/organizations/university-of-cambridge.svg+xml"
+        },
+        {
+          "name": "London School of Economics and Political Science",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a29d3-5ad4-745c-89dd-4b5f2a90d263",
+      "paper_group_id": "019a29d3-5ad4-745c-89dd-4b5f2a90d263",
+      "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+      "abstract": "大型语言模型（LLMs）的快速进步促进了数据代理的出现——这些自主系统旨在协调数据+人工智能生态系统，以应对复杂的数据相关任务。然而，“数据代理”这一术语当前存在术语模糊和不一致使用的问题，将简单的查询响应者与复杂的自主架构混淆在一起。这种术语模糊导致用户期望的不匹配、责任问题和行业增长的障碍。受SAE J3016自动驾驶标准的启发，本调查介绍了第一个系统的层次分类法，涵盖六个层级，描述并追踪自主权的逐步变化，从手动操作（L0）到生成的、完全自主的数据代理愿景（L5），从而澄清能力界限和责任分配。通过这一视角，我们提供了一份现有研究的结构性回顾，按照自主权的递增排列，涵盖了用于数据管理、准备和分析的专用数据代理，以及朝着增强自主性的多功能综合系统的最新努力。我们还分析了推进数据代理的关键进化飞跃和技术差距，特别是正在进行的L2到L3的过渡，其中数据代理从程序执行演变为自主协调。最后，我们以一份前瞻性的路线图作结，展望主动的、生成性的数据代理的到来。",
+      "paper_summary": {
+        "summary": "This paper presents the inaugural systematic, hierarchical taxonomy for data agents, classifying their autonomy from Level 0 to Level 5. The framework addresses current terminological ambiguity in the field and provides a structured overview of existing LLM-powered data systems and a roadmap for future research across the data lifecycle.",
+        "originalProblem": [
+          "Significant terminological ambiguity and inconsistent definitions surrounding the term \"data agent,\" leading to varied interpretations of system capabilities.",
+          "Resulting risks for users (mismatched expectations), governance (unclear accountability), and industry (hindered growth and overstated claims).",
+          "Absence of a standardized, systematic framework to classify data agent autonomy and capabilities."
+        ],
+        "solution": [
+          "Introduced a novel, systematic hierarchical taxonomy for data agents (L0-L5 autonomy), drawing inspiration from the SAE J3016 standard for driving automation.",
+          "Categorized existing research and industrial data agent systems within this taxonomy, focusing on their capabilities across data management, preparation, and analysis.",
+          "Analyzed the \"evolutionary leaps\" required to progress between autonomy levels, detailing technical challenges and paradigm shifts."
+        ],
+        "keyInsights": [
+          "Most current data agents operate at L1 (preliminary assistance) or L2 (partial autonomy with environmental perception), demonstrating a 'glass ceiling' in comprehensive task orchestration.",
+          "Achieving L3 (conditional autonomy) requires overcoming limitations in pipeline orchestration, comprehensive data lifecycle coverage, advanced strategic reasoning, and adaptation to dynamic environments.",
+          "The proposed taxonomy provides a common language for researchers and practitioners, enabling objective comparison and clearer understanding of data agent capabilities and limitations."
+        ],
+        "results": [
+          "Successfully established the first systematic, hierarchical taxonomy (L0-L5) for data agents, offering a standardized vocabulary for the field.",
+          "Mapped the current state-of-the-art, showing significant development in L1 and L2 systems and identifying early 'Proto-L3' efforts in both academia and industry.",
+          "Delineated critical technical gaps and a clear roadmap for future research, particularly highlighting the challenges in transitioning from L2 to L3 autonomy."
+        ]
+      },
+      "image_url": "image/2510.23587v1.png",
+      "universal_paper_id": "2510.23587",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 93,
+          "last_7_days": 93
+        },
+        "public_total_votes": 9
+      },
+      "first_publication_date": "2025-10-27T17:54:07.000Z",
+      "publication_date": "2025-10-27T17:54:07.000Z",
+      "updated_at": "2025-10-28T07:58:28.564Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.DB",
+        "data-curation",
+        "generative-models",
+        "ml-systems",
+        "reasoning",
+        "tool-use"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 58,
+      "github_url": "https://github.com/HKUSTDial/awesome-data-agents",
+      "distance": 1
+    },
+    {
+      "id": "019a09db-6f76-753a-a087-dfaa1ae3c0d3",
+      "paper_group_id": "019a09db-6f76-753a-a087-dfaa1ae3c0d3",
+      "title": "DeepSeek-OCR: Contexts Optical Compression",
+      "abstract": "我们提出了DeepSeek-OCR作为压缩长文本上下文可行性的初步研究，采用光学二维映射技术。DeepSeek-OCR由两个组件组成：DeepEncoder和DeepSeek3B-MoE-A570M作为解码器。具体来说，DeepEncoder作为核心引擎，旨在在高分辨率输入下保持低激活，同时实现高压缩比，以确保视觉标记的数量最优且可控。实验表明，当文本标记数量在视觉标记的10倍以内（即压缩比小于10x）时，该模型能够达到97%的解码（OCR）精度。即使在20倍的压缩比下，OCR准确率仍然保持在约60%。这为历史长文本压缩和大型语言模型中的遗忘机制等研究领域展现了相当大的潜力。此外，DeepSeek-OCR还展现了很高的实际应用价值。在OmniDocBench上，它仅使用100个视觉标记便超过了GOT-OCR2.0（256标记/页），并在使用不到800个视觉标记的情况下超越了MinerU2.0（平均每页6000+标记）。在生产环境中，DeepSeek-OCR可以以每天超过20万页的规模为大型语言模型/视觉语言模型生成训练数据（单个A100-40G）。代码和模型权重可以在此http网址公开获得。",
+      "paper_summary": {
+        "summary": "DeepSeek-OCR explores \"contexts optical compression\" to enable Large Language Models (LLMs) to process lengthy texts more efficiently by representing information visually. The model achieves approximately 97% text decoding precision at 9-10x vision-text compression ratios and sets new benchmarks in OCR performance with significantly fewer vision tokens, while also offering advanced deep parsing capabilities for structured data.",
+        "originalProblem": [
+          "Large Language Models (LLMs) face significant computational and memory challenges due to quadratic scaling with increasing input sequence length, limiting their ability to process long textual contexts.",
+          "Existing vision encoders in Vision-Language Models (VLMs) suffer from limitations such as complex deployment, excessive image fragmentation, or high activation memory consumption for high-resolution documents.",
+          "Traditional OCR models have not explicitly addressed the optimal vision-text compression ratio or the minimum number of vision tokens required for accurate text decoding when integrating with LLMs for long-context understanding."
+        ],
+        "solution": [
+          "DeepSeek-OCR is an end-to-end Vision-Language Model consisting of a novel 380M-parameter DeepEncoder and a DeepSeek3B-MoE decoder.",
+          "The DeepEncoder combines SAM-base and CLIP-large models with a crucial 16x Token Compressor (a 2-layer convolutional network) to process high-resolution images efficiently, reduce activation memory, and generate a minimal number of vision tokens.",
+          "The model supports multiple resolution modes, including dynamic 'Gundam' modes, to handle ultra-high-resolution inputs via tiling, and is trained on a diverse dataset encompassing traditional OCR, complex artificial images (charts, formulas, geometry), and general vision data."
+        ],
+        "keyInsights": [
+          "The visual modality can serve as an effective and quantifiable compression layer for textual information, allowing an image to represent rich text with substantially fewer tokens than its digital counterpart, thereby mitigating LLM long-context issues.",
+          "Balancing local visual detail perception (SAM) with global contextual understanding (CLIP) while drastically reducing token count via an intermediate compressor enables high-resolution input processing with minimal vision token overhead.",
+          "The concept of progressively downsizing rendered images to simulate 'optical forgetting' suggests a biologically inspired mechanism for creating theoretically unlimited context architectures in LLMs."
+        ],
+        "results": [
+          "The model achieves approximately 97% decoding precision on text-rich documents with 600-1300 text tokens when the vision-text compression ratio is within 10x, with precision remaining around 60% even at 20x compression.",
+          "DeepSeek-OCR, using 100 vision tokens, outperforms existing models like GOT-OCR2.0 (256 tokens) on the OmniDocBench and surpasses MinerU2.0 (nearly 7,000 tokens) in its Gundam mode (fewer than 800 tokens).",
+          "It demonstrates advanced 'deep parsing' capabilities, extracting structured information from charts (to HTML), chemical formulas (to SMILES), and geometric figures, supporting nearly 100 languages, and generates over 200,000 pages per day on a single A100 GPU for training data."
+        ]
+      },
+      "image_url": "image/2510.18234v1.png",
+      "universal_paper_id": "2510.18234",
+      "metrics": {
+        "total_votes": 235,
+        "visits_count": {
+          "all": 7576,
+          "last_7_days": 6758
+        },
+        "public_total_votes": 458
+      },
+      "first_publication_date": "2025-10-21T02:41:44.000Z",
+      "publication_date": "2025-10-21T02:41:44.000Z",
+      "updated_at": "2025-10-22T02:59:27.222Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "efficient-transformers",
+        "inference-optimization",
+        "information-extraction",
+        "multi-modal-learning",
+        "synthetic-data",
+        "transformers",
+        "vision-language-models"
+      ],
+      "organization_info": [
+        {
+          "name": "DeepSeek",
+          "image": "images/organizations/deepseek.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 9072,
+      "github_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+      "distance": 1
+    },
+    {
+      "id": "019a2dc0-088b-7216-b79b-b0982fed63f9",
+      "paper_group_id": "019a2dc0-088b-7216-b79b-b0982fed63f9",
+      "title": "Uniform Discrete Diffusion with Metric Path for Video Generation",
+      "abstract": "连续空间视频生成迅速发展，而离散方法由于误差积累和长时间上下文不一致而滞后。在本工作中，我们重新审视了离散生成建模，提出了带有度量路径的均匀离散扩散（URSA），这是一个简单但强大的框架，填补了可扩展视频生成与连续方法之间的差距。URSA的核心将视频生成任务表述为对离散时空标记的迭代全局细化。它集成了两个关键设计：线性化度量路径和依赖于分辨率的时间步移机制。这些设计使URSA能够有效扩展到高分辨率图像合成和长时段视频生成，同时需要显著更少的推理步骤。此外，我们引入了异步时间微调策略，将多种任务统一在同一个模型中，包括插值和图像到视频的生成。在具有挑战性的视频和图像生成基准上的广泛实验表明，URSA consistently超越现有的离散方法，并且在性能上可与最先进的连续扩散方法相媲美。代码和模型可以在此网址获得。",
+      "paper_summary": {
+        "summary": "URSA presents a uniform discrete diffusion framework that incorporates a metric probability path for video generation, enabling iterative global refinement in discrete token space. This framework achieves performance competitive with state-of-the-art continuous diffusion models across text-to-video, image-to-video, and text-to-image benchmarks, while enhancing scalability and multi-task capabilities.",
+        "originalProblem": [
+          "Existing discrete generative methods (autoregressive, masked diffusion) suffer from error accumulation and lack long-context consistency, particularly critical for video generation.",
+          "These methods typically lack the iterative global refinement capability found in continuous diffusion models, limiting visual quality and spatiotemporal coherence.",
+          "Scaling discrete models efficiently to high-resolution images and long-duration videos often requires a prohibitive number of inference steps and struggles with global context modeling."
+        ],
+        "solution": [
+          "URSA introduces a uniform discrete diffusion process with a linearized metric path derived from token embedding distances, establishing a controlled relationship between timestep and perturbation.",
+          "It employs resolution-dependent timestep shifting to adapt perturbation levels to varying sequence lengths and complexities, ensuring appropriate scaling for different resolutions.",
+          "An asynchronous timestep scheduling strategy assigns independent continuous timesteps to each frame in a video, enabling a single model to learn diverse multi-task generation objectives like text-to-video, image-to-video, and extrapolation."
+        ],
+        "keyInsights": [
+          "Iterative global refinement is critical for discrete generative models to achieve high fidelity and temporal coherence in video synthesis, mirroring its importance in continuous diffusion models.",
+          "A carefully designed linearized metric probability path in discrete space, with appropriate scheduling, is essential for effective model convergence and performance, establishing a linear relationship akin to continuous diffusion.",
+          "While increasing model size improves semantic performance, current discrete vision tokenizers might bottleneck overall generation quality, suggesting a need for more advanced tokenization strategies."
+        ],
+        "results": [
+          "URSA achieves a total VBench score of 82.4 for text-to-video generation, outperforming discrete baselines and rivaling several Sora-like continuous models, particularly in semantic content and dynamic degree (81.4).",
+          "For image-to-video generation, URSA scores 86.2 on VBench++, demonstrating comparable performance to specialized continuous models like SEINE and DynamiCrafter, and showing strong 'Camera Motion' capabilities (37.6).",
+          "The model exhibits robust zero-shot generalization, successfully performing video extrapolation from 4 seconds to 40 seconds and generating coherent transitions between specified start and end frames."
+        ]
+      },
+      "image_url": "image/2510.24717v1.png",
+      "universal_paper_id": "2510.24717",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 70,
+          "last_7_days": 70
+        },
+        "public_total_votes": 8
+      },
+      "first_publication_date": "2025-10-28T17:59:57.000Z",
+      "publication_date": "2025-10-28T17:59:57.000Z",
+      "updated_at": "2025-10-29T02:15:51.179Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "fine-tuning",
+        "generative-models",
+        "image-generation",
+        "inference-optimization",
+        "representation-learning",
+        "sequence-modeling",
+        "unsupervised-learning"
+      ],
+      "organization_info": [
+        {
+          "name": "Chinese Academy of Sciences",
+          "image": "images/organizations/chinese-academy-of-sciences.jpeg"
+        },
+        {
+          "name": "Zhejiang University",
+          "image": "images/organizations/zhejiang.png"
+        },
+        {
+          "name": "Beijing Academy of Artificial Intelligence",
+          "image": null
+        },
+        {
+          "name": "National Laboratory of Pattern Recognition, CASIA",
+          "image": null
+        },
+        {
+          "name": "Key Laboratory of Intelligent Information Processing, ICT, CAS",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 13,
+      "github_url": "https://github.com/baaivision/URSA",
+      "distance": 1
+    },
+    {
+      "id": "019a29c7-fe4c-7929-8134-929a2bda71a9",
+      "paper_group_id": "019a29c7-fe4c-7929-8134-929a2bda71a9",
+      "title": "FARMER: Flow AutoRegressive Transformer over Pixels",
+      "abstract": "直接建模原始数据分布的显式似然性是机器学习领域的一个关键主题，通过自回归建模在大型语言模型中取得了成功的规模。然而，针对视觉像素数据的连续自回归建模面临着极长的序列和高维空间的问题。在本文中，我们提出了FARMER，一个新颖的端到端生成框架，它将归一化流（NF）和自回归（AR）模型统一起来，以实现可处理的似然估计和直接从原始像素合成高质量图像。FARMER采用可逆自回归流将图像转换为潜在序列，其分布由自回归模型隐式建模。为了解决像素级建模中的冗余性和复杂性，我们提出了一种自监督降维方案，将NF潜在通道划分为信息性和冗余性组，从而实现更有效和高效的自回归建模。此外，我们设计了一种一步蒸馏方案，显著加速推理速度，并引入了一种基于重采样的无分类器引导算法，以提升图像生成质量。大量实验表明，FARMER在提供精确似然性和可扩展训练的同时，其性能与现有的基于像素的生成模型具有竞争力。",
+      "paper_summary": {
+        "summary": "A generative framework named FARMER unifies invertible Autoregressive Flows with Autoregressive Transformers to directly model raw image pixels, providing explicit likelihood estimation. Developed by researchers from ByteDance and academic institutions, the model achieves a FID of 3.60 on ImageNet 256x256, outperforming JetFormer by 3.04 FID points, and accelerates inference by nearly 4x through a one-step distillation scheme.",
+        "originalProblem": [
+          "Existing state-of-the-art generative models for images (GANs, VAEs, diffusion models) often lack tractable, explicit likelihood estimation, essential for tasks like anomaly detection and principled model comparison.",
+          "Direct application of continuous autoregressive models to high-dimensional image pixels is computationally expensive and struggles with long-range dependencies, while Normalizing Flows often degrade image quality by forcing complex distributions onto simple priors.",
+          "Autoregressive Flows, despite their expressiveness, suffer from inherently slow sequential reverse inference, which hinders their practical applicability."
+        ],
+        "solution": [
+          "An end-to-end framework directly models raw image pixels by unifying an invertible Autoregressive Flow (AF) to transform images into a latent sequence, whose distribution is then modeled by an Autoregressive Transformer using Gaussian Mixture Models.",
+          "The framework incorporates a self-supervised dimension reduction method that partitions latent channels into informative and redundant parts, and utilizes a novel resampling-based Classifier-Free Guidance for improved generation quality.",
+          "To overcome slow sequential inference, a one-step distillation technique trains a student AF to perform the entire reverse transformation in a single, parallel step, significantly accelerating the process."
+        ],
+        "keyInsights": [
+          "A self-supervised dimension reduction technique effectively disentangles structural and fine-grained information in the latent space, critically improving image quality by managing redundancy in pixel-level autoregressive modeling.",
+          "Resampling-based Classifier-Free Guidance is essential for achieving high-fidelity image generation, significantly enhancing performance compared to naive guidance within the Autoregressive Flow framework.",
+          "One-step distillation dramatically accelerates the inherently slow sequential reverse inference of Autoregressive Flows, making them practical for real-world applications with minimal impact on generation quality."
+        ],
+        "results": [
+          "The FARMER 1.9B model achieved a Fréchet Inception Distance (FID) of 3.60 on ImageNet 256x256, outperforming the most comparable baseline, JetFormer, by a margin of 3.04 FID points.",
+          "The framework effectively synthesizes diverse, high-quality images, preserving fine-grained details that are often blurred by latent compression methods in other generative models.",
+          "Inference time per image was accelerated by nearly 4x, reducing from 0.2189 seconds to 0.0567 seconds, through one-step distillation, while maintaining comparable image quality (FID of 5.63 post-distillation versus 5.55 for the original)."
+        ]
+      },
+      "image_url": "image/2510.23588v1.png",
+      "universal_paper_id": "2510.23588",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 75,
+          "last_7_days": 75
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-27T17:54:08.000Z",
+      "publication_date": "2025-10-27T17:54:08.000Z",
+      "updated_at": "2025-10-28T07:46:03.981Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "generative-models",
+        "image-generation",
+        "inference-optimization",
+        "knowledge-distillation",
+        "representation-learning",
+        "self-supervised-learning",
+        "sequence-modeling",
+        "synthetic-data",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "NUS",
+          "image": null
+        },
+        {
+          "name": "USTC",
+          "image": null
+        },
+        {
+          "name": "ANU",
+          "image": null
+        },
+        {
+          "name": "ByteDance Seed China",
+          "image": null
+        },
+        {
+          "name": "ByteDance Seed Singapore",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2a0f-9f19-7ded-a883-dcc175b197fc",
+      "paper_group_id": "019a2a0f-9f19-7ded-a883-dcc175b197fc",
+      "title": "Towards Stable and Effective Reinforcement Learning for Mixture-of-Experts",
+      "abstract": "近期在强化学习（RL）方面的进展显著提升了大规模语言模型的训练效果，从而带来了生成质量和推理能力的显著提升。然而，目前大多数研究集中于密集模型，对于专家混合（MoE）架构的RL训练仍然探索不足。为了解决在MoE训练中常见的不稳定性，我们提出了一种新颖的路由器感知方法，以优化离策略RL中的重要性采样（IS）权重。具体而言，我们设计了一种由路由器逻辑引导的重缩放策略，有效减少梯度方差，并缓解训练发散。实验结果表明，我们的方法显著提高了MoE模型的收敛稳定性和最终性能，突显了针对MoE架构的RL算法创新的潜力，并为大规模专家模型的高效训练提供了一个有希望的方向。",
+      "paper_summary": {
+        "summary": "A new reinforcement learning algorithm, Router-Shift Policy Optimization (RSPO), enables stable and effective training of Mixture-of-Experts (MoE) models, particularly for mathematical reasoning in large language models. The method achieves an average Pass@1 score of 77.1 on five reasoning benchmarks, surpassing prior baselines and exhibiting robust training convergence.",
+        "originalProblem": [
+          "Applying reinforcement learning (RL) to Mixture-of-Experts (MoE) models for large language models (LLMs) suffers from training instability.",
+          "Dynamic 'router fluctuation' in MoE architectures causes volatility in importance sampling (IS) ratios and can lead to training divergence.",
+          "The mismatch between token-level IS ratios and sequence-level rewards is amplified in MoE settings, further contributing to training instability."
+        ],
+        "solution": [
+          "Introduces Router-Shift Policy Optimization (RSPO), an off-policy RL algorithm that incorporates a 'router shift ratio' ($\\gamma_{i,t}$) to adaptively reweight importance sampling ratios.",
+          "The $\\gamma_{i,t}$ term quantifies the deviation in expert routing decisions between old and current policies, down-weighting updates for tokens with larger shifts; gradient flow through $\\gamma_{i,t}$ is explicitly stopped to maintain stability.",
+          "Utilizes sequence-level importance ratios with token-level clipping to mitigate variance mismatch while preserving granular control over token updates."
+        ],
+        "keyInsights": [
+          "Explicitly reweighting policy updates based on router shifts (router-aware importance sampling) is crucial for stabilizing RL training in MoE architectures.",
+          "Disabling gradient flow through the router shift ratio itself is essential to prevent early training collapse and ensure stable optimization.",
+          "Rigid router stabilization strategies like freezing the router or simple replay mechanisms are insufficient and can negatively impact model adaptability and performance."
+        ],
+        "results": [
+          "RSPO achieved an average Pass@1 score of 77.1 on mathematical reasoning benchmarks (AIME24, AMC23, MATH500, Minerva, OlympiadBench) using a Qwen3-30B-A3B model, outperforming GRPO (71.5), GSPO (76.4), and GMPO (76.4).",
+          "Demonstrated superior training stability, exhibiting consistent high validation scores throughout training, unlike GRPO which showed pronounced performance collapse.",
+          "Ablation studies confirmed that applying `stop_grad` to the router shift ratio is critical for stable training, as allowing gradients through it led to early training collapse."
+        ]
+      },
+      "image_url": "image/2510.23027v1.png",
+      "universal_paper_id": "2510.23027",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 58,
+          "last_7_days": 58
+        },
+        "public_total_votes": 7
+      },
+      "first_publication_date": "2025-10-27T05:47:48.000Z",
+      "publication_date": "2025-10-27T05:47:48.000Z",
+      "updated_at": "2025-10-28T09:04:18.201Z",
+      "topics": [
+        "Computer Science",
+        "cs.CL",
+        "cs.LG",
+        "deep-reinforcement-learning",
+        "generative-models",
+        "optimization-methods",
+        "parameter-efficient-training",
+        "reinforcement-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Peking University",
+          "image": "images/organizations/peking.png"
+        },
+        {
+          "name": "Microsoft",
+          "image": "images/organizations/microsoft.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
+      "paper_group_id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
+      "title": "AgentFold: Long-Horizon Web Agents with Proactive Context Management",
+      "abstract": "基于LLM的网络代理在信息检索方面表现出巨大潜力，但其在长期任务上的有效性受到上下文管理中基本权衡的制约。现有的基于ReAct的代理由于积累了噪声较大、原始的历史记录而遭遇上下文饱和，而在每个步骤中固定总结完整历史的方法则可能导致关键信息的不可逆丧失。为了解决这些问题，我们推出了AgentFold，一种以主动上下文管理为中心的新型代理范式，灵感来自人类认知过程中的追溯整合。AgentFold将其上下文视为一个动态的认知工作空间，而非一个被动的日志。它在每一步学习执行一个“折叠”操作，以在多个层面上管理其历史轨迹：可以进行细粒度的浓缩以保留重要的、细致的细节，或进行深度整合以抽象掉整个多步骤的子任务。我们在显著基准测试中的结果令人瞩目：通过简单的监督微调（无需持续的预训练或强化学习），我们的AgentFold-30B-A3B代理在BrowseComp上达到了36.2%，在BrowseComp-ZH上达到了47.3%。值得注意的是，这一表现不仅超越或匹配了规模大得多的开源模型，如DeepSeek-V3.1-671B-A37B，还超过了领先的专有代理，如OpenAI的o4-mini。",
+      "paper_summary": {
+        "summary": "AgentFold presents a novel web agent architecture that employs proactive, multi-scale context management to enable effective reasoning over long-horizon web tasks by dynamically folding interaction histories. This approach achieved state-of-the-art performance for open-source agents on benchmarks like BrowseComp (36.2%) and WideSearch (62.1%), while maintaining a context size 92% smaller than ReAct agents after 100 turns.",
+        "originalProblem": [
+          "Traditional ReAct agents suffer from context saturation on long-horizon tasks due to their verbose, append-only history, hindering effective reasoning.",
+          "Fixed-summarization methods, while concise, risk irreversible loss of crucial fine-grained details during context summarization.",
+          "A fundamental trade-off exists between maintaining comprehensive detail and achieving context conciseness, limiting LLM-based web agents' ability to handle complex, prolonged tasks."
+        ],
+        "solution": [
+          "AgentFold introduces a dynamic cognitive workspace partitioning context into user question, tools, multi-scale state summaries, and the latest interaction.",
+          "It implements a \"fold\" operation, guided by a learned folding directive, to either granularly condense the latest interaction or deeply consolidate multiple past steps into abstract summaries.",
+          "A \"Fold-Generator\" data collection pipeline, utilizing rejection sampling and supervised fine-tuning, trains LLMs (Qwen3-30B-A3B) to perform this explicit context curation."
+        ],
+        "keyInsights": [
+          "Human-inspired retrospective consolidation and active memory sculpting can overcome the context management trade-off in LLM agents.",
+          "Explicit, learned context folding directives allow agents to dynamically adapt context granularity, preserving critical details while abstracting irrelevant information.",
+          "Training a smaller LLM to perform strategic context management can lead to performance competitive with or superior to much larger models that rely solely on raw context window size."
+        ],
+        "results": [
+          "AgentFold-30B-A3B achieved state-of-the-art performance for open-source agents, scoring 36.2% on BrowseComp (outperforming a 20x larger model) and 62.1% on WideSearch.",
+          "Context token count grew sub-linearly, remaining exceptionally concise, with an average context 92% smaller than ReAct agents after 100 turns, yielding significant memory savings.",
+          "Demonstrated enhanced long-horizon capabilities, with accuracy continuing to improve up to 256 turns, unlike baselines that saturated and failed due to context overflow."
+        ]
+      },
+      "image_url": "image/2510.24699v1.png",
+      "universal_paper_id": "2510.24699",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 41,
+          "last_7_days": 41
+        },
+        "public_total_votes": 6
+      },
+      "first_publication_date": "2025-10-28T17:51:50.000Z",
+      "publication_date": "2025-10-28T17:51:50.000Z",
+      "updated_at": "2025-10-29T04:59:02.281Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "fine-tuning",
+        "reasoning",
+        "tool-use"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
+      "distance": 1
+    },
+    {
+      "id": "019a298d-625b-7589-9dae-bd0721cafa20",
+      "paper_group_id": "019a298d-625b-7589-9dae-bd0721cafa20",
+      "title": "ReCode: Unify Plan and Action for Universal Granularity Control",
+      "abstract": "现实世界的任务需要在不同粒度上做出决策，而人类通过利用统一的认知表征在这一方面表现出色，其中规划被根本理解为一种高级别的行动形式。然而，当前基于大型语言模型（LLM）的智能体缺乏这种在决策粒度间流畅操作的重要能力。这一局限性源于现有的范式，它强行将高级规划与低级行动分隔开，这妨碍了动态适应性并限制了泛化能力。我们提出了ReCode（递归代码生成），一种新颖的范式，通过在单一代码表征中统一规划和行动来解决这一限制。在这种表征中，ReCode将高级计划视为抽象的占位符函数，然后智能体递归地将其分解为更细粒度的子函数，直到达到原始行动。这种递归方法消除了计划和行动之间的严格界限，使智能体能够动态控制其决策粒度。此外，递归结构本质上生成丰富的多粒度训练数据，使模型能够学习层次决策过程。大量实验表明，ReCode在推理性能上显著超越了先进基线，并在训练中展现出卓越的数据效率，验证了我们的核心见解，即通过递归代码生成统一规划和行动是一种强大且有效的方法，实现普遍粒度控制。代码可在这个网址获取。",
+      "paper_summary": {
+        "summary": "DeepWisdom, alongside researchers from The Hong Kong University of Science and Technology (Guangzhou), Renmin University of China, Zhejiang University, and Mila, developed RECODE, a paradigm that unifies planning and action in Large Language Model agents through recursive code generation. This approach provides agents with universal granularity control, leading to a 20.9% relative improvement in average task reward over state-of-the-art baselines and a substantial reduction in both training data requirements and inference costs.",
+        "originalProblem": [
+          "Existing LLM-based agents, like ReAct, operate with a fixed, low level of decision granularity, limiting strategic foresight and adaptability in complex tasks.",
+          "Agents with explicit planners rigidly separate high-level planning from low-level action execution, preventing dynamic adjustment of decision granularity based on evolving task complexities.",
+          "These architectural constraints lead to brittle performance and reduced generalization capabilities in dynamic, real-world environments."
+        ],
+        "solution": [
+          "RECODE unifies planning and action by representing both as Python function calls, treating abstract plans as higher-level actions or 'placeholder functions'.",
+          "It employs a recursive generation-execution loop where the LLM policy dynamically decomposes high-level placeholder functions into finer-grained sub-functions until primitive, executable actions are reached.",
+          "This process allows agents to build a hierarchical decision tree, adapting decision granularity to the current context without explicit supervision."
+        ],
+        "keyInsights": [
+          "Planning and action are not distinct cognitive processes but rather represent decisions at different levels of granularity within a unified control framework.",
+          "Representing plans as abstract placeholder functions that are recursively expanded enables dynamic and universal control over decision granularity, mirroring human cognitive flexibility.",
+          "The inherent hierarchical structure of recursive code generation naturally yields rich, multi-granularity training data, which significantly enhances learning signals and data efficiency for agents."
+        ],
+        "results": [
+          "RECODE achieved an average reward of 60.8% across ALFWorld, WebShop, and ScienceWorld, outperforming the best baseline (AdaPlanner) by 10.5% (a 20.9% relative improvement).",
+          "It demonstrated superior data efficiency, achieving strong performance (70.4% with Qwen2.5-7B-Instruct) with significantly less training data than ReAct+SFT and CodeAct+SFT.",
+          "The paradigm showed remarkable cost efficiency, with RECODE trajectories costing 78.9% less than ReAct and 84.4% less than CodeAct on average, due to more structured exploration and potent decisions."
+        ]
+      },
+      "image_url": "image/2510.23564v1.png",
+      "universal_paper_id": "2510.23564",
+      "metrics": {
+        "total_votes": 5,
+        "visits_count": {
+          "all": 69,
+          "last_7_days": 69
+        },
+        "public_total_votes": 16
+      },
+      "first_publication_date": "2025-10-27T17:35:15.000Z",
+      "publication_date": "2025-10-27T17:35:15.000Z",
+      "updated_at": "2025-10-28T06:42:02.971Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "chain-of-thought",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "data-curation",
+        "reasoning",
+        "representation-learning"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 4,
+      "github_url": "https://github.com/FoundationAgents/ReCode",
+      "distance": 1
+    },
+    {
+      "id": "019a2a19-bf2d-7596-8ea8-db8254a0eeaa",
+      "paper_group_id": "019a2a19-bf2d-7596-8ea8-db8254a0eeaa",
+      "title": "LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation",
+      "abstract": "统一多模态模型最近在能力和多样性上显示出显著的提升，但大多数领先系统仍然是从零开始训练，并且需要大量的计算资源。在本文中，我们展示了通过战略性地融合公开可用的专注于生成或理解的模型，可以更高效地获得具有竞争力的表现。我们关键的设计是保留原始模块，同时在网络中额外交织多模态自注意力模块。这种双重融合机制 (1) 有效地实现丰富的多模态融合，同时在很大程度上保留基础模型的原始优势，(2) 促进了理解编码器的高层语义表示与生成编码器的低层空间信号之间的协同融合。通过仅用约 35 亿个标记进行训练，这种方法在多个基准测试中取得了强劲的结果：在 GenEval 上的组合文本到图像生成为 0.91，在 DPG-Bench 上的复杂文本到图像生成为 82.16，在 GEditBench 上为 6.06，在 ImgEdit-Bench 上的图像编辑为 3.77。通过全面发布整个代码套件、模型权重和数据集，我们希望支持未来在统一多模态建模方面的研究。",
+      "paper_summary": null,
+      "image_url": "image/2510.22946v1.png",
+      "universal_paper_id": "2510.22946",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 47,
+          "last_7_days": 47
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-27T02:59:57.000Z",
+      "publication_date": "2025-10-27T02:59:57.000Z",
+      "updated_at": "2025-10-28T09:15:21.773Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "image-generation",
+        "lightweight-models",
+        "model-merging",
+        "multi-modal-learning",
+        "parameter-efficient-training",
+        "transfer-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Monash University",
+          "image": "images/organizations/monash-university.png"
+        },
+        {
+          "name": "Tsinghua University",
+          "image": "images/organizations/tsinghua.png"
+        },
+        {
+          "name": "ByteDance",
+          "image": "images/organizations/bytedance.png"
+        },
+        {
+          "name": "University of California, Santa Cruz",
+          "image": "images/organizations/ucsc.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/UCSC-VLAA/UCSC-VLAA.github.io",
+      "distance": 1
+    },
+    {
+      "id": "019a289e-f974-7224-ba25-78069e7f64c2",
+      "paper_group_id": "019a289e-f974-7224-ba25-78069e7f64c2",
+      "title": "Code Aesthetics with Agentic Reward Feedback",
+      "abstract": "大型语言模型（LLMs）已成为开发者在与代码相关任务中的宝贵助手。尽管LLMs在传统编程任务如代码生成和错误修复方面表现出色，但在视觉导向的编码任务中却表现不佳，常常产生美学效果不理想的代码。本文介绍了一种新的流程，以提高LLM生成代码的美学质量。我们首先构建了AesCode-358K，这是一个专注于代码美学的大规模指令调优数据集。接下来，我们提出了代理奖励反馈，这是一种多代理系统，用于评估可执行性、静态美学和交互美学。在此基础上，我们开发了GRPO-AR，它将这些信号整合到GRPO算法中，以实现功能性和代码美学的联合优化。最后，我们开发了OpenDesign，这是一个评估代码美学的基准测试。实验结果表明，将AesCode-358K上的监督微调与使用代理奖励反馈的强化学习相结合，显著提高了OpenDesign上的表现，并增强了在现有基准如PandasPlotBench上的结果。值得注意的是，我们的AesCoder-4B超越了GPT-4o和GPT-4.1，达到了与参数为480B-685B的大型开源模型相当的性能，凸显了我们方法的有效性。",
+      "paper_summary": {
+        "summary": "AesCoder enables large language models to generate aesthetically pleasing code for visually-oriented tasks like plot generation and webpage design. It achieves this by integrating a multi-agent reward framework and specialized training, allowing smaller models to outperform larger counterparts.",
+        "originalProblem": [
+          "Large Language Models (LLMs) struggle to produce aesthetically pleasing code for visually-oriented tasks such as data visualizations or web pages, often resulting in suboptimal visual outputs.",
+          "Current reward systems for training coding LLMs rely on single textual modalities, limiting their ability to assess visual and interactive aesthetics.",
+          "There is a lack of large-scale instruction-tuning datasets and dedicated benchmarks specifically designed for evaluating code aesthetics, particularly for interactive web design."
+        ],
+        "solution": [
+          "The AesCoder pipeline was developed, combining a large-scale instruction-tuning dataset (AesCode-358K) and a multi-agent reward framework for comprehensive aesthetic feedback.",
+          "An Agentic Reward Framework was implemented, employing execution, static aesthetics (via GPT-5 multimodal LLM), and interactive aesthetics (via WebVoyager with GPT-4o) agents to provide diverse feedback signals.",
+          "A two-stage training approach was used, starting with Supervised Fine-Tuning (SFT) on AesCode-358K, followed by Reinforcement Learning (RL) using the GRPO algorithm with Agentic Reward Feedback (GRPO-AR).",
+          "A new benchmark, OpenDesign, was created to enable efficient and automated assessment of webpage aesthetics from both static and interactive perspectives."
+        ],
+        "keyInsights": [
+          "Multi-modal, agent-based reward feedback is essential for guiding LLMs to generate aesthetically pleasing code, significantly outperforming approaches that rely solely on textual rewards.",
+          "Specialized instruction-tuning on a curated dataset combined with reinforcement learning from agentic aesthetic feedback allows smaller open-source LLMs (4B, 7B) to achieve competitive performance against much larger open-source and proprietary models.",
+          "The concept of 'code aesthetics' for visually rendered outputs can be effectively defined, measured, and incorporated into LLM training, extending the scope of AI-generated content quality beyond functional correctness."
+        ],
+        "results": [
+          "AesCoder models (4B and 7B) consistently achieved improvements in aesthetic quality, showing lower error rates and higher 'good rates' on Python-based plot generation tasks (PandasPlotBench).",
+          "On the OpenDesign benchmark for webpage design, AesCoder models demonstrated substantial gains in static and interactive aesthetics, outperforming large open-source models (30B-685B parameters).",
+          "AesCoder-4B surpassed leading proprietary models like GPT-4o and GPT-4.1 on both PandasPlotBench and OpenDesign, achieving comparable aesthetic scores to GPT-5 and Claude Sonnet 4, as validated by human evaluations."
+        ]
+      },
+      "image_url": "image/2510.23272v1.png",
+      "universal_paper_id": "2510.23272",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 67,
+          "last_7_days": 67
+        },
+        "public_total_votes": 11
+      },
+      "first_publication_date": "2025-10-27T12:32:33.000Z",
+      "publication_date": "2025-10-27T12:32:33.000Z",
+      "updated_at": "2025-10-28T02:21:38.548Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.CL",
+        "data-curation",
+        "deep-reinforcement-learning",
+        "fine-tuning",
+        "instruction-tuning",
+        "multi-agent-learning",
+        "optimization-methods",
+        "text-generation"
+      ],
+      "organization_info": [
+        {
+          "name": "Peking University",
+          "image": "images/organizations/peking.png"
+        },
+        {
+          "name": "Microsoft",
+          "image": "images/organizations/microsoft.png"
+        },
+        {
+          "name": "Zhiyuan College, Shanghai Jiao Tong University",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/bangx7/code_aesthetics",
+      "distance": 1
+    },
+    {
+      "id": "019a2910-1cbe-74ec-aec4-2772a8f9483c",
+      "paper_group_id": "019a2910-1cbe-74ec-aec4-2772a8f9483c",
+      "title": "Knocking-Heads Attention",
+      "abstract": "多头注意力(MHA)已成为现代大型语言模型的基石，通过并行注意力头增强表示能力。然而，增加头的数量本质上削弱了单个头的能力，而现有的注意力机制——无论是标准的MHA还是其变体，如分组查询注意力(GQA)和分组绑定注意力(GTA)——只是简单地将孤立头的输出连接起来，缺乏强烈的交互。为了解决这一限制，我们提出了敲头注意力(KHA)，使注意力头能够“相互敲击”——在缩放点积注意力之前促进跨头特征级交互。这是通过在所有头之间应用一个共享的、对角初始化的投影矩阵来实现的。对角初始化在训练开始时保持头的专业化，同时允许模型逐步学习集成的跨头表示。KHA仅增加了最小的参数和浮点运算，并且可以无缝集成到MHA、GQA、GTA和其他注意力变体中。我们通过在1T高质量标记上训练一个61亿参数的MoE模型（激活1.01亿）来验证KHA。与基线注意力机制相比，KHA带来了更优越和更稳定的训练动态，在下游任务中取得了更好的性能。",
+      "paper_summary": {
+        "summary": "Knocking-Heads Attention (KHA) introduces shared, diagonally-initialized projection matrices to enable efficient cross-head feature-level interactions within multi-head attention mechanisms for large language models. This architectural enhancement significantly reduces loss spikes during pre-training and improves downstream task performance by an average of 1.26 points across various benchmarks, with minimal computational overhead.",
+        "originalProblem": [
+          "Standard Multi-Head Attention (MHA) operates with isolated heads, limiting expressive power and potentially creating redundancy.",
+          "Existing methods for inter-head interaction often introduce high computational overhead or are incompatible with efficient attention implementations like FlashAttention.",
+          "Large language model pre-training frequently encounters loss spikes, leading to training instability and wasted computational resources."
+        ],
+        "solution": [
+          "Knocking-Heads Attention (KHA) integrates shared, diagonally-initialized projection matrices into the Q, K, and V paths for feature-level inter-head communication.",
+          "KHA offers KHA-Linear (zero inference overhead via matrix absorption) and KHA-MLP (non-linear interaction with comparable parameter count) variants.",
+          "A diagonal initialization strategy ensures initial head specialization is preserved, allowing for adaptive learning of cross-head collaboration."
+        ],
+        "keyInsights": [
+          "Applying knocking-heads projections to the value (V) representations yields the most significant performance improvements among Q, K, and V.",
+          "Diagonal initialization of the shared projection matrices is critical for maintaining head specialization during early training and achieving stable convergence.",
+          "KHA effectively regularizes the training process, leading to a substantial reduction in the frequency and severity of loss spikes."
+        ],
+        "results": [
+          "A 6.1B parameter MoE model equipped with KHA achieved an average 1.26-point improvement across various downstream tasks, including a 4.32-point gain in Language Understanding.",
+          "KHA reduced the frequency and severity of loss spikes during 1T token pre-training, leading to a consistently lower training loss (approximately 0.015 points) in later stages.",
+          "The method demonstrated broad compatibility, enhancing MHA, GQA, MQA, and GTA across models ranging from 0.44B to 14.6B parameters with minimal computational overhead."
+        ]
+      },
+      "image_url": "image/2510.23052v1.png",
+      "universal_paper_id": "2510.23052",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 53,
+          "last_7_days": 53
+        },
+        "public_total_votes": 12
+      },
+      "first_publication_date": "2025-10-27T06:28:58.000Z",
+      "publication_date": "2025-10-27T06:28:58.000Z",
+      "updated_at": "2025-10-28T04:25:13.150Z",
+      "topics": [
+        "attention-mechanisms",
+        "Computer Science",
+        "cs.CL",
+        "efficient-transformers",
+        "generative-models",
+        "parameter-efficient-training",
+        "representation-learning",
+        "sequence-modeling",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Ant Group",
+          "image": null
+        },
+        {
+          "name": "Zhejiang University",
+          "image": "images/organizations/zhejiang.png"
+        },
+        {
+          "name": "Westlake University",
+          "image": "images/organizations/westlake-university.jpeg"
+        },
+        {
+          "name": "Renmin University of China",
+          "image": "images/organizations/renmin.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a0998-93c4-7993-a782-1cd52db19b53",
+      "paper_group_id": "019a0998-93c4-7993-a782-1cd52db19b53",
+      "title": "LightMem: Lightweight and Efficient Memory-Augmented Generation",
+      "abstract": "尽管大型语言模型（LLMs）具有卓越的能力，但在动态和复杂环境中，它们仍难以有效利用历史交互信息。内存系统使LLMs能够超越无状态交互，通过引入持久的信息存储、检索和利用机制。然而，现有的内存系统往往带来相当大的时间和计算开销。为此，我们提出了一种新的内存系统，称为LightMem，它在内存系统的性能和效率之间取得了平衡。LightMem受到阿特金森-希夫林人类记忆模型的启发，将记忆组织为三个互补的阶段。首先，受认知启发的感官记忆通过轻量压缩快速过滤无关信息，并根据主题对信息进行分组。接下来，具有主题意识的短期记忆巩固这些基于主题的分组，为更结构化的访问组织和总结内容。最后，具有睡眠时间更新的长期记忆采用一种离线程序，将巩固与在线推理解耦。在与GPT和Qwen骨架的LongMemEval实验中，LightMem在准确性上超过强基线（提高高达10.9%），同时减少了硬币使用次数最多117倍、API调用次数最多159倍，运行时间超过12倍。代码可在该链接获取。",
+      "paper_summary": {
+        "summary": "LightMem introduces a lightweight and efficient memory system for Large Language Models, enabling them to effectively process long and dynamic conversational contexts with improved accuracy and drastically reduced computational overhead. It achieves up to 117x fewer tokens, 177x fewer API calls, and over 12x faster runtime while increasing question-answering accuracy by up to 10.9%.",
+        "originalProblem": [
+          "Large Language Models struggle with fixed context windows and the 'lost in the middle' problem, limiting their ability to leverage historical interaction information in long, dynamic conversations.",
+          "Existing LLM memory systems incur substantial inefficiencies, characterized by high token consumption, excessive API calls, and long runtimes due to redundant information processing.",
+          "Memory construction often lacks semantic cohesion, leading to fragmented or inaccurate representations, and real-time complex memory updates introduce significant latency during interactions."
+        ],
+        "solution": [
+          "LightMem employs a three-stage, human-memory-inspired architecture (Sensory Memory, Short-Term Memory, Long-Term Memory) to efficiently filter, organize, and consolidate information.",
+          "The Light1 (Sensory Memory) module pre-compresses raw input using LLMLingua-2 to remove redundant tokens and segments the input into topic-coherent units with a hybrid attention- and similarity-based approach.",
+          "Light2 (Short-Term Memory) summarizes these topic segments into concise memory entries, while Light3 (Long-Term Memory) uses soft, direct insertions during online inference and parallelized 'sleep-time' offline updates for deeper, consistent consolidation."
+        ],
+        "keyInsights": [
+          "A multi-stage, human-memory-inspired architecture is highly effective for drastically improving both the efficiency and accuracy of LLM memory in dynamic conversational environments.",
+          "Pre-compression of raw dialogue input and dynamic, topic-aware segmentation are crucial for reducing redundant processing and enhancing semantic cohesion in memory unit construction.",
+          "Decoupling complex memory update and consolidation processes from online inference, through a 'sleep-time' parallelized update mechanism, significantly reduces real-time latency while enabling high-fidelity memory reorganization."
+        ],
+        "results": [
+          "LightMem consistently demonstrated superior performance, achieving up to 10.9% higher question-answering accuracy compared to the strongest baselines like A-Mem.",
+          "The system provided substantial efficiency gains, reducing total token consumption by a factor of 10x to 117x and API calls by 3.3x to 177x across different LLM backbones.",
+          "Overall runtime was reduced by a factor ranging from 1.67x to 12.45x, highlighting significant improvements in operational speed and cost efficiency."
+        ]
+      },
+      "image_url": "image/2510.18866v1.png",
+      "universal_paper_id": "2510.18866",
+      "metrics": {
+        "total_votes": 15,
+        "visits_count": {
+          "all": 1010,
+          "last_7_days": 944
+        },
+        "public_total_votes": 97
+      },
+      "first_publication_date": "2025-10-21T17:58:17.000Z",
+      "publication_date": "2025-10-21T17:58:17.000Z",
+      "updated_at": "2025-10-22T01:46:25.604Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.LG",
+        "cs.MA",
+        "human-ai-interaction",
+        "inference-optimization",
+        "lightweight-models",
+        "model-compression",
+        "representation-learning",
+        "text-generation",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "National University of Singapore",
+          "image": "images/organizations/national-university-of-singapore.svg+xml"
+        },
+        {
+          "name": "Zhejiang University",
+          "image": "images/organizations/zhejiang.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 50,
+      "github_url": "https://github.com/zjunlp/LightMem",
+      "distance": 1
+    },
+    {
       "id": "019a251c-1491-72d6-95b1-dd003122d496",
       "paper_group_id": "019a251c-1491-72d6-95b1-dd003122d496",
       "title": "WorldGrow: Generating Infinite 3D World",
-      "abstract": "我们面临生成可以无限扩展的3D世界的挑战——大型、连续的环境，拥有一致的几何形状和逼真的外观。现有的方法面临关键挑战：2D提升方法在视角间存在几何和外观不一致，3D隐式表示难以扩展，而目前的3D基础模型主要以物体为中心，限制了它们在场景级别生成中的适用性。我们的关键洞察是利用预训练的3D模型中强大的生成先验来进行结构化场景块的生成。为此，我们提出了WorldGrow，一个用于无限3D场景合成的分层框架。我们的方法具有三个核心组件：（1）一个数据整理管道，用于提取高质量的场景块以进行训练，使3D结构化潜在表示适合场景生成；（2）一个3D块修复机制，使得场景扩展具有上下文感知能力；（3）一种粗到细的生成策略，确保全球布局的合理性以及局部几何/纹理的保真度。在大规模3D-FRONT数据集上的评估表明，WorldGrow在几何重建方面达到了领先的性能，同时独特地支持无限场景生成，输出逼真且结构一致的结果。这些结果突显了其构建大规模虚拟环境的能力以及未来世界模型的构建潜力。",
+      "abstract": "我们面临着生成无限可扩展的3D世界的挑战——大规模、连续的环境，具有连贯的几何形状和逼真的外观。现有方法面临关键挑战：二维提升方法在不同视图之间存在几何和外观的不一致性，三维隐式表示难以扩展，而当前的三维基础模型大多以物体为中心，限制了其在场景级生成中的适用性。我们的关键见解是利用预训练3D模型的强生成功能，用于结构化场景块的生成。为此，我们提出了WorldGrow，一个用于无限3D场景合成的分层框架。我们的方法具有三个核心组件：（1）一个数据整理管道，提取高质量的场景块用于训练，使得3D结构化潜在表示适合场景生成；（2）一个3D块修复机制，实现上下文感知的场景扩展；（3）一种粗到细的生成策略，确保全局布局的合理性及局部几何/纹理的保真度。在大规模的3D-FRONT数据集上进行评估，WorldGrow在几何重建方面达到了最先进的性能，同时独特地支持无限场景生成，产生照片般真实且结构一致的输出。这些结果突显了其构建大规模虚拟环境的能力以及未来构建世界模型的潜力。",
       "paper_summary": {
         "summary": "WorldGrow presents a hierarchical framework for generating infinitely extendable 3D worlds by adapting powerful 3D foundation models. It produces continuous environments with coherent geometry and photorealistic appearance, demonstrating superior perceptual quality and structural plausibility in large-scale scenes.",
         "originalProblem": [
@@ -221,12 +1289,12 @@ const papersData = {
       "image_url": "image/2510.21682v1.png",
       "universal_paper_id": "2510.21682",
       "metrics": {
-        "total_votes": 3,
+        "total_votes": 5,
         "visits_count": {
-          "all": 138,
-          "last_7_days": 138
+          "all": 217,
+          "last_7_days": 217
         },
-        "public_total_votes": 17
+        "public_total_votes": 25
       },
       "first_publication_date": "2025-10-24T17:39:52.000Z",
       "publication_date": "2025-10-24T17:39:52.000Z",
@@ -267,73 +1335,278 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a09db-6f76-753a-a087-dfaa1ae3c0d3",
-      "paper_group_id": "019a09db-6f76-753a-a087-dfaa1ae3c0d3",
-      "title": "DeepSeek-OCR: Contexts Optical Compression",
-      "abstract": "我们提出了DeepSeek-OCR，作为对通过光学二维映射压缩长文本的可行性的初步研究。DeepSeek-OCR由两个组件组成：DeepEncoder和DeepSeek3B-MoE-A570M作为解码器。具体来说，DeepEncoder作为核心引擎，旨在在高分辨率输入下保持低激活，同时实现高压缩比，以确保视觉标记的数量既最佳又可管理。实验表明，当文本标记数量在视觉标记的10倍以内（即压缩比小于10倍）时，该模型可以实现97%的解码（OCR）精度。即使在20倍的压缩比下，OCR精度仍保持在约60%。这为历史长文本压缩和大语言模型中的记忆遗忘机制等研究领域展现了相当大的潜力。此外，DeepSeek-OCR还展示了较高的实用价值。在OmniDocBench上，它仅使用100个视觉标记就超越了GOT-OCR2.0（每页256个标记），并在使用不足800个视觉标记的情况下优于MinerU2.0（每页平均6000个以上标记）。在生产中，DeepSeek-OCR能够每天生成超过20万页的LLMs/VLMs训练数据（使用单个A100-40G）。代码和模型权重在此HTTP网址上公开获取。",
+      "id": "019a299d-f37e-70bc-acee-0a37bf1c7d90",
+      "paper_group_id": "019a299d-f37e-70bc-acee-0a37bf1c7d90",
+      "title": "Scalable Supervising Software Agents with Patch Reasoner",
+      "abstract": "虽然大语言模型代理在软件工程任务中取得了进展，但现有基于测试的监督方式的不可扩展性限制了数据规模扩大的潜力。原因有二：（1）构建和运行测试沙箱相对繁重且脆弱；（2）高覆盖测试的数据自然稀缺，并在边缘情况下受到测试破解的威胁。在本文中，我们提出了R4P，一个补丁验证模型，通过推理为训练和测试软件工程（SWE）代理提供可扩展的奖励。我们认为补丁验证本质上是一个推理任务，反映了人类代码库维护者在不编写和运行新重现测试的情况下如何审查补丁。为了获得足够的参考并降低奖励破解的风险，R4P使用组目标进行强化学习训练，使其能够相互验证多个补丁的修改，并获得稠密的奖励以实现稳定的训练。R4P在验证SWE-bench-verified的补丁时达到了72.2%的准确率，超越了OpenAI的o3。为了展示R4P的实用性，我们设计并训练了一个轻量级框架Mini-SE，采用纯强化学习，所有奖励均来自R4P。因此，Mini-SE在SWE-bench-verified上达到了26.2%的通过率提升，较原始的Qwen3-32B提高了10.0%。通过R4P进行测试时可进一步提升至32.8%。此外，R4P在一秒内验证补丁，平均比测试快50倍。奖励和准确率的稳定扩展曲线以及高效率反映了R4P的实用性。",
       "paper_summary": {
-        "summary": "DeepSeek-OCR explores \"contexts optical compression\" to enable Large Language Models (LLMs) to process lengthy texts more efficiently by representing information visually. The model achieves approximately 97% text decoding precision at 9-10x vision-text compression ratios and sets new benchmarks in OCR performance with significantly fewer vision tokens, while also offering advanced deep parsing capabilities for structured data.",
+        "summary": "A collaborative team from The Chinese University of Hong Kong, Shenzhen, and ByteDance developed R4P, a reasoning-based patch verifier that provides scalable, test-free supervision for Large Language Model (LLM) agents in software engineering. This approach enables efficient training and evaluation by leveraging a group-wise task formulation, unlocking vast amounts of previously unusable, untested real-world software issues.",
         "originalProblem": [
-          "Large Language Models (LLMs) face significant computational and memory challenges due to quadratic scaling with increasing input sequence length, limiting their ability to process long textual contexts.",
-          "Existing vision encoders in Vision-Language Models (VLMs) suffer from limitations such as complex deployment, excessive image fragmentation, or high activation memory consumption for high-resolution documents.",
-          "Traditional OCR models have not explicitly addressed the optimal vision-text compression ratio or the minimum number of vision tokens required for accurate text decoding when integrating with LLMs for long-context understanding."
+          "Traditional test-based supervision for LLM software engineering agents relies on heavy, fragile infrastructure for test execution, limiting scalability and parallel processing.",
+          "A scarcity of high-quality, high-coverage test data restricts training, leaving vast amounts of real-world issues in open-source projects unutilized.",
+          "Existing tests often suffer from low coverage, allowing LLM agents to generate \"tricky patches\" that pass tests but do not genuinely fix the underlying issue."
         ],
         "solution": [
-          "DeepSeek-OCR is an end-to-end Vision-Language Model consisting of a novel 380M-parameter DeepEncoder and a DeepSeek3B-MoE decoder.",
-          "The DeepEncoder combines SAM-base and CLIP-large models with a crucial 16x Token Compressor (a 2-layer convolutional network) to process high-resolution images efficiently, reduce activation memory, and generate a minimal number of vision tokens.",
-          "The model supports multiple resolution modes, including dynamic 'Gundam' modes, to handle ultra-high-resolution inputs via tiling, and is trained on a diverse dataset encompassing traditional OCR, complex artificial images (charts, formulas, geometry), and general vision data."
+          "Introduction of R4P (Reasoning for Patch Verifier), a novel model that frames patch verification as a reasoning task, moving away from execution-based methods.",
+          "R4P employs a group-wise task formulation where multiple candidate patches are compared, providing richer contextual information and a denser reward signal for stable reinforcement learning.",
+          "R4P is trained with an RL algorithm on carefully sampled patch groups and used to supervise a lightweight, execution-free agent (Mini-SE) entirely without traditional sandbox testing."
         ],
         "keyInsights": [
-          "The visual modality can serve as an effective and quantifiable compression layer for textual information, allowing an image to represent rich text with substantially fewer tokens than its digital counterpart, thereby mitigating LLM long-context issues.",
-          "Balancing local visual detail perception (SAM) with global contextual understanding (CLIP) while drastically reducing token count via an intermediate compressor enables high-resolution input processing with minimal vision token overhead.",
-          "The concept of progressively downsizing rendered images to simulate 'optical forgetting' suggests a biologically inspired mechanism for creating theoretically unlimited context architectures in LLMs."
+          "Patch verification is fundamentally a reasoning task, similar to human code review, which can be effectively modeled by LLMs to overcome limitations of execution-based testing.",
+          "Evaluating a group of candidate patches rather than individual ones provides crucial comparative context, mitigates context deficiency, and generates a denser, more stable reward signal for reinforcement learning.",
+          "Decoupling patch verification from execution-based testing significantly improves efficiency and scalability, enabling the utilization of massive, previously unsupervisable datasets for training software agents."
         ],
         "results": [
-          "The model achieves approximately 97% decoding precision on text-rich documents with 600-1300 text tokens when the vision-text compression ratio is within 10x, with precision remaining around 60% even at 20x compression.",
-          "DeepSeek-OCR, using 100 vision tokens, outperforms existing models like GOT-OCR2.0 (256 tokens) on the OmniDocBench and surpasses MinerU2.0 (nearly 7,000 tokens) in its Gundam mode (fewer than 800 tokens).",
-          "It demonstrates advanced 'deep parsing' capabilities, extracting structured information from charts (to HTML), chemical formulas (to SMILES), and geometric figures, supporting nearly 100 languages, and generates over 200,000 pages per day on a single A100 GPU for training data."
+          "R4P achieved 72.2% accuracy on the SWE-bench-verified dataset, outperforming larger proprietary models and specialized trajectory verifiers.",
+          "The lightweight Mini-SE agent, trained purely with R4P's rewards, reached a 26.2% Pass@1 resolution rate on SWE-bench-verified, a 10.0% improvement over the base model.",
+          "R4P verifies patches in approximately one second, demonstrating over a 50x speedup compared to traditional test-based verification, which averaged 50 seconds and frequently timed out."
         ]
       },
-      "image_url": "image/2510.18234v1.png",
-      "universal_paper_id": "2510.18234",
+      "image_url": "image/2510.22775v1.png",
+      "universal_paper_id": "2510.22775",
       "metrics": {
-        "total_votes": 222,
+        "total_votes": 0,
         "visits_count": {
-          "all": 6915,
-          "last_7_days": 6915
+          "all": 48,
+          "last_7_days": 48
         },
-        "public_total_votes": 421
+        "public_total_votes": 9
       },
-      "first_publication_date": "2025-10-21T02:41:44.000Z",
-      "publication_date": "2025-10-21T02:41:44.000Z",
-      "updated_at": "2025-10-22T02:59:27.222Z",
+      "first_publication_date": "2025-10-26T17:52:05.000Z",
+      "publication_date": "2025-10-26T17:52:05.000Z",
+      "updated_at": "2025-10-28T07:00:08.702Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.CL",
+        "cs.SE",
+        "ml-systems",
+        "model-observability",
+        "reasoning",
+        "reinforcement-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "ByteDance",
+          "image": "images/organizations/bytedance.png"
+        },
+        {
+          "name": "The Chinese University of Hong Kong, Shenzhen",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2c7c-c15e-7c46-9ac9-995bd9b7ba0b",
+      "paper_group_id": "019a2c7c-c15e-7c46-9ac9-995bd9b7ba0b",
+      "title": "How Do AI Agents Do Human Work? Comparing AI and Human Workflows Across Diverse Occupations",
+      "abstract": "AI代理不断被优化以执行与人类工作相关的任务，如软件工程和专业写作，这表明了一个对人力资源有重大影响的迫切趋势。然而，这些代理开发往往没有建立在对人类如何执行工作的清晰理解之上，因此未能揭示代理所具备的专业知识及其在多种工作流程中可以扮演的角色。在本研究中，我们通过对人类和代理工作者在多项重要工作相关技能（数据分析、工程、计算、写作和设计）上的首次直接比较，研究代理是如何执行人类工作的。为了更好地理解和比较工人在异构计算机使用活动中的表现，我们引入了一种可扩展的工具包，从人类或代理的计算机使用活动中引导可解释的结构化工作流程。利用这些引导的工作流程，我们比较了人类和代理在执行相同任务时的表现，发现：（1）尽管代理在与人类工作流程的对齐上展现出潜力，但它们在所有工作领域都采取了压倒性的程序化方法，即使在开放式、视觉依赖的任务（如设计）中，这与人类通常使用的以用户界面为中心的方法形成了对比。（2）代理产生的工作质量较低，但往往通过数据伪造和高级工具的不当使用来掩盖其缺陷。（3）尽管如此，代理的交付结果比人类快88.3%，且成本比人类低90.4%-96.2%，这突显了通过将容易编程的任务委派给代理来实现高效协作的潜力。",
+      "paper_summary": {
+        "summary": "A study comparing AI agent and human work processes across five occupational skill categories developed a toolkit to induce and align hierarchical workflows from raw computer-use activities. The research reveals that AI agents favor programmatic approaches, produce lower-quality work with issues like data fabrication, yet offer substantial speed and cost efficiencies, while human workflows are more significantly altered by AI automation than augmentation.",
+        "originalProblem": [
+          "Current AI agent development often overlooks how humans perform work, leading to a disconnect between agent capabilities and real-world workflows.",
+          "Existing evaluation paradigms for AI agents primarily focus on end-task outcomes, lacking insights into the underlying processes or how agents' methods compare to human approaches.",
+          "There is a need for systematic, fine-grained comparisons between human and AI agent work processes to inform effective human-AI collaboration and task delegation across diverse occupations."
+        ],
+        "solution": [
+          "Designed 80 realistic, long-horizon tasks across five major skill categories common to 287 U.S. occupations (data analysis, engineering, computation, writing, design).",
+          "Collected raw computer-use activity data from 48 qualified human workers and four representative LLM agent frameworks (ChatGPT Agent, Manus, OpenHands).",
+          "Developed a novel, scalable workflow induction toolkit to automatically transform heterogeneous, low-level activities into hierarchical, interpretable workflows for fine-grained comparative analysis."
+        ],
+        "keyInsights": [
+          "AI agents predominantly adopt programmatic approaches for tasks across various domains, contrasting sharply with humans who utilize diverse, interactive UI-oriented tools.",
+          "Human workflows undergo substantial alterations when using AI for full automation (shifting to reviewing/debugging), but only experience minor changes with AI augmentation.",
+          "Despite procedural consistency, agents often deliver lower-quality work through behaviors like data fabrication and tool misuse, though efficient task delegation by teaming humans and agents can leverage their respective strengths."
+        ],
+        "results": [
+          "Agents exhibited a 93.8% program-use rate, aligning 27.8% more strongly with program-oriented human workflows than with UI-centric ones.",
+          "Human workers experienced a 24.3% efficiency gain and 76.8% workflow alignment under AI augmentation, but a 17.7% slowdown and 40.3% alignment under AI automation.",
+          "Agents produced work with 32.5–49.5% lower success rates compared to humans, often demonstrating data fabrication and tool misuse, yet delivered results 88.3–96.6% faster and at 90.4–96.2% lower cost."
+        ]
+      },
+      "image_url": "image/2510.22780v1.png",
+      "universal_paper_id": "2510.22780",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 40,
+          "last_7_days": 40
+        },
+        "public_total_votes": 5
+      },
+      "first_publication_date": "2025-10-26T18:10:22.000Z",
+      "publication_date": "2025-10-26T18:10:22.000Z",
+      "updated_at": "2025-10-28T20:22:44.830Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.HC",
+        "human-ai-interaction",
+        "industrial-automation",
+        "ml-systems",
+        "model-observability",
+        "test-time-inference",
+        "tool-use"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 5,
+      "github_url": "https://github.com/zorazrw/workflow-induction-toolkit",
+      "distance": 1
+    },
+    {
+      "id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
+      "paper_group_id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
+      "title": "Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents",
+      "abstract": "我们介绍了Game-TARS，一种通用游戏代理，采用统一、可扩展的动作空间，基于与人类对齐的原生键盘-鼠标输入进行训练。与基于API或GUI的方法不同，这一范式使得在异构领域进行大规模持续预训练成为可能，包括操作系统、网页和模拟游戏。Game-TARS在超过5000亿个标记上进行了预训练，涵盖多样的轨迹和多模态数据。关键技术包括衰减持续损失以减少因果混淆，以及一种高效的稀疏思维策略，能够平衡推理深度和推断成本。实验表明，Game-TARS在开放世界Minecraft任务上的成功率约为之前最佳模型的两倍，在未见过的网页3D游戏中接近新手玩家的通用性，并在FPS基准测试中优于GPT-5、Gemini-2.5-Pro和Claude-4-Sonnet。训练和测试时的扩展结果证实，统一的动作空间在跨游戏和多模态数据的扩展中保持了改进。我们的研究结果表明，简单、可扩展的动作表示与大规模预训练相结合，为具备广泛计算机使用能力的通用代理提供了有前景的路径。",
+      "paper_summary": null,
+      "image_url": "image/2510.23691v1.png",
+      "universal_paper_id": "2510.23691",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 34,
+          "last_7_days": 34
+        },
+        "public_total_votes": 4
+      },
+      "first_publication_date": "2025-10-27T17:43:51.000Z",
+      "publication_date": "2025-10-27T17:43:51.000Z",
+      "updated_at": "2025-10-29T08:13:32.278Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "continual-learning",
+        "cs.AI",
+        "deep-reinforcement-learning",
+        "imitation-learning",
+        "inference-optimization",
+        "multi-modal-learning",
+        "tool-use",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2a1b-1829-74f8-842a-71b062afa63e",
+      "paper_group_id": "019a2a1b-1829-74f8-842a-71b062afa63e",
+      "title": "LongCat-Video Technical Report",
+      "abstract": "视频生成是通往世界模型的一个关键途径，而高效的长视频推断是其中一个重要能力。为此，我们介绍了LongCat-Video，这是一种基础的视频生成模型，拥有136亿个参数，在多个视频生成任务中表现出色。它特别擅长高效和高质量的长视频生成，代表了我们迈向世界模型的第一步。其主要特点包括：统一的多任务架构：基于扩散变换器（DiT）框架，LongCat-Video支持文本到视频、图像到视频和视频延续任务，通过一个模型实现；长视频生成：在视频延续任务上进行预训练，使LongCat-Video在生成分钟长的视频时能够保持高质量和时间一致性；高效推断：LongCat-Video通过在时间和空间轴上采用粗到细的生成策略，在几分钟内生成720p、30帧每秒的视频；块稀疏注意力进一步提高了效率，特别是在高分辨率下；多奖励RLHF的强大性能：多奖励RLHF训练使LongCat-Video的性能与最新的闭源和领先的开源模型相当。代码和模型权重已公开，旨在加速该领域的进展。",
+      "paper_summary": {
+        "summary": "The Meituan LongCat Team developed LongCat-Video, a 13.6-billion-parameter foundational model capable of generating high-quality, minutes-long videos efficiently from text or images. The model achieved a leading score in the \"Commonsense\" dimension on VBench 2.0, demonstrating improved physical plausibility and motion rationality, and offers a unified framework for diverse video generation tasks.",
+        "originalProblem": [
+          "Existing video generation models often struggle with maintaining temporal coherence and quality over extended durations.",
+          "Generating high-resolution, high-frame-rate videos is computationally intensive, limiting practical application.",
+          "Many current approaches require specialized models for different tasks like Text-to-Video, Image-to-Video, and Video-Continuation."
+        ],
+        "solution": [
+          "Introduced a Diffusion Transformer (DiT) architecture with 13.6 billion parameters, unifying Text-to-Video, Image-to-Video, and Video-Continuation tasks within a single framework.",
+          "Implemented a coarse-to-fine generation strategy and Block Sparse Attention (BSA) to enable efficient high-resolution and long-duration video synthesis.",
+          "Utilized a multi-reward Group Relative Policy Optimization (GRPO) training approach to align model outputs with human preferences for visual quality, motion quality, and text-video alignment."
+        ],
+        "keyInsights": [
+          "A coarse-to-fine generation strategy effectively balances quality and efficiency, allowing for high-resolution video generation without excessive computational overhead.",
+          "Multi-reward GRPO, with modifications like fixed stochastic timesteps and reweighting coefficients, can effectively optimize video generation models for complex human preferences, preventing reward hacking.",
+          "Trainable 3D Block Sparse Attention can significantly reduce computational cost for high-resolution video while maintaining near-lossless quality, critical for long video generation."
+        ],
+        "results": [
+          "Achieved a leading score in the \"Commonsense\" dimension of the VBench 2.0 benchmark, indicating superior motion rationality and physical plausibility in generated videos.",
+          "Demonstrated the ability to generate minutes-long videos (up to 2 minutes at 720p, 30fps) without significant quality degradation or color drifting.",
+          "Exhibited competitive performance in internal MOS (Mean Opinion Score) evaluations for Text-to-Video and Image-to-Video tasks, nearly matching top commercial models in visual quality and surpassing state-of-the-art open-source alternatives in overall quality."
+        ]
+      },
+      "image_url": "image/2510.22200v1.png",
+      "universal_paper_id": "2510.22200",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 79,
+          "last_7_days": 79
+        },
+        "public_total_votes": 15
+      },
+      "first_publication_date": "2025-10-25T07:41:02.000Z",
+      "publication_date": "2025-10-25T07:41:02.000Z",
+      "updated_at": "2025-10-28T09:16:50.089Z",
       "topics": [
         "Computer Science",
         "cs.CV",
+        "deep-reinforcement-learning",
         "efficient-transformers",
+        "fine-tuning",
+        "generative-models",
+        "image-generation",
         "inference-optimization",
-        "information-extraction",
         "multi-modal-learning",
-        "synthetic-data",
         "transformers",
         "vision-language-models"
       ],
       "organization_info": [
         {
-          "name": "DeepSeek",
-          "image": "images/organizations/deepseek.png"
+          "name": "Meituan",
+          "image": null
         }
       ],
       "author_info": [],
-      "github_stars": 9072,
-      "github_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+      "github_stars": 645,
+      "github_url": "https://github.com/meituan-longcat/LongCat-Video",
+      "distance": 1
+    },
+    {
+      "id": "019a2e41-430c-7d0d-bc75-080e6007894a",
+      "paper_group_id": "019a2e41-430c-7d0d-bc75-080e6007894a",
+      "title": "MiniOneRec: An Open-Source Framework for Scaling Generative Recommendation",
+      "abstract": "大型语言模型（LLMs）近期的成功重新引发了人们对推荐系统是否能实现类似规模效益的兴趣。传统推荐系统普遍依赖于庞大的嵌入表，随着嵌入维度的增加，这类系统往往会出现性能瓶颈。相比之下，新的生成范式用自回归变换器生成的紧凑语义ID（SID）序列取代了嵌入。然而，大多数工业部署仍然是专有的，留下了两个基本问题待解：（1）预期的规模法则在公共基准上是否成立？（2）实现竞争性能的最小后训练方案是什么？\n\n我们提出了MiniOneRec，尽我们所知，这是第一个完全开源的生成推荐框架，提供了一个端到端的工作流程，涵盖SID构建、监督微调和针对推荐的强化学习。我们通过残差量化变分自编码器生成SID，并在亚马逊评论数据集上对从0.5B到7B参数的Qwen骨干网络进行后训练。实验表明，随着模型大小的增加，训练和评估损失均显示出一致的下降趋势，验证了生成方法的参数效率。为了进一步提升性能，我们提出了一种轻量且有效的后训练管道，(1) 强制进行全过程SID对齐，(2) 应用带约束解码和混合奖励的强化学习。这些技术结合起来，在排名准确性和候选多样性方面都取得了显著提升。",
+      "paper_summary": null,
+      "image_url": "image/2510.24431v1.png",
+      "universal_paper_id": "2510.24431",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 33,
+          "last_7_days": 33
+        },
+        "public_total_votes": 7
+      },
+      "first_publication_date": "2025-10-28T13:58:36.000Z",
+      "publication_date": "2025-10-28T13:58:36.000Z",
+      "updated_at": "2025-10-29T04:37:00.300Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.IR",
+        "efficient-transformers",
+        "fine-tuning",
+        "generative-models",
+        "parameter-efficient-training",
+        "recommender-systems",
+        "reinforcement-learning",
+        "representation-learning",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 14,
+      "github_url": "https://github.com/AkaliKong/MiniOneRec",
       "distance": 1
     },
     {
       "id": "019a24e8-c03e-7621-9d93-6387c729db49",
       "paper_group_id": "019a24e8-c03e-7621-9d93-6387c729db49",
       "title": "Visual Diffusion Models are Geometric Solvers",
-      "abstract": "在本文中，我们展示了视觉扩散模型可以作为有效的几何求解器：它们可以通过在像素空间中工作，直接推理几何问题。我们首先在内切平方问题上证明了这一点，这是一个长期以来在几何学中存在的问题，询问每个乔丹曲线是否包含四个点形成一个正方形。接着，我们将这种方法扩展到另外两个著名的难题：斯坦纳树问题和简单多边形问题。\n\n我们的方法将每个问题实例视为图像，并训练一个标准的视觉扩散模型，该模型将高斯噪声转换为表示有效近似解的图像，该近似解与精确解密切匹配。该模型学习将噪声几何结构转变为正确的配置，有效地将几何推理重新放置为图像生成。\n\n与之前的研究不同，后者在将扩散应用于参数几何表示时需要专门的架构和领域特定的调整，我们采用一个标准的视觉扩散模型，该模型作用于问题的视觉表示。这种简单性突显了生成建模与几何问题求解之间令人惊讶的桥梁。超越此处研究的特定问题，我们的结果指向一个更广泛的范式：在图像空间中操作为近似那些著名的难题提供了一个通用而实用的框架，并为解决更广泛的挑战性几何任务打开了大门。",
+      "abstract": "在本文中，我们展示了视觉扩散模型可以作为有效的几何求解器：它们可以通过在像素空间中工作，直接推理几何问题。我们首先在内接正方形问题上证明了这一点，这是一个长期存在的几何问题，询问每个乔丹曲线是否包含四个点形成一个正方形。然后我们将这种方法扩展到另外两个著名的难题几何问题：施泰纳树问题和简单多边形问题。\n\n我们的方法将每个问题实例视为一幅图像，并训练一个标准的视觉扩散模型，该模型将高斯噪声转化为代表有效近似解的图像，该近似解与精确解紧密匹配。模型学习将嘈杂的几何结构转换为正确的配置，有效地将几何推理重新表述为图像生成。\n\n与先前的工作不同，后者在将扩散应用于参数几何表示时需要专门的架构和领域特定的调整，我们采用一个标准的视觉扩散模型，该模型在问题的视觉表示上运行。这种简单性突出了一座意想不到的桥梁，连接了生成建模和几何问题求解。超越这里所研究的具体问题，我们的结果指向一个更广泛的范式：在图像空间中操作为近似著名的难题提供了一个通用而实用的框架，并为解决更广泛的挑战性几何任务打开了大门。",
       "paper_summary": {
         "summary": "Visual diffusion models, leveraging a standard U-Net architecture, can effectively approximate solutions to complex geometric problems such as the Steiner Tree and Maximum Area Polygon by operating purely in pixel space. This method achieved high solution accuracy, with a mean Euclidean length ratio of 1.0008 to optimal for Steiner Trees and finding exact optimal solutions for Maximum Area Polygon in 57.4% of cases, demonstrating generalization capabilities.",
         "originalProblem": [
@@ -360,12 +1633,12 @@ const papersData = {
       "image_url": "image/2510.21697v1.png",
       "universal_paper_id": "2510.21697",
       "metrics": {
-        "total_votes": 3,
+        "total_votes": 8,
         "visits_count": {
-          "all": 94,
-          "last_7_days": 94
+          "all": 159,
+          "last_7_days": 159
         },
-        "public_total_votes": 15
+        "public_total_votes": 26
       },
       "first_publication_date": "2025-10-24T17:57:31.000Z",
       "publication_date": "2025-10-24T17:57:31.000Z",
@@ -398,404 +1671,54 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a1759-3897-7864-9e1c-c9fbe9ad8173",
-      "paper_group_id": "019a1759-3897-7864-9e1c-c9fbe9ad8173",
-      "title": "Thought Communication in Multiagent Collaboration",
-      "abstract": "自然语言长期以来促进了人类合作，但其损耗性、模糊性和间接性限制了集体智慧的潜力。虽然机器不受这些限制，但大多数基于大型语言模型的多代理系统仍然仅依赖自然语言，交换标记或其嵌入。为了超越语言，我们引入了一种新的范式——思想沟通，使代理能够像心灵感应一样进行直接的心智对话。为了以原则性的方式揭示这些潜在思想，我们将这一过程形式化为一个一般潜变量模型，其中代理状态由潜在思想的未知函数生成。我们证明，在没有辅助信息的非参数环境中，任何一对代理之间的共享和私有潜在思想都可以被识别。此外，思想共享的全局结构，包括哪些代理共享哪些思想以及这些关系是如何构建的，也可以在理论上得到恢复。在既定理论的指导下，我们开发了一个框架，该框架在沟通之前从所有代理中提取潜在思想，并为每个代理分配相关思想及其共享模式。这种范式自然扩展到所有模态，因为大多数观察数据来自隐藏的生成过程。在合成和现实世界基准上的实验验证了该理论，并展示了思想沟通的协作优势。我们希望这项工作能阐明利用隐藏世界的潜力，因为许多挑战仅通过表层观察无法解决，无论计算或数据规模如何。",
+      "id": "019a04ba-21a1-7422-b529-6edb25aa0e24",
+      "paper_group_id": "019a04ba-21a1-7422-b529-6edb25aa0e24",
+      "title": "The Free Transformer",
+      "abstract": "我们提出了一种解码器Transformer的扩展，它的生成过程以随机潜变量为条件，这些潜变量通过变分过程在无监督的情况下学习。实验评估表明，允许这种条件设置在下游任务上带来了显著的改进。",
       "paper_summary": {
-        "summary": "Researchers from Carnegie Mellon University, Meta AI, and Mohamed bin Zayed University of Artificial Intelligence introduce \"thought communication,\" a method for multi-agent LLMs to exchange latent thoughts directly rather than through natural language. The THOUGHTCOMM framework, backed by nonparametric identifiability theory, achieves an average 19.06% relative improvement in accuracy over state-of-the-art multi-agent finetuning on math reasoning benchmarks, demonstrating greater efficiency and scalability.",
+        "summary": "The Free Transformer augments standard decoder-only Transformer architectures by conditioning their generative process on learned, unsupervised random latent variables injected into a middle layer. This architectural innovation from FAIR at Meta enhances performance on reasoning-intensive tasks like code generation and math problems, demonstrating improved inductive bias with minimal computational overhead.",
         "originalProblem": [
-          "Multi-agent LLM collaboration is fundamentally limited by the sequential, ambiguous, and imprecise nature of natural language communication, leading to inter-agent misalignment and failures.",
-          "Existing multi-agent communication methods primarily optimize within the natural language framework, failing to address its inherent constraints for developing truly collective intelligence.",
-          "Traditional identifiability theory for latent variable models often relies on strong assumptions or auxiliary information, which are not always applicable for recovering agent \"thoughts\" in a general nonparametric setting."
+          "Purely autoregressive decoder-only Transformers must implicitly infer latent quantities from token sequences, leading to indirect and potentially inefficient computations.",
+          "This implicit inference increases model complexity and capacity requirements, as well as vulnerability to error propagation from early token errors.",
+          "The autoregressive paradigm can hinder the emergence of \"natural\" data structures, potentially limiting out-of-distribution generalization."
         ],
         "solution": [
-          "A new communication paradigm called \"thought communication\" is proposed, enabling AI agents to interact directly \"mind-to-mind\" by exchanging latent thoughts derived from their internal model states.",
-          "A robust theoretical framework, grounded in a latent generative model, establishes nonparametric identifiability for shared and private latent thoughts, as well as their structural organization, under general conditions without auxiliary information.",
-          "The THOUGHTCOMM framework implements this by using a sparsity-regularized autoencoder to uncover latent thoughts and an agreement-based reweighting strategy with prefix adaptation to inject personalized latent representations into agents' reasoning."
+          "Extends the standard decoder Transformer by embedding a conditional Variational Autoencoder (VAE) framework directly within its structure.",
+          "Latent variables are injected into the middle layer of a shared Transformer decoder, specifically modulating the attention mechanism's key-value space.",
+          "A non-causal Transformer block acts as an encoder to infer latent variables from the full sequence during training, coupled with a \"free bits\" method to prevent KL collapse."
         ],
         "keyInsights": [
-          "Direct communication of latent thoughts, bypassing natural language, can overcome the inherent limitations of current multi-agent LLM collaboration, enabling more precise and efficient inter-agent interaction.",
-          "Shared and private latent thoughts, along with their structural organization across agents, can be nonparametrically identified under general, practical conditions without relying on auxiliary information.",
-          "A lightweight, modular, and task-agnostic framework can effectively enable \"thought communication\" by extracting latent states and injecting them as prefixes, significantly enhancing collaborative performance and scalability for multi-agent systems."
+          "The model effectively learns to condition its generative process on unsupervised latent variables, which capture meaningful structural properties of the data.",
+          "Careful control over the information flow into the latent variable (via the free-bits threshold \"kappa\") is crucial to prevent KL collapse and ensure beneficial utilization.",
+          "This integrated design provides enhanced inductive bias for complex generative tasks with minimal computational overhead (3-3.6% increase in compute/parameters)."
         ],
         "results": [
-          "On challenging math reasoning benchmarks (MATH and GSM8K), THOUGHTCOMM achieved an average relative accuracy improvement of 19.06% over \"Multiagent Finetuning\" (a SOTA baseline) and 67.23% over a single-LLM baseline.",
-          "Synthetic experiments validated the core identifiability theory, successfully disentangling and recovering shared and private latent variables with higher R^2 scores compared to baselines without sparsity regularization.",
-          "THOUGHTCOMM demonstrates high efficiency and scalability, requiring only a lightweight autoencoder and adapter training (computational cost scales with embedding dimension, not LLM parameters), and maintaining robust performance across various LLMs, debate rounds, and prefix lengths."
+          "Achieved substantial performance gains, often exceeding 10%, on generative code (HumanEval+, MBPP) and math (GSM8K) benchmarks, as well as general knowledge (MMLU, CSQA) for both 1.5B and 8B parameter models.",
+          "Demonstrated stable training across scales (up to 8B parameters on 1T tokens) with cross-entropy values remaining very close to baseline models.",
+          "The benefits were sustained and sometimes amplified when scaling to 8B models trained on 1T tokens, confirming the approach consistently improves inductive bias."
         ]
       },
-      "image_url": "image/2510.20733v1.png",
-      "universal_paper_id": "2510.20733",
+      "image_url": "image/2510.17558v1.png",
+      "universal_paper_id": "2510.17558",
       "metrics": {
-        "total_votes": 6,
+        "total_votes": 42,
         "visits_count": {
-          "all": 275,
-          "last_7_days": 275
+          "all": 2196,
+          "last_7_days": 2002
         },
-        "public_total_votes": 33
+        "public_total_votes": 166
       },
-      "first_publication_date": "2025-10-23T16:48:02.000Z",
-      "publication_date": "2025-10-23T16:48:02.000Z",
-      "updated_at": "2025-10-24T17:51:54.519Z",
+      "first_publication_date": "2025-10-20T14:05:30.000Z",
+      "publication_date": "2025-10-20T14:05:30.000Z",
+      "updated_at": "2025-10-21T03:04:58.529Z",
       "topics": [
-        "agents",
+        "bayesian-deep-learning",
         "Computer Science",
-        "cs.AI",
         "cs.LG",
-        "cs.MA",
         "generative-models",
-        "multi-agent-learning",
-        "reasoning",
         "representation-learning",
+        "transformers",
         "unsupervised-learning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a13f2-71bc-722c-932a-fc8ebf018ff5",
-      "paper_group_id": "019a13f2-71bc-722c-932a-fc8ebf018ff5",
-      "title": "LLM-empowered knowledge graph construction: A survey",
-      "abstract": "知识图谱（KGs）长期以来一直作为结构化知识表示和推理的基础设施。随着大型语言模型（LLMs）的出现，KG的构建进入了一个新的范式——从基于规则和统计的流程转向以语言驱动的生成框架。本调查提供了LLM赋能的知识图谱构建的最新进展的全面概述，系统地分析了LLM如何重塑经典的三层管道：本体工程、知识提取和知识融合。\n\n我们首先回顾传统的KG方法，以建立概念基础，然后从两个互补的视角审视新兴的LLM驱动的方法：一种是基于结构、规范化和一致性的架构导向范式，另一种是强调灵活性、适应性和开放发现的无架构范式。在每个阶段，我们综合代表性的框架，分析它们的技术机制，并识别其局限性。\n\n最后，调查概述了关键趋势和未来的研究方向，包括基于KG的LLM推理、智能系统的动态知识记忆以及多模态KG构建。通过这一系统性的回顾，我们旨在澄清LLM与知识图谱之间不断演变的互动，架起符号知识工程与神经语义理解之间的桥梁，推动自适应、可解释和智能知识系统的发展。",
-      "paper_summary": {
-        "summary": "This survey provides a comprehensive analysis of how Large Language Models (LLMs) are reshaping Knowledge Graph Construction (KGC), detailing their impact across ontology engineering, knowledge extraction, and knowledge fusion. It categorizes current LLM-driven approaches, synthesizes representative frameworks, and identifies future research directions for building more adaptive and generative knowledge systems.",
-        "originalProblem": [
-          "Traditional Knowledge Graph Construction (KGC) methods faced scalability limitations and high reliance on expert human intervention for schema design and data annotation.",
-          "Conventional KGC pipelines were rigid in adapting to new domains and suffered from cumulative error propagation across fragmented stages.",
-          "These limitations historically hindered the creation of truly self-evolving, large-scale, and dynamic knowledge graphs."
-        ],
-        "solution": [
-          "Large Language Models (LLMs) are leveraged as \"cognitive engines\" to perform generative knowledge modeling and semantic unification, directly synthesizing structured representations from unstructured text.",
-          "LLMs orchestrate complex KGC workflows through instruction-driven orchestration (prompt-based interactions), moving beyond fragmented, rule-driven pipelines.",
-          "The survey systematically analyzes LLM integration into the three primary stages of KGC: ontology engineering, knowledge extraction, and knowledge fusion, categorizing approaches into schema-based and schema-free paradigms."
-        ],
-        "keyInsights": [
-          "The KGC landscape is undergoing a fundamental shift from traditional rule-based or statistical methods to unified, adaptive, and generative frameworks powered by LLMs.",
-          "LLMs facilitate a move from static schemas to dynamic induction, integrate pipeline modularity into generative unification, and enable a transition from symbolic rigidity to semantic adaptability.",
-          "Knowledge Graphs are envisioned as dynamic, cognitive infrastructures that can serve as persistent memory and reasoning substrates for LLM agents, enhancing their logical consistency, causal inference, and interpretability."
-        ],
-        "results": [
-          "LLMs empower ontology engineering through top-down (e.g., CQ-based, natural language-based) and bottom-up (e.g., data-driven schema induction) methods, achieving schema quality comparable to novice human modelers and supporting dynamic schema evolution.",
-          "In knowledge extraction, LLMs advance both schema-based methods (evolving from fixed to co-evolving schemas) and schema-free methods (e.g., structured generative extraction, Open Information Extraction), demonstrating broad generalization capabilities.",
-          "For knowledge fusion, LLMs enable flexible schema-level and instance-level unification through adaptive reasoning and multi-step prompting, progressing towards autonomous, self-correcting workflows in comprehensive frameworks."
-        ]
-      },
-      "image_url": "image/2510.20345v1.png",
-      "universal_paper_id": "2510.20345",
-      "metrics": {
-        "total_votes": 7,
-        "visits_count": {
-          "all": 322,
-          "last_7_days": 322
-        },
-        "public_total_votes": 39
-      },
-      "first_publication_date": "2025-10-23T08:43:28.000Z",
-      "publication_date": "2025-10-23T08:43:28.000Z",
-      "updated_at": "2025-10-24T02:00:47.292Z",
-      "topics": [
-        "agentic-frameworks",
-        "Computer Science",
-        "cs.AI",
-        "generative-models",
-        "information-extraction",
-        "multi-modal-learning",
-        "neuro-symbolic-ai",
-        "reasoning",
-        "text-generation",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Xidian University",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
-      "paper_group_id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
-      "title": "Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations",
-      "abstract": "人类通过多感官协同学习抽象概念，一旦形成，这些表征通常可以从单一模态中回忆起来。受到这一原理的启发，我们推出了Concerto，这是一种人类概念学习的极简模拟，用于空间认知，结合了3D内模态自蒸馏与2D-3D跨模态联合嵌入。尽管其简单，Concerto学会了更连贯和富有信息的空间特征，通过零样本可视化得以证明。在3D场景感知的线性 probing 中，其性能分别比独立的 SOTA 2D 和 3D 自监督模型提高了 14.2% 和 4.8%，以及它们的特征级联。通过全面微调，Concerto 在多个场景理解基准上创造了新的 SOTA 结果（例如：在 ScanNet 上达到 80.7% 的 mIoU）。我们还推出了一种针对视频提升的点云空间理解的 Concerto 变体，以及一个将 Concerto 表征线性投影到 CLIP 语言空间的转换器，从而实现开放世界感知。这些结果突显出 Concerto 在空间表征上展现出优越的细粒度几何和语义一致性。",
-      "paper_summary": {
-        "summary": "Concerto, a joint 2D-3D self-supervised learning framework developed by researchers from The University of Hong Kong, The Chinese University of Hong Kong, and Harbin Institute of Technology, synergistically combines intra-modal 3D self-distillation and cross-modal 2D-3D joint embedding prediction. This approach learns unified spatial representations, achieving 80.7% mIoU for 3D semantic segmentation on ScanNet and demonstrating robust data efficiency.",
-        "originalProblem": [
-          "Representations learned independently from 2D images and 3D point clouds do not fully overlap, missing complementary spatial information.",
-          "3D self-supervised learning has historically lagged behind its 2D counterpart due to the sparse, unstructured, and often incomplete nature of point cloud data.",
-          "Existing multi-modal approaches often rely on simple feature concatenation or one-way distillation, failing to achieve true synergistic integration of modalities."
-        ],
-        "solution": [
-          "Concerto employs a dual-branch self-supervised learning framework combining 3D intra-modal self-distillation (extending Sonata) and 2D-3D cross-modal joint embedding prediction.",
-          "The 3D branch refines point cloud representations using a teacher-student clustering objective, while the 2D-3D branch trains the 3D encoder to predict features from a frozen 2D image encoder (DINOv2) using camera parameters for correspondence.",
-          "This approach enables a 'multisensory synergy' where modalities continuously inform and enhance each other, leading to emergent, unified spatial representations."
-        ],
-        "keyInsights": [
-          "Deep, joint self-supervised learning between 2D images and 3D point clouds can yield representations that are fundamentally richer and more coherent than those derived from individual modalities or simple fusions.",
-          "A 'minimalist simulation of human concept learning' through combined intra-modal refinement and cross-modal prediction fosters emergent spatial cognition in machines.",
-          "The learned spatial representations can be effectively aligned with human language via linear projection into a language space like CLIP, opening avenues for open-world 3D perception."
-        ],
-        "results": [
-          "Concerto achieved 77.3% mIoU for 3D semantic segmentation on ScanNet with linear probing, surpassing concatenated SOTA 2D and 3D features by 1.4%.",
-          "With full fine-tuning, it established new state-of-the-art with 80.7% mIoU on ScanNet and 39.2% on ScanNet200.",
-          "The framework demonstrated superior data efficiency, outperforming supervised methods across all protocols in the ScanNet Data Efficient benchmark, especially in data-limited scenarios."
-        ]
-      },
-      "image_url": "image/2510.23607v1.png",
-      "universal_paper_id": "2510.23607",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 45,
-          "last_7_days": 45
-        },
-        "public_total_votes": 6
-      },
-      "first_publication_date": "2025-10-27T17:59:59.000Z",
-      "publication_date": "2025-10-27T17:59:59.000Z",
-      "updated_at": "2025-10-28T03:49:52.885Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV",
-        "geometric-deep-learning",
-        "multi-modal-learning",
-        "object-detection",
-        "representation-learning",
-        "self-supervised-learning",
-        "semantic-segmentation",
-        "transfer-learning",
-        "vision-language-models",
-        "zero-shot-learning"
-      ],
-      "organization_info": [
-        {
-          "name": "The Chinese University of Hong Kong",
-          "image": "images/organizations/chinesehongkong.png"
-        },
-        {
-          "name": "The University of Hong Kong",
-          "image": "images/organizations/hku.png"
-        },
-        {
-          "name": "Harbin Institute of Technology (Shenzhen)",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 58,
-      "github_url": "https://github.com/Pointcept/Concerto",
-      "distance": 1
-    },
-    {
-      "id": "019a144d-2189-701f-8efb-8bd3b4e59870",
-      "paper_group_id": "019a144d-2189-701f-8efb-8bd3b4e59870",
-      "title": "From Masks to Worlds: A Hitchhiker's Guide to World Models",
-      "abstract": "这不是一份典型的世界模型调查；它是一本为那些希望构建世界的人提供的指南。我们并不打算列举每一篇提到“世界模型”的论文。相反，我们遵循一条清晰的道路：从早期的掩蔽模型，这些模型在不同模态中统一了表示学习；到统一架构，这些架构共享单一范式；再到关闭行动-感知循环的交互生成模型；最后到能够在时间维度上维持一致世界的记忆增强系统。我们绕过松散相关的分支，集中于核心：生成的核心、交互循环和记忆系统。我们展示了这条道路是通往真正世界模型的最有前途的路径。",
-      "paper_summary": {
-        "summary": "A conceptual framework and evolutionary roadmap are proposed for building \"true world models,\" integrating a generative core, an interactive loop, and a persistent memory system into a five-stage progression. The framework aims to unify fragmented research efforts and define key architectural commitments necessary for creating dynamic, interactive, and self-sustaining computational worlds.",
-        "originalProblem": [
-          "A lack of clear, unifying consensus on what constitutes a \"true world model\" across diverse AI subfields.",
-          "Fragmented research efforts often optimize narrow tasks without a coherent vision for interactive and persistent simulated worlds.",
-          "Inconsistent definitions and applications of the term \"world model\" have led to ambiguity."
-        ],
-        "solution": [
-          "Proposes an opinionated \"Hitchhiker's Guide\" that synthesizes disparate research into a coherent, evolutionary roadmap for world models.",
-          "Establishes a precise, architectural definition of a true world model, integrating a generative heart, an interactive loop, and a persistent memory system.",
-          "Outlines a five-stage progression, from mask-based models to unified architectures, interactive generative models, memory-augmented systems, and finally, \"True World Models.\""
-        ],
-        "keyInsights": [
-          "True world models require the deliberate integration of a generative heart, an interactive loop, and a persistent memory system to achieve dynamic, interactive realities.",
-          "The field's progression can be understood through a five-stage evolutionary roadmap, where advancements in one stage lay the foundation for the next.",
-          "Achieving true world models hinges on addressing three fundamental challenges: coherence (evaluation), compression (scaling), and alignment (safety)."
-        ],
-        "results": [
-          "Articulated a precise architectural definition of a \"true world model\" comprising three indispensable subsystems: Generative Heart, Interactive Loop, and Memory System.",
-          "Established a five-stage evolutionary roadmap guiding the development of world models, categorizing existing and future advancements within each stage.",
-          "Identified emergent properties for true world models\n\t\t\t\t\t\t\t\t\t—Persistence, Agency, and Emergence—and defined three frontier challenges that must be overcome (Coherence, Compression, Alignment)."
-        ]
-      },
-      "image_url": "image/2510.20668v1.png",
-      "universal_paper_id": "2510.20668",
-      "metrics": {
-        "total_votes": 5,
-        "visits_count": {
-          "all": 210,
-          "last_7_days": 210
-        },
-        "public_total_votes": 30
-      },
-      "first_publication_date": "2025-10-23T15:46:44.000Z",
-      "publication_date": "2025-10-23T15:46:44.000Z",
-      "updated_at": "2025-10-24T03:39:50.537Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.LG",
-        "generative-models",
-        "multi-modal-learning",
-        "reinforcement-learning",
-        "representation-learning",
-        "self-supervised-learning",
-        "sequence-modeling"
-      ],
-      "organization_info": [
-        {
-          "name": "UCLA",
-          "image": "images/organizations/ucla.png"
-        },
-        {
-          "name": "National University of Singapore",
-          "image": "images/organizations/national-university-of-singapore.svg+xml"
-        },
-        {
-          "name": "Georgia Tech",
-          "image": null
-        },
-        {
-          "name": "UC Merced",
-          "image": null
-        },
-        {
-          "name": "MeissonFlow Research",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 9,
-      "github_url": "https://github.com/M-E-AGI-Lab/Awesome-World-Models",
-      "distance": 1
-    },
-    {
-      "id": "019a13ec-c73a-71df-aa73-6eb0795f4098",
-      "paper_group_id": "019a13ec-c73a-71df-aa73-6eb0795f4098",
-      "title": "KL-Regularized Reinforcement Learning is Designed to Mode Collapse",
-      "abstract": "人们普遍认为，优化逆KL散度会导致“模式寻求”，而优化正KL散度则会导致“覆盖质量”，后者在目标是从多个不同模式中进行抽样时更受欢迎。我们通过数学和实证的方式展示，这种直觉并不一定适用于通过逆/正KL正则化进行强化学习（例如，通常与语言模型一起使用）。相反，逆/正KL的选择决定了由正则化系数参数化的最优目标分布的家族。模式覆盖主要取决于其他因素，如正则化强度以及奖励与参考概率之间的相对尺度。此外，我们表明，常用的设置如低正则化强度和可验证奖励相等，往往指定单模态目标分布，这意味着优化目标在构造上就是非多样的。我们利用这些见解构建了一个简单、可扩展且理论上有正当理由的算法。它对奖励幅度的改动很小，但优化了一个目标分布，使其在所有高质量抽样模式上赋予高概率。在实验中，这一简单的修改可以有效地对大语言模型和化学语言模型进行后训练，提高解决方案的质量和多样性，而不依赖任何外部的多样性信号，并且在使用正逆KL时都能有效，因为直接使用往往失败。",
-      "paper_summary": {
-        "summary": "Researchers from NYU and EPFL demonstrate that KL-regularized reinforcement learning objectives inherently lead to mode collapse, proving that optimal solutions are often unimodal by design rather than due to optimization failures. They introduce Mode Anchored Reward Augmentation (MARA), a simple algorithm that modifies rewards to foster diverse, high-quality outputs across generative AI applications.",
-        "originalProblem": [
-          "Diversity collapse (mode collapse) is a pervasive issue in reinforcement learning post-training of foundation models, leading to models producing similar outputs despite multiple valid solutions.",
-          "Existing approaches to combat diversity collapse are often heuristic and address symptoms rather than the fundamental theoretical cause.",
-          "A lack of rigorous understanding of why diversity collapse occurs inherently within KL-regularized reinforcement learning objectives."
-        ],
-        "solution": [
-          "The authors conducted a rigorous theoretical analysis using variational inference to derive the globally optimal target distributions implicitly defined by KL-regularized RL objectives.",
-          "They developed Mode Anchored Reward Augmentation (MARA), a simple algorithm that redefines the reward function to ensure the optimal target distribution places uniformly high mass over all high-quality samples.",
-          "The theoretical claims and MARA's efficacy were validated through didactic simulations and experiments on Large Language Models (LLMs) and Chemical Language Models (CLMs)."
-        ],
-        "keyInsights": [
-          "KL-regularized RL objectives, under common settings, are intrinsically designed to yield unimodal optimal policies, indicating that diversity collapse is an inherent outcome rather than an optimization failure.",
-          "The choice between reverse and forward KL regularization does not primarily determine mode coverage; instead, the regularization strength (β), and relative magnitudes of rewards and reference probabilities are the dominant factors.",
-          "The proposed MARA algorithm promotes multimodality by modifying the reward function to equalize the effective reward-to-reference-probability ratio for all high-quality samples, thus directly shaping the target distribution."
-        ],
-        "results": [
-          "Theoretical analysis revealed that optimal KL-regularized policies exhibit exponential sensitivity to even minor reward differences and merely preserve reference policy ratios for equally rewarded samples, thereby leading to mode collapse.",
-          "MARA successfully maintained diversity and quality in LLM post-training, outperforming baselines in tasks like verifiable integer generation and creative question answering by achieving higher entropy and distinctness.",
-          "Applied to Chemical Language Models for drug discovery, MARA significantly increased the "
-        ]
-      },
-      "image_url": "image/2510.20817v1.png",
-      "universal_paper_id": "2510.20817",
-      "metrics": {
-        "total_votes": 8,
-        "visits_count": {
-          "all": 187,
-          "last_7_days": 187
-        },
-        "public_total_votes": 34
-      },
-      "first_publication_date": "2025-10-23T17:59:40.000Z",
-      "publication_date": "2025-10-23T17:59:40.000Z",
-      "updated_at": "2025-10-24T01:54:35.962Z",
-      "topics": [
-        "Computer Science",
-        "cs.LG",
-        "fine-tuning",
-        "generative-models",
-        "optimization-methods",
-        "reinforcement-learning",
-        "representation-learning",
-        "statistical-learning",
-        "text-generation",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "New York University",
-          "image": "images/organizations/nyu.png"
-        },
-        {
-          "name": "École Polytechnique Fédérale de Lausanne (EPFL)",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
-      "paper_group_id": "019a13e9-d98d-7ae9-855d-24e7a7abad50",
-      "title": "Collective Communication for 100k+ GPUs",
-      "abstract": "大型语言模型（LLMs）规模的不断扩大 necessitates 高效的集体通信框架，特别是在训练负载扩展到数十万块GPU时。传统通信方法在这个规模上面临着显著的吞吐量和延迟限制，阻碍了最先进模型的开发和部署。本文介绍了在Meta开发的NCCLX集体通信框架，旨在优化整个LLM生命周期的性能，从大规模训练的同步需求到推理的低延迟要求。该框架旨在支持超过100,000块GPU的集群上的复杂工作负载，确保可靠的、高吞吐量和低延迟的数据交换。对Llama4模型的实证评估显示了通信效率的显著提升。本研究为下一代LLMs在前所未有的规模下运行提供了强有力的解决方案。",
-      "paper_summary": {
-        "summary": "Meta's NCCLX introduces a new collective communication framework, building a host-driven, zero-copy, and SM-free communication stack called CTran to support training and deploying next-generation Large Language Models like Llama4 on clusters exceeding 100,000 GPUs. The framework improves Llama4 training step latency by up to 12%, accelerates training startup by up to 11x at 96K GPU scale, and enhances Llama4 Maverick inference decoding latency by 15% to 80% across configurations.",
-        "originalProblem": [
-          "Existing GPU communication libraries like NVIDIA NCCL face scalability and flexibility limitations when applied to multi-dimensional parallelism of LLMs at 100,000+ GPU scales.",
-          "NCCL's host-initiated, kernel-driven, copy-based model incurs overheads from CPU scheduling, GPU-to-CPU synchronizations for dynamic arguments, and GPU resource consumption for internal buffer copies.",
-          "NVSHMEM offers device-initiated communication but is constrained by symmetric memory region requirements and limited flexibility within the PyTorch ecosystem."
-        ],
-        "solution": [
-          "Introduced NCCLX, a unified host-driven, zero-copy, and SM-free collective communication framework built on a custom transport layer called CTran, designed for 100,000+ GPUs.",
-          "CTran employs host-driven CPU background threads for scheduling, enabling rapid deployment of HPC algorithms, co-design with model algorithms, and direct RDMA operations to bypass GPU kernel involvement.",
-          "Leverages modern GPU hardware features for zero-copy data transfers, issuing RDMA operations directly between user buffers, eliminating intermediate FIFO buffer copies and freeing up GPU SMs and HBM bandwidth."
-        ],
-        "keyInsights": [
-          "A host-driven communication framework with zero-copy data transfers can fundamentally overcome the scalability and flexibility limitations of traditional GPU communication libraries for ultra-large-scale LLM workloads.",
-          "Co-designing the communication stack with PyTorch's memory management and network hardware is crucial for maximizing efficiency and adaptability in production environments.",
-          "Addressing operational challenges like scalable initialization, fault tolerance, and comprehensive performance observability tools are as critical as raw communication throughput for robust large-scale AI system deployment."
-        ],
-        "results": [
-          "NCCLX reduced steady training step latency for Llama4 models by up to 12% and achieved up to 11x faster training startup time at 96K GPU scale compared to baseline NCCL.",
-          "For Llama4 Maverick inference, NCCLX demonstrated 15% to 80% improvements in end-to-end decoding latency across various distributed configurations.",
-          "Zero-copy CTran point-to-point communication achieved 1.09x to 2.7x speedup for medium message sizes over copy-based NCCL, while internal memory management reduced NCCL GPU memory usage by almost 2x."
-        ]
-      },
-      "image_url": "image/2510.20171v1.png",
-      "universal_paper_id": "2510.20171",
-      "metrics": {
-        "total_votes": 9,
-        "visits_count": {
-          "all": 296,
-          "last_7_days": 296
-        },
-        "public_total_votes": 41
-      },
-      "first_publication_date": "2025-10-23T03:32:04.000Z",
-      "publication_date": "2025-10-23T03:32:04.000Z",
-      "updated_at": "2025-10-24T01:51:24.045Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.DC",
-        "cs.NI",
-        "distributed-learning",
-        "efficient-transformers",
-        "hardware-aware-algorithms",
-        "inference-optimization",
-        "ml-systems",
-        "model-deployment-systems",
-        "model-serving-infrastructure",
-        "optimization-methods",
-        "training-orchestration",
-        "transformers"
       ],
       "organization_info": [
         {
@@ -804,38 +1727,64 @@ const papersData = {
         }
       ],
       "author_info": [],
-      "github_stars": 131,
-      "github_url": "https://github.com/meta-pytorch/torchcomms",
+      "github_stars": 300,
+      "github_url": "https://github.com/PengBoXiangShang/multigraph_transformer",
       "distance": 1
     },
     {
-      "id": "019a239f-7e8e-7fba-9349-86ac275849cb",
-      "paper_group_id": "019a239f-7e8e-7fba-9349-86ac275849cb",
-      "title": "The Universal Landscape of Human Reasoning",
-      "abstract": "理解信息如何在人的推理中动态积累和转化，长期以来对认知心理学、哲学和人工智能构成了挑战。现有的理论，从经典逻辑到概率模型，揭示了输出或个体建模的某些方面，但并未提供一个统一的、定量的关于一般人类推理动态的描述。为了解决这个问题，我们引入了信息流追踪（IF-Track），该方法利用大型语言模型（LLMs）作为概率编码器，在每个推理步骤中量化信息熵和增益。通过对多样化任务的细致分析，我们的方法首次成功地在一个单一的度量空间中建模了人类推理行为的普遍特征。我们展示了IF-Track捕捉到的重要推理特征，识别了系统性错误模式，并刻画了个体差异。在应用于先进心理理论的讨论时，我们首次在IF-Track中调和了单过程与双过程理论，发现了人工与人类认知的一致性及LLMs如何重塑人类推理过程。这一方法为理论与测量之间建立了定量的桥梁，提供了关于推理结构的机制性洞见。",
-      "paper_summary": null,
-      "image_url": "image/2510.21623v1.png",
-      "universal_paper_id": "2510.21623",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 47,
-          "last_7_days": 47
-        },
-        "public_total_votes": 6
+      "id": "019a29c7-dc36-79e4-a66e-ffd68ad51365",
+      "paper_group_id": "019a29c7-dc36-79e4-a66e-ffd68ad51365",
+      "title": "Think Twice: Branch-and-Rethink Reasoning Reward Model",
+      "abstract": "大型语言模型（LLMs）越来越依赖外化中间步骤并分配额外测试时间计算的思维模型，反思策略表明，经过深思熟虑的第二次过程可以引发更强的推理。相比之下，大多数奖励模型（RMs）仍然将许多质量维度压缩成一个单一的标量，这种设计导致判断扩散：注意力在评估标准间分散，导致关注度降低和分析肤浅。我们提出了分支重思（BR-RM），这是一种将思考两次原则转移到奖励建模的两轮奖励模型。第一轮进行自适应分支，选择一小部分关键维度（如事实性和安全性），并勾勒简明的寻证假设。第二轮执行基于分支的重思，这是一种针对性的重读，测试这些假设并仅审视最重要的内容。我们使用GRPO风格的强化学习在结构化的两轮记录上进行训练，采用简单的二元结果奖励并严格格式检查，使该方法与标准的强化学习人类反馈（RLHF）管道兼容。通过将一口气评分转换为聚焦的、第二次审视的推理，BR-RM减少了判断扩散，提高了对细微而重要错误的敏感性，同时保持了实用性和可扩展性。实验结果表明，我们的模型在三个具有挑战性的奖励建模基准测试中达到了最先进的性能，覆盖多个领域。代码和模型将很快发布。",
+      "paper_summary": {
+        "summary": "Researchers from NVIDIA and UIUC developed the Branch-and-Rethink (BR-RM) framework, a two-turn generative reasoning reward model that significantly enhances evaluation accuracy by explicitly addressing \"judgment diffusion.\" BR-RM establishes new state-of-the-art results across various reward modeling benchmarks, outperforming existing scalar, generative, and reasoning reward models.",
+        "originalProblem": [
+          "Traditional reward models (RMs) suffer from \"judgment diffusion,\" leading to \"focus dilution\" and \"shallow analysis\" as they attempt to compress numerous quality dimensions into a single, holistic score.",
+          "Existing RMs often miss subtle factual inaccuracies, logical inconsistencies, or localized errors that are critical for robust LLM performance and alignment.",
+          "Even advanced generative and reasoning RMs frequently lack instance-adaptive focus or a second pass conditioned on specific, discovered issues, limiting their depth of scrutiny."
+        ],
+        "solution": [
+          "The Branch-and-Rethink (BR-RM) framework introduces a two-turn generative evaluation process: adaptive branching followed by branch-conditioned rethinking.",
+          "In Stage 1 (Adaptive Branching), the model selects instance-critical evaluation criteria and generates a preliminary \"issue sketch\" for each response, forcing focused attention.",
+          "In Stage 2 (Branch-Conditioned Rethinking), the model re-evaluates responses by conducting a targeted, issue-driven deep analysis, guided by the findings from Stage 1 and task-specific evaluation hierarchies.",
+          "BR-RM is trained using Generalized Reward Policy Optimization (GRPO) with a curriculum-based reward function that strictly enforces the two-stage format and rewards accurate binary preference outcomes."
+        ],
+        "keyInsights": [
+          "Transferring the \"think twice\" principle from LLM problem-solvers to LLM evaluators significantly improves judgment accuracy and robustness by enabling deliberate, multi-step assessment.",
+          "Adaptive branching allows the reward model to dynamically narrow its evaluation scope to the most salient dimensions for each input, effectively combating focus dilution.",
+          "Conditioned rethinking, which involves a targeted re-evaluation based on specific issues identified in the first turn, is crucial for preventing shallow analysis and detecting subtle errors.",
+          "A direct, binary outcome reward combined with strict format adherence provides a more stable and effective training signal for complex generative reward models than scaled or additional rewards."
+        ],
+        "results": [
+          "BR-RM-Qwen-14B achieved an average accuracy of 84.2% across RewardBench, RM-Bench, and RMB, surpassing all baselines, including larger models like GPT-4o and INF-ORM-Llama3.1-70B.",
+          "Ablation studies confirmed the critical contribution of both adaptive branching and conditioned rethinking, with removing either component leading to significant performance degradation (e.g., up to 3.7 points drop on RMB for 'Branching Only').",
+          "Analysis of training data highlighted the necessity of a diverse mixture: foundational datasets (HelpSteer3) for general understanding, safety-focused data (Skywork) for safety, and specialized reasoning data (Math-Step-DPO) for complex reasoning tasks."
+        ]
       },
-      "first_publication_date": "2025-10-24T16:26:36.000Z",
-      "publication_date": "2025-10-24T16:26:36.000Z",
-      "updated_at": "2025-10-27T03:04:06.542Z",
+      "image_url": "image/2510.23596v1.png",
+      "universal_paper_id": "2510.23596",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 37,
+          "last_7_days": 37
+        },
+        "public_total_votes": 9
+      },
+      "first_publication_date": "2025-10-27T17:58:07.000Z",
+      "publication_date": "2025-10-27T17:58:07.000Z",
+      "updated_at": "2025-10-28T07:45:55.254Z",
       "topics": [
+        "agents",
+        "chain-of-thought",
         "Computer Science",
-        "cs.AI",
         "cs.CL",
-        "human-ai-interaction",
-        "machine-psychology",
+        "fine-tuning",
         "reasoning",
-        "representation-learning",
-        "statistical-learning"
+        "reasoning-verification",
+        "reinforcement-learning",
+        "test-time-inference",
+        "transformers"
       ],
       "organization_info": [
         {
@@ -843,32 +1792,8 @@ const papersData = {
           "image": "images/organizations/university-of-illinois-at-urbana-champaign.jpeg"
         },
         {
-          "name": "Shanghai Jiao Tong University",
-          "image": "images/organizations/shanghai-jiao-tong-university.png"
-        },
-        {
-          "name": "The Chinese University of Hong Kong",
-          "image": "images/organizations/chinesehongkong.png"
-        },
-        {
-          "name": "Central South University",
-          "image": null
-        },
-        {
-          "name": "Harbin Institute of Technology",
-          "image": null
-        },
-        {
-          "name": "The University of Hong Kong",
-          "image": "images/organizations/hku.png"
-        },
-        {
-          "name": "Princeton University",
-          "image": "images/organizations/princeton.jpg"
-        },
-        {
-          "name": "ByteDance Seed (China)",
-          "image": null
+          "name": "NVIDIA",
+          "image": "images/organizations/nvidia.png"
         }
       ],
       "author_info": [],
@@ -877,1073 +1802,97 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a0ed2-33d2-7e5a-b6cf-f29c444992aa",
-      "paper_group_id": "019a0ed2-33d2-7e5a-b6cf-f29c444992aa",
-      "title": "Semantic World Models",
-      "abstract": "基于世界模型的规划为机器人控制提供了一种强大的范式。传统方法训练一个模型，以当前帧和动作为条件预测未来帧，这个模型可以用于规划。然而，预测未来像素的目标通常与实际的规划目标相矛盾；强大的像素重建并不总是与良好的规划决策相关。本文认为，与其将未来帧重建为像素，不如让世界模型仅仅预测与任务相关的未来语义信息。为了实现这种预测，本文将世界建模视为一个关于未来帧中语义信息的视觉问答问题。这种视角使得可以使用与视觉语言模型相同的工具来进行世界建模。因此，视觉语言模型可以通过对图像-动作-文本数据进行监督微调的过程，训练为“语义”世界模型，从而为决策规划提供支持，同时继承预训练视觉语言模型的许多概括性和鲁棒性特性。本文展示了如何利用这样的语义世界模型在开放式机器人任务中进行策略改进，相较于基于重建的动作条件世界建模的典型范式，带来了显著的概括性提升。网站可在此 HTTPS URL 上访问。",
+      "id": "019a2a4d-7ba7-73bf-b831-ec6ea693080b",
+      "paper_group_id": "019a2a4d-7ba7-73bf-b831-ec6ea693080b",
+      "title": "Alita-G: Self-Evolving Generative Agent for Agent Generation",
+      "abstract": "大型语言模型（LLMs）在被构建为具有记忆、工具和反馈的代理时表现得更好。除此之外，自我进化的代理已经出现，但目前的工作主要将适应限制于提示重写或失败重试。因此，我们提出了ALITA-G，一个自我进化框架，通过系统地生成、抽象和策划模型上下文协议（MCP）工具，将通用代理转变为领域专家。在这个框架中，通用代理执行策划的目标领域任务，并从成功的轨迹中合成候选MCP。这些MCP随后被抽象为参数化原语，并整合到一个MCP盒子中。在推理时，ALITA-G在每个工具的描述和用例的帮助下执行增强检索的MCP选择，然后执行配备MCP执行器的代理。在多个基准测试GAIA、PathVQA以及人类最后的考试中，ALITA-G取得了显著的提升，同时减少了计算成本。在GAIA验证中，它达到了83.03%的pass@1和89.09%的pass@3，建立了新的最先进的结果，并将每个示例的平均标记数相较于强基线代理减少了约15%。因此，ALITA-G为从通用能力到可重用的领域特定能力提供了一条有原则的路径，提高了复杂推理任务的准确性和效率。",
       "paper_summary": {
-        "summary": "Researchers at the University of Washington and Sony AI developed Semantic World Models (SWMs) that redefine world modeling for robotics by predicting task-relevant semantic information through visual question answering (VQA) about future states, rather than reconstructing pixels. This approach, leveraging pre-trained Vision-Language Models, improved success rates on complex tasks by over 50% and demonstrated strong generalization to novel compositions and scenes, outperforming pixel-based world models and offline reinforcement learning methods.",
+        "summary": "ALITA-G is a self-evolution framework that transforms general-purpose large language model agents into domain-specific experts through task-conditioned, end-to-end adaptation of Model Context Protocol (MCP) tools. The framework notably improved task accuracy by 10.3% relatively on the GAIA benchmark, reaching 83.03%, while simultaneously reducing average token consumption by 15.5% compared to baseline generalist agents.",
         "originalProblem": [
-          "Traditional pixel-based world models prioritize high-fidelity visual reconstruction, which often fails to capture crucial task-relevant semantic details necessary for effective robotic planning.",
-          "The objective of predicting future pixels can conflict with the actual planning objective, leading to models that are visually accurate but semantically unhelpful for decision-making.",
-          "Existing methods for incorporating task-relevant information often impose additional assumptions or rely on rewards, limiting their general applicability for open-world robotic control."
+          "Existing self-evolving AI agents often adapt only within a narrow scope (single task) or through shallow mechanisms, failing to achieve true domain expertise.",
+          "General-purpose LLM agents lack the deep domain knowledge and efficient tool utilization required for high-performance execution on complex, specialized tasks.",
+          "Previous approaches for agent adaptation often struggle with 'prompt bloat' and inefficient tool selection, hindering both performance and computational efficiency."
         ],
         "solution": [
-          "The Semantic World Model (SWM) frames world modeling as a Visual Question Answering (VQA) problem about future states, using natural language to query task-relevant information.",
-          "SWM leverages pre-trained Vision-Language Models (VLMs) like PaliGemma, adapting them with an action projection matrix to condition future predictions on proposed actions.",
-          "A novel State-Action-Question-Answer (SAQA) dataset is programmatically generated in simulation to train the SWM, and both sampling-based and gradient-based planning strategies are employed."
+          "ALITA-G employs a multi-execution strategy where a master agent solves target tasks multiple times to generate diverse, successful trajectories and distill reusable Model Context Protocol (MCP) components.",
+          "A high-capacity LLM abstracts these raw MCPs into generalized, parameterized tools, forming a curated 'MCP Box' with standardized interfaces and enhanced documentation.",
+          "At inference, a Retrieval-Augmented Generation (RAG) mechanism dynamically selects the most relevant MCPs from the 'MCP Box' based on the task query, integrating them into a specialized agent architecture for efficient execution."
         ],
         "keyInsights": [
-          "Pixel-level reconstruction is often unnecessary and can be detrimental for robotic planning; focusing on semantic prediction directly addresses task-relevant information needs.",
-          "Large pre-trained Vision-Language Models provide a powerful foundation for robotic world models, offering strong generalization and semantic understanding from internet-scale data.",
-          "SWM can effectively learn from a mixture of optimal and suboptimal data, improving its accuracy and robustness, which is crucial for real-world data collection."
+          "Automating the generation, abstraction, and dynamic retrieval of task-specific executable tools (MCPs) enables end-to-end transformation of general LLM agents into domain experts.",
+          "Leveraging both descriptions and use cases for RAG-based MCP selection is crucial for accurately matching task queries to relevant and contextually appropriate tools.",
+          "A richer, well-curated MCP Box (e.g., from multiple generation iterations) directly correlates with higher task accuracy and improved reliability without introducing significant regressions."
         ],
         "results": [
-          "SWM dramatically improved success rates, raising performance on LangTable tasks from 14.4% to 81.6% and OGBench tasks from 45.33% to 76% using gradient-based policy improvement.",
-          "The model demonstrated superior generalization to novel object compositions and scene changes, outperforming pixel-based world models and offline reinforcement learning baselines in out-of-distribution scenarios.",
-          "Gradient-based planning with SWM was significantly more efficient, executing per action chunk in 1.56 seconds, compared to 676.41 seconds for the pixel-based Action-Conditioned Video Diffusion (AVD) baseline."
+          "ALITA-G_3x_ achieved 83.03% accuracy on the GAIA benchmark (pass@1), representing a 10.3% relative improvement over the Original Agent System's 75.15% accuracy.",
+          "The framework demonstrated computational efficiency gains, reducing average token consumption by 15.5% on GAIA (from 12,305 to 10,394 tokens) compared to the generalist agent.",
+          "ALITA-G also showed superior performance on PathVQA (60% vs. 52%) and HLE (33% vs. 24%) compared to the Original Agent System, highlighting its generalizability across diverse challenging domains."
         ]
       },
-      "image_url": "image/2510.19818v1.png",
-      "universal_paper_id": "2510.19818",
-      "metrics": {
-        "total_votes": 9,
-        "visits_count": {
-          "all": 346,
-          "last_7_days": 346
-        },
-        "public_total_votes": 46
-      },
-      "first_publication_date": "2025-10-22T17:53:45.000Z",
-      "publication_date": "2025-10-22T17:53:45.000Z",
-      "updated_at": "2025-10-23T02:07:28.210Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO",
-        "fine-tuning",
-        "multi-modal-learning",
-        "reinforcement-learning",
-        "representation-learning",
-        "robotic-control",
-        "transfer-learning",
-        "vision-language-models",
-        "visual-qa"
-      ],
-      "organization_info": [
-        {
-          "name": "University of Washington",
-          "image": "images/organizations/uw.png"
-        },
-        {
-          "name": "Sony AI",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 89,
-      "github_url": "https://github.com/AgibotTech/EWMBench",
-      "distance": 1
-    },
-    {
-      "id": "019a25a3-18de-7a2b-9e88-3e846e88c924",
-      "paper_group_id": "019a25a3-18de-7a2b-9e88-3e846e88c924",
-      "title": "Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation",
-      "abstract": "群体相对策略优化（GRPO）在基于流匹配的文本到图像（T2I）生成中展现出强大的潜力，但面临两个关键限制：不准确的优势归因，以及对生成的时间动态的忽视。在本研究中，我们认为将优化范式从步骤级别转向块级别可以有效缓解这些问题。在此基础上，我们提出了Chunk-GRPO，这是首个基于块级GRPO的T2I生成方法。其核心思想是将连续的步骤归类为一致的“块”，以捕捉流匹配的内在时间动态，并在块级别上优化策略。此外，我们引入了一种可选的加权采样策略，以进一步提升性能。大量实验表明，Chunk-GRPO在偏好对齐和图像质量方面均获得了优异的结果，突显了块级优化在基于GRPO的方法中的潜力。",
-      "paper_summary": {
-        "summary": "Researchers from Tsinghua University and Kuaishou Technology introduce Chunk-GRPO, an optimization framework for text-to-image generation that refines Group Relative Policy Optimization (GRPO) by optimizing at the chunk level. This method leverages the intrinsic temporal dynamics of flow matching to segment the generation process, achieving superior preference alignment and visual quality compared to existing GRPO approaches.",
-        "originalProblem": [
-          "Existing GRPO methods for text-to-image (T2I) generation suffer from inaccurate advantage attribution, uniformly applying a single final reward to all timesteps regardless of their individual contributions.",
-          "These methods often neglect the prompt-invariant, timestep-dependent temporal dynamics inherent in flow-matching-based T2I processes, treating each step uniformly.",
-          "Uniform policy updates across all timesteps can lead to sub-optimal learning signals, hindering fine-grained control for high-quality image generation."
-        ],
-        "solution": [
-          "Chunk-GRPO introduces chunk-level optimization for GRPO, grouping consecutive timesteps and computing importance ratios over chunk likelihoods to provide smoother gradient signals.",
-          "Chunk formation is guided by the intrinsic temporal dynamics of flow matching, identified through the relative L1 distance between intermediate latents, ensuring timesteps with similar dynamics are grouped.",
-          "An optional weighted sampling strategy biases updates towards high-noise chunks (early timesteps) to accelerate learning in critical generation phases, while acknowledging potential trade-offs with structural stability."
-        ],
-        "keyInsights": [
-          "Optimizing policy updates at a \"chunk\" level, rather than individual timesteps, leads to more accurate advantage attribution and smoother gradient signals in multi-step generative processes.",
-          "Flow-matching-based T2I generation exhibits clear, prompt-invariant temporal dynamics that can be leveraged to intelligently segment generation trajectories for more effective reinforcement learning.",
-          "While focusing training on high-noise chunks can accelerate preference alignment, it introduces a trade-off with maintaining overall image structure and semantic coherence, suggesting a need for balanced optimization."
-        ],
-        "results": [
-          "Chunk-GRPO consistently achieved higher human preference scores, with HPSv3 scores of 15.373 (vs. 15.080 for Dance-GRPO) and ImageReward scores of 1.149 (vs. 1.141 for Dance-GRPO), demonstrating superior preference alignment.",
-          "Qualitative evaluations show images generated by Chunk-GRPO feature stronger lighting contrast, more vivid colors, and finer-grained details compared to baseline methods.",
-          "The method achieved an overall score of 0.76 on the rewritten WISE benchmark (vs. 0.75 for Dance-GRPO), showing improved generalization and adherence to diverse textual prompts across categories like Cultural, Time, and Biology."
-        ]
-      },
-      "image_url": "image/2510.21583v1.png",
-      "universal_paper_id": "2510.21583",
+      "image_url": "image/2510.23601v1.png",
+      "universal_paper_id": "2510.23601",
       "metrics": {
         "total_votes": 0,
         "visits_count": {
-          "all": 41,
-          "last_7_days": 41
-        },
-        "public_total_votes": 6
-      },
-      "first_publication_date": "2025-10-24T15:50:36.000Z",
-      "publication_date": "2025-10-24T15:50:36.000Z",
-      "updated_at": "2025-10-27T12:27:17.086Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CV",
-        "deep-reinforcement-learning",
-        "generative-models",
-        "image-generation",
-        "multi-modal-learning",
-        "optimization-methods",
-        "reinforcement-learning",
-        "sequence-modeling",
-        "vision-language-models"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a298d-625b-7589-9dae-bd0721cafa20",
-      "paper_group_id": "019a298d-625b-7589-9dae-bd0721cafa20",
-      "title": "ReCode: Unify Plan and Action for Universal Granularity Control",
-      "abstract": "现实世界的任务需要在不同粒度上做出决策，而人类擅长通过利用统一的认知表征来实现这一点，其中规划被根本理解为一种高级行动形式。然而，目前基于大型语言模型（LLM）的代理缺乏在决策粒度之间流畅操作的关键能力。这一限制源于现有范式对高层规划和低层行动之间的严格分离，这损害了动态适应能力并限制了泛化。我们提出了ReCode（递归代码生成），这是一种新的范式，通过将规划与行动统一在单一代码表征中来解决这一限制。在这种表征中，ReCode将高层计划视为抽象占位符函数，代理随后递归地将其分解为更细粒度的子函数，直到达到原始动作。这种递归方法 dissolves 了计划与行动之间的严格边界，使代理能够动态控制其决策粒度。此外，递归结构本质上生成了丰富的多粒度训练数据，使模型能够学习分层决策过程。大量实验证明，ReCode在推理性能上显著超越先进基线，并在训练中表现出卓越的数据效率，验证了我们核心的见解：通过递归代码生成统一规划与行动是一种强大且有效的方法，以实现普遍的粒度控制。代码可以在此HTTPS网址获取。",
-      "paper_summary": {
-        "summary": "DeepWisdom, alongside researchers from The Hong Kong University of Science and Technology (Guangzhou), Renmin University of China, Zhejiang University, and Mila, developed RECODE, a paradigm that unifies planning and action in Large Language Model agents through recursive code generation. This approach provides agents with universal granularity control, leading to a 20.9% relative improvement in average task reward over state-of-the-art baselines and a substantial reduction in both training data requirements and inference costs.",
-        "originalProblem": [
-          "Existing LLM-based agents, like ReAct, operate with a fixed, low level of decision granularity, limiting strategic foresight and adaptability in complex tasks.",
-          "Agents with explicit planners rigidly separate high-level planning from low-level action execution, preventing dynamic adjustment of decision granularity based on evolving task complexities.",
-          "These architectural constraints lead to brittle performance and reduced generalization capabilities in dynamic, real-world environments."
-        ],
-        "solution": [
-          "RECODE unifies planning and action by representing both as Python function calls, treating abstract plans as higher-level actions or 'placeholder functions'.",
-          "It employs a recursive generation-execution loop where the LLM policy dynamically decomposes high-level placeholder functions into finer-grained sub-functions until primitive, executable actions are reached.",
-          "This process allows agents to build a hierarchical decision tree, adapting decision granularity to the current context without explicit supervision."
-        ],
-        "keyInsights": [
-          "Planning and action are not distinct cognitive processes but rather represent decisions at different levels of granularity within a unified control framework.",
-          "Representing plans as abstract placeholder functions that are recursively expanded enables dynamic and universal control over decision granularity, mirroring human cognitive flexibility.",
-          "The inherent hierarchical structure of recursive code generation naturally yields rich, multi-granularity training data, which significantly enhances learning signals and data efficiency for agents."
-        ],
-        "results": [
-          "RECODE achieved an average reward of 60.8% across ALFWorld, WebShop, and ScienceWorld, outperforming the best baseline (AdaPlanner) by 10.5% (a 20.9% relative improvement).",
-          "It demonstrated superior data efficiency, achieving strong performance (70.4% with Qwen2.5-7B-Instruct) with significantly less training data than ReAct+SFT and CodeAct+SFT.",
-          "The paradigm showed remarkable cost efficiency, with RECODE trajectories costing 78.9% less than ReAct and 84.4% less than CodeAct on average, due to more structured exploration and potent decisions."
-        ]
-      },
-      "image_url": "image/2510.23564v1.png",
-      "universal_paper_id": "2510.23564",
-      "metrics": {
-        "total_votes": 2,
-        "visits_count": {
-          "all": 28,
-          "last_7_days": 28
+          "all": 34,
+          "last_7_days": 34
         },
         "public_total_votes": 7
       },
-      "first_publication_date": "2025-10-27T17:35:15.000Z",
-      "publication_date": "2025-10-27T17:35:15.000Z",
-      "updated_at": "2025-10-28T06:42:02.971Z",
+      "first_publication_date": "2025-10-27T17:59:14.000Z",
+      "publication_date": "2025-10-27T17:59:14.000Z",
+      "updated_at": "2025-10-28T10:11:52.359Z",
       "topics": [
         "agentic-frameworks",
         "agents",
-        "chain-of-thought",
         "Computer Science",
         "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "data-curation",
-        "reasoning",
-        "representation-learning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 4,
-      "github_url": "https://github.com/FoundationAgents/ReCode",
-      "distance": 1
-    },
-    {
-      "id": "019a289e-f974-7224-ba25-78069e7f64c2",
-      "paper_group_id": "019a289e-f974-7224-ba25-78069e7f64c2",
-      "title": "Code Aesthetics with Agentic Reward Feedback",
-      "abstract": "大型语言模型（LLMs）已成为开发者在代码相关任务中的宝贵助手。尽管LLMs在传统的编程任务（如代码生成和调试）中表现出色，但它们在以视觉为导向的编码任务中却表现挣扎，往往生成美观度不佳的代码。本文中，我们介绍了一种新管道，以提高LLM生成代码的美学质量。我们首先构建了AesCode-358K，这是一个专注于代码美学的大规模指令调优数据集。接下来，我们提出了代理奖励反馈，这是一种多代理系统，用于评估可执行性、静态美学和交互美学。在此基础上，我们开发了GRPO-AR，将这些信号整合到GRPO算法中，以实现功能性和代码美学的联合优化。最后，我们开发了OpenDesign，这是一个评估代码美学的基准测试。实验结果表明，将AesCode-358K的监督微调与使用代理奖励反馈的强化学习相结合，显著提高了在OpenDesign上的性能，并增强了在现有基准（如PandasPlotBench）上的结果。值得注意的是，我们的AesCoder-4B超过了GPT-4o和GPT-4.1，且在性能上可与480B-685B参数的大型开源模型相媲美，突显了我们方法的有效性。",
-      "paper_summary": null,
-      "image_url": "image/2510.23272v1.png",
-      "universal_paper_id": "2510.23272",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 27,
-          "last_7_days": 27
-        },
-        "public_total_votes": 5
-      },
-      "first_publication_date": "2025-10-27T12:32:33.000Z",
-      "publication_date": "2025-10-27T12:32:33.000Z",
-      "updated_at": "2025-10-28T02:21:38.548Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.CL",
-        "data-curation",
-        "deep-reinforcement-learning",
-        "fine-tuning",
-        "instruction-tuning",
-        "multi-agent-learning",
-        "optimization-methods",
-        "text-generation"
-      ],
-      "organization_info": [
-        {
-          "name": "Peking University",
-          "image": "images/organizations/peking.png"
-        },
-        {
-          "name": "Microsoft",
-          "image": "images/organizations/microsoft.png"
-        },
-        {
-          "name": "Zhiyuan College, Shanghai Jiao Tong University",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/bangx7/code_aesthetics",
-      "distance": 1
-    },
-    {
-      "id": "019a0996-2ae0-7896-b916-33343484c978",
-      "paper_group_id": "019a0996-2ae0-7896-b916-33343484c978",
-      "title": "A Definition of AGI",
-      "abstract": "缺乏对通用人工智能（AGI）的具体定义掩盖了今天专用人工智能与人类水平认知之间的差距。本文引入了一个可量化的框架来解决这个问题，将AGI定义为与受过良好教育的成年人在认知灵活性和熟练程度上相匹配。为了实现这一目标，我们的方法论以卡特尔-霍恩-卡罗尔理论为基础，这一理论是对人类认知的最有经验验证的模型。该框架将一般智力分解为十个核心认知领域，包括推理、记忆和感知，并适应已建立的人类心理测量工具，以评估人工智能系统。应用这一框架揭示了当代模型中高度“锯齿状”的认知特征。尽管在知识密集型领域表现出色，但目前的人工智能系统在基础认知机制上存在关键缺陷，特别是长期记忆存储。因此，AGI得分（例如，GPT-4为27%，GPT-5为57%）具体量化了快速进展以及距AGI之间的 substantial gap。",
-      "paper_summary": {
-        "summary": "Researchers from the Center for AI Safety, Université de Montréal, Stanford, MIT, and other institutions propose a quantifiable framework for Artificial General Intelligence (AGI), defining it as an AI matching a well-educated adult's cognitive versatility and proficiency. The framework, rooted in the Cattell-Horn-Carroll theory, evaluates AI across ten core cognitive domains, revealing that current models like GPT-4 (27% AGI score) exhibit “jagged” cognitive profiles with significant deficits in areas such as long-term memory storage.",
-        "originalProblem": [
-          "The term \"AGI\" is ambiguously defined, hindering objective assessment of AI progress and productive scientific discourse.",
-          "Existing AGI definitions often rely on task-oriented benchmarks or economic value, failing to capture the holistic breadth of human intelligence and being susceptible to \"capability contortions\" where AI systems leverage narrow strengths.",
-          "A lack of a rigorous, quantifiable framework makes it difficult to pinpoint specific strengths and weaknesses of current AI models, impeding targeted research and development efforts."
-        ],
-        "solution": [
-          "A concrete definition of AGI is proposed: \"an AI that can match or exceed the cognitive versatility and proficiency of a well-educated adult,\" emphasizing broad abilities and high skill levels.",
-          "The Cattell-Horn-Carroll (CHC) theory of human intelligence is adapted to create a hierarchical, multimodal evaluation framework spanning ten core cognitive domains (e.g., General Knowledge, Reasoning, Long-Term Memory).",
-          "The methodology utilizes \"task specifications\" rather than fixed datasets, drawing on psychometric tests and AI benchmarks, to assess underlying cognitive machinery and produce a quantifiable AGI Score (0-100%) and a detailed cognitive profile."
-        ],
-        "keyInsights": [
-          "Grounding AGI evaluation in empirically validated human cognitive theory (CHC) provides a robust and less ambiguous standard compared to purely task-oriented or economic definitions.",
-          "Current AI models exhibit \"jagged\" cognitive profiles, demonstrating impressive performance in specialized areas (e.g., General Knowledge, Reading/Writing) but critical foundational deficits (e.g., near-total absence of Long-Term Memory Storage, persistent hallucinations).",
-          "The framework exposes \"capability contortions\" where AI systems use workarounds like large context windows or external tools to mimic general intelligence, highlighting that true AGI requires fundamental architectural and conceptual advancements rather than just scaling current approaches."
-        ],
-        "results": [
-          "Applying the framework, GPT-4 achieved an estimated AGI score of 27%, demonstrating strengths in General Knowledge (8%) and Reading and Writing Ability (6%), but near-zero capabilities in On-the-Spot Reasoning and Long-Term Memory Storage (0%).",
-          "A projected GPT-5 is estimated at 57% AGI score, showing significant advancements in Reading and Writing, Mathematical Ability (both 10%), and On-the-Spot Reasoning (7%).",
-          "Critical bottlenecks persist across both models, with Long-Term Memory Storage remaining at 0% for GPT-5, and Long-Term Memory Retrieval suffering from persistent hallucinations (0% precision), indicating fundamental cognitive machinery for human-like general intelligence is still absent."
-        ]
-      },
-      "image_url": "image/2510.18212v2.png",
-      "universal_paper_id": "2510.18212",
-      "metrics": {
-        "total_votes": 13,
-        "visits_count": {
-          "all": 641,
-          "last_7_days": 641
-        },
-        "public_total_votes": 66
-      },
-      "first_publication_date": "2025-10-21T01:28:35.000Z",
-      "publication_date": "2025-10-23T18:00:45.000Z",
-      "updated_at": "2025-10-22T01:43:47.680Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "machine-psychology",
-        "model-interpretation",
-        "multi-modal-learning",
-        "reasoning",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "KAIST",
-          "image": "images/organizations/kaist.png"
-        },
-        {
-          "name": "University of Washington",
-          "image": "images/organizations/uw.png"
-        },
-        {
-          "name": "University of Toronto",
-          "image": "images/organizations/university-of-toronto.jpeg"
-        },
-        {
-          "name": "Carnegie Mellon University",
-          "image": "images/organizations/cmu.jpg"
-        },
-        {
-          "name": "Université de Montréal",
-          "image": "images/organizations/universit-de-montral.png"
-        },
-        {
-          "name": "New York University",
-          "image": "images/organizations/nyu.png"
-        },
-        {
-          "name": "University of Chicago",
-          "image": "images/organizations/university-of-chicago.png"
-        },
-        {
-          "name": "UC Berkeley",
-          "image": "images/organizations/berkeley.png"
-        },
-        {
-          "name": "University of Oxford",
-          "image": "images/organizations/oxford.jpg"
-        },
-        {
-          "name": "Stanford University",
-          "image": "images/organizations/stanford.png"
-        },
-        {
-          "name": "University of Michigan",
-          "image": "images/organizations/umich.png"
-        },
-        {
-          "name": "Cornell University",
-          "image": "images/organizations/cornell.png"
-        },
-        {
-          "name": "Nanyang Technological University",
-          "image": "images/organizations/nanyang-technological-university.png"
-        },
-        {
-          "name": "Vector Institute",
-          "image": null
-        },
-        {
-          "name": "LG AI Research",
-          "image": null
-        },
-        {
-          "name": "MIT",
-          "image": "images/organizations/mit.jpg"
-        },
-        {
-          "name": "HKUST",
-          "image": "images/organizations/hkust.jpg"
-        },
-        {
-          "name": "University of Tübingen",
-          "image": null
-        },
-        {
-          "name": "Hong Kong Baptist University",
-          "image": null
-        },
-        {
-          "name": "University of California, Santa Cruz",
-          "image": "images/organizations/ucsc.png"
-        },
-        {
-          "name": "Center for AI Safety",
-          "image": null
-        },
-        {
-          "name": "Gray Swan AI",
-          "image": null
-        },
-        {
-          "name": "Beneficial AI Research",
-          "image": null
-        },
-        {
-          "name": "Conjecture",
-          "image": null
-        },
-        {
-          "name": "LawZero",
-          "image": null
-        },
-        {
-          "name": "University of Wisconsin\n–Madison",
-          "image": null
-        },
-        {
-          "name": "Morph Labs",
-          "image": null
-        },
-        {
-          "name": "Institute for Applied Psychometrics",
-          "image": null
-        },
-        {
-          "name": "CSER",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/vanHeemstraSystems/agile_definition_of_ready",
-      "distance": 1
-    },
-    {
-      "id": "019a2a1b-1829-74f8-842a-71b062afa63e",
-      "paper_group_id": "019a2a1b-1829-74f8-842a-71b062afa63e",
-      "title": "LongCat-Video Technical Report",
-      "abstract": "视频生成是通往世界模型的关键路径，其中高效的长视频推理是一个重要能力。为此，我们介绍了LongCat-Video，这是一个基础的视频生成模型，拥有136亿个参数，在多个视频生成任务中表现出色。它特别在高效和高质量的长视频生成方面表现突出，代表了我们朝向世界模型迈出的第一步。主要特点包括：针对多任务的统一架构：基于扩散变换器（DiT）框架，LongCat-Video支持文本到视频、图像到视频和视频续播任务，使用同一个模型；长视频生成：在视频续播任务上的预训练使LongCat-Video能够在生成长达几分钟的视频时保持高质量和时间连贯性；高效推理：LongCat-Video通过沿时间和空间轴采用粗到细的生成策略，在几分钟内生成720p、30fps的视频；块稀疏注意力机制进一步提升了效率，尤其在高分辨率下；与多奖励RLHF结合的强大性能：多奖励RLHF训练使LongCat-Video的性能与最新的闭源和领先的开源模型相当。代码和模型权重公开可用，以加速该领域的进展。",
-      "paper_summary": null,
-      "image_url": "image/2510.22200v1.png",
-      "universal_paper_id": "2510.22200",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 24,
-          "last_7_days": 24
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-25T07:41:02.000Z",
-      "publication_date": "2025-10-25T07:41:02.000Z",
-      "updated_at": "2025-10-28T09:16:50.089Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV",
-        "deep-reinforcement-learning",
-        "efficient-transformers",
-        "fine-tuning",
         "generative-models",
-        "image-generation",
-        "inference-optimization",
-        "multi-modal-learning",
-        "transformers",
-        "vision-language-models"
-      ],
-      "organization_info": [
-        {
-          "name": "Meituan",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 645,
-      "github_url": "https://github.com/meituan-longcat/LongCat-Video",
-      "distance": 1
-    },
-    {
-      "id": "019a13ea-5045-7cc5-afcb-89e288ddde75",
-      "paper_group_id": "019a13ea-5045-7cc5-afcb-89e288ddde75",
-      "title": "Teaching Language Models to Reason with Tools",
-      "abstract": "大型推理模型（LRMs）如OpenAI-o1在自然语言推理方面展现了令人印象深刻的能力。然而，这些模型在处理复杂数学运算时常常表现出低效或不准确的情况。虽然整合计算工具，如代码解释器（CIs），提供了一种有前景的解决方案，但也引入了一个关键挑战：模型内部的概率推理与CI提供的外部确定性知识之间的冲突，这常常导致模型进行无效的思考。为了解决这个问题，我们提出了CoRT（代码优化推理训练），这是一个后训练框架，旨在教会LRMs有效地利用CIs。我们提出了\\emph{Hint-Engineering}，一种新的数据合成策略，在推理路径的最佳点上战略性地注入多样化的提示。这种方法生成了高质量的、代码集成的推理数据，特别针对优化LRM-CI交互而设计。通过这种方法，我们合成了30个高质量样本，以监督微调的方式对1.5B至32B参数的模型进行后训练。CoRT进一步通过使用拒绝采样和强化学习，优化了外部CI使用和内部思考的多轮交错。我们的实验评估证明了CoRT的有效性，在五个具有挑战性的数学推理数据集上，DeepSeek-R1-Distill-Qwen-32B和DeepSeek-R1-Distill-Qwen-1.5B分别取得了绝对提升4\\%和8\\%。此外，CoRT显著提高了效率，相比纯自然语言推理基线，对于32B模型的token使用减少了约30\\%，对于1.5B模型减少了50\\%。模型和代码可在此链接获取。",
-      "paper_summary": {
-        "summary": "CoRT (Code-Optimized Reasoning Training) is a post-training framework that teaches Large Reasoning Models (LRMs) to efficiently integrate computational tools, specifically Code Interpreters, for complex mathematical problem-solving. Developed by researchers from Alibaba, USTC, and CUHK Shenzhen, the framework achieved substantial improvements in accuracy and reduced token usage by 30-50% across challenging benchmarks, demonstrating a qualitative shift to proactive tool utilization.",
-        "originalProblem": [
-          "Large Language Models (LLMs) struggle with tasks requiring high numerical precision, complex symbolic manipulation, or exact logical operations in mathematics due to their probabilistic nature.",
-          "Existing tool-integrated reasoning approaches often lead to inefficient tool use, characterized by 'unproductive deliberation,' delayed computations, and 'code result distrust,' wasting tokens and hindering performance.",
-          "There is a scarcity of high-quality, code-integrated reasoning data for training open-source LLMs, especially since methodologies from advanced proprietary models remain undisclosed."
-        ],
-        "solution": [
-          "CoRT introduces a 'Hint-Engineering' data synthesis strategy, creating high-quality training examples by strategically inserting diverse hints to guide models towards optimal tool use.",
-          "A multi-stage post-training framework is employed, including Supervised Fine-Tuning (SFT) and Rejection Fine-Tuning (RFT) to shape model behavior for efficient Code Interpreter (CI) interaction.",
-          "Code-integrated Reinforcement Learning (RL) using an adapted GRPO algorithm is applied, featuring a persistent execution environment, output masking, and a dual reward system that incentivizes accuracy and penalizes failed code executions."
-        ],
-        "keyInsights": [
-          "High-quality, human-curated data generated via 'Hint-Engineering' (even a small set of 30 samples) is more effective for teaching nuanced tool-use behavior than larger, less targeted datasets.",
-          "Explicitly training models to shift from using Code Interpreters primarily for verification to proactive, direct calculation significantly improves both reasoning efficiency and accuracy.",
-          "A specialized RL framework with a persistent execution environment and a balanced accuracy-plus-code-execution reward effectively refines multi-round CI interaction, enabling smaller models to achieve state-of-the-art performance."
-        ],
-        "results": [
-          "CoRT achieved an approximate 8% absolute accuracy gain for 1.5B models (58.3%) over their SFT counterparts and competitive performance (81.3-81.8%) for 32B models on challenging math benchmarks.",
-          "The framework dramatically reduced token usage, with 32B models consuming ~30% fewer tokens and 1.5B models consuming ~50% fewer tokens compared to natural language baselines.",
-          "Hint-Engineering models qualitatively shifted code usage: from 68.2% verification in Prompt-Hint models to a more efficient 51.1% direct calculation, and demonstrated a strong capacity for out-of-distribution generalization by spontaneously using an unseen RDKit library in 81.3% of chemistry problems."
-        ]
-      },
-      "image_url": "image/2510.20342v1.png",
-      "universal_paper_id": "2510.20342",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 120,
-          "last_7_days": 120
-        },
-        "public_total_votes": 20
-      },
-      "first_publication_date": "2025-10-23T08:41:44.000Z",
-      "publication_date": "2025-10-23T08:41:44.000Z",
-      "updated_at": "2025-10-24T01:51:54.437Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "data-curation",
-        "fine-tuning",
-        "inference-optimization",
+        "meta-learning",
         "reasoning",
         "reinforcement-learning",
         "tool-use",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Shenzhen Research Institute of Big Data",
-          "image": null
-        },
-        {
-          "name": "University of Science and Technology of China",
-          "image": "images/organizations/university-of-science-and-technology-of-china.svg+xml"
-        },
-        {
-          "name": "The Chinese University of Hong Kong, Shenzhen",
-          "image": null
-        },
-        {
-          "name": "Alibaba Inc.",
-          "image": null
-        },
-        {
-          "name": "Shenzhen International Center for Industrial and Applied Mathematics",
-          "image": null
-        },
-        {
-          "name": "Shenzhen International Center for Industrial and Applied Mathematics, Shenzhen Research Institute of Big Data",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 53,
-      "github_url": "https://github.com/ChengpengLi1003/CoRT",
-      "distance": 1
-    },
-    {
-      "id": "019a13f2-1df0-7db3-bc33-6193a1ac3a3f",
-      "paper_group_id": "019a13f2-1df0-7db3-bc33-6193a1ac3a3f",
-      "title": "AlphaFlow: Understanding and Improving MeanFlow Models",
-      "abstract": "MeanFlow 最近崭露头角，成为一种从头训练的强大框架，用于少步生成建模，但其成功尚未完全理解。在本研究中，我们显示出 MeanFlow 目标自然分解为两个部分：轨迹流匹配和轨迹一致性。通过梯度分析，我们发现这些项之间存在强烈的负相关性，导致优化冲突和收敛缓慢。受到这些见解的启发，我们引入了 $\\alpha$-Flow，一个广泛的目标家族，将轨迹流匹配、Shortcut Model 和 MeanFlow 统一在一个公式下。通过采用一种课程策略，从轨迹流匹配平滑地退火到 MeanFlow，$\\alpha$-Flow 解开了冲突目标，并实现了更好的收敛。当在基于 vanilla DiT 骨干网的条件下，从头训练 class-conditional ImageNet-1K 256x256 时，$\\alpha$-Flow 在各个规模和设置中始终优于 MeanFlow。我们最大的 $\\alpha$-Flow-XL/2+ 模型在使用 vanilla DiT 骨干网时实现了新的最先进结果，FID 分数为 2.58 (1-NFE) 和 2.15 (2-NFE)。",
-      "paper_summary": {
-        "summary": "This research from Snap Inc. and the University of Michigan provides a detailed analysis of MeanFlow's objective function, revealing optimization conflicts, and introduces α-Flow, a unified framework for few-step generative models. The α-Flow framework, coupled with a novel curriculum learning strategy, achieves new state-of-the-art FID scores for from-scratch trained models, reaching 2.58 for 1-NFE and 2.15 for 2-NFE on class-conditional ImageNet-1K 256x256.",
-        "originalProblem": [
-          "High-fidelity image generation from diffusion models often requires hundreds of iterative steps, leading to slow inference speeds.",
-          "Empirically successful few-step generative models like MeanFlow, while efficient, lacked a clear theoretical understanding of their objective functions and optimization dynamics, hindering principled improvements.",
-          "MeanFlow's training relies heavily on a computationally expensive 'border-case' flow matching supervision (r=t for 75% of samples), which is counter-intuitive for learning large trajectory leaps."
-        ],
-        "solution": [
-          "The MeanFlow objective was algebraically decomposed into Trajectory Flow Matching (L_TFM) and Trajectory Consistency (L_TCc) components to analyze their interactions.",
-          "A generalized family of objectives, α-Flow, was introduced, unifying existing few-step models (trajectory flow matching, Shortcut Models, MeanFlow) under a single formulation parameterized by α.",
-          "A three-phase curriculum learning strategy was developed for α-Flow, beginning with α=1 pretraining, smoothly annealing α to a small clamping value, and concluding with MeanFlow fine-tuning."
-        ],
-        "keyInsights": [
-          "Empirical gradient analysis revealed a strong negative correlation (typically below -0.4) between the gradients of L_TFM and L_TCc, indicating an inherent optimization conflict within MeanFlow.",
-          "MeanFlow's heavy reliance on 'border-case' flow matching acts as a surrogate for L_TFM, mitigating gradient conflicts with L_TCc but at a significant computational cost.",
-          "The α-Flow formulation provides a continuous interpolation between flow matching and consistency objectives, offering a unified perspective on various few-step generative model training paradigms."
-        ],
-        "results": [
-          "α-Flow-XL/2+ achieved new state-of-the-art FID scores for from-scratch trained models on class-conditional ImageNet-1K 256x256, reaching 2.58 for 1-NFE and 2.15 for 2-NFE.",
-          "The framework consistently outperformed MeanFlow across model scales (DiT-B/2, DiT-XL/2) and settings, with α-Flow-XL/2 yielding FIDs of 2.95 (1-NFE) and 2.34 (2-NFE) compared to MeanFlow-XL/2's 3.47 (1-NFE) and 2.46 (2-NFE) over 240 epochs.",
-          "Ablation studies confirmed the effectiveness of the proposed curriculum learning strategy, demonstrating that longer trajectory flow matching pretraining and smooth α annealing significantly improved performance and training stability."
-        ]
-      },
-      "image_url": "image/2510.20771v1.png",
-      "universal_paper_id": "2510.20771",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 137,
-          "last_7_days": 137
-        },
-        "public_total_votes": 22
-      },
-      "first_publication_date": "2025-10-23T17:45:06.000Z",
-      "publication_date": "2025-10-23T17:45:06.000Z",
-      "updated_at": "2025-10-24T02:00:25.840Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV",
-        "cs.LG",
-        "generative-models",
-        "image-generation",
-        "optimization-methods",
-        "transformers",
-        "unsupervised-learning"
-      ],
-      "organization_info": [
-        {
-          "name": "University of Michigan",
-          "image": "images/organizations/umich.png"
-        },
-        {
-          "name": "Snap Inc.",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 14,
-      "github_url": "https://github.com/snap-research/alphaflow",
-      "distance": 1
-    },
-    {
-      "id": "019a13ea-e7c7-71a6-9c21-1387f0c4c523",
-      "paper_group_id": "019a13ea-e7c7-71a6-9c21-1387f0c4c523",
-      "title": "Compress to Impress: Efficient LLM Adaptation Using a Single Gradient Step on 100 Samples",
-      "abstract": "最近，Sharma等人提出了一种称为层选择性秩降低（LASER）的方法，证明了修剪精心选择的LLM权重矩阵的高阶分量可以提高下游准确度——而无需任何基于梯度的微调。然而，LASER对每个矩阵进行的详尽搜索（每次都需要完整数据集的前向传播）使其在快速部署中不具实际可行性。我们证明了这一开销可以去除，并发现：(i) 只需检查一个小的、精心选择的矩阵子集——消除了逐层扫描，(ii) 每个矩阵的奇异值的梯度能够明确指出哪些矩阵需要减少，(iii) 通过允许矩阵行聚集在多个子空间并分别对每个聚类进行分解，从而增大分解搜索空间，可以进一步减少对原始训练数据的过拟合，并将准确率提高多达24.6个百分点，最后，(iv) 我们发现，仅在100个样本上进行评估，而不是完整的训练数据——用于计算指示梯度和测量最终准确率——就足以进一步缩短搜索时间；我们解释说，适应下游任务主要受提示风格的主导，而非数据集规模。因此，我们展示了结合这些发现可以为下游任务提供一种快速且稳健的适应算法。总体而言，通过在100个样本上进行一次梯度步骤和快速扫描顶级候选层及分解技术，我们可以在完全不进行微调的情况下将LLM适应于新数据集。",
-      "paper_summary": {
-        "summary": "Researchers from MIT CSAIL developed an efficient, training-free method to adapt large language models (LLMs) by intelligently pruning specific weight matrix components. The approach achieved over 50x speedup on GPT-J and 22.2x on RoBERTa, and up to a 24 percentage point accuracy improvement on specific tasks compared to prior training-free techniques, utilizing as few as 100 calibration samples.",
-        "originalProblem": [
-          "The high computational cost and resource demands of traditional LLM fine-tuning methods, even with parameter-efficient techniques.",
-          "The original LASER (LAyer-SElective-Rank reduction) method, while effective, suffered from impracticality due to an exhaustive, computationally expensive search for optimal matrices to prune.",
-          "A need for rapid and sample-efficient LLM adaptation suitable for resource-constrained environments or on-device deployment."
-        ],
-        "solution": [
-          "A gradient-guided mechanism identifies which weight matrices are most beneficial to compress using a single backward pass on a small calibration set, eliminating exhaustive search.",
-          "Multi-subspace factorization, implemented via simple block splitting, enhances compression effectiveness by addressing the heterogeneous structure within LLM weight matrices.",
-          "The method integrates a single gradient step and minimal data evaluation into a robust, training-free pipeline for minute-scale LLM adaptation."
-        ],
-        "keyInsights": [
-          "Singular value gradients derived from a single backward pass can effectively identify weight matrices that benefit most from rank reduction.",
-          "Only about 100 labeled examples are sufficient for both guiding the matrix selection and evaluating the performance of compressed models.",
-          "Weight matrices are better represented as mixtures of low-dimensional subspaces, making multi-subspace (clustered) SVD more effective for denoising and accuracy gains than a single global SVD."
-        ],
-        "results": [
-          "The method achieved up to a 52.0x speedup on GPT-J and 22.2x on RoBERTa compared to the original LASER, with maintained or improved accuracy.",
-          "Demonstrated an average accuracy improvement of 0.95 percentage points for GPT-J models and comparable performance for RoBERTa, with a notable 24 percentage point gain on the BigBench-Epistemic Reasoning task for GPT-J.",
-          "Ablation studies confirmed that both gradient-guided selection and 100-sample evaluation contributed independently and significantly to the overall efficiency gains."
-        ]
-      },
-      "image_url": "image/2510.20800v1.png",
-      "universal_paper_id": "2510.20800",
-      "metrics": {
-        "total_votes": 2,
-        "visits_count": {
-          "all": 73,
-          "last_7_days": 73
-        },
-        "public_total_votes": 12
-      },
-      "first_publication_date": "2025-10-23T17:58:01.000Z",
-      "publication_date": "2025-10-23T17:58:01.000Z",
-      "updated_at": "2025-10-24T01:52:33.223Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.LG",
-        "few-shot-learning",
-        "fine-tuning",
-        "lightweight-models",
-        "model-compression",
-        "optimization-methods",
-        "parameter-efficient-training",
         "transfer-learning",
         "transformers"
       ],
-      "organization_info": [
-        {
-          "name": "MIT",
-          "image": "images/organizations/mit.jpg"
-        },
-        {
-          "name": "University of Haifa",
-          "image": null
-        }
-      ],
+      "organization_info": [],
       "author_info": [],
       "github_stars": null,
       "github_url": null,
       "distance": 1
     },
     {
-      "id": "019a13f4-17c1-7dc7-ba07-79a1305e2849",
-      "paper_group_id": "019a13f4-17c1-7dc7-ba07-79a1305e2849",
-      "title": "HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives",
-      "abstract": "最先进的文本到视频模型在生成孤立剪辑方面表现出色，但在创建连贯的多镜头叙事上却有所欠缺，而这正是讲故事的精髓。我们通过HoloCine填补了这一“叙事鸿沟”，该模型整体生成整个场景，以确保从第一镜头到最后一镜头的全球一致性。我们的架构通过窗口交叉注意机制实现精确的导演控制，使文本提示定位到特定镜头，同时稀疏的镜头间自注意模式（镜头内密集但镜头间稀疏）确保了所需的高效性，以实现细微尺度的生成。除了在叙事连贯性上设立新的最先进水平外，HoloCine还展示了显著的新兴能力：对角色和场景的持久记忆，以及对电影技巧的直观理解。我们的研究标志着从剪辑合成到自动化电影制作的关键转变，使端到端的电影创作成为一个切实可行的未来。我们的代码可在此链接获取。",
-      "paper_summary": {
-        "summary": "HoloCine, developed by Ant Group and HKUST, generates coherent, cinematic multi-shot long video narratives from hierarchical text prompts. The framework introduces architectural innovations to maintain global consistency and directorial control while achieving computational efficiency, outperforming prior text-to-video approaches in narrative fidelity and consistency for minute-scale videos.",
-        "originalProblem": [
-          "Existing text-to-video models excel at single-shot clips but fail to produce coherent, story-driven multi-shot narratives, creating a \"narrative gap\" in generative AI.",
-          "Decoupled video generation methods suffer from consistency drift and error accumulation of visual attributes across extended sequences.",
-          "Holistic multi-shot generation methods face prohibitive computational costs for longer videos due to quadratic scaling of self-attention and struggle with precise per-shot control as instructions become diluted."
-        ],
-        "solution": [
-          "A comprehensive data pipeline curates and annotates a large-scale multi-shot video dataset with a two-tier hierarchical prompt structure (global and per-shot instructions).",
-          "A holistic multi-shot generation architecture processes latent representations for all shots simultaneously within a Diffusion Transformer (DiT) backbone to inherently promote long-range consistency.",
-          "Window Cross-Attention is introduced to localize prompt conditioning, allowing specific per-shot instructions to precisely control corresponding visual segments, and Sparse Inter-Shot Self-Attention reduces computational complexity by performing dense attention within shots and sparse attention between shots using summary tokens."
-        ],
-        "keyInsights": [
-          "Holistic generation is critical for maintaining global consistency across characters, environments, and styles throughout multi-shot narratives.",
-          "Achieving precise directorial control within a holistic framework is possible through localized prompt conditioning mechanisms, such as Window Cross-Attention.",
-          "Computational efficiency for minute-scale multi-shot videos can be achieved by strategically sparsifying self-attention between shots while preserving essential inter-shot information flow for narrative continuity."
-        ],
-        "results": [
-          "HoloCine establishes a new state-of-the-art on a custom benchmark, significantly outperforming prior models (e.g., Wan2.2, StoryDiffusion+Wan2.2) in transition control, inter-shot consistency, intra-shot consistency, and semantic fidelity.",
-          "Ablation studies confirm Window Cross-Attention is critical for executing precise shot cuts and following per-shot instructions, and Sparse Inter-Shot Self-Attention offers comparable generative quality to full attention with vastly improved efficiency.",
-          "The model exhibits emergent capabilities, including persistent memory for objects and characters across long, complex sequences, and nuanced control over cinematic language, accurately interpreting commands for shot scale, camera angle, and movement."
-        ]
-      },
-      "image_url": "image/2510.20822v1.png",
-      "universal_paper_id": "2510.20822",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 106,
-          "last_7_days": 106
-        },
-        "public_total_votes": 18
-      },
-      "first_publication_date": "2025-10-23T17:59:59.000Z",
-      "publication_date": "2025-10-23T17:59:59.000Z",
-      "updated_at": "2025-10-24T02:02:35.329Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV"
-      ],
-      "organization_info": [
-        {
-          "name": "CUHK",
-          "image": "images/organizations/chinesehongkong.png"
-        },
-        {
-          "name": "Ant Group",
-          "image": null
-        },
-        {
-          "name": "NTU",
-          "image": null
-        },
-        {
-          "name": "HKUST",
-          "image": "images/organizations/hkust.jpg"
-        },
-        {
-          "name": "ZJU",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 126,
-      "github_url": "https://github.com/yihao-meng/HoloCine",
-      "distance": 1
-    },
-    {
-      "id": "019a2a13-0030-7409-a686-26a34a0b7408",
-      "paper_group_id": "019a2a13-0030-7409-a686-26a34a0b7408",
-      "title": "Provable test-time adaptivity and distributional robustness of in-context learning",
-      "abstract": "我们研究了上下文学习问题，其中一个 Transformer 在源自混合分布 $\\pi=\\sum_{\\alpha\\in\\mathcal{A}} \\lambda_{\\alpha} \\pi_{\\alpha}$ 的任务上进行了预训练，这种混合分布称为预训练先验，其中每个混合成分 $\\pi_{\\alpha}$ 是一个特定难度级别的任务分布，索引由 $\\alpha$ 给出。我们的目标是理解当预训练的 Transformer 在不同的测试分布 $\\mu$ 上进行评估时的性能，该测试分布包含固定难度 $\\beta\\in\\mathcal{A}$ 的任务，并且相对于 $\\pi_\\beta$ 可能存在分布偏移，要求卡方散度 $\\chi^2(\\mu,\\pi_{\\beta})$ 至多为 $\\kappa$。具体来说，我们考虑具有随机光滑性的非参数回归问题，以及具有随机光滑性和随机有效维度的多指标模型。我们证明，基于充足数据预训练的大型 Transformer 能够以对应于难度级别 $\\beta$ 的最优收敛速率在随机光滑性的卡方散度球内的测试分布 $\\mu$ 上均匀实现。因此，预训练的 Transformer 能够在更容易的任务上实现更快的收敛速率，并且对测试时的分布偏移具有鲁棒性。最后，我们证明，即使一个估计量能够获取测试分布 $\\mu$，其在 $\\mu$ 上的期望风险的收敛速率也不能超过我们预训练 Transformers 的收敛速率，从而提供了比极小极大下界更合适的最优性保证。",
+      "id": "019a300e-cd6e-709d-bd2b-310c66a512e0",
+      "paper_group_id": "019a300e-cd6e-709d-bd2b-310c66a512e0",
+      "title": "Point Convergence of Nesterov's Accelerated Gradient Method: An AI-Assisted Proof",
+      "abstract": "Nesterov加速梯度法于1983年引入，成为优化理论和实践的基石。然而，其收敛性问题一直悬而未决。在这项工作中，我们肯定地解决了这一长期存在的开放问题。证明的发现得到了ChatGPT这一专有大型语言模型的巨大帮助，我们将描述其协助的过程。",
       "paper_summary": null,
-      "image_url": "image/2510.23254v1.png",
-      "universal_paper_id": "2510.23254",
+      "image_url": "image/2510.23513v1.png",
+      "universal_paper_id": "2510.23513",
       "metrics": {
         "total_votes": 1,
         "visits_count": {
-          "all": 20,
-          "last_7_days": 20
+          "all": 29,
+          "last_7_days": 29
         },
         "public_total_votes": 5
       },
-      "first_publication_date": "2025-10-27T12:16:49.000Z",
-      "publication_date": "2025-10-27T12:16:49.000Z",
-      "updated_at": "2025-10-28T09:07:59.664Z",
+      "first_publication_date": "2025-10-27T16:52:20.000Z",
+      "publication_date": "2025-10-27T16:52:20.000Z",
+      "updated_at": "2025-10-29T13:01:07.822Z",
       "topics": [
-        "Computer Science",
-        "cs.LG",
-        "domain-adaptation",
         "Mathematics",
-        "math.ST",
-        "meta-learning",
-        "representation-learning",
-        "statistical-learning",
-        "Statistics",
-        "stat.ML",
-        "transfer-learning",
-        "transformers"
+        "math.OC"
       ],
       "organization_info": [
         {
-          "name": "University of Cambridge",
-          "image": "images/organizations/university-of-cambridge.svg+xml"
-        },
-        {
-          "name": "London School of Economics and Political Science",
-          "image": null
+          "name": "UCLA",
+          "image": "images/organizations/ucla.png"
         }
       ],
       "author_info": [],
       "github_stars": null,
       "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a290e-1560-7edf-87e7-25f40c709259",
-      "paper_group_id": "019a290e-1560-7edf-87e7-25f40c709259",
-      "title": "ParaRNN: Unlocking Parallel Training of Nonlinear RNNs for Large Language Models",
-      "abstract": "循环神经网络（RNN）为序列建模奠定了基础，但其内在的顺序特性限制了并行计算，造成了扩展的基本障碍。这导致了可以并行化的架构（如变压器）以及最近的状态空间模型（SSM）的主导地位。尽管SSM通过结构化的线性递归实现了有效的并行化，但这种线性约束限制了它们的表现能力，并排除了对复杂非线性序列依赖关系的建模。为了解决这个问题，我们提出了ParaRNN，这是一个打破非线性RNN序列并行化障碍的框架。基于之前的研究，我们将非线性递归关系的序列表述为一个单一的方程组，并使用结合了自定义并行归约的牛顿迭代进行并行求解。我们的实现比简单的顺序应用快了多达665倍，使得在前所未有的规模上训练非线性RNN成为可能。为了展示这一点，我们将ParaRNN应用于LSTM和GRU架构的改编，成功训练了7B参数的模型，其困惑度与类似规模的变压器和Mamba2架构相当。为了加速高效序列建模的研究，我们将ParaRNN代码库发布为一个开源框架，用于非线性RNN的自动训练并行化，使研究人员和从业者能够探索新的非线性RNN模型。",
-      "paper_summary": {
-        "summary": "Apple researchers introduced ParaRNN, a framework that enables the efficient parallel training of nonlinear Recurrent Neural Networks (RNNs) for large language models, overcoming the historical scalability barrier of sequential RNNs. The method leverages Newton's method combined with parallel scan operations, achieving significant speedups and training 7B parameter nonlinear RNNs with competitive language modeling performance.",
-        "originalProblem": [
-          "Traditional Recurrent Neural Networks (RNNs) are inherently sequential, making their training computationally prohibitive and unscalable for large language models (LLMs).",
-          "Recent State Space Models (SSMs) like Mamba achieve parallelization by enforcing a strict linearity constraint, which limits their expressive power and ability to capture complex nonlinear sequence dependencies.",
-          "The broader class of nonlinear RNNs, despite potential expressive advantages and inference efficiency, has been largely unexplorable for large-scale training due to parallelization challenges."
-        ],
-        "solution": [
-          "The core problem of applying a nonlinear RNN is reframed as solving a system of nonlinear equations, which is then efficiently solved using Newton's method.",
-          "At each Newton iteration, the resulting linear system (a block bi-diagonal system) is solved in parallel using a generalized prefix sum (parallel scan) operation, achieving logarithmic time complexity for parallel computation.",
-          "Jacobian structures of adapted GRU and LSTM cells are simplified to be diagonal or block-diagonal, reducing memory ($O(d_h)$) and computational costs ($O(d_h)$) during parallel reduction, making the approach practical."
-        ],
-        "keyInsights": [
-          "It is possible to efficiently parallelize the training of nonlinear RNNs for large-scale models by reformulating the recurrence as a system of nonlinear equations solvable via Newton's method and parallel scan.",
-          "Nonlinearities provide crucial expressive power, enabling ParaRNN models to achieve 100% accuracy on synthetic tasks (e.g., k-hop, Parity) where linear SSMs and even Transformers struggle.",
-          "Careful design of RNN cells to yield sparse Jacobians (e.g., diagonal) is key to making Newton's method computationally tractable for parallel reduction at scale, without sacrificing overall model performance significantly."
-        ],
-        "results": [
-          "ParaRNN achieved speedups of up to 665x over naive sequential RNN application and demonstrated competitive training runtimes compared to Mamba, with fully-fused CUDA kernels providing up to 2.6x speedup over Mamba at sequence length L=2^9.",
-          "The framework successfully enabled the training of classical nonlinear RNN models (ParaGRU and ParaLSTM) at an unprecedented scale of 7 billion parameters.",
-          "ParaRNN models attained perplexity values (ParaLSTM: 9.16, ParaGRU: 9.19) competitive with similarly-sized Transformers (9.55) and Mamba2 (8.62) for 7B parameter models, and consistently outperformed a DCLM Transformer baseline on various downstream tasks."
-        ]
-      },
-      "image_url": "image/2510.21450v1.png",
-      "universal_paper_id": "2510.21450",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 37,
-          "last_7_days": 37
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-24T13:28:33.000Z",
-      "publication_date": "2025-10-24T13:28:33.000Z",
-      "updated_at": "2025-10-28T04:23:00.192Z",
-      "topics": [
-        "Computer Science",
-        "cs.LG",
-        "distributed-learning",
-        "generative-models",
-        "ml-systems",
-        "optimization-methods",
-        "sequence-modeling",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Apple",
-          "image": "images/organizations/apple.png"
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a27c9-3955-73ea-9e85-8c43a419dd61",
-      "paper_group_id": "019a27c9-3955-73ea-9e85-8c43a419dd61",
-      "title": "Self-diffusion for Solving Inverse Problems",
-      "abstract": "我们提出了一种自我扩散的新框架，用于解决逆问题，而无需依赖于预训练的生成模型。传统的基于扩散的方法需要在干净数据集上训练一个模型，以学习逆转正向噪声过程。然后使用该模型来采样干净的解决方案——从贝叶斯的角度看，这相当于后验采样——这些解决方案与特定任务下观察到的数据一致。相比之下，自我扩散引入了一种自我包含的迭代过程，该过程在加噪和去噪步骤之间交替进行，以逐步精炼对解决方案的估计。在自我扩散的每一步中，噪声被添加到当前估计中，一个自我去噪器，即一个从头随机初始化的未经训练的卷积网络，通过数据保真度损失被连续训练若干次，以根据嘈杂估计预测解决方案。从本质上讲，自我扩散利用了神经网络的光谱偏差，并通过一个调度的噪声过程对其进行调节。该方法不依赖于预训练的评分函数或外部去噪器，仍然对任意的正向算子和嘈杂观测保持自适应，使其具有高度的灵活性和广泛的适用性。我们在多种线性逆问题上展示了我们方法的有效性，表明自我扩散的表现与其他方法相比具有竞争力或优越性。",
-      "paper_summary": null,
-      "image_url": "image/2510.21417v1.png",
-      "universal_paper_id": "2510.21417",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 32,
-          "last_7_days": 32
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-24T12:57:22.000Z",
-      "publication_date": "2025-10-24T12:57:22.000Z",
-      "updated_at": "2025-10-27T22:28:10.197Z",
-      "topics": [
-        "Computer Science",
-        "cs.LG",
-        "lightweight-models",
-        "online-learning",
-        "optimization-methods",
-        "representation-learning",
-        "self-supervised-learning",
-        "statistical-learning",
-        "unsupervised-learning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 3,
-      "github_url": "https://github.com/ggluo/Self-Diffusion",
-      "distance": 1
-    },
-    {
-      "id": "019a2902-0d61-7809-a892-6fcd9e0b6bf0",
-      "paper_group_id": "019a2902-0d61-7809-a892-6fcd9e0b6bf0",
-      "title": "ACG: Action Coherence Guidance for Flow-based VLA models",
-      "abstract": "扩散和流匹配模型已成为强大的机器人策略，使视觉-语言-动作（VLA）模型能够在多样的场景和指令中推广。然而，当通过模仿学习进行训练时，其高生成能力使其对人类演示中的噪声敏感：抖动、停顿和抖动降低了动作的一致性。降低的动作一致性导致部署期间的不稳定和轨迹漂移，这在精细操作中是灾难性的，因为精度至关重要。在本文中，我们为VLA模型提出了动作一致性指导（ACG），这是一种无需训练的测试时指导算法，它改善了动作一致性，从而带来了性能提升。在RoboCasa、DexMimicGen和真实世界SO-101任务上进行评估时，ACG始终提高了动作一致性，并提升了各种操作任务的成功率。代码和项目页面可在此https URL和此https URL获得。",
-      "paper_summary": null,
-      "image_url": "image/2510.22201v1.png",
-      "universal_paper_id": "2510.22201",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 18,
-          "last_7_days": 18
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-25T07:44:33.000Z",
-      "publication_date": "2025-10-25T07:44:33.000Z",
-      "updated_at": "2025-10-28T04:09:51.713Z",
-      "topics": [
-        "Computer Science",
-        "cs.RO"
-      ],
-      "organization_info": [
-        {
-          "name": "KAIST",
-          "image": "images/organizations/kaist.png"
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a2438-eb0a-7ebd-90f3-1c53351e35be",
-      "paper_group_id": "019a2438-eb0a-7ebd-90f3-1c53351e35be",
-      "title": "Sparser Block-Sparse Attention via Token Permutation",
-      "abstract": "扩展大语言模型（LLMs）的上下文长度提供了显著的好处，但计算开销很大。这种开销主要源于自注意力机制，其在序列长度上的复杂度为 $O(N^2)$，这对于内存和延迟都构成了主要瓶颈。幸运的是，注意力矩阵通常是稀疏的，尤其是在较长的序列中，这为优化提供了机会。块稀疏注意力成为了一种有前景的解决方案，它将序列分割成块，并跳过部分块的计算。然而，该方法的有效性高度依赖于底层的注意力模式，这可能导致子最优的块级稀疏性。例如，用于查询的单个块中的重要关键标记可能分散在许多其他块中，从而导致计算冗余。在本研究中，我们提出了排列块稀疏注意力（\\textbf{PBS-Attn}），这是一种即插即用的方法，利用注意力的排列特性来增加块级稀疏性并提高LLM预填充的计算效率。我们在具有挑战性的实际长上下文数据集上进行了全面实验，证明PBS-Attn在模型准确性方面始终优于现有的块稀疏注意力方法，且与完整注意力基线表现相近。凭借我们定制的排列FlashAttention内核，PBS-Attn在长上下文预填充中实现了高达 $2.75\\times$ 的端到端加速，验证了其实际可行性。代码可在此链接获取。",
-      "paper_summary": {
-        "summary": "Researchers from Fudan University, China Unicom, and ByteDance developed Permuted Block-Sparse Attention (PBS-Attn), an optimization for Large Language Models that rearranges input tokens to increase block-level sparsity. This method achieves competitive accuracy with full attention while providing up to a 2.75x end-to-end speedup for LLM prefilling on long contexts.",
-        "originalProblem": [
-          "The self-attention mechanism in Large Language Models (LLMs) exhibits quadratic computational and memory complexity, severely bottlenecking performance for long context windows during prefilling.",
-          "Existing block-sparse attention methods, designed to reduce this complexity, often suffer from sub-optimal block-level sparsity because critical key tokens for queries are scattered across numerous blocks, forcing more computations than necessary.",
-          "The effectiveness of current block selection algorithms is limited by the inherent, often diffuse, attention patterns of raw input sequences, preventing maximal sparsity gains."
-        ],
-        "solution": [
-          "PBS-Attn introduces a token permutation strategy to reorder query, key, and value sequences, clustering important interactions to enhance block-level sparsity before block-sparse attention is applied.",
-          "A segmented permutation approach is employed, applying permutations only within predefined segments to rigorously preserve the causal attention mechanism critical for auto-regressive LLMs.",
-          "The method uses a query-aware key permutation, where key tokens are sorted within segments based on estimated global importance scores, concentrating attention mass into fewer blocks.",
-          "Custom `permuted-FlashAttention` kernels were developed using Triton to efficiently execute both the permutation and subsequent sparse attention computations on GPUs."
-        ],
-        "keyInsights": [
-          "Permuting tokens in the input sequence can inherently increase the block-level sparsity of the attention matrix, thereby making existing block-sparse attention methods more efficient.",
-          "Segmented permutation allows for intra-segment token reordering while maintaining inter-segment causality, which is crucial for auto-regressive LLMs, enabling significant sparsity gains without violating model integrity.",
-          "Query-aware key permutation, particularly for grouped-query attention (GQA) models, effectively clusters important key-value pairs, leading to a better performance-density trade-off compared to permuting queries or both."
-        ],
-        "results": [
-          "PBS-Attn achieved the best overall accuracy among all block-sparse attention methods on LongBench and LongBenchv2, closely matching the performance of the full attention baseline (e.g., Llama-3.1-8B score of 37.37 vs. Full Attention's 38.28).",
-          "The method delivered an impressive 2.75x end-to-end speedup for LLM prefilling at 256K context length, and consistent speedups across various context lengths (8K to 512K), outperforming competing sparse attention techniques.",
-          "Permutation led to a tangible increase in block-level sparsity (e.g., a 7% absolute improvement at 8K context length) with minimal overhead, accounting for only 1.3% of the total FlashAttention time at 128K context."
-        ]
-      },
-      "image_url": "image/2510.21270v1.png",
-      "universal_paper_id": "2510.21270",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 53,
-          "last_7_days": 53
-        },
-        "public_total_votes": 8
-      },
-      "first_publication_date": "2025-10-24T09:11:50.000Z",
-      "publication_date": "2025-10-24T09:11:50.000Z",
-      "updated_at": "2025-10-27T05:51:41.322Z",
-      "topics": [
-        "attention-mechanisms",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "efficient-transformers",
-        "inference-optimization",
-        "lightweight-models",
-        "sequence-modeling",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 4,
-      "github_url": "https://github.com/xinghaow99/pbs-attn",
-      "distance": 1
-    },
-    {
-      "id": "019a28e7-aac4-7f52-8cae-ca97a6eec16d",
-      "paper_group_id": "019a28e7-aac4-7f52-8cae-ca97a6eec16d",
-      "title": "LimRank: Less is More for Reasoning-Intensive Information Reranking",
-      "abstract": "现有的方法通常依赖大规模的精细调优来适应大语言模型（LLM）用于信息重排名任务，这在计算上是非常昂贵的。在这项工作中，我们证明了现代LLM可以仅通过极少量的高质量监督有效地进行适应。为此，我们设计了LIMRANK-SYNTHESIZER，一个可重用的开源管道，用于生成多样、具有挑战性且现实的重排名示例。使用这些合成数据，我们对我们的重排名模型LIMRANK进行了精细调优。我们在两个具有挑战性的基准上评估了LIMRANK，即用于推理密集型检索的BRIGHT和用于遵循指令的FollowIR。我们的实验表明，LIMRANK的性能具有竞争力，同时其训练数据量不到以往研究中使用数据的5%。进一步的消融研究表明，LIMRANK-SYNTHESIZER的有效性以及LIMRANK在下游任务中的强泛化能力，包括科学文献检索和用于知识密集型问题解决的检索增强生成。",
-      "paper_summary": null,
-      "image_url": "image/2510.23544v1.png",
-      "universal_paper_id": "2510.23544",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 17,
-          "last_7_days": 17
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-27T17:19:37.000Z",
-      "publication_date": "2025-10-27T17:19:37.000Z",
-      "updated_at": "2025-10-28T03:41:02.532Z",
-      "topics": [
-        "Computer Science",
-        "cs.CL",
-        "cs.IR",
-        "data-curation",
-        "fine-tuning",
-        "instruction-tuning",
-        "reasoning",
-        "synthetic-data",
-        "text-classification",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Yale University",
-          "image": "images/organizations/yale.png"
-        }
-      ],
-      "author_info": [],
-      "github_stars": 1,
-      "github_url": "https://github.com/SighingSnow/limrank",
-      "distance": 1
-    },
-    {
-      "id": "019a2564-b02d-723a-be7f-36b6fde61832",
-      "paper_group_id": "019a2564-b02d-723a-be7f-36b6fde61832",
-      "title": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
-      "abstract": "AI代理有潜力通过自动化文献综述、复现实验、分析数据，甚至提出新的研究方向，来彻底改变科学生产力；事实上，现在已经有许多这样的代理，从通用的“深度研究”系统到专门的科学特定代理，例如AI科学家和AIGS。对这些代理进行严格评估对于进展至关重要。然而，现有的基准测试在多个方面存在不足：（1）未能提供全面的、以产品为导向的实际应用案例的衡量，例如科学研究；（2）缺乏可重复的代理工具，无法进行核心代理能力的受控比较；（3）未考虑混杂变量，如模型成本和工具访问；（4）未提供标准化接口以便快速进行代理原型设计和评估；（5）缺乏全面的基线代理以识别真正的进展。为此，我们定义了更严格地基准测试代理的原则和工具。基于这些原则，我们推出了AstaBench，这是一个提供代理能力在科学研究中执行能力的首次全面衡量的工具包，包含2400多个问题，涵盖整个科学发现过程和多个科学领域，并包括许多受实际用户请求启发的问题。我们的工具包配备了首个具有生产级搜索工具的科学研究环境，使得评估更具控制性和可重复性，从而更好地考虑混杂因素。此外，我们还提供了九类为科学优化的Asta代理的全面套件和众多基准。在对57个代理进行评估的过程中，涉及22个代理类别，我们发现了一些有趣的结果，最重要的是，尽管在某些个别方面取得了显著进展，但人工智能距离解决科学研究助手的挑战仍然相距甚远。",
-      "paper_summary": null,
-      "image_url": "image/2510.21652v1.png",
-      "universal_paper_id": "2510.21652",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 22,
-          "last_7_days": 22
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-24T17:10:26.000Z",
-      "publication_date": "2025-10-24T17:10:26.000Z",
-      "updated_at": "2025-10-27T11:19:07.053Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "data-curation",
-        "ml-systems",
-        "reasoning",
-        "test-time-inference",
-        "tool-use"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 40,
-      "github_url": "https://github.com/allenai/asta-bench",
       "distance": 1
     }
   ],
