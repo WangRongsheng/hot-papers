@@ -4,7 +4,7 @@ const papersData = {
       "id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
       "paper_group_id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
       "title": "Tongyi DeepResearch Technical Report",
-      "abstract": "我们推出了Tongyi DeepResearch，一个具有自主性的、专门为长期、大规模信息搜索研究任务设计的大型语言模型。为了激励自主的深度研究能力，Tongyi DeepResearch通过一个端到端的训练框架开发，该框架结合了自主的中期训练和自主的后期训练，使得在复杂任务中进行可扩展的推理和信息搜寻成为可能。我们设计了一个高可扩展性的数据合成管道，完全自动化，无需依赖昂贵的人为标注，支持所有训练阶段。通过为每个阶段构建定制化环境，我们的系统实现了稳健和一致的交互。Tongyi DeepResearch拥有305亿个参数，每个令牌仅激活33亿个参数，在一系列自主深度研究基准测试中表现出色，包括人类的最后考试、BrowseComp、BrowseComp-ZH、WebWalkerQA、xbench-DeepSearch、FRAMES和xbench-DeepSearch-2510。我们将模型、框架和完整解决方案开源，以赋能社区。",
+      "abstract": "我们提出了Tongyi DeepResearch，这是一个代理型大型语言模型，专门设计用于长期、深入的信息探索研究任务。为了激励自主深度研究能力，Tongyi DeepResearch是通过一种端到端的训练框架开发的，该框架结合了代理中期训练和代理后期训练，使得在复杂任务中能够进行可扩展的推理和信息寻求。我们设计了一种高度可扩展的数据合成流程，完全自动化，无需依赖昂贵的人类标注，支持所有训练阶段。通过为每个阶段构建定制的环境，我们的系统实现了整个过程中的稳定和一致的交互。Tongyi DeepResearch拥有305亿个参数，其中每个token仅激活33亿个参数，在一系列代理深度研究基准测试中实现了最先进的性能，包括人类的最后考试、BrowseComp、BrowseComp-ZH、WebWalkerQA、xbench-DeepSearch、FRAMES和xbench-DeepSearch-2510。我们开源了模型、框架和完整解决方案，以赋能社区。",
       "paper_summary": {
         "summary": "The Tongyi DeepResearch Team from Alibaba Group introduced an open-source model and an end-to-end agentic training framework for autonomous deep research agents, integrating agentic mid-training and post-training with a fully automated data synthesis pipeline. This approach achieves state-of-the-art performance on various benchmarks, including 32.9 on Humanity's Last Exam and 70.9 on GAIA, while activating only 3.3 billion parameters.",
         "originalProblem": [
@@ -31,12 +31,12 @@ const papersData = {
       "image_url": "image/2510.24701v1.png",
       "universal_paper_id": "2510.24701",
       "metrics": {
-        "total_votes": 13,
+        "total_votes": 31,
         "visits_count": {
-          "all": 407,
-          "last_7_days": 407
+          "all": 1032,
+          "last_7_days": 1032
         },
-        "public_total_votes": 41
+        "public_total_votes": 82
       },
       "first_publication_date": "2025-10-28T17:53:02.000Z",
       "publication_date": "2025-10-28T17:53:02.000Z",
@@ -70,259 +70,10 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2c20-a499-781f-b895-e0c2dc989b15",
-      "paper_group_id": "019a2c20-a499-781f-b895-e0c2dc989b15",
-      "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
-      "abstract": "强化学习（RL）在提升大型语言模型（LLMs）推理能力方面展现了显著的潜力。然而，RL在LLMs上的成功在很大程度上依赖于人工策划的数据集和可验证的奖励，这限制了它们的可扩展性和普遍性。近期的自我对弈强化学习方法，受益于这一范式在游戏和围棋中的成功，旨在提升LLM的推理能力而无需人工标注的数据。然而，这些方法主要依赖于一个有反馈的基础环境（例如，Python解释器或游戏引擎）；将其扩展到一般领域仍然面临挑战。为了解决这些问题，我们提出了多智能体进化（MAE）框架，它使LLM能够在解决多样化任务（包括数学、推理和一般知识问答）中自我进化。MAE的核心设计基于三个相互作用的智能体（提问者、求解者、评判者），这些智能体由单个LLM实例化，并应用强化学习来优化它们的行为。提问者生成问题，求解者尝试解决方案，评判者在共同进化的同时评估两者。对Qwen2.5-3B-Instruct的实验表明，MAE在多个基准测试中实现了平均4.54%的提升。这些结果突显了MAE作为一种可扩展、数据高效的方法，能够在最小依赖人工策划监督的情况下提升LLM的普遍推理能力。",
-      "paper_summary": {
-        "summary": "Multi-Agent Evolve (MAE) enables large language models (LLMs) to improve their reasoning and problem-solving abilities across general domains through a self-supervised, multi-agent co-evolutionary framework. The approach allows a 3B-parameter LLM to increase its overall average accuracy from 55.33% to 58.51% without human annotation and even outperform supervised fine-tuning with ground truth.",
-        "originalProblem": [
-          "Current LLM training with Reinforcement Learning heavily relies on costly human-curated datasets and verifiable reward signals, limiting scalability and generalizability.",
-          "Existing self-play methods for LLMs often require \"grounded environments\" to provide explicit feedback, restricting their application to open-ended language and reasoning tasks.",
-          "A lack of mechanisms for continuous, autonomous enhancement of LLM reasoning abilities across diverse tasks without human supervision."
-        ],
-        "solution": [
-          "A framework instantiating three co-evolving LLM agents (Proposer, Solver, Judge) from a single backbone model.",
-          "Domain-agnostic self-rewarding mechanisms are used, where the Judge agent evaluates questions and answers without external ground truth.",
-          "A continuous training loop with question quality filtering and synchronized updates using Task-Relative REINFORCE++ drives the self-evolutionary process."
-        ],
-        "keyInsights": [
-          "LLMs can autonomously achieve self-improvement in general domains by generating their own curriculum and feedback, eliminating reliance on human supervision or external verifiers.",
-          "Generating questions of \"desirable difficulty\" (challenging but feasible) is crucial for optimal and continuous performance enhancement.",
-          "The comprehensive interaction and co-evolution of distinct agent roles (Proposer, Solver, Judge) are essential for framework stability and achieving optimal self-improvement."
-        ],
-        "results": [
-          "MAE improved the Qwen2.5-3B-Instruct model's overall average accuracy from 55.33% to 58.51% without any reference questions, outperforming the AZR baseline.",
-          "MAE variants, including those without ground truth, significantly surpassed Supervised Fine-Tuning on the same dataset with ground truth, with MAE (half reference) achieving 59.87% overall average.",
-          "The framework demonstrated stable performance over 250 training steps, with continuous addition of high-quality questions preventing dataset degradation."
-        ]
-      },
-      "image_url": "image/2510.23595v1.png",
-      "universal_paper_id": "2510.23595",
-      "metrics": {
-        "total_votes": 7,
-        "visits_count": {
-          "all": 260,
-          "last_7_days": 260
-        },
-        "public_total_votes": 30
-      },
-      "first_publication_date": "2025-10-27T17:58:02.000Z",
-      "publication_date": "2025-10-27T17:58:02.000Z",
-      "updated_at": "2025-10-28T18:42:08.153Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "fine-tuning",
-        "multi-agent-learning",
-        "reasoning",
-        "reinforcement-learning",
-        "self-supervised-learning",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/ulab-uiuc/Multi-agent-Evolve",
-      "distance": 1
-    },
-    {
-      "id": "019a306d-221a-7ffd-8c54-65a431dadafb",
-      "paper_group_id": "019a306d-221a-7ffd-8c54-65a431dadafb",
-      "title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents",
-      "abstract": "关于大规模监督微调AI代理的公共研究成果仍然相对较少，因为收集代理训练数据面临独特的挑战。在这项工作中，我们认为瓶颈不在于缺乏基础数据源，而在于各种数据在异构格式、工具和接口中碎片化。为此，我们提出了代理数据协议（ADP），这是一种轻量级的表示语言，充当不同格式的代理数据集与统一的代理训练管道之间的“中介语言”。ADP的设计足够表达各种任务，包括API/工具使用、浏览、编码、软件工程和一般代理工作流程，同时在解析和训练时无需针对每个数据集进行工程处理。在实验中，我们将13个现有的代理训练数据集统一为ADP格式，并将标准化的ADP数据转换为多个代理框架的训练准备格式。我们在这些数据上进行了监督微调（SFT），并展示了相较于相应基线模型平均约20%的性能提升，在标准编码、浏览、工具使用和研究基准上达到了最先进或接近最先进的性能，而无需领域特定的调优。所有代码和数据均已公开发布，希望ADP能够帮助降低标准化、可扩展和可重复的代理训练的门槛。",
-      "paper_summary": {
-        "summary": "Carnegie Mellon University and collaborating researchers introduced the Agent Data Protocol (ADP), a standardized framework unifying diverse agent training datasets. This protocol enables more effective and scalable fine-tuning of LLM agents, achieving approximately 20% average performance gain over base models and enhancing cross-task generalization.",
-        "originalProblem": [
-          "Agent training data is highly fragmented across datasets, utilizing inconsistent formats, action spaces, and observation structures.",
-          "The heterogeneity of existing data sources hinders the ability to combine and leverage them for large-scale supervised fine-tuning (SFT) of LLM agents.",
-          "A significant engineering overhead exists for integrating new datasets or adapting agent frameworks, as custom conversion scripts are required for each dataset-agent pair."
-        ],
-        "solution": [
-          "Developed the Agent Data Protocol (ADP), a lightweight, expressive representation language to standardize diverse agent training datasets.",
-          "Implemented ADP using Pydantic schemas, defining core `Trajectory` objects composed of standardized `Actions` (API, Code, Message) and `Observations` (Text, Web).",
-          "Created a three-stage conversion pipeline that transforms raw datasets into ADP-standardized format, then converts them into SFT-ready formats tailored for specific agent frameworks."
-        ],
-        "keyInsights": [
-          "A systematic analysis of 13 diverse datasets, unified via ADP, revealed inherent characteristics such as varied trajectory lengths, domain-specific action patterns, and high reasoning coverage (typically >90%).",
-          "Unifying diverse datasets through ADP enables the training of more generalizable LLM agents, outperforming models fine-tuned on single-domain data and mitigating negative transfer effects.",
-          "The ADP framework demonstrably reduces the engineering effort for integrating datasets and agent frameworks, transforming a quadratic (D x A) integration problem into a linear (D + A) one."
-        ],
-        "results": [
-          "Fine-tuning LLMs on the standardized ADP dataset yielded an average performance gain of approximately 20% over base models across benchmarks like SWE-Bench, WebArena, AgentBench OS, and GAIA.",
-          "On SWE-Bench (Verified), ADP-trained Qwen-2.5-7B-Coder-Instruct improved accuracy from 0.4% to 20.2% (SWE-Agent) and 2.8% to 20.4% (OpenHands), with the 32B model achieving 40.3% (SWE-Agent).",
-          "ADP reduced the engineering cost for dataset-to-agent integration, illustrated by a reduction from an estimated ~489,200 Lines of Code without ADP to ~12,592 LOC with ADP for 13 datasets and 100 harnesses."
-        ]
-      },
-      "image_url": "image/2510.24702v1.png",
-      "universal_paper_id": "2510.24702",
-      "metrics": {
-        "total_votes": 4,
-        "visits_count": {
-          "all": 131,
-          "last_7_days": 131
-        },
-        "public_total_votes": 14
-      },
-      "first_publication_date": "2025-10-28T17:53:13.000Z",
-      "publication_date": "2025-10-28T17:53:13.000Z",
-      "updated_at": "2025-10-29T14:44:09.882Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "data-curation",
-        "fine-tuning",
-        "instruction-tuning",
-        "ml-systems",
-        "tool-use",
-        "training-orchestration",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a315b-20e8-7941-a237-262a8aeeb18c",
-      "paper_group_id": "019a315b-20e8-7941-a237-262a8aeeb18c",
-      "title": "An efficient probabilistic hardware architecture for diffusion-like models",
-      "abstract": "概率人工智能的普及促进了专用随机计算机的提案。尽管这些提案显示出潜在的效率提升，但由于依赖基本有限的建模技术和奇特的、无法扩展的硬件，它们未能获得 traction。本文针对这些缺点，提出了一种全晶体管的概率计算机，能够在硬件层面实现强大的去噪模型。系统级分析表明，基于我们架构的设备在一个简单的图像基准测试中，可以在使用约1/10,000的能量的情况下，实现与GPU的性能平衡。",
-      "paper_summary": {
-        "summary": "Extropic Corporation presents a probabilistic hardware architecture that integrates Denoising Thermodynamic Models (DTMs) with a CMOS-compatible, all-transistor random number generator, achieving an estimated 10,000-fold energy reduction compared to GPU-based diffusion models for generative tasks.",
-        "originalProblem": [
-          "Large-scale AI systems, particularly LLMs, face an unsustainable energy consumption trajectory, with current GPU-centric hardware leading to immense power footprints.",
-          "Previous probabilistic computing efforts suffered from the \"mixing-expressivity tradeoff\" (MET) in monolithic Energy-Based Models (EBMs) and relied on non-scalable \"exotic\" hardware components.",
-          "The \"Hardware Lottery\" phenomenon has locked AI algorithm development into suboptimal hardware architectures, hindering the exploration of more energy-efficient paradigms."
-        ],
-        "solution": [
-          "Introduces Denoising Thermodynamic Models (DTMs) which overcome the MET by sequentially composing simpler, hardware-implementable EBMs for gradual denoising.",
-          "Develops a Denoising Thermodynamic Computer Architecture (DTCA) featuring an all-transistor random number generator (RNG) that is CMOS-compatible, fast, and energy-efficient.",
-          "Proposes a system-level co-design of algorithms and hardware, enabling massively parallel arrays of primitive sampling circuitry optimized for Boltzmann machines."
-        ],
-        "keyInsights": [
-          "DTMs bypass the mixing-expressivity tradeoff by breaking down complex generative tasks into a chain of simpler conditional sampling problems, each handled by an efficient EBM.",
-          "An all-transistor RNG based on subthreshold transistor networks provides a scalable, energy-efficient, and commercially viable stochastic primitive for probabilistic hardware, avoiding exotic components.",
-          "Hybrid Thermodynamic-Deterministic Machine Learning (HTDML) offers a pathway to combine the energy efficiency of probabilistic hardware with the expressivity of classical neural networks for complex tasks."
-        ],
-        "results": [
-          "Projects a 10,000-fold reduction in energy consumption for generative tasks (e.g., binarized Fashion-MNIST) compared to GPU-based diffusion models, while achieving performance parity.",
-          "Demonstrates an all-transistor RNG with a 100 ns autocorrelation decay time, ~350 aJ/bit energy consumption, and a small ~3x3 µm footprint, validated for CMOS compatibility.",
-          "Shows DTMs can be trained stably using an Adaptive Correlation Penalty (ACP), maintaining well-mixed sampling chains and improving monotonically in quality, unlike traditional monolithic EBMs."
-        ]
-      },
-      "image_url": "image/2510.23972v1.png",
-      "universal_paper_id": "2510.23972",
-      "metrics": {
-        "total_votes": 2,
-        "visits_count": {
-          "all": 121,
-          "last_7_days": 121
-        },
-        "public_total_votes": 12
-      },
-      "first_publication_date": "2025-10-28T01:09:19.000Z",
-      "publication_date": "2025-10-28T01:09:19.000Z",
-      "updated_at": "2025-10-29T19:04:07.144Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "energy-efficient-ml",
-        "generative-models",
-        "hardware-aware-algorithms",
-        "image-generation",
-        "inference-optimization",
-        "ml-systems"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a23e5-088e-7cbd-828d-79523c0470c9",
-      "paper_group_id": "019a23e5-088e-7cbd-828d-79523c0470c9",
-      "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
-      "abstract": "大型推理模型已经显示出强大的问题解决能力，然而现实世界的任务通常需要外部工具和长时间的互动。现有的代理框架通常遵循预定义的工作流程，这限制了自主和全局任务的完成。在本文中，我们介绍了DeepAgent，这是一种端到端的深度推理代理，能够在单一、一致的推理过程中执行自主思考、工具发现和行动执行。为了应对长时间交互的挑战，特别是来自多个工具调用的上下文长度爆炸和交互历史的累积，我们引入了一种自主记忆折叠机制，将过去的交互压缩成结构化的情节记忆、工作记忆和工具记忆，减少错误的累积，同时保留关键信息。为了高效且稳定地教授通用工具的使用，我们开发了一种端到端的强化学习策略，即ToolPO，利用LLM模拟的API，并将工具调用优势归因应用于赋予工具调用令牌细粒度的信用。在八个基准上的大量实验，包括一般工具使用任务（ToolBench、API-Bank、TMDB、Spotify、ToolHop）和下游应用（ALFWorld、WebShop、GAIA、HLE），表明DeepAgent在标记工具和开放集合工具检索场景中始终优于基线。这项工作朝着实现更通用和更强大代理的方向迈出了一步，以便应用于现实世界。代码和演示可在此HTTPS链接获取。",
-      "paper_summary": {
-        "summary": "DeepAgent is presented as an end-to-end reasoning agent that leverages large language models for autonomous thinking, dynamic tool discovery, and action execution from scalable toolsets. The framework significantly outperforms previous workflow-based methods, achieving up to 36.4% higher success rates on general tool-use benchmarks and state-of-the-art results on complex downstream applications, supported by novel memory management and a tailored reinforcement learning strategy.",
-        "originalProblem": [
-          "Existing LLM agents are limited by rigid, predefined workflows that constrain their autonomy and ability to adapt dynamically to diverse tasks.",
-          "Current frameworks typically rely on restricted and often small toolsets, preventing agents from addressing the vast and varied requirements of real-world scenarios.",
-          "Long-horizon interactions pose challenges due to context length limitations and the accumulation of errors without effective mechanisms for self-correction or memory management.",
-          "Training general-purpose tool-using agents is inefficient and unstable, primarily due to costly, latent real-world API interactions and the difficulty in providing fine-grained feedback for intermediate tool calls."
-        ],
-        "solution": [
-          "Developed DeepAgent, an end-to-end deep reasoning agent that unifies autonomous thinking, dynamic tool discovery, and action execution within a single, coherent reasoning process.",
-          "Introduced an autonomous memory folding mechanism, supported by a brain-inspired memory schema (episodic, working, and tool memory), to effectively manage long-horizon interactions by compressing history and enabling strategic reconsideration.",
-          "Proposed ToolPO, an end-to-end reinforcement learning strategy that uses LLM-simulated APIs for stable training and incorporates fine-grained tool-call advantage attribution for precise credit assignment during policy optimization."
-        ],
-        "keyInsights": [
-          "Unifying thinking, dynamic tool discovery, and action execution into a continuous reasoning stream allows LLMs to maintain a global perspective on tasks, moving beyond fragmented 'Reason-Act-Observe' cycles.",
-          "Effective memory management, via autonomous folding and a structured, brain-inspired memory schema, is critical for handling long-horizon interactions, preventing context overflow, and enabling strategic replanning.",
-          "Reinforcement learning for tool-using agents can be stabilized and made efficient by utilizing LLM-simulated APIs and providing precise, localized rewards for intermediate tool invocations."
-        ],
-        "results": [
-          "DeepAgent achieved superior performance on general tool usage tasks, outperforming the best 32B baselines by up to 36.4% on TMDB (89.0% vs 55.0%) and 22.8% on Spotify (75.4% vs 52.6%).",
-          "On complex downstream applications, DeepAgent attained state-of-the-art performance among 32B models, scoring 53.3 on GAIA (compared to HiRA's 42.5) and a 91.8% success rate on ALFWorld (versus HiRA's 84.3%).",
-          "Ablation studies confirmed the criticality of ToolPO training and autonomous memory folding, as their removal led to significant performance declines, highlighting their essential contributions to robust agent behavior."
-        ]
-      },
-      "image_url": "image/2510.21618v1.png",
-      "universal_paper_id": "2510.21618",
-      "metrics": {
-        "total_votes": 30,
-        "visits_count": {
-          "all": 1403,
-          "last_7_days": 1403
-        },
-        "public_total_votes": 92
-      },
-      "first_publication_date": "2025-10-24T16:24:01.000Z",
-      "publication_date": "2025-10-24T16:24:01.000Z",
-      "updated_at": "2025-10-27T04:20:03.854Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.IR",
-        "cs.LG",
-        "deep-reinforcement-learning",
-        "fine-tuning",
-        "reasoning",
-        "reinforcement-learning",
-        "tool-use",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Renmin University of China",
-          "image": "images/organizations/renmin.png"
-        },
-        {
-          "name": "Xiaohongshu Inc.",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 25,
-      "github_url": "https://github.com/RUC-NLPIR/DeepAgent",
-      "distance": 1
-    },
-    {
       "id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
       "paper_group_id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
       "title": "Scaling Latent Reasoning via Looped Language Models",
-      "abstract": "现代大型语言模型（LLM）主要通过显式的文本生成进行“思考”，例如链式推理（CoT），这使得推理过程推迟到后期训练，并未充分利用预训练数据。我们提出并开源了Ouro，名为递归的乌罗波罗斯，属于一类预训练的循环语言模型（LoopLM），该模型通过以下方式将推理融入预训练阶段：(i) 潜在空间中的迭代计算，(ii) 用于学习深度分配的熵正则化目标，以及 (iii) 扩展到7.7万亿个标记。Ouro 1.4B和2.6B模型在多个基准测试中表现优越，性能与高达12B的最先进大型语言模型相匹配。通过控制实验，我们证明了这一优势并非来自于知识容量的增加，而是来自于更出色的知识操作能力。我们还展示了LoopLM所产生的推理痕迹与最终输出的对齐程度优于显式的CoT。我们希望我们的结果展示了LoopLM作为推理时代一种新颖扩展方向的潜力。我们的模型可以在此http URL找到。",
+      "abstract": "现代的大型语言模型（LLMs）主要通过显式文本生成进行“思考”，如思维链（CoT），这将推理推迟到训练后，并未充分利用预训练数据。我们提出并开源了Ouro，名为递归的乌罗波罗斯（Ouroboros），这是一个预训练的循环语言模型（LoopLM）系列，通过（i）在潜在空间中的迭代计算，（ii）用于学习深度分配的熵正则化目标，和（iii）扩展到7.7T个标记来构建推理于预训练阶段。Ouro 1.4B和2.6B模型在广泛的基准测试中表现优越，与高达12B的最先进LLMs的结果相匹配。通过控制实验，我们表明这一优势并非来自知识容量的增加，而是来自更优越的知识操控能力。我们还显示，LoopLM产生的推理痕迹与最终输出的对齐程度优于显式CoT。我们希望我们的结果展示了LoopLM作为推理时代新型扩展方向的潜力。我们的模型可以在此找到：这个HTTP URL。",
       "paper_summary": {
         "summary": "Researchers introduce Ouro, a family of Looped Language Models (LoopLM) that offers a new scaling pathway for large language models, achieving 2-3x parameter efficiency and improved reasoning capabilities by leveraging iterative latent computation. This approach demonstrates enhanced safety and more faithful reasoning, particularly on complex tasks.",
         "originalProblem": [
@@ -349,12 +100,12 @@ const papersData = {
       "image_url": "image/2510.25741v1.png",
       "universal_paper_id": "2510.25741",
       "metrics": {
-        "total_votes": 4,
+        "total_votes": 12,
         "visits_count": {
-          "all": 102,
-          "last_7_days": 102
+          "all": 419,
+          "last_7_days": 419
         },
-        "public_total_votes": 13
+        "public_total_votes": 34
       },
       "first_publication_date": "2025-10-29T17:45:42.000Z",
       "publication_date": "2025-10-29T17:45:42.000Z",
@@ -424,69 +175,304 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2d98-dd10-79a3-8241-720f043f888b",
-      "paper_group_id": "019a2d98-dd10-79a3-8241-720f043f888b",
-      "title": "The Principles of Diffusion Models",
-      "abstract": "本专著介绍了指导扩散模型发展的核心原理，追溯其起源，并展示出如何从共享的数学思想中产生多样化的形式。扩散建模首先通过定义一个向前过程，将数据逐渐腐蚀为噪声，将数据分布与一个简单先验通过一系列中间分布相连接。目标是学习一个逆过程，将噪声转化回数据，同时恢复相同的中间状态。我们描述了三个互补的视角。变分视角受到变分自编码器的启发，将扩散视为学习逐步去除噪声。基于评分的视角根植于基于能量的建模，学习不断变化的数据分布的梯度，指示如何将样本推向更可能的区域。基于流的视角与归一化流有关，将生成视为遵循一个平滑路径，通过学习的速度场将样本从噪声转移到数据。这些观点有一个共同的基础：一个时间依赖的速度场，其流动将一个简单的先验传输到数据。采样则相当于解决一个微分方程，该方程沿着连续轨迹将噪声演变为数据。在此基础上，专著讨论了可控生成的指导、高效数值求解器以及基于扩散的流图模型，这些模型学习在任意时间之间的直接映射。它为具备基本深度学习知识的读者提供了对扩散模型的概念性和数学基础的理解。",
+      "id": "019a2c20-a499-781f-b895-e0c2dc989b15",
+      "paper_group_id": "019a2c20-a499-781f-b895-e0c2dc989b15",
+      "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
+      "abstract": "强化学习（RL）在提升大型语言模型（LLM）的推理能力方面展现出了显著的潜力。然而，RL在LLM上的成功严重依赖于人类精心策划的数据集和可验证的奖励，这限制了其可扩展性和通用性。最近受到游戏和围棋成功启发的自我对弈强化学习方法，旨在增强LLM的推理能力，而无需人工标注的数据。然而，这些方法主要依赖一个有反馈的基础环境（例如，Python解释器或游戏引擎）；将其扩展到一般领域仍然具有挑战性。为了解决这些问题，我们提出了多智能体进化（MAE）框架，该框架使LLM能够自我进化以解决各种任务，包括数学、推理和常识问答。MAE的核心设计基于一个由三个相互作用的智能体（提问者、求解者、评审者）组成的三元组，这些智能体源自同一个LLM，并应用强化学习来优化它们的行为。提问者生成问题，求解者尝试解决方案，而评审者在共同进化的过程中评估二者。Qwen2.5-3B-Instruct的实验表明，MAE在多个基准测试中实现了平均4.54%的提升。这些结果突显了MAE作为一种可扩展且数据高效的方法，通过最小依赖人类策划的监督来增强LLM的通用推理能力。",
       "paper_summary": {
-        "summary": "Authored by leading researchers from Sony AI, OpenAI, and Stanford, this monograph synthesizes the rapidly evolving field of diffusion models by clarifying their theoretical foundations and unifying diverse formulations into a single continuous-time generative framework. It systematically covers the origins, unifies variational, score-based, and flow-based perspectives, and outlines advancements in sampling and generation techniques.",
+        "summary": "Multi-Agent Evolve (MAE) enables large language models (LLMs) to improve their reasoning and problem-solving abilities across general domains through a self-supervised, multi-agent co-evolutionary framework. The approach allows a 3B-parameter LLM to increase its overall average accuracy from 55.33% to 58.51% without human annotation and even outperform supervised fine-tuning with ground truth.",
         "originalProblem": [
-          "The rapid proliferation of diverse diffusion model formulations (e.g., DDPM, NCSN, Flow Matching) led to a fragmented literature.",
-          "Researchers and practitioners found it challenging to grasp the underlying mathematical connections and theoretical coherence across different approaches.",
-          "A lack of a systematic and unified understanding hindered entry into the field and efficient progress in research."
+          "Current LLM training with Reinforcement Learning heavily relies on costly human-curated datasets and verifiable reward signals, limiting scalability and generalizability.",
+          "Existing self-play methods for LLMs often require \"grounded environments\" to provide explicit feedback, restricting their application to open-ended language and reasoning tasks.",
+          "A lack of mechanisms for continuous, autonomous enhancement of LLM reasoning abilities across diverse tasks without human supervision."
         ],
         "solution": [
-          "The monograph provides a comprehensive and authoritative review, acting as a pedagogical guide for the field of diffusion models.",
-          "It rigorously demonstrates the mathematical equivalence of variational, score-based, and flow-based approaches under a continuous-time framework.",
-          "It clarifies the theoretical underpinnings, including the central roles of the score function, SDEs, ODEs, and the Fokker-Planck equation, and systematically covers practical advancements like guidance and efficient sampling."
+          "A framework instantiating three co-evolving LLM agents (Proposer, Solver, Judge) from a single backbone model.",
+          "Domain-agnostic self-rewarding mechanisms are used, where the Judge agent evaluates questions and answers without external ground truth.",
+          "A continuous training loop with question quality filtering and synchronized updates using Task-Relative REINFORCE++ drives the self-evolutionary process."
         ],
         "keyInsights": [
-          "Variational, score-based, and flow-based diffusion models are mathematically equivalent formulations of a single continuous-time generative process, all implicitly or explicitly learning a time-dependent vector field.",
-          "The 'conditioning trick,' which transforms intractable marginal objectives into tractable conditional ones, is a foundational enabler for training across all major diffusion model formulations.",
-          "The generation process can be fundamentally understood as solving a differential equation (SDE or Probability Flow ODE), providing a principled basis for analyzing and accelerating sampling."
+          "LLMs can autonomously achieve self-improvement in general domains by generating their own curriculum and feedback, eliminating reliance on human supervision or external verifiers.",
+          "Generating questions of \"desirable difficulty\" (challenging but feasible) is crucial for optimal and continuous performance enhancement.",
+          "The comprehensive interaction and co-evolution of distinct agent roles (Proposer, Solver, Judge) are essential for framework stability and achieving optimal self-improvement."
         ],
         "results": [
-          "The monograph conclusively demonstrates the mathematical equivalence between DDPM, NCSN/Score SDE, and Flow Matching paradigms, showing they are manifestations of a unified continuous-time generative process.",
-          "It establishes the Fokker-Planck equation as the universal underlying law governing the evolution of marginal probability densities in diffusion models, regardless of stochastic or deterministic dynamics.",
-          "The work systematically categorizes and explains advancements in diffusion models, including guidance mechanisms for controllable generation, training-free acceleration methods (numerical solvers), and training-based acceleration techniques (distillation, learning from scratch like Consistency Models)."
+          "MAE improved the Qwen2.5-3B-Instruct model's overall average accuracy from 55.33% to 58.51% without any reference questions, outperforming the AZR baseline.",
+          "MAE variants, including those without ground truth, significantly surpassed Supervised Fine-Tuning on the same dataset with ground truth, with MAE (half reference) achieving 59.87% overall average.",
+          "The framework demonstrated stable performance over 250 training steps, with continuous addition of high-quality questions preventing dataset degradation."
         ]
       },
-      "image_url": "image/2510.21890v1.png",
-      "universal_paper_id": "2510.21890",
+      "image_url": "image/2510.23595v1.png",
+      "universal_paper_id": "2510.23595",
       "metrics": {
-        "total_votes": 23,
+        "total_votes": 14,
         "visits_count": {
-          "all": 668,
-          "last_7_days": 668
+          "all": 567,
+          "last_7_days": 567
         },
-        "public_total_votes": 56
+        "public_total_votes": 54
       },
-      "first_publication_date": "2025-10-24T02:29:02.000Z",
-      "publication_date": "2025-10-24T02:29:02.000Z",
-      "updated_at": "2025-10-29T01:33:04.144Z",
+      "first_publication_date": "2025-10-27T17:58:02.000Z",
+      "publication_date": "2025-10-27T17:58:02.000Z",
+      "updated_at": "2025-10-28T18:42:08.153Z",
       "topics": [
+        "agents",
         "Computer Science",
         "cs.AI",
-        "cs.GR",
-        "cs.LG",
-        "generative-models",
-        "image-generation",
-        "optimization-methods",
-        "representation-learning",
-        "statistical-learning",
-        "unsupervised-learning"
+        "fine-tuning",
+        "multi-agent-learning",
+        "reasoning",
+        "reinforcement-learning",
+        "self-supervised-learning",
+        "transformers"
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": 3,
-      "github_url": "https://github.com/Shiying-Zhang/diffusion-theory-discussion",
+      "github_stars": 0,
+      "github_url": "https://github.com/ulab-uiuc/Multi-agent-Evolve",
+      "distance": 1
+    },
+    {
+      "id": "019a315b-20e8-7941-a237-262a8aeeb18c",
+      "paper_group_id": "019a315b-20e8-7941-a237-262a8aeeb18c",
+      "title": "An efficient probabilistic hardware architecture for diffusion-like models",
+      "abstract": "概率人工智能的扩散促进了对专用随机计算机的提议。尽管这些提议在效率上有望带来改善，但由于它们依赖于根本有限的建模技术和奇特的、不可扩展的硬件，因此未能获得广泛认可。在本研究中，我们通过提出一种全晶体管概率计算机来解决这些不足，该计算机在硬件层面实现强大的去噪模型。系统级分析表明，基于我们架构的设备在一个简单的图像基准测试中可以实现与GPU相当的性能，并且能耗大约低10,000倍。",
+      "paper_summary": {
+        "summary": "Extropic Corporation presents a probabilistic hardware architecture that integrates Denoising Thermodynamic Models (DTMs) with a CMOS-compatible, all-transistor random number generator, achieving an estimated 10,000-fold energy reduction compared to GPU-based diffusion models for generative tasks.",
+        "originalProblem": [
+          "Large-scale AI systems, particularly LLMs, face an unsustainable energy consumption trajectory, with current GPU-centric hardware leading to immense power footprints.",
+          "Previous probabilistic computing efforts suffered from the \"mixing-expressivity tradeoff\" (MET) in monolithic Energy-Based Models (EBMs) and relied on non-scalable \"exotic\" hardware components.",
+          "The \"Hardware Lottery\" phenomenon has locked AI algorithm development into suboptimal hardware architectures, hindering the exploration of more energy-efficient paradigms."
+        ],
+        "solution": [
+          "Introduces Denoising Thermodynamic Models (DTMs) which overcome the MET by sequentially composing simpler, hardware-implementable EBMs for gradual denoising.",
+          "Develops a Denoising Thermodynamic Computer Architecture (DTCA) featuring an all-transistor random number generator (RNG) that is CMOS-compatible, fast, and energy-efficient.",
+          "Proposes a system-level co-design of algorithms and hardware, enabling massively parallel arrays of primitive sampling circuitry optimized for Boltzmann machines."
+        ],
+        "keyInsights": [
+          "DTMs bypass the mixing-expressivity tradeoff by breaking down complex generative tasks into a chain of simpler conditional sampling problems, each handled by an efficient EBM.",
+          "An all-transistor RNG based on subthreshold transistor networks provides a scalable, energy-efficient, and commercially viable stochastic primitive for probabilistic hardware, avoiding exotic components.",
+          "Hybrid Thermodynamic-Deterministic Machine Learning (HTDML) offers a pathway to combine the energy efficiency of probabilistic hardware with the expressivity of classical neural networks for complex tasks."
+        ],
+        "results": [
+          "Projects a 10,000-fold reduction in energy consumption for generative tasks (e.g., binarized Fashion-MNIST) compared to GPU-based diffusion models, while achieving performance parity.",
+          "Demonstrates an all-transistor RNG with a 100 ns autocorrelation decay time, ~350 aJ/bit energy consumption, and a small ~3x3 µm footprint, validated for CMOS compatibility.",
+          "Shows DTMs can be trained stably using an Adaptive Correlation Penalty (ACP), maintaining well-mixed sampling chains and improving monotonically in quality, unlike traditional monolithic EBMs."
+        ]
+      },
+      "image_url": "image/2510.23972v1.png",
+      "universal_paper_id": "2510.23972",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 232,
+          "last_7_days": 232
+        },
+        "public_total_votes": 22
+      },
+      "first_publication_date": "2025-10-28T01:09:19.000Z",
+      "publication_date": "2025-10-28T01:09:19.000Z",
+      "updated_at": "2025-10-29T19:04:07.144Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.LG",
+        "energy-efficient-ml",
+        "generative-models",
+        "hardware-aware-algorithms",
+        "image-generation",
+        "inference-optimization",
+        "ml-systems"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a306d-221a-7ffd-8c54-65a431dadafb",
+      "paper_group_id": "019a306d-221a-7ffd-8c54-65a431dadafb",
+      "title": "Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents",
+      "abstract": "关于大规模监督微调AI代理的公共研究结果仍然相对稀少，因为收集代理训练数据面临独特的挑战。在这项工作中，我们认为瓶颈并不是缺乏基础数据源，而是各种数据在异构格式、工具和接口之间高度碎片化。为此，我们提出了代理数据协议（ADP），这是一种轻量级的表示语言，充当不同格式的代理数据集与统一的下游代理训练管道之间的“中介语”。ADP的设计足够表达多种任务，包括API/工具使用、浏览、编码、软件工程和一般代理工作流程，同时保持解析和训练的简单性，而无需在每个数据集级别进行工程化。在实验中，我们将13个现有的代理训练数据集统一为ADP格式，并将标准化的ADP数据转换为多个代理框架的训练准备格式。我们在这些数据上进行了监督微调，平均表现提升约20%，在标准编码、浏览、工具使用和研究基准上实现了最先进或者接近最先进的性能，而无需进行领域特定的调优。所有代码和数据都已公开发布，希望ADP能够帮助降低标准化、可扩展和可重复的代理训练的门槛。",
+      "paper_summary": {
+        "summary": "Carnegie Mellon University and collaborating researchers introduced the Agent Data Protocol (ADP), a standardized framework unifying diverse agent training datasets. This protocol enables more effective and scalable fine-tuning of LLM agents, achieving approximately 20% average performance gain over base models and enhancing cross-task generalization.",
+        "originalProblem": [
+          "Agent training data is highly fragmented across datasets, utilizing inconsistent formats, action spaces, and observation structures.",
+          "The heterogeneity of existing data sources hinders the ability to combine and leverage them for large-scale supervised fine-tuning (SFT) of LLM agents.",
+          "A significant engineering overhead exists for integrating new datasets or adapting agent frameworks, as custom conversion scripts are required for each dataset-agent pair."
+        ],
+        "solution": [
+          "Developed the Agent Data Protocol (ADP), a lightweight, expressive representation language to standardize diverse agent training datasets.",
+          "Implemented ADP using Pydantic schemas, defining core `Trajectory` objects composed of standardized `Actions` (API, Code, Message) and `Observations` (Text, Web).",
+          "Created a three-stage conversion pipeline that transforms raw datasets into ADP-standardized format, then converts them into SFT-ready formats tailored for specific agent frameworks."
+        ],
+        "keyInsights": [
+          "A systematic analysis of 13 diverse datasets, unified via ADP, revealed inherent characteristics such as varied trajectory lengths, domain-specific action patterns, and high reasoning coverage (typically >90%).",
+          "Unifying diverse datasets through ADP enables the training of more generalizable LLM agents, outperforming models fine-tuned on single-domain data and mitigating negative transfer effects.",
+          "The ADP framework demonstrably reduces the engineering effort for integrating datasets and agent frameworks, transforming a quadratic (D x A) integration problem into a linear (D + A) one."
+        ],
+        "results": [
+          "Fine-tuning LLMs on the standardized ADP dataset yielded an average performance gain of approximately 20% over base models across benchmarks like SWE-Bench, WebArena, AgentBench OS, and GAIA.",
+          "On SWE-Bench (Verified), ADP-trained Qwen-2.5-7B-Coder-Instruct improved accuracy from 0.4% to 20.2% (SWE-Agent) and 2.8% to 20.4% (OpenHands), with the 32B model achieving 40.3% (SWE-Agent).",
+          "ADP reduced the engineering cost for dataset-to-agent integration, illustrated by a reduction from an estimated ~489,200 Lines of Code without ADP to ~12,592 LOC with ADP for 13 datasets and 100 harnesses."
+        ]
+      },
+      "image_url": "image/2510.24702v1.png",
+      "universal_paper_id": "2510.24702",
+      "metrics": {
+        "total_votes": 5,
+        "visits_count": {
+          "all": 234,
+          "last_7_days": 234
+        },
+        "public_total_votes": 25
+      },
+      "first_publication_date": "2025-10-28T17:53:13.000Z",
+      "publication_date": "2025-10-28T17:53:13.000Z",
+      "updated_at": "2025-10-29T14:44:09.882Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "data-curation",
+        "fine-tuning",
+        "instruction-tuning",
+        "ml-systems",
+        "tool-use",
+        "training-orchestration",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
+      "paper_group_id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
+      "title": "AgentFold: Long-Horizon Web Agents with Proactive Context Management",
+      "abstract": "基于LLM的网页代理在信息检索方面展现了巨大的潜力，但在长时程任务中的有效性受到背景管理的基本权衡影响。当前的ReAct基础代理由于积累了嘈杂的原始历史，面临背景饱和的问题，而每一步固定总结完整历史的方法则有可能导致关键信息的不可逆损失。为了解决这些问题，我们推出了AgentFold，这是一种以主动背景管理为中心的新型代理范式，灵感来源于人类认知过程中的回顾整合。AgentFold将其背景视为一个动态的认知工作空间，积极进行塑造，而不是一个被动的记录。每一步，它学习执行一个“折叠”操作，在多个尺度上管理其历史轨迹：它可以进行细粒度的凝聚以保留重要的细节，也可以进行深度的整合以抽象出整个多步子任务。在显著的基准测试中，结果令人瞩目：通过简单的监督微调（不需要持续预训练或强化学习），我们的AgentFold-30B-A3B代理在BrowseComp上取得了36.2%、在BrowseComp-ZH上取得了47.3%的成绩。值得注意的是，这一表现不仅超过或匹配了规模远大于自身的开源模型，如DeepSeek-V3.1-671B-A37B，还超过了诸如OpenAI的o4-mini等领先的专有代理。",
+      "paper_summary": {
+        "summary": "AgentFold presents a novel web agent architecture that employs proactive, multi-scale context management to enable effective reasoning over long-horizon web tasks by dynamically folding interaction histories. This approach achieved state-of-the-art performance for open-source agents on benchmarks like BrowseComp (36.2%) and WideSearch (62.1%), while maintaining a context size 92% smaller than ReAct agents after 100 turns.",
+        "originalProblem": [
+          "Traditional ReAct agents suffer from context saturation on long-horizon tasks due to their verbose, append-only history, hindering effective reasoning.",
+          "Fixed-summarization methods, while concise, risk irreversible loss of crucial fine-grained details during context summarization.",
+          "A fundamental trade-off exists between maintaining comprehensive detail and achieving context conciseness, limiting LLM-based web agents' ability to handle complex, prolonged tasks."
+        ],
+        "solution": [
+          "AgentFold introduces a dynamic cognitive workspace partitioning context into user question, tools, multi-scale state summaries, and the latest interaction.",
+          "It implements a \"fold\" operation, guided by a learned folding directive, to either granularly condense the latest interaction or deeply consolidate multiple past steps into abstract summaries.",
+          "A \"Fold-Generator\" data collection pipeline, utilizing rejection sampling and supervised fine-tuning, trains LLMs (Qwen3-30B-A3B) to perform this explicit context curation."
+        ],
+        "keyInsights": [
+          "Human-inspired retrospective consolidation and active memory sculpting can overcome the context management trade-off in LLM agents.",
+          "Explicit, learned context folding directives allow agents to dynamically adapt context granularity, preserving critical details while abstracting irrelevant information.",
+          "Training a smaller LLM to perform strategic context management can lead to performance competitive with or superior to much larger models that rely solely on raw context window size."
+        ],
+        "results": [
+          "AgentFold-30B-A3B achieved state-of-the-art performance for open-source agents, scoring 36.2% on BrowseComp (outperforming a 20x larger model) and 62.1% on WideSearch.",
+          "Context token count grew sub-linearly, remaining exceptionally concise, with an average context 92% smaller than ReAct agents after 100 turns, yielding significant memory savings.",
+          "Demonstrated enhanced long-horizon capabilities, with accuracy continuing to improve up to 256 turns, unlike baselines that saturated and failed due to context overflow."
+        ]
+      },
+      "image_url": "image/2510.24699v1.png",
+      "universal_paper_id": "2510.24699",
+      "metrics": {
+        "total_votes": 5,
+        "visits_count": {
+          "all": 208,
+          "last_7_days": 208
+        },
+        "public_total_votes": 27
+      },
+      "first_publication_date": "2025-10-28T17:51:50.000Z",
+      "publication_date": "2025-10-28T17:51:50.000Z",
+      "updated_at": "2025-10-29T04:59:02.281Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "fine-tuning",
+        "reasoning",
+        "tool-use"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
+      "distance": 1
+    },
+    {
+      "id": "019a38b6-4852-748b-80ff-8fca8b517243",
+      "paper_group_id": "019a38b6-4852-748b-80ff-8fca8b517243",
+      "title": "Defeating the Training-Inference Mismatch via FP16",
+      "abstract": "强化学习（RL）对大型语言模型（LLM）的微调常常因训练政策和推断政策之间的数值不匹配而导致不稳定性。尽管之前的研究尝试通过算法修正或工程对齐来减轻这一问题，但我们表明其根本原因在于浮点精度本身。尽管广泛采用的BF16具有较大的动态范围，但它引入了大量的舍入错误，破坏了训练和推断之间的一致性。在本研究中，我们证明简单地回退到\\textbf{FP16}可以有效消除这种不匹配。这一变化简单，现代框架完全支持，只需几行代码的更改，并且不需对模型架构或学习算法进行修改。我们的结果表明，使用FP16在不同任务、算法和框架中通常能够实现更稳定的优化、更快的收敛和更强的性能。我们希望这些发现能激励人们更广泛地重新考虑RL微调中的精度权衡。",
+      "paper_summary": {
+        "summary": "This research from Sea AI Lab and the National University of Singapore demonstrates that using FP16 precision for both training and inference fundamentally resolves the numerical discrepancies causing instability in Reinforcement Learning (RL) fine-tuning of Large Language Models. Employing FP16 drastically reduces the training-inference mismatch, leading to more stable optimization, faster convergence, and superior performance compared to existing BF16-based methods and complex algorithmic corrections.",
+        "originalProblem": [
+          "Reinforcement Learning (RL) fine-tuning of Large Language Models (LLMs) often suffers from instability, training collapse, and sub-optimal performance.",
+          "The 'training-inference mismatch,' caused by numerical discrepancies between fast inference and gradient computation engines, leads to biased gradients and a 'deployment gap'.",
+          "Existing solutions, such as importance sampling corrections or manual engineering alignments, are computationally expensive, complex, or only address symptoms without eliminating the fundamental mismatch."
+        ],
+        "solution": [
+          "The paper hypothesizes and confirms that low floating-point precision, specifically BF16, is the root cause of the training-inference mismatch due to accumulated rounding errors.",
+          "The core solution involves switching from BF16 to FP16 precision for both the inference policy and the training engine in RL fine-tuning.",
+          "FP16's higher numerical precision (more mantissa bits) ensures that minor implementation differences are absorbed, preventing policy divergence, with standard loss scaling addressing its limited dynamic range."
+        ],
+        "keyInsights": [
+          "BF16's lower precision (7 mantissa bits) is a primary source of numerical instability in RL fine-tuning, causing policies to diverge even with identical model weights.",
+          "FP16's significantly higher precision (10 mantissa bits) effectively eliminates the training-inference mismatch by ensuring numerical consistency between inference and training policies.",
+          "By addressing the root cause of the mismatch, FP16 simplifies RL fine-tuning, allowing even simple, unbiased policy gradient estimators to perform robustly and effectively, rendering complex algorithmic corrections less necessary."
+        ],
+        "results": [
+          "FP16 reduced the training-inference mismatch in sequence-level log-probability ratios by approximately 24 times compared to BF16.",
+          "Switching to FP16 precision enabled traditional RL algorithms (e.g., GRPO, PG-Seq-IS) to converge stably and achieve nearly 100% training accuracy on a challenging dataset, while BF16-based methods frequently collapsed or converged slowly.",
+          "The benefits of FP16 generalized across diverse settings, including Mixture-of-Experts (MoE) models, LoRA-based fine-tuning, larger dense models, and different LLM architectures, consistently leading to higher training rewards and validation performance."
+        ]
+      },
+      "image_url": "image/2510.26788v1.png",
+      "universal_paper_id": "2510.26788",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 69,
+          "last_7_days": 69
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-30T17:58:11.000Z",
+      "publication_date": "2025-10-30T17:58:11.000Z",
+      "updated_at": "2025-10-31T05:21:01.522Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "deep-reinforcement-learning",
+        "fine-tuning",
+        "hardware-aware-algorithms",
+        "ml-systems",
+        "optimization-methods",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 5,
+      "github_url": "https://github.com/sail-sg/Precision-RL",
       "distance": 1
     },
     {
       "id": "019a2dc0-088b-7216-b79b-b0982fed63f9",
       "paper_group_id": "019a2dc0-088b-7216-b79b-b0982fed63f9",
       "title": "Uniform Discrete Diffusion with Metric Path for Video Generation",
-      "abstract": "连续空间视频生成迅速推进，而离散方法由于误差积累和长期上下文不一致而滞后。在这项工作中，我们重新审视了离散生成建模，并提出了均匀分布的扩散与度量路径（URSA），这是一个简单而强大的框架，弥合了可扩展视频生成与连续方法之间的差距。URSA的核心是将视频生成任务表述为对离散时空代币的迭代全局精细化。它整合了两个关键设计：线性度量路径和与分辨率相关的时间步移转机制。这些设计使URSA能够有效扩展到高分辨率图像合成和长时段视频生成，同时所需的推理步骤显著减少。此外，我们引入了一种异步时间微调策略，统一了单一模型中的多种任务，包括插值和图像转视频生成。在具有挑战性的视频和图像生成基准上的大量实验表明，URSA始终优于现有的离散方法，并且其性能与最新的连续扩散方法相当。代码和模型可以在此链接找到。",
+      "abstract": "连续空间视频生成快速发展，而离散方法由于误差积累和长时段不一致性滞后。在本研究中，我们重新审视了离散生成建模，并提出了Uniform discRete diffuSion with metric pAth（URSA），这是一个简单而强大的框架，弥合了可扩展视频生成与连续方法之间的差距。URSA的核心是将视频生成任务表述为离散时空令牌的迭代全局优化。它整合了两个关键设计：线性化度量路径和分辨率依赖的时间步长转换机制。这些设计使URSA能够高效地扩展到高分辨率图像合成和长时段视频生成，同时所需的推理步骤显著减少。此外，我们还引入了一种异步时间微调策略，将多种任务统一于单一模型中，包括插值和图像到视频的生成。在具有挑战性的视频和图像生成基准上的广泛实验表明，URSA在性能上始终优于现有的离散方法，并且达到了与最先进的连续扩散方法相当的性能。代码和模型可在该https URL获取。",
       "paper_summary": {
         "summary": "URSA presents a uniform discrete diffusion framework that incorporates a metric probability path for video generation, enabling iterative global refinement in discrete token space. This framework achieves performance competitive with state-of-the-art continuous diffusion models across text-to-video, image-to-video, and text-to-image benchmarks, while enhancing scalability and multi-task capabilities.",
         "originalProblem": [
@@ -515,10 +501,10 @@ const papersData = {
       "metrics": {
         "total_votes": 2,
         "visits_count": {
-          "all": 149,
-          "last_7_days": 149
+          "all": 212,
+          "last_7_days": 212
         },
-        "public_total_votes": 16
+        "public_total_votes": 22
       },
       "first_publication_date": "2025-10-28T17:59:57.000Z",
       "publication_date": "2025-10-28T17:59:57.000Z",
@@ -562,68 +548,10 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
-      "paper_group_id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
-      "title": "AgentFold: Long-Horizon Web Agents with Proactive Context Management",
-      "abstract": "基于大语言模型的网络代理在信息检索中展现出巨大的潜力，但它们在长时间任务中的有效性受到上下文管理的基本权衡的制约。现有的ReAct-based代理由于累积了嘈杂的原始历史而遭遇上下文饱和，而在每个步骤固定总结整个历史的方法则面临关键细节不可逆转损失的风险。为了解决这些问题，我们引入了AgentFold，这是一种新颖的代理范式，专注于主动的上下文管理，受到人类认知过程中的回顾性整合的启发。AgentFold将其上下文视为一个动态的认知工作空间，主动进行塑造，而不是被动地填充记录。在每个步骤中，它学习执行“折叠”操作，以在多个层面上管理其历史轨迹：它可以进行细致的浓缩，以保留重要的细微细节，或者进行深度整合，以抽象出整个多步骤的子任务。在显著的基准测试中，结果令人瞩目：通过简单的监督微调（无需持续预训练或强化学习），我们的AgentFold-30B-A3B代理在BrowseComp上达到了36.2%，在BrowseComp-ZH上达到了47.3%。值得注意的是，这一性能不仅超越或匹配了大规模开源模型，如DeepSeek-V3.1-671B-A37B，还超越了领先的专有代理，比如OpenAI的o4-mini。",
-      "paper_summary": {
-        "summary": "AgentFold presents a novel web agent architecture that employs proactive, multi-scale context management to enable effective reasoning over long-horizon web tasks by dynamically folding interaction histories. This approach achieved state-of-the-art performance for open-source agents on benchmarks like BrowseComp (36.2%) and WideSearch (62.1%), while maintaining a context size 92% smaller than ReAct agents after 100 turns.",
-        "originalProblem": [
-          "Traditional ReAct agents suffer from context saturation on long-horizon tasks due to their verbose, append-only history, hindering effective reasoning.",
-          "Fixed-summarization methods, while concise, risk irreversible loss of crucial fine-grained details during context summarization.",
-          "A fundamental trade-off exists between maintaining comprehensive detail and achieving context conciseness, limiting LLM-based web agents' ability to handle complex, prolonged tasks."
-        ],
-        "solution": [
-          "AgentFold introduces a dynamic cognitive workspace partitioning context into user question, tools, multi-scale state summaries, and the latest interaction.",
-          "It implements a \"fold\" operation, guided by a learned folding directive, to either granularly condense the latest interaction or deeply consolidate multiple past steps into abstract summaries.",
-          "A \"Fold-Generator\" data collection pipeline, utilizing rejection sampling and supervised fine-tuning, trains LLMs (Qwen3-30B-A3B) to perform this explicit context curation."
-        ],
-        "keyInsights": [
-          "Human-inspired retrospective consolidation and active memory sculpting can overcome the context management trade-off in LLM agents.",
-          "Explicit, learned context folding directives allow agents to dynamically adapt context granularity, preserving critical details while abstracting irrelevant information.",
-          "Training a smaller LLM to perform strategic context management can lead to performance competitive with or superior to much larger models that rely solely on raw context window size."
-        ],
-        "results": [
-          "AgentFold-30B-A3B achieved state-of-the-art performance for open-source agents, scoring 36.2% on BrowseComp (outperforming a 20x larger model) and 62.1% on WideSearch.",
-          "Context token count grew sub-linearly, remaining exceptionally concise, with an average context 92% smaller than ReAct agents after 100 turns, yielding significant memory savings.",
-          "Demonstrated enhanced long-horizon capabilities, with accuracy continuing to improve up to 256 turns, unlike baselines that saturated and failed due to context overflow."
-        ]
-      },
-      "image_url": "image/2510.24699v1.png",
-      "universal_paper_id": "2510.24699",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 119,
-          "last_7_days": 119
-        },
-        "public_total_votes": 14
-      },
-      "first_publication_date": "2025-10-28T17:51:50.000Z",
-      "publication_date": "2025-10-28T17:51:50.000Z",
-      "updated_at": "2025-10-29T04:59:02.281Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "fine-tuning",
-        "reasoning",
-        "tool-use"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
-      "distance": 1
-    },
-    {
       "id": "019a2dc8-3214-77f5-8ba1-95cbcf79d717",
       "paper_group_id": "019a2dc8-3214-77f5-8ba1-95cbcf79d717",
       "title": "SPICE: Self-Play In Corpus Environments Improves Reasoning",
-      "abstract": "自我改善系统需要与环境互动以实现持续适应。我们介绍了SPICE（自我对弈语料环境），这是一个强化学习框架，单一模型担任两个角色：挑战者从大型语料库中提取文档以生成多样化的推理任务，和推理者来解决这些任务。在对抗性动态中，挑战者在推理者能力的前沿创建了一个自动课程，而语料库的基础提供了丰富的、几乎无尽的外部信号，支持持续改进。与现有的无基础自我对弈方法相比，这些方法的收益更为有限，SPICE在多个模型系列的数学 (+8.9%) 和一般推理 (+9.8%) 基准测试中实现了一致的提升。我们的分析揭示了文档基础在SPICE中是一个关键要素，它不断生成自身愈发挑战的目标并实现这些目标，从而实现持续的自我改善。",
+      "abstract": "自我提升系统需要与环境互动以实现持续的适应。我们引入了SPICE（自我对弈语料环境），这是一种强化学习框架，单一模型承担两个角色：挑战者从大型语料库中挖掘文档以生成多样的推理任务，推理者则负责解决这些任务。通过对抗性动态，挑战者在推理者能力的前沿创建自动课程，而语料的基础则提供了丰富的、几乎用不完的外部信号，必要以支持持续的改进。与现有的无基础自我对弈方法所提供的有限益处不同，SPICE在多个模型类别上的数学（+8.9%）和一般推理（+9.8%）基准上实现了一致的提升。我们的分析揭示了文档基础是SPICE中关键的成分，它能够持续生成自己日益具有挑战性的目标并实现这些目标，从而实现持续的自我提升。",
       "paper_summary": {
         "summary": "A research team from FAIR at Meta and NUS developed SPICE, a reinforcement learning framework that enables large language models to continuously enhance their reasoning abilities through adversarial self-play grounded in a vast external document corpus. The method consistently improved performance on mathematical and general reasoning benchmarks by up to 11.9% compared to base models.",
         "originalProblem": [
@@ -652,12 +580,12 @@ const papersData = {
       "image_url": "image/2510.24684v1.png",
       "universal_paper_id": "2510.24684",
       "metrics": {
-        "total_votes": 2,
+        "total_votes": 7,
         "visits_count": {
-          "all": 95,
-          "last_7_days": 95
+          "all": 156,
+          "last_7_days": 156
         },
-        "public_total_votes": 13
+        "public_total_votes": 24
       },
       "first_publication_date": "2025-10-28T17:46:16.000Z",
       "publication_date": "2025-10-28T17:46:16.000Z",
@@ -694,10 +622,339 @@ const papersData = {
       "distance": 1
     },
     {
+      "id": "019a330f-ab28-7eba-9849-ff7b835837c9",
+      "paper_group_id": "019a330f-ab28-7eba-9849-ff7b835837c9",
+      "title": "The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic, and Long-Horizon Task Execution",
+      "abstract": "现实世界中的语言代理必须处理跨多个应用程序的复杂多步骤工作流程。例如，一个代理可以通过与日历和文件系统协调来管理电子邮件，或者监控生产数据库以检测异常，并根据操作手册生成报告。然而，现有的语言代理基准测试往往集中于狭窄的领域或简化的任务，缺乏评估代理在真实世界表现所需的多样性、真实性和长期复杂性。为了解决这个问题，我们推出了工具十项全能赛（称为Toolathlon），这是一项为语言代理提供多样化应用和工具的基准测试，具有真实的环境设置和可靠的执行基础评估。Toolathlon涵盖32个软件应用和604个工具，从日常平台如Google日历和Notion，到专业工具如WooCommerce、Kubernetes和BigQuery。大多数工具基于我们可能已经修订或自行实施的高质量模型上下文协议（MCP）服务器。与以往的工作不同，后者主要确保功能现实性，但环境状态多样性有限，我们提供真实软件的真实初始环境状态，例如有数十名学生的Canvas课程或实际的财务电子表格。该基准总共包括108个手动获取或定制的任务，要求在完成时平均与多个应用互动约20个回合。每个任务都可以通过专门的评估脚本严格验证。对最先进模型的全面评估突显了它们的显著缺陷：表现最佳的模型Claude-4.5-Sonnet的成功率仅为38.6%，平均召唤工具的回合数为20.2，而顶级开放权重模型DeepSeek-V3.2-Exp的成功率为20.1%。我们期待Toolathlon推动更强大语言代理的发展，以执行现实世界的长期任务。",
+      "paper_summary": {
+        "summary": "A new benchmark, TOOLATHLON, has been introduced to rigorously evaluate language agents on their ability to execute diverse, realistic, and long-horizon tasks across 32 real-world applications. Evaluations using this benchmark reveal that even leading state-of-the-art models achieve low success rates, with the top-performing Claude-4.5-Sonnet reaching only 38.6% Pass@1.",
+        "originalProblem": [
+          "Existing language agent benchmarks often use narrow domains, simplified tasks, or artificial environments, failing to capture real-world complexity.",
+          "Many benchmarks rely on synthetic data, mocked tools, or subjective LLM judges, leading to unreliable and unreproducible evaluations.",
+          "Current evaluation methodologies do not adequately test agents' capabilities in long-horizon tasks requiring multi-step planning and cross-application orchestration."
+        ],
+        "solution": [
+          "Developed TOOLATHLON, a comprehensive benchmark with 108 tasks across 32 real-world applications and 604 tools, spanning seven diverse domains.",
+          "Designed tasks to be long-horizon (average 20 interaction turns), multi-application, and featuring realistic initial environment states and \"fuzzy\" instructions.",
+          "Implemented a strictly verifiable, execution-based evaluation framework using deterministic scripts to check final environment states within isolated containerized or remote real-world environments."
+        ],
+        "keyInsights": [
+          "Current state-of-the-art language agents, including top proprietary models, demonstrate significant limitations in reliably executing complex, real-world, long-horizon tasks.",
+          "Agents struggle with long-context scenarios, particularly processing and extracting information from overlong tool outputs, leading to reduced success rates.",
+          "There is a notable disparity between models' occasional success (Pass@3) and consistent performance (Pass^3), highlighting a lack of robustness and reliability."
+        ],
+        "results": [
+          "The best-performing proprietary model, Claude-4.5-Sonnet, achieved only a 38.6% Pass@1 success rate across all tasks.",
+          "Leading open-source models showed a noticeable performance gap, with DeepSeek-V3.2-Exp reaching a 20.1% Pass@1 success rate.",
+          "Hallucinating non-existent tool names proved more detrimental to task success than tool execution errors that provided feedback for agent adjustment."
+        ]
+      },
+      "image_url": "image/2510.25726v1.png",
+      "universal_paper_id": "2510.25726",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 98,
+          "last_7_days": 98
+        },
+        "public_total_votes": 13
+      },
+      "first_publication_date": "2025-10-29T17:32:49.000Z",
+      "publication_date": "2025-10-29T17:32:49.000Z",
+      "updated_at": "2025-10-30T03:00:56.232Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "multi-task-learning",
+        "reasoning",
+        "tool-use"
+      ],
+      "organization_info": [
+        {
+          "name": "Carnegie Mellon University",
+          "image": "images/organizations/cmu.jpg"
+        },
+        {
+          "name": "Duke University",
+          "image": "images/organizations/duke-university.jpeg"
+        },
+        {
+          "name": "HKUST",
+          "image": "images/organizations/hkust.jpg"
+        },
+        {
+          "name": "All Hands AI",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 17,
+      "github_url": "https://github.com/hkust-nlp/Toolathlon",
+      "distance": 1
+    },
+    {
+      "id": "019a380e-305a-71ac-bef8-bb045bbbded1",
+      "paper_group_id": "019a380e-305a-71ac-bef8-bb045bbbded1",
+      "title": "Emu3.5: Native Multimodal Models are World Learners",
+      "abstract": "我们推出了Emu3.5，这是一个大规模的多模态世界模型，能够原生地预测视觉和语言的下一状态。Emu3.5在一个包含超过10万亿个标记的视觉-语言交错数据语料库上进行了端到端的预训练，主要源自互联网视频的连续帧和文字记录。该模型自然接受交错的视觉-语言输入，并生成交错的视觉-语言输出。Emu3.5进一步通过大规模强化学习进行后训练，以增强多模态推理和生成。为了提高推理效率，我们提出了离散扩散适应（DiDA），将逐 token 解码转换为双向并行预测，使每张图像的推理速度加快约20倍，而不牺牲性能。Emu3.5展现了强大的原生多模态能力，包括长时间范围的视觉-语言生成、任意到图像（X2I）生成以及复杂的丰富文本图像生成。它还表现出可泛化的世界建模能力，使得在多样场景和任务中能够进行时空一致的世界探索和开放世界的具身操作。作为比较，Emu3.5在图像生成和编辑任务上达到了与Gemini 2.5 Flash Image（Nano Banana）相当的性能，并在一系列交错生成任务上展示了卓越的结果。我们在这个https URL上开源Emu3.5，以支持社区研究。",
+      "paper_summary": {
+        "summary": "BAAI's Emu3.5 introduces a native multimodal model trained extensively on internet videos, capable of understanding and generating interleaved vision-language sequences across long horizons. The model achieves strong performance in various multimodal tasks, including complex image generation with accurate text rendering and embodied AI scenarios, while accelerating image inference by approximately 20x using a novel Discrete Diffusion Adaptation (DiDA) technique.",
+        "originalProblem": [
+          "Large language models are inherently limited by their text-only input, offering a restricted view of the world and hindering comprehensive understanding.",
+          "Many existing vision-language models employ separate encoders or adapter-based approaches, lacking deep, native integration of vision and language for unified prediction.",
+          "Autoregressive models suffer from slow, token-by-token inference, creating a practical bottleneck for generating high-resolution images in real-time applications."
+        ],
+        "solution": [
+          "Develop Emu3.5, a 34.1 billion parameter decoder-only transformer, designed for native multimodal prediction of the 'next state across vision and language' using a unified next-token prediction objective.",
+          "Pre-train the model on over 13 trillion multimodal tokens, primarily sourced from ~63 million internet videos, to learn long-horizon spatiotemporal continuity and cross-modal alignment.",
+          "Introduce Discrete Diffusion Adaptation (DiDA), a technique that converts autoregressive image generation into bidirectional parallel prediction, significantly accelerating inference.",
+          "Apply extensive post-training through two-stage supervised fine-tuning (SFT) and large-scale reinforcement learning (RL) guided by comprehensive multimodal rewards to enhance reasoning and generation."
+        ],
+        "keyInsights": [
+          "Native multimodal architectures, when trained on vast quantities of long-horizon interleaved vision-language data, move closer to learning a 'world model' that captures temporal dynamics and rich context.",
+          "The Discrete Diffusion Adaptation (DiDA) method effectively transforms sequential autoregressive image generation into an efficient parallel process, addressing a major practical limitation for high-resolution output.",
+          "A unified post-training strategy, incorporating large-scale SFT and RL with a comprehensive multimodal reward system, is crucial for aligning model outputs with human preferences and improving generalization across diverse tasks.",
+          "Scaling pre-training compute with high-quality, meticulously filtered and annotated internet video data leads to progressively stronger generalization capabilities across multimodal tasks."
+        ],
+        "results": [
+          "Emu3.5 achieves strong performance in Any-to-Image (X2I) generation, including open-world image editing, precise control, and complex text-rich image rendering, outperforming various state-of-the-art T2I models on benchmarks like LeX-Bench and CVTG-2K.",
+          "The model demonstrates generalizable world-modeling abilities, achieving a 65.5% win rate against Gemini 2.5 Flash Image for world exploration and a 67.1% win rate for embodied manipulation in automated preference evaluations.",
+          "Discrete Diffusion Adaptation (DiDA) accelerates per-image inference by approximately 20x (reducing generation time for a 1024x1024 image from 120s to 10s) without sacrificing performance on T2I and X2I tasks, making it competitive with fast-sampling diffusion models."
+        ]
+      },
+      "image_url": "image/2510.26583v1.png",
+      "universal_paper_id": "2510.26583",
+      "metrics": {
+        "total_votes": 4,
+        "visits_count": {
+          "all": 59,
+          "last_7_days": 59
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-30T15:11:16.000Z",
+      "publication_date": "2025-10-30T15:11:16.000Z",
+      "updated_at": "2025-10-31T02:17:25.338Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "generative-models",
+        "image-generation",
+        "inference-optimization",
+        "multi-modal-learning",
+        "reinforcement-learning",
+        "representation-learning",
+        "robotic-control",
+        "transformers",
+        "video-understanding",
+        "vision-language-models"
+      ],
+      "organization_info": [
+        {
+          "name": "BAAI",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 555,
+      "github_url": "https://github.com/baaivision/Emu3.5",
+      "distance": 1
+    },
+    {
+      "id": "019a3883-8556-7e55-bfb5-d6dd27a39c0b",
+      "paper_group_id": "019a3883-8556-7e55-bfb5-d6dd27a39c0b",
+      "title": "OneTrans: Unified Feature Interaction and Sequence Modeling with One Transformer in Industrial Recommender",
+      "abstract": "在推荐系统中，扩展特征交互模块（例如，Wukong、RankMixer）或用户行为序列模块（例如，LONGER）已取得显著成功。然而，这些努力通常在不同的轨道上进行，这不仅阻碍了双向信息交换，还阻止了统一优化和扩展。在本文中，我们提出了OneTrans，一种统一的Transformer骨干网，能够同时执行用户行为序列建模和特征交互。OneTrans采用统一的分词器，将顺序和非顺序属性转换为单个令牌序列。堆叠的OneTrans模块在相似的顺序令牌之间共享参数，同时为非顺序令牌分配特定的参数。通过因果注意力和跨请求KV缓存，OneTrans实现了中间表示的预计算和缓存，在训练和推理过程中显著降低了计算成本。在工业规模数据集上的实验结果表明，OneTrans在参数增加时表现出良好的扩展性，始终优于强基线，并在在线A/B测试中实现了每用户GMV提升5.68%。",
+      "paper_summary": {
+        "summary": "OneTrans, a joint effort by ByteDance and Nanyang Technological University, introduces a unified Transformer architecture for industrial recommender systems that simultaneously processes user-behavior sequences and diverse non-sequential features. This approach enables bidirectional information exchange, leverages LLM-style optimizations, and achieves improved recommendation quality (e.g., +1.53% CTR AUC) and efficiency in industrial deployments, demonstrating significant business lifts in online A/B tests.",
+        "originalProblem": [
+          "Conventional recommender systems suffer from architectural fragmentation, separating user-behavior sequence modeling from feature interaction.",
+          "This fragmentation restricts bidirectional information flow between static features and dynamic sequences, limiting a holistic understanding of user preferences.",
+          "Fragmented architectures hinder the application of unified Large Language Model (LLM) engineering optimizations and predictable performance scaling."
+        ],
+        "solution": [
+          "OneTrans employs a unified Transformer backbone with a comprehensive tokenization strategy that converts both sequential (user behavior) and non-sequential (user, item, context) features into a single token sequence.",
+          "It utilizes a \"Mixed Parameterization Transformer Block\" where sequential tokens share parameters, while each non-sequential token has distinct parameters for Q/K/V projections and FFNs, facilitating tailored interaction.",
+          "A Pyramid Stack and LLM-style optimizations (e.g., Cross-Request KV Caching, FlashAttention-2, mixed precision) are integrated to enhance efficiency, reduce computation, and improve memory management during training and inference."
+        ],
+        "keyInsights": [
+          "Unifying sequence modeling and feature interaction within a single causal Transformer architecture enables more reliable and compute-efficient performance improvements than scaling components independently.",
+          "Specific design choices like an Auto-Split tokenizer for non-sequential features, timestamp-aware fusion for sequential data, and token-specific parameters for heterogeneous non-sequential tokens are crucial for optimal performance.",
+          "Adopting LLM engineering optimizations (e.g., KV caching, FlashAttention, mixed precision) significantly improves training and serving efficiency, making complex Transformer models practical for industrial recommender systems."
+        ],
+        "results": [
+          "OneTrans-L achieved +1.53% CTR AUC and +1.14% CVR AUC over DCNv2+DIN baselines in offline evaluations, with predictable performance gains observed when scaling model size, depth, and width.",
+          "LLM optimizations, including the Pyramid Stack, Cross-Request KV Caching, FlashAttention-2, and mixed precision, led to substantial efficiency improvements (e.g., ~30-69% reduction in latency/runtime, ~30-58% reduction in memory) while maintaining performance.",
+          "Online A/B tests demonstrated statistically significant business lifts (e.g., +4.35% orders/user, +5.68% GMV/user in Feeds) and improved user engagement, alongside maintaining or reducing p99 inference latency by -3.91% to -3.26%."
+        ]
+      },
+      "image_url": "image/2510.26104v1.png",
+      "universal_paper_id": "2510.26104",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 57,
+          "last_7_days": 57
+        },
+        "public_total_votes": 9
+      },
+      "first_publication_date": "2025-10-30T03:30:12.000Z",
+      "publication_date": "2025-10-30T03:30:12.000Z",
+      "updated_at": "2025-10-31T04:25:34.806Z",
+      "topics": [
+        "Computer Science",
+        "cs.IR"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a3829-2111-73c8-ab76-f934bd1469c0",
+      "paper_group_id": "019a3829-2111-73c8-ab76-f934bd1469c0",
+      "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
+      "abstract": "我们介绍了Kimi Linear，一种混合线性注意力架构，它首次在多种场景下的公正比较中超越了全注意力，包括短上下文、长上下文和强化学习（RL）扩展范畴。其核心是Kimi Delta Attention（KDA），这是一个具有表现力的线性注意力模块，扩展了具有更细粒度门控机制的Gated DeltaNet，从而更有效地利用有限的有限状态RNN内存。我们的定制块算法通过一种特殊的对角加低秩（DPLR）变换矩阵实现高硬件效率，与通用DPLR公式相比，显著减少了计算量，同时与经典的delta规则保持更一致。\n\n我们预训练了一个Kimi Linear模型，拥有30亿个激活参数和48亿个总参数，基于KDA和多头潜在注意力（MLA）的逐层混合。我们的实验表明，在相同的训练食谱下，Kimi Linear在所有评估任务中都以显著优势超越了全MLA，同时将KV缓存的使用减少了多达75%，在1M上下文下实现了高达6倍的解码吞吐量。这些结果表明，Kimi Linear可以作为全注意力架构的即插即用替代品，提供更优越的性能和效率，包括处理更长输入和输出长度的任务。\n\n为了支持进一步的研究，我们开源了KDA内核和vLLM实现，并发布了预训练和指令调优的模型检查点。",
+      "paper_summary": {
+        "summary": "Kimi Linear introduces a hybrid attention architecture that integrates Kimi Delta Attention (KDA) with periodic full attention layers, matching or surpassing the quality of full attention models across various benchmarks. This architecture significantly enhances inference efficiency, achieving up to 6x faster decoding throughput and a 75% reduction in KV cache usage for million-token contexts.",
+        "originalProblem": [
+          "Standard self-attention mechanisms in LLMs suffer from quadratic time complexity and linearly growing Key-Value (KV) cache memory, hindering performance for long-context and reinforcement learning applications.",
+          "Prior linear attention methods often struggled to match the expressivity and quality of full attention, limiting their utility in complex tasks.",
+          "Scaling and evaluating hybrid attention architectures robustly across diverse benchmarks remained a challenge for industrial-grade LLM deployment."
+        ],
+        "solution": [
+          "A new linear attention module, Kimi Delta Attention (KDA), is developed, featuring channel-wise gating for finer memory control and a hardware-efficient Diagonal-Plus-Low-Rank (DPLR) variant with a custom chunkwise algorithm.",
+          "Kimi Linear, a hybrid architecture, integrates KDA layers with periodic Multi-Head Latent Attention (MLA) layers in a 3:1 ratio to balance efficiency and global information flow.",
+          "All MLA layers are designed with No Positional Encoding (NoPE), allowing KDA layers to dynamically handle positional information and recency bias."
+        ],
+        "keyInsights": [
+          "Kimi Delta Attention's channel-wise gating mechanism enables finer-grained control over recurrent memory, selectively forgetting irrelevant information while preserving crucial details more effectively than previous methods.",
+          "Customizing a Diagonal-Plus-Low-Rank (DPLR) matrix for KDA, combined with a bespoke chunkwise-parallel algorithm, yields substantial hardware efficiency gains and operator speedup.",
+          "A hybrid architecture uniformly interleaving KDA and full attention layers (3:1 ratio) provides the optimal balance of quality and efficiency across various tasks.",
+          "Using No Positional Encoding (NoPE) in full attention layers within the hybrid architecture, and relying on KDA for dynamic positional encoding, improves long-context extrapolation and robustness."
+        ],
+        "results": [
+          "Kimi Linear consistently outperformed full attention and other efficient attention baselines across a wide range of tasks, including language understanding, reasoning, long-context retrieval, and reinforcement learning.",
+          "Inference efficiency for 1M context sequences improved dramatically, showing up to 6x faster decoding throughput and a 75% reduction in KV cache memory usage.",
+          "The architecture achieved approximately 1.16x computational efficiency compared to full attention under compute-optimal training conditions.",
+          "Kimi Linear demonstrated superior long-context capabilities, achieving a RULER score of 94.8 at 1M context length, and exhibited faster convergence and higher accuracy in Math RL training."
+        ]
+      },
+      "image_url": "image/2510.26692v1.png",
+      "universal_paper_id": "2510.26692",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 54,
+          "last_7_days": 54
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-30T16:59:43.000Z",
+      "publication_date": "2025-10-30T16:59:43.000Z",
+      "updated_at": "2025-10-31T02:46:50.897Z",
+      "topics": [
+        "attention-mechanisms",
+        "Computer Science",
+        "cs.CL",
+        "cs.LG",
+        "efficient-transformers",
+        "generative-models",
+        "hardware-aware-algorithms",
+        "instruction-tuning",
+        "lightweight-models",
+        "reinforcement-learning",
+        "sequence-modeling",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 270,
+      "github_url": "https://github.com/MoonshotAI/Kimi-Linear",
+      "distance": 1
+    },
+    {
+      "id": "019a380e-b464-7026-a226-547dfe0bbcfa",
+      "paper_group_id": "019a380e-b464-7026-a226-547dfe0bbcfa",
+      "title": "Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning",
+      "abstract": "大型语言模型（LLMs）在需要多步推理的问题上常常面临困难。对于小规模的开源模型，使用可验证奖励的强化学习（RLVR）在经过多次尝试后仍然无法成功采样到正确的解决方案，而监督微调（SFT）则倾向于通过严格的逐词模仿过拟合于长示范。为了填补这一空白，我们提出了监督强化学习（SRL），这是一种将问题解决重新表述为生成逻辑“动作”序列的框架。SRL训练模型在每个动作前生成内部推理独白。它根据模型的动作与从SFT数据集中提取的专家动作之间的相似性，以逐步的方式提供更平滑的奖励。即使所有的回合都是错误的，这种监督也提供了更丰富的学习信号，同时鼓励专家示范引导的灵活推理。结果，SRL使得小模型能够学习以前无法通过SFT或RLVR学习的挑战性问题。此外，在用RLVR进行精细化之前用SRL初始化训练，产生了最强的整体性能。除了推理基准测试之外，SRL在自主软件工程任务中也有效地推广，确立了它作为面向推理的LLM的一个稳健且多功能的训练框架。",
+      "paper_summary": {
+        "summary": "The Supervised Reinforcement Learning (SRL) framework enables smaller Large Language Models (LLMs) to learn complex multi-step reasoning by providing dense, step-wise similarity rewards from expert demonstrations. It notably improved greedy average accuracy on math reasoning benchmarks by 3.0% over the base model, and showed a 74% relative improvement in resolve rate on agentic software engineering tasks.",
+        "originalProblem": [
+          "Small-scale, open-source LLMs struggle to solve challenging multi-step reasoning problems effectively with current training paradigms.",
+          "Supervised Fine-Tuning (SFT) often leads to overfitting on complex expert demonstrations, sometimes causing performance degradation for smaller models.",
+          "Reinforcement Learning with Verifiable Rewards (RLVR) faces sparse reward signals on difficult problems, hindering effective learning due to a lack of positive advantage estimates."
+        ],
+        "solution": [
+          "Introduced Supervised Reinforcement Learning (SRL), which reformulates problem-solving as a sequential decision-making process by decomposing expert solutions into logical 'actions'.",
+          "Generated step-wise training data from expert trajectories and provided a dense sequence similarity reward based on the model's predicted action, allowing for flexible internal monologues.",
+          "Optimized the policy using a Group Relative Policy Optimization (GRPO) objective with dynamic sampling and explored a curriculum learning strategy combining SRL with RLVR."
+        ],
+        "keyInsights": [
+          "Dense, step-wise supervision, through sequence similarity rewards on discrete actions, effectively guides LLMs on complex problems where sparse rewards or rigid imitation fail.",
+          "SRL encourages flexible and sophisticated reasoning patterns, including planning, on-the-fly adjustments, and reflective verification, without merely increasing output length.",
+          "The combination of SRL for initial robust guidance and subsequent RLVR refinement forms a powerful curriculum learning approach for maximizing performance on challenging tasks."
+        ],
+        "results": [
+          "SRL alone achieved a 27.6% greedy average accuracy on math reasoning benchmarks, a 3.0% increase over the base Qwen2.5-7B-Instruct model.",
+          "The SRL → RLVR pipeline delivered the strongest performance, reaching 28.3% greedy average accuracy, a 3.7% increase over the base model and outperforming all baselines.",
+          "SRL generalized to agentic software engineering tasks, achieving a 14.8% resolve rate in an oracle file editing setting, representing a 74% relative improvement over an SFT baseline."
+        ]
+      },
+      "image_url": "image/2510.25992v1.png",
+      "universal_paper_id": "2510.25992",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 53,
+          "last_7_days": 53
+        },
+        "public_total_votes": 9
+      },
+      "first_publication_date": "2025-10-29T22:05:08.000Z",
+      "publication_date": "2025-10-29T22:05:08.000Z",
+      "updated_at": "2025-10-31T02:17:59.140Z",
+      "topics": [
+        "agents",
+        "chain-of-thought",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "fine-tuning",
+        "imitation-learning",
+        "reasoning",
+        "reinforcement-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "UCLA",
+          "image": "images/organizations/ucla.png"
+        },
+        {
+          "name": "Google Cloud",
+          "image": null
+        },
+        {
+          "name": "Google Cloud AI Research",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
       "id": "019a29d3-5ad4-745c-89dd-4b5f2a90d263",
       "paper_group_id": "019a29d3-5ad4-745c-89dd-4b5f2a90d263",
       "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
-      "abstract": "大型语言模型（LLMs）的快速发展催生了数据代理的出现——这些自主系统旨在协调数据与人工智能生态系统，以解决复杂的数据相关任务。然而，“数据代理”这一术语目前存在定义模糊和不一致采用的问题，将简单的查询响应者与复杂的自主架构混为一谈。这种术语模糊性导致了用户期望的不匹配、责任挑战以及行业增长的障碍。受德尔福自动驾驶标准SAE J3016的启发，本调查引入了首个系统性的层次分类法，用于数据代理，包含六个级别，明确划分并追踪从手动操作（L0）到生成的、完全自主的数据代理（L5）之间的渐进性变化，从而澄清能力边界和责任分配。通过这一视角，我们提供了一个结构化的现有研究回顾，按照自主性逐渐递增的顺序，涵盖了用于数据管理、准备和分析的专门数据代理，以及朝着更具自主性的多功能综合系统的发展努力。我们进一步分析了推进数据代理所需的关键演变飞跃和技术差距，特别是正在进行的L2到L3过渡，即数据代理从程序执行演变为自主编排。最后，我们以一个前瞻性的路线图结束，展望主动生成的数据代理的到来。",
+      "abstract": "大型语言模型（LLMs）的快速发展促使数据代理的出现——一种旨在协调数据与人工智能生态系统，以应对复杂数据相关任务的自主系统。然而，“数据代理”这一术语目前存在术语模糊和不一致的使用问题，将简单的查询响应者与复杂的自主架构混为一谈。这种术语模糊导致了用户期望的不匹配、责任挑战和行业增长的障碍。受到SAE J3016自动驾驶标准的启发，本调查介绍了首个系统化的阶层分类法，涵盖六个级别，划定并追踪自主性从手动操作（L0）到生成型、完全自主数据代理（L5）的逐步转变，从而澄清能力边界和责任分配。在这一视角下，我们提供了一项结构化的现有研究回顾，按增加的自主性排列，涵盖用于数据管理、准备和分析的专门数据代理，以及朝向具有更高自主性的多功能综合系统的最新努力。我们还分析了推动数据代理发展的关键演变飞跃和技术差距，特别是正在进行的L2到L3的过渡，在这一过程中，数据代理从程序执行演变为自主协调。最后，我们以一个前瞻性的路线图结束，展望积极主动、生成型数据代理的到来。",
       "paper_summary": {
         "summary": "This paper presents the inaugural systematic, hierarchical taxonomy for data agents, classifying their autonomy from Level 0 to Level 5. The framework addresses current terminological ambiguity in the field and provides a structured overview of existing LLM-powered data systems and a roadmap for future research across the data lifecycle.",
         "originalProblem": [
@@ -724,12 +981,12 @@ const papersData = {
       "image_url": "image/2510.23587v1.png",
       "universal_paper_id": "2510.23587",
       "metrics": {
-        "total_votes": 2,
+        "total_votes": 3,
         "visits_count": {
-          "all": 161,
-          "last_7_days": 161
+          "all": 210,
+          "last_7_days": 210
         },
-        "public_total_votes": 17
+        "public_total_votes": 24
       },
       "first_publication_date": "2025-10-27T17:54:07.000Z",
       "publication_date": "2025-10-27T17:54:07.000Z",
@@ -753,72 +1010,10 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2e41-430c-7d0d-bc75-080e6007894a",
-      "paper_group_id": "019a2e41-430c-7d0d-bc75-080e6007894a",
-      "title": "MiniOneRec: An Open-Source Framework for Scaling Generative Recommendation",
-      "abstract": "最近大型语言模型（LLMs）的成功重新引发了人们对推荐系统是否能实现类似扩展收益的兴趣。传统推荐系统以庞大的嵌入表为主，随着嵌入维度的增加，其性能往往趋于平稳。相比之下，新兴的生成范式用自回归变换器生成的紧凑语义标识（SID）序列替代了嵌入。然而，大多数工业部署仍然是专有的，这留下了两个基本问题： (1) 预期的扩展法则在公共基准上是否成立？ (2) 什么是实现竞争性能的最低后训练方案？\n我们提出了MiniOneRec，尽我们所知，这是第一个完全开源的生成推荐框架，提供了一个涵盖SID构建、监督微调和面向推荐的强化学习的端到端工作流程。我们通过残差量化变分自编码器生成SIDs，并对0.5B到7B参数范围内的Qwen骨干网络进行了后训练，数据集为Amazon Review。我们的实验揭示了随着模型尺寸的增加，训练和评估损失均显示出一致的下降趋势，验证了生成方法的参数效率。为了进一步提升性能，我们提出了一种轻量且有效的后训练管道，该管道 (1) 强制执行全流程SID对齐，(2) 应用带约束解码和混合奖励的强化学习。结合这些技术，显著提高了排名准确性和候选多样性。",
-      "paper_summary": {
-        "summary": "An open-source framework, MiniOneRec, validates large language model-like scaling laws for generative recommendation on public benchmarks while providing an efficient post-training recipe that achieves superior performance and transferability over existing methods.",
-        "originalProblem": [
-          "Traditional embedding-centric recommender systems exhibit performance plateaus, failing to scale like Large Language Models (LLMs).",
-          "While generative recommendation (using Semantic IDs and Transformers) shows promise, advanced industrial implementations remain proprietary, preventing open validation of scaling laws on public datasets.",
-          "The academic community lacks a transparent, efficient post-training pipeline for generative recommenders to achieve competitive performance."
-        ],
-        "solution": [
-          "Introduces MiniOneRec, a fully open-source, end-to-end generative recommendation framework built on a Qwen-based LLM backbone.",
-          "Employs Residual Quantized Variational Autoencoder (RQ-VAE) for item tokenization into compact, hierarchical 3-level Semantic IDs (SIDs).",
-          "Aligns SIDs with the LLM through vocabulary augmentation and joint supervised fine-tuning (SFT) tasks combining recommendation and semantic alignment objectives.",
-          "Optimizes preferences using Group Relative Policy Gradient (GRPO) with a hybrid reward function and constrained beam search to ensure diverse and valid recommendations."
-        ],
-        "keyInsights": [
-          "Generative recommendation, when structured with Semantic IDs (SIDs), demonstrably exhibits LLM-like scaling laws on public datasets, with larger models consistently achieving lower losses.",
-          "Full-process Semantic ID (SID) alignment throughout training is crucial for effectively integrating the LLM's world knowledge and achieving high performance in recommendation tasks.",
-          "Reinforcement learning, specifically with a hybrid reward function and constrained beam search, can effectively refine generative policies and uncover generalizable interaction patterns, enabling transferability across domains."
-        ],
-        "results": [
-          "Empirically validated scaling laws for generative recommendation, demonstrating consistent loss reduction and faster convergence on public Amazon datasets as Qwen backbone models scaled from 0.5B to 7B parameters.",
-          "Consistently surpassed all traditional, generative, and LLM-based baselines across HR@K and NDCG@K metrics on both Industrial and Office Amazon Review datasets.",
-          "Demonstrated superior transferability and robustness, with MiniOneRec achieving competitive accuracy on unseen domains by effectively discovering generalizable SID interaction patterns.",
-          "Ablation studies confirmed the full-process SID alignment strategy, constrained beam search sampling, and the hybrid reward design as key contributors to its top performance."
-        ]
-      },
-      "image_url": "image/2510.24431v1.png",
-      "universal_paper_id": "2510.24431",
-      "metrics": {
-        "total_votes": 4,
-        "visits_count": {
-          "all": 96,
-          "last_7_days": 96
-        },
-        "public_total_votes": 15
-      },
-      "first_publication_date": "2025-10-28T13:58:36.000Z",
-      "publication_date": "2025-10-28T13:58:36.000Z",
-      "updated_at": "2025-10-29T04:37:00.300Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.IR",
-        "efficient-transformers",
-        "fine-tuning",
-        "generative-models",
-        "parameter-efficient-training",
-        "recommender-systems",
-        "reinforcement-learning",
-        "representation-learning",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 14,
-      "github_url": "https://github.com/AkaliKong/MiniOneRec",
-      "distance": 1
-    },
-    {
       "id": "019a2df4-d452-707d-b69b-aa09894baaa3",
       "paper_group_id": "019a2df4-d452-707d-b69b-aa09894baaa3",
       "title": "Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal Reasoning in MLLMs",
-      "abstract": "尽管多模态大型语言模型（MLLMs）在视觉理解方面表现出色，但在需要视觉规划和想象的复杂场景中常常遇到困难。受到人类如何利用草图作为一种视觉思维形式来发展和传达思想的启发，我们提出了潜在草图板（Latent Sketchpad），这一框架为MLLMs配备了一个内部视觉便签本。传统上，MLLMs的内部视觉表征仅限于感知理解。我们重新利用它们以支持生成性视觉思维，而不影响推理能力。基于前沿的MLLMs，我们的方法将视觉生成直接集成到它们本土的自回归推理过程中。这使得模型能够将文本推理与视觉潜象的生成交替进行。这些潜象指导内部思维过程，并可以转换为草图图像以便于理解。为实现这一目标，我们引入了两个组件：一个上下文感知的视觉头自回归地产生视觉表征，预训练的草图解码器将其渲染为人类可理解的图像。我们在新的数据集MazePlanning上评估了该框架。在对各种MLLMs的实验中，结果显示潜在草图板提供的推理性能与其主干模型相当，甚至优于主干模型。它进一步在不同的前沿MLLMs中泛化，包括Gemma3和Qwen2.5-VL。通过将模型的文本推理扩展到视觉思维，我们的框架为更丰富的人机交互和更广泛的应用开辟了新机会。更多细节和资源请访问我们的项目页面：这个https URL。",
+      "abstract": "虽然多模态大型语言模型（MLLMs）在视觉理解方面表现出色，但它们常常在需要视觉规划和想象的复杂场景中遇到困难。受到人类通过素描作为一种视觉思维形式来发展和传达想法的启发，我们引入了潜在素描板（Latent Sketchpad），这是一个为MLLMs提供内部视觉草图的框架。MLLMs的内部视觉表示传统上局限于感知理解。我们对其进行了重新利用，以支持生成视觉思维，而不妨碍推理能力。在先进的MLLMs基础上，我们的方法将视觉生成直接整合到其本土自回归推理过程中，使模型能够将文本推理与视觉潜变量的生成交错进行。这些潜变量指导内部思维过程，并且可以转化为草图图像以提高可解释性。为实现这一目标，我们引入了两个组件：一个上下文感知视觉头（Context-Aware Vision Head），自回归地生成视觉表示；一个预训练的素描解码器（Sketch Decoder），将这些表示渲染为人类可理解的图像。我们在新的数据集MazePlanning上评估了这一框架。通过对不同MLLMs的实验表明，潜在素描板的推理性能与其基础模型相当甚至更优。此外，它还可以在不同的前沿MLLMs上推广，包括Gemma3和Qwen2.5-VL。通过将模型的文本推理扩展到视觉思维，我们的框架为更加丰富的人机交互和更广泛的应用开辟了新的机会。更多详细信息和资源可以在我们的项目页面找到：这个网址。",
       "paper_summary": {
         "summary": "A framework called Latent Sketchpad extends pretrained multimodal large language models by enabling them to generate and integrate abstract visual thoughts as sketches directly into their reasoning process. This modular approach enhances performance on complex visual planning tasks and provides interpretable visual traces of the model's internal thinking.",
         "originalProblem": [
@@ -845,12 +1040,12 @@ const papersData = {
       "image_url": "image/2510.24514v1.png",
       "universal_paper_id": "2510.24514",
       "metrics": {
-        "total_votes": 1,
+        "total_votes": 2,
         "visits_count": {
-          "all": 68,
-          "last_7_days": 68
+          "all": 112,
+          "last_7_days": 112
         },
-        "public_total_votes": 10
+        "public_total_votes": 16
       },
       "first_publication_date": "2025-10-28T15:26:20.000Z",
       "publication_date": "2025-10-28T15:26:20.000Z",
@@ -896,10 +1091,615 @@ const papersData = {
       "distance": 1
     },
     {
+      "id": "019a2e41-430c-7d0d-bc75-080e6007894a",
+      "paper_group_id": "019a2e41-430c-7d0d-bc75-080e6007894a",
+      "title": "MiniOneRec: An Open-Source Framework for Scaling Generative Recommendation",
+      "abstract": "大语言模型（LLMs）的近期成功重新引发了人们对推荐系统是否能实现类似规模效益的兴趣。传统推荐系统以庞大的嵌入表为主，这导致当嵌入维度增长时，性能通常趋于平稳。相比之下，新兴的生成范式用自回归Transformer生成的紧凑的语义ID（SID）序列取代了嵌入。然而，大多数工业应用仍然是专有的，这留下了两个基本问题： (1) 预期的规模法则在公共基准上是否成立？ (2) 实现竞争性性能的最小后训练方案是什么？\n\n我们推出了MiniOneRec，尽我们所知，这是第一个完全开源的生成推荐框架，提供了涵盖SID构建、监督微调和面向推荐的强化学习的端到端工作流程。我们通过残差量化变分自编码器生成SID，并在亚马逊评论数据集上对从5亿到70亿参数的Qwen骨干网络进行后训练。我们的实验发现，随着模型规模的增加，训练和评估损失均呈现出一致的下降趋势，验证了生成方法的参数效率。为了进一步提高性能，我们提出了一种轻量且有效的后训练流程，该流程（1）强制执行全流程的SID对齐，(2) 应用有限解码和混合奖励的强化学习。这些技术共同显著提高了排名准确性和候选多样性。",
+      "paper_summary": {
+        "summary": "An open-source framework, MiniOneRec, validates large language model-like scaling laws for generative recommendation on public benchmarks while providing an efficient post-training recipe that achieves superior performance and transferability over existing methods.",
+        "originalProblem": [
+          "Traditional embedding-centric recommender systems exhibit performance plateaus, failing to scale like Large Language Models (LLMs).",
+          "While generative recommendation (using Semantic IDs and Transformers) shows promise, advanced industrial implementations remain proprietary, preventing open validation of scaling laws on public datasets.",
+          "The academic community lacks a transparent, efficient post-training pipeline for generative recommenders to achieve competitive performance."
+        ],
+        "solution": [
+          "Introduces MiniOneRec, a fully open-source, end-to-end generative recommendation framework built on a Qwen-based LLM backbone.",
+          "Employs Residual Quantized Variational Autoencoder (RQ-VAE) for item tokenization into compact, hierarchical 3-level Semantic IDs (SIDs).",
+          "Aligns SIDs with the LLM through vocabulary augmentation and joint supervised fine-tuning (SFT) tasks combining recommendation and semantic alignment objectives.",
+          "Optimizes preferences using Group Relative Policy Gradient (GRPO) with a hybrid reward function and constrained beam search to ensure diverse and valid recommendations."
+        ],
+        "keyInsights": [
+          "Generative recommendation, when structured with Semantic IDs (SIDs), demonstrably exhibits LLM-like scaling laws on public datasets, with larger models consistently achieving lower losses.",
+          "Full-process Semantic ID (SID) alignment throughout training is crucial for effectively integrating the LLM's world knowledge and achieving high performance in recommendation tasks.",
+          "Reinforcement learning, specifically with a hybrid reward function and constrained beam search, can effectively refine generative policies and uncover generalizable interaction patterns, enabling transferability across domains."
+        ],
+        "results": [
+          "Empirically validated scaling laws for generative recommendation, demonstrating consistent loss reduction and faster convergence on public Amazon datasets as Qwen backbone models scaled from 0.5B to 7B parameters.",
+          "Consistently surpassed all traditional, generative, and LLM-based baselines across HR@K and NDCG@K metrics on both Industrial and Office Amazon Review datasets.",
+          "Demonstrated superior transferability and robustness, with MiniOneRec achieving competitive accuracy on unseen domains by effectively discovering generalizable SID interaction patterns.",
+          "Ablation studies confirmed the full-process SID alignment strategy, constrained beam search sampling, and the hybrid reward design as key contributors to its top performance."
+        ]
+      },
+      "image_url": "image/2510.24431v1.png",
+      "universal_paper_id": "2510.24431",
+      "metrics": {
+        "total_votes": 5,
+        "visits_count": {
+          "all": 137,
+          "last_7_days": 137
+        },
+        "public_total_votes": 21
+      },
+      "first_publication_date": "2025-10-28T13:58:36.000Z",
+      "publication_date": "2025-10-28T13:58:36.000Z",
+      "updated_at": "2025-10-29T04:37:00.300Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.IR",
+        "efficient-transformers",
+        "fine-tuning",
+        "generative-models",
+        "parameter-efficient-training",
+        "recommender-systems",
+        "reinforcement-learning",
+        "representation-learning",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 14,
+      "github_url": "https://github.com/AkaliKong/MiniOneRec",
+      "distance": 1
+    },
+    {
+      "id": "019a23e5-088e-7cbd-828d-79523c0470c9",
+      "paper_group_id": "019a23e5-088e-7cbd-828d-79523c0470c9",
+      "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
+      "abstract": "大型推理模型展示了强大的问题解决能力，但现实世界的任务往往需要外部工具和长时间的互动。现有的代理框架通常遵循预定义的工作流程，这限制了自主和全面任务的完成。在本文中，我们介绍了DeepAgent，一种端到端的深度推理代理，它在单一且一致的推理过程中进行自主思考、工具发现和行动执行。为了解决长时间互动的挑战，特别是多个工具调用导致的上下文长度爆炸和互动历史的累积，我们引入了一种自主记忆折叠机制，将过去的互动压缩成结构化的情节记忆、工作记忆和工具记忆，从而减少错误累积，同时保留关键信息。为了有效且稳定地教授通用工具的使用，我们开发了一种端到端的强化学习策略，即ToolPO，利用LLM模拟的API，并应用工具调用优势归因，将细粒度的信用分配给工具调用的标记。在八个基准测试上的广泛实验，包括通用工具使用任务（ToolBench、API-Bank、TMDB、Spotify、ToolHop）和下游应用（ALFWorld、WebShop、GAIA、HLE），表明DeepAgent在标记工具和开放集工具检索场景中始终优于基线。这项工作朝着为现实世界应用创造更通用和更强大代理的方向迈出了一步。代码和演示可在此HTTPS网址获得。",
+      "paper_summary": {
+        "summary": "DeepAgent is presented as an end-to-end reasoning agent that leverages large language models for autonomous thinking, dynamic tool discovery, and action execution from scalable toolsets. The framework significantly outperforms previous workflow-based methods, achieving up to 36.4% higher success rates on general tool-use benchmarks and state-of-the-art results on complex downstream applications, supported by novel memory management and a tailored reinforcement learning strategy.",
+        "originalProblem": [
+          "Existing LLM agents are limited by rigid, predefined workflows that constrain their autonomy and ability to adapt dynamically to diverse tasks.",
+          "Current frameworks typically rely on restricted and often small toolsets, preventing agents from addressing the vast and varied requirements of real-world scenarios.",
+          "Long-horizon interactions pose challenges due to context length limitations and the accumulation of errors without effective mechanisms for self-correction or memory management.",
+          "Training general-purpose tool-using agents is inefficient and unstable, primarily due to costly, latent real-world API interactions and the difficulty in providing fine-grained feedback for intermediate tool calls."
+        ],
+        "solution": [
+          "Developed DeepAgent, an end-to-end deep reasoning agent that unifies autonomous thinking, dynamic tool discovery, and action execution within a single, coherent reasoning process.",
+          "Introduced an autonomous memory folding mechanism, supported by a brain-inspired memory schema (episodic, working, and tool memory), to effectively manage long-horizon interactions by compressing history and enabling strategic reconsideration.",
+          "Proposed ToolPO, an end-to-end reinforcement learning strategy that uses LLM-simulated APIs for stable training and incorporates fine-grained tool-call advantage attribution for precise credit assignment during policy optimization."
+        ],
+        "keyInsights": [
+          "Unifying thinking, dynamic tool discovery, and action execution into a continuous reasoning stream allows LLMs to maintain a global perspective on tasks, moving beyond fragmented 'Reason-Act-Observe' cycles.",
+          "Effective memory management, via autonomous folding and a structured, brain-inspired memory schema, is critical for handling long-horizon interactions, preventing context overflow, and enabling strategic replanning.",
+          "Reinforcement learning for tool-using agents can be stabilized and made efficient by utilizing LLM-simulated APIs and providing precise, localized rewards for intermediate tool invocations."
+        ],
+        "results": [
+          "DeepAgent achieved superior performance on general tool usage tasks, outperforming the best 32B baselines by up to 36.4% on TMDB (89.0% vs 55.0%) and 22.8% on Spotify (75.4% vs 52.6%).",
+          "On complex downstream applications, DeepAgent attained state-of-the-art performance among 32B models, scoring 53.3 on GAIA (compared to HiRA's 42.5) and a 91.8% success rate on ALFWorld (versus HiRA's 84.3%).",
+          "Ablation studies confirmed the criticality of ToolPO training and autonomous memory folding, as their removal led to significant performance declines, highlighting their essential contributions to robust agent behavior."
+        ]
+      },
+      "image_url": "image/2510.21618v1.png",
+      "universal_paper_id": "2510.21618",
+      "metrics": {
+        "total_votes": 32,
+        "visits_count": {
+          "all": 1596,
+          "last_7_days": 1596
+        },
+        "public_total_votes": 108
+      },
+      "first_publication_date": "2025-10-24T16:24:01.000Z",
+      "publication_date": "2025-10-24T16:24:01.000Z",
+      "updated_at": "2025-10-27T04:20:03.854Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG",
+        "deep-reinforcement-learning",
+        "fine-tuning",
+        "reasoning",
+        "reinforcement-learning",
+        "tool-use",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Renmin University of China",
+          "image": "images/organizations/renmin.png"
+        },
+        {
+          "name": "Xiaohongshu Inc.",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 25,
+      "github_url": "https://github.com/RUC-NLPIR/DeepAgent",
+      "distance": 1
+    },
+    {
+      "id": "019a2d98-dd10-79a3-8241-720f043f888b",
+      "paper_group_id": "019a2d98-dd10-79a3-8241-720f043f888b",
+      "title": "The Principles of Diffusion Models",
+      "abstract": "本专著呈现了指导扩散模型发展的核心原则，追溯其起源并展示如何从共同的数学思想中产生多样化的表达形式。扩散建模首先定义一个前向过程，该过程逐渐将数据腐蚀为噪声，通过一系列连续的中间分布将数据分布与简单的先验联系起来。其目标是学习一个反向过程，将噪声转回数据，同时恢复相同的中间过程。我们描述了三种互补的视角。变分视角借鉴变分自编码器，认为扩散是学习逐步去除噪声。基于分数的视角根植于基于能量的建模，学习不断演变的数据分布的梯度，指示如何将样本推向更可能的区域。基于流的视角与标准化流有关，将生成过程视为遵循一条平滑路径，该路径在学习到的速度场下将样本从噪声移动到数据。这些视角共享一个共同的框架：一个时间依赖的速度场，其流动将简单的先验传输到数据。采样因此可以看作是解决一个沿持续轨迹将噪声演变为数据的微分方程。在这个基础上，专著讨论了可控生成的指导方案、高效数值求解器，以及受扩散启发的流映射模型，这些模型学习任意时间之间的直接映射。它为具备基本深度学习知识的读者提供了对扩散模型的概念性和数学基础的理解。",
+      "paper_summary": {
+        "summary": "Authored by leading researchers from Sony AI, OpenAI, and Stanford, this monograph synthesizes the rapidly evolving field of diffusion models by clarifying their theoretical foundations and unifying diverse formulations into a single continuous-time generative framework. It systematically covers the origins, unifies variational, score-based, and flow-based perspectives, and outlines advancements in sampling and generation techniques.",
+        "originalProblem": [
+          "The rapid proliferation of diverse diffusion model formulations (e.g., DDPM, NCSN, Flow Matching) led to a fragmented literature.",
+          "Researchers and practitioners found it challenging to grasp the underlying mathematical connections and theoretical coherence across different approaches.",
+          "A lack of a systematic and unified understanding hindered entry into the field and efficient progress in research."
+        ],
+        "solution": [
+          "The monograph provides a comprehensive and authoritative review, acting as a pedagogical guide for the field of diffusion models.",
+          "It rigorously demonstrates the mathematical equivalence of variational, score-based, and flow-based approaches under a continuous-time framework.",
+          "It clarifies the theoretical underpinnings, including the central roles of the score function, SDEs, ODEs, and the Fokker-Planck equation, and systematically covers practical advancements like guidance and efficient sampling."
+        ],
+        "keyInsights": [
+          "Variational, score-based, and flow-based diffusion models are mathematically equivalent formulations of a single continuous-time generative process, all implicitly or explicitly learning a time-dependent vector field.",
+          "The 'conditioning trick,' which transforms intractable marginal objectives into tractable conditional ones, is a foundational enabler for training across all major diffusion model formulations.",
+          "The generation process can be fundamentally understood as solving a differential equation (SDE or Probability Flow ODE), providing a principled basis for analyzing and accelerating sampling."
+        ],
+        "results": [
+          "The monograph conclusively demonstrates the mathematical equivalence between DDPM, NCSN/Score SDE, and Flow Matching paradigms, showing they are manifestations of a unified continuous-time generative process.",
+          "It establishes the Fokker-Planck equation as the universal underlying law governing the evolution of marginal probability densities in diffusion models, regardless of stochastic or deterministic dynamics.",
+          "The work systematically categorizes and explains advancements in diffusion models, including guidance mechanisms for controllable generation, training-free acceleration methods (numerical solvers), and training-based acceleration techniques (distillation, learning from scratch like Consistency Models)."
+        ]
+      },
+      "image_url": "image/2510.21890v1.png",
+      "universal_paper_id": "2510.21890",
+      "metrics": {
+        "total_votes": 39,
+        "visits_count": {
+          "all": 904,
+          "last_7_days": 904
+        },
+        "public_total_votes": 86
+      },
+      "first_publication_date": "2025-10-24T02:29:02.000Z",
+      "publication_date": "2025-10-24T02:29:02.000Z",
+      "updated_at": "2025-10-29T01:33:04.144Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
+        "generative-models",
+        "image-generation",
+        "optimization-methods",
+        "representation-learning",
+        "statistical-learning",
+        "unsupervised-learning"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 3,
+      "github_url": "https://github.com/Shiying-Zhang/diffusion-theory-discussion",
+      "distance": 1
+    },
+    {
+      "id": "019a2c33-6b53-74e7-9272-fb16dadac30a",
+      "paper_group_id": "019a2c33-6b53-74e7-9272-fb16dadac30a",
+      "title": "Towards Personalized Treatment Plan: Geometrical Model-Agnostic Approach to Counterfactual Explanations",
+      "abstract": "在我们的文章中，我们描述了一种在高维空间中生成反事实解释的方法，该方法涉及四个步骤：将我们的数据集拟合到模型、找到决策边界、确定问题的约束以及计算该边界上最近的点（反事实解释）。我们提出了一种离散化的方法，在边界上找到许多离散点，然后识别最近的可行反事实解释。我们稍后称之为“分段采样边界近似”（SSBA）的方法，应用二分搜索找到决策边界点，然后寻找最近的边界点。在四个不同维度的数据集上，我们展示了我们的方法可以超越当前的反事实生成方法，在$L_2$范数方面的距离减少幅度在$5\\%$到$50\\%$之间。我们的方法还可以通过对不可变和分类特征（如年龄、性别、性别、高度以及与健康相关的数据集相似的其他相关特征）限制变化，从而处理现实世界的约束。在运行时间方面，SSBA算法在给定时间内生成决策边界点的效率比基于网格的方法快多个数量级。总体而言，我们的方法提供了一种简单有效的模型无关方法，能够计算出最近的可行（即符合约束的现实）反事实解释。我们的所有结果和代码可以在此链接找到：$\\href{this https URL}{this https URL dsin85691/SSBA\\_For\\_Counterfactuals}$",
+      "paper_summary": {
+        "summary": "Researchers introduced Segmented Sampling for Boundary Approximation (SSBA), a geometrical and model-agnostic method for generating counterfactual explanations. The approach efficiently identifies decision boundary points in high-dimensional spaces and rigorously incorporates real-world constraints, enabling the derivation of feasible and actionable personalized intervention strategies.",
+        "originalProblem": [
+          "Existing counterfactual explanation methods often compromise between model-agnosticism, computational efficiency, and finding the nearest, most realistic counterfactuals.",
+          "High-dimensional datasets introduce significant computational and memory challenges for traditional grid-based approaches to identifying decision boundaries.",
+          "Ensuring the feasibility and actionability of generated counterfactuals by incorporating real-world constraints, such as immutable features or specific value ranges, is complex with current loss-function based methods."
+        ],
+        "solution": [
+          "The Segmented Sampling for Boundary Approximation (SSBA) method provides a geometrical, discretized approach to approximate the decision boundary of any black-box machine learning model.",
+          "It employs a binary search algorithm along line segments connecting correctly classified points from different classes to efficiently locate decision boundary points, addressing high-dimensionality challenges.",
+          "Real-world constraints, including immutable features and specific value ranges, are directly applied as filters to the generated boundary points, ensuring the feasibility of the resulting counterfactual explanations."
+        ],
+        "keyInsights": [
+          "Approximating the decision boundary through segmented sampling offers a scalable and model-agnostic path to generating counterfactuals without needing model gradients.",
+          "Directly filtering decision boundary points based on predefined constraints is more robust for ensuring counterfactual feasibility than embedding them in complex, multi-objective loss functions.",
+          "Using binary search along connecting line segments between points of differing classes effectively navigates high-dimensional spaces, circumventing the exponential complexity of grid-based methods."
+        ],
+        "results": [
+          "SSBA demonstrated superior scalability, generating up to a million boundary points for 50 features in seconds, proving feasible where grid-based methods failed due to memory limitations.",
+          "In unconstrained scenarios, SSBA consistently reduced the L2 distance between the original instance and the counterfactual by 5% to 50% compared to other model-agnostic methods.",
+          "For constrained scenarios on real-world datasets, SSBA produced closer 'bounded counterfactuals' to the decision boundary than both model-agnostic and gradient-based comparative methods, strictly adhering to defined feasibility constraints."
+        ]
+      },
+      "image_url": "image/2510.22911v1.png",
+      "universal_paper_id": "2510.22911",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 99,
+          "last_7_days": 99
+        },
+        "public_total_votes": 13
+      },
+      "first_publication_date": "2025-10-27T01:28:57.000Z",
+      "publication_date": "2025-10-27T01:28:57.000Z",
+      "updated_at": "2025-10-28T19:02:38.675Z",
+      "topics": [
+        "ai-for-health",
+        "Computer Science",
+        "cs.LG",
+        "explainable-ai",
+        "model-interpretation",
+        "optimization-methods",
+        "statistical-learning",
+        "Statistics",
+        "stat.ML"
+      ],
+      "organization_info": [
+        {
+          "name": "University of Pennsylvania",
+          "image": "images/organizations/upenn.jpeg"
+        },
+        {
+          "name": "Drexel University",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 2,
+      "github_url": "https://github.com/dsin85691/SSBA_For_Counterfactuals",
+      "distance": 1
+    },
+    {
+      "id": "019a33b3-1cb4-740e-9f6f-5301838f9711",
+      "paper_group_id": "019a33b3-1cb4-740e-9f6f-5301838f9711",
+      "title": "Multimodal Spatial Reasoning in the Large Model Era: A Survey and Benchmarks",
+      "abstract": "人类拥有空间推理能力，使他们能够通过视觉和声音等多种感官观察理解空间。大型多模态推理模型通过学习感知和推理扩展了这些能力，在各种空间任务中展示出良好的性能。然而，针对这些模型的系统评审和公开基准仍然有限。在这项调查中，我们对大模型的多模态空间推理任务进行了全面评审，归纳了多模态大型语言模型（MLLM）的最新进展，并介绍了用于评估的开放基准。我们首先概述了一般的空间推理，重点讨论后训练技术、可解释性和架构。除了经典的二维任务外，我们还考察了空间关系推理、场景和布局理解，以及视觉问答和在三维空间中的基础定位。我们还审视了体现人工智能的进展，包括视觉-语言导航和动作模型。此外，我们考虑了音频和第一人称视频等新兴模态，它们通过新传感器为新颖的空间理解做出了贡献。我们相信这项调查为不断增长的多模态空间推理领域奠定了坚实的基础，并提供了有价值的见解。有关此调查的最新信息、代码和开放基准的实现可在此https网址找到。",
+      "paper_summary": {
+        "summary": "A systematic survey provides a comprehensive review of multimodal spatial reasoning in large models, establishing a taxonomy of tasks and introducing open benchmarks for evaluation. This work synthesizes advancements across various domains, highlighting current capabilities and persistent challenges in equipping AI with robust spatial understanding.",
+        "originalProblem": [
+          "Large Language Models (LLMs) are primarily unimodal, limiting their understanding of the physical world and common-sense spatial concepts.",
+          "Multimodal Large Language Models (MLLMs) lack a systematic review and standardized benchmarks specifically for their spatial reasoning capabilities.",
+          "The absence of unified evaluation protocols hinders consistent progress and fair comparison of different MLLM architectures in spatial reasoning tasks."
+        ],
+        "solution": [
+          "Developed a comprehensive taxonomy for multimodal spatial reasoning, categorizing tasks across 2D, 3D, embodied AI, video, and audio modalities.",
+          "Conducted a structured literature review detailing methods like test-time scaling, post-training strategies, and architectural modifications for enhancing spatial understanding in MLLMs.",
+          "Introduced and made publicly available open benchmarks and evaluation protocols to standardize the assessment of MLLMs' spatial reasoning performance."
+        ],
+        "keyInsights": [
+          "Effective spatial reasoning in MLLMs often requires explicit geometric grounding and structured reasoning, going beyond simple prompting or generic architectural designs.",
+          "Integrating external tools (e.g., 2D/3D perception modules) and dedicated spatial reasoning components significantly enhances MLLMs' ability to process and infer spatial relationships.",
+          "MLLMs frequently rely on object co-occurrence patterns rather than genuine geometric understanding, underscoring the need for balanced cross-modal encoding and relation-aware attention."
+        ],
+        "results": [
+          "Specialized prompting strategies leveraging visual cues or structured textual prompts prove more effective for spatial tasks compared to generic Chain-of-Thought approaches.",
+          "Incorporating explicit spatial cues into MLLM inputs (e.g., marker channels, depth maps) or employing dedicated architectural modifications improves spatial structure preservation.",
+          "While benchmarks are evolving, current MLLM evaluations for spatial reasoning still face limitations in generalization to real-world dynamic scenes, cross-modal alignment, and annotation scalability."
+        ]
+      },
+      "image_url": "image/2510.25760v1.png",
+      "universal_paper_id": "2510.25760",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 54,
+          "last_7_days": 54
+        },
+        "public_total_votes": 11
+      },
+      "first_publication_date": "2025-10-29T17:55:43.000Z",
+      "publication_date": "2025-10-29T17:55:43.000Z",
+      "updated_at": "2025-10-30T05:59:27.668Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "explainable-ai",
+        "multi-modal-learning",
+        "object-detection",
+        "reasoning",
+        "robotics-perception",
+        "transformers",
+        "vision-language-models",
+        "visual-qa"
+      ],
+      "organization_info": [
+        {
+          "name": "South China University of Technology",
+          "image": null
+        },
+        {
+          "name": "Shanghai Jiao Tong University",
+          "image": "images/organizations/shanghai-jiao-tong-university.png"
+        },
+        {
+          "name": "University of Pisa",
+          "image": null
+        },
+        {
+          "name": "HKUST(GZ)",
+          "image": null
+        },
+        {
+          "name": "INSAIT",
+          "image": null
+        },
+        {
+          "name": "HKUST",
+          "image": "images/organizations/hkust.jpg"
+        },
+        {
+          "name": "University of Trento",
+          "image": null
+        },
+        {
+          "name": "Sofia University \"St. Kliment Ohridski\"",
+          "image": null
+        },
+        {
+          "name": "Sofia University “St. Kliment Ohridski”",
+          "image": null
+        },
+        {
+          "name": "Sofia University \",St. Kliment Ohridski\"",
+          "image": null
+        },
+        {
+          "name": "Sofia University \",\"St. Kliment Ohridski\"",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": 18,
+      "github_url": "https://github.com/zhengxuJosh/Awesome-Multimodal-Spatial-Reasoning",
+      "distance": 1
+    },
+    {
+      "id": "019a3258-ba90-763b-b54f-f9819b50e6d9",
+      "paper_group_id": "019a3258-ba90-763b-b54f-f9819b50e6d9",
+      "title": "Generating Creative Chess Puzzles",
+      "abstract": "尽管生成式人工智能在各个领域迅速发展，但生成真正具有创造性、美感和反直觉的输出仍然是一项挑战。本文提出了一种应对国际象棋难题领域中这些困难的方法。我们首先对生成式人工智能架构进行基准测试，然后引入一个基于国际象棋引擎搜索统计的创新奖励的强化学习框架，以克服一些缺陷。这些奖励旨在提升难题的独特性、反直觉性、多样性和现实感。我们的强化学习方法将反直觉难题的生成提升了10倍，从0.22\\%（监督学习）提高到2.5\\%，超过了现有数据集的比率（2.1\\%）和最佳的Lichess训练模型（0.4\\%）。我们的难题达到了新颖性和多样性基准，保留了美学主题，并获得人类专家的评价，认为其比书中编撰的难题更具创造性、趣味性和反直觉性，甚至接近经典作品。我们的最终成果是一本经过精选的AI生成难题小册子，该小册子获得了三位世界著名专家对创造力的认可。",
+      "paper_summary": {
+        "summary": "Google DeepMind, University of Oxford, and Mila researchers developed an AI system that generates creative and counter-intuitive chess puzzles by formalizing creativity metrics and employing a reinforcement learning framework. The system increased the generation rate of counter-intuitive puzzles to 2.5%, surpassing human-derived datasets, and produced puzzles rated by human experts as more creative and enjoyable than typical Lichess puzzles.",
+        "originalProblem": [
+          "Generating truly creative, aesthetic, and counter-intuitive content remains a significant challenge for AI, especially in domains requiring abstract reasoning.",
+          "Existing chess puzzle datasets, like Lichess Puzzler, contain a scarcity of truly 'creative' or counter-intuitive puzzles, with only 2.1% meeting rigorous criteria.",
+          "Traditional AI in games focuses primarily on performance, overlooking subjective qualities such as counter-intuitiveness and aesthetics, which are crucial for human enjoyment of puzzles."
+        ],
+        "solution": [
+          "Formalized chess puzzle creativity by proposing computational metrics for uniqueness, novelty, and a novel measure of 'counter-intuitiveness' based on comparing shallow vs. deep chess engine evaluations.",
+          "Utilized a reinforcement learning (RL) framework with a pre-trained generative AI model (auto-regressive transformer) to optimize directly for these newly defined creative attributes.",
+          "Introduced diversity-filtering mechanisms, including KL divergence constraints, piece regularization, and intra/inter-batch novelty tests, to prevent 'entropy collapse' and ensure realism and diversity in generated puzzles."
+        ],
+        "keyInsights": [
+          "Subjective creative attributes like 'counter-intuitiveness' can be effectively quantified through computational metrics, such as comparing chess engine evaluations at different search depths, enabling AI optimization.",
+          "Reinforcement Learning, when combined with robust pre-training and mechanisms to promote diversity, can successfully guide generative models to produce complex and subjectively creative outputs, even when high-quality training data is scarce.",
+          "Human expert evaluation plays a critical role in validating AI-generated creative content, demonstrating that AI can produce artifacts that resonate with human aesthetic appreciation and rival human compositions."
+        ],
+        "results": [
+          "The RL framework dramatically increased the generation rate of counter-intuitive puzzles from a baseline of 0.22% (supervised transformer) to 2.5%, exceeding the 2.1% rate found in the Lichess training data.",
+          "Implemented diversity filtering mechanisms successfully prevented 'entropy collapse,' leading to the continuous generation of novel and diverse puzzles, confirmed by board and principal variation distance metrics.",
+          "Human chess experts rated the AI-generated puzzles as more creative, enjoyable, and counter-intuitive than typical Lichess puzzles, and comparable to human-composed book puzzles."
+        ]
+      },
+      "image_url": "image/2510.23881v1.png",
+      "universal_paper_id": "2510.23881",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 68,
+          "last_7_days": 68
+        },
+        "public_total_votes": 13
+      },
+      "first_publication_date": "2025-10-27T21:43:39.000Z",
+      "publication_date": "2025-10-27T21:43:39.000Z",
+      "updated_at": "2025-10-29T23:41:07.088Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.LG",
+        "deep-reinforcement-learning",
+        "fine-tuning",
+        "generative-models",
+        "human-ai-interaction",
+        "optimization-methods",
+        "reinforcement-learning",
+        "synthetic-data",
+        "tool-use"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
+      "paper_group_id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
+      "title": "Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents",
+      "abstract": "我们推出了Game-TARS，作为一个通用游戏代理，通过统一、可扩展的动作空间进行训练，该动作空间以与人类对齐的原生键盘鼠标输入为基础。与基于API或GUI的方法不同，这种范式支持在异构领域进行大规模持续的预训练，包括操作系统、网络和模拟游戏。Game-TARS在超过5000亿个标记上进行预训练，涵盖了多样的轨迹和多模态数据。关键技术包括一种衰减持续损失，以减少因果混淆，以及一种高效的稀疏思维策略，以平衡推理深度和推断成本。实验表明，Game-TARS在开放世界的Minecraft任务中成功率约为之前最先进模型的两倍，在未见过的网络3D游戏中接近新手玩家的普遍性，并且在FPS基准测试中超越了GPT-5、Gemini-2.5-Pro和Claude-4-Sonnet。关于训练时间和测试时间的扩展结果确认，统一的动作空间在跨游戏和多模态数据扩展时持续带来改进。我们的结果表明，简单、可扩展的动作表示结合大规模预训练，为拥有广泛计算机使用能力的通用代理提供了一条有希望的道路。",
+      "paper_summary": {
+        "summary": "Game-TARS develops a generalist multimodal game agent using a human-native keyboard-mouse interaction paradigm for scalable, continual pre-training. The agent achieves superior performance in diverse unseen game environments like Minecraft, web 3D games, and FPS benchmarks, often outperforming existing specialized and general-purpose models.",
+        "originalProblem": [
+          "Traditional game AI agents suffer from highly customized, environment-specific action spaces that severely limit their generalization to new domains.",
+          "Existing generalist agents often rely on environment-specific APIs or Graphical User Interface elements, creating a semantic gap and hindering true universality across digital environments.",
+          "Integrating sophisticated reasoning efficiently into agent behavior without incurring prohibitively high computational costs remains a challenge."
+        ],
+        "solution": [
+          "Introduces a \"Human-Native Interaction paradigm\" that defines a universal, low-level action space based on keyboard and mouse inputs, enabling massive cross-domain pre-training.",
+          "Employs \"native Sparse ReAct pretraining\" using an online \"think-aloud\" protocol and visual anchors for causal alignment, generating reasoning only at critical decision points.",
+          "Utilizes a history-aware decaying loss function during continual pre-training to re-weight repetitive actions, compelling the model to focus on high-entropy decision boundaries."
+        ],
+        "keyInsights": [
+          "A universal, low-level keyboard-mouse action space provides a scalable foundation for generalist agents, confirming that simple, general representations effectively scale with data and compute.",
+          "Selectively incorporating reasoning through a Sparse Thinking strategy significantly improves efficiency and performance in complex tasks by balancing deliberation with action.",
+          "Mitigating imbalanced action distributions with a decaying loss function during pre-training yields more robust and diverse learned behaviors by preventing the model from exploiting dataset biases."
+        ],
+        "results": [
+          "Game-TARS-MoE-mini achieved success rates of 72.0% in Embodied, 55.4% in GUI, and 66.1% in Combat tasks on the unseen Minecraft MCU benchmark, substantially outperforming state-of-the-art baselines.",
+          "Demonstrated competitive generalization against human players and surpassed GPT-5 in unseen web 3D games, also outperforming GPT-5, Claude-4-Sonnet, and Gemini-2.5-Pro in the FPS Vizdoom benchmark.",
+          "The Sparse Thinking strategy improved Minecraft success rate to 63% while reducing average token consumption by 45% compared to greedy thinking, optimizing reasoning efficiency."
+        ]
+      },
+      "image_url": "image/2510.23691v1.png",
+      "universal_paper_id": "2510.23691",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 113,
+          "last_7_days": 113
+        },
+        "public_total_votes": 16
+      },
+      "first_publication_date": "2025-10-27T17:43:51.000Z",
+      "publication_date": "2025-10-27T17:43:51.000Z",
+      "updated_at": "2025-10-29T08:13:32.278Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "continual-learning",
+        "cs.AI",
+        "deep-reinforcement-learning",
+        "imitation-learning",
+        "inference-optimization",
+        "multi-modal-learning",
+        "tool-use",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a3409-76c2-72e8-a9d2-1c507e3a57b5",
+      "paper_group_id": "019a3409-76c2-72e8-a9d2-1c507e3a57b5",
+      "title": "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence",
+      "abstract": "神经编码智能的范围正在迅速扩展，超越基于文本的源代码，涵盖程序生成的丰富视觉输出。这一视觉维度对于灵活的内容生成以及精确的程序驱动可视化编辑等高级应用至关重要。然而，进展受到高质量多模态代码数据稀缺的阻碍，这一瓶颈源于合成和质量评估的挑战。为了解决这些挑战，我们从数据和建模两个角度做出了贡献。我们首先介绍了一整套合成工具包，利用数据模态之间的相互协同，高效地生成从标准图表到复杂交互式网页用户界面及代码驱动动画的大规模高质量语料库。基于此工具包，我们构建了JanusCode-800K，这是迄今为止最大的多模态代码语料库。这为我们的模型JanusCoder和JanusCoderV的训练提供了支持，后者建立了一个视觉编程接口，用于从文本指令、视觉输入或两者的组合生成代码。我们的统一模型不同于现有的为孤立任务构建专用模型的方法。在文本中心和视觉中心的编码任务上进行的广泛实验表明，JanusCoder系列的性能优越，我们的7B至14B规模模型的表现接近甚至超过商业模型。此外，广泛的分析提供了统一程序逻辑与其视觉表达的关键见解。我们的代码和检查点将在此https URL上提供。",
+      "paper_summary": {
+        "summary": "JANUSCODER presents a unified visual-programmatic interface for multimodal code intelligence, addressing the gap between code's logical structure and its visual output. It introduces JANUSCODE-800K, the largest multimodal code corpus, and achieves performance matching or surpassing commercial models like GPT-4o on diverse text-centric and vision-centric coding tasks.",
+        "originalProblem": [
+          "Existing research in visually-grounded code generation and understanding is fragmented, relying on specialized models for isolated tasks that lack generalization.",
+          "Progress in multimodal code intelligence is bottlenecked by the scarcity of high-quality, diverse multimodal code data, particularly for complex visual outputs like animations and interactive UIs."
+        ],
+        "solution": [
+          "A novel, scalable data synthesis toolkit was developed to automatically generate high-quality multimodal code data through strategies like Guided Evolution, Re-Contextualization, and Bidirectional Translation.",
+          "The JANUSCODE-800K corpus, comprising 800,000 diverse samples including animations and web artifacts, was constructed as the largest and most comprehensive multimodal code dataset.",
+          "JANUSCODER (text-centric) and JANUSCODERV (multimodal) models were trained on this corpus to unify the generation of code from textual and visual inputs, or combinations thereof."
+        ],
+        "keyInsights": [
+          "Cross-domain and cross-modal data synergies are critical for enhancing model performance, enabling knowledge transfer, and improving capabilities in data-scarce scenarios.",
+          "A VLM/LLM-based reward modeling framework is crucial for filtering out misaligned or low-quality synthesized data, as mere executability is insufficient for high-quality multimodal data.",
+          "The proposed data design and synthesis toolkit effectively empower various large language model (LLM) and vision-language model (VLM) backbones, leading to consistent performance improvements across tasks."
+        ],
+        "results": [
+          "JANUSCODE-800K was successfully created as the largest multimodal code corpus, offering a balanced distribution of text-centric (50.9%) and vision-centric (49.1%) data.",
+          "JANUSCODER and JANUSCODERV models demonstrated superior performance, often matching or exceeding commercial models like GPT-4o, on Python visualization, web artifact generation, and scientific demonstration tasks.",
+          "On multimodal chart-to-code tasks, JANUSCODERV significantly outperformed baselines and specialized MLLMs, validating the effectiveness of cross-task data synergy."
+        ]
+      },
+      "image_url": "image/2510.23538v1.png",
+      "universal_paper_id": "2510.23538",
+      "metrics": {
+        "total_votes": 2,
+        "visits_count": {
+          "all": 54,
+          "last_7_days": 54
+        },
+        "public_total_votes": 10
+      },
+      "first_publication_date": "2025-10-27T17:13:49.000Z",
+      "publication_date": "2025-10-27T17:13:49.000Z",
+      "updated_at": "2025-10-30T07:33:46.818Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.SE",
+        "generative-models",
+        "multi-modal-learning",
+        "representation-learning",
+        "synthetic-data",
+        "transformers",
+        "vision-language-models"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 31,
+      "github_url": "https://github.com/InternLM/JanusCoder",
+      "distance": 1
+    },
+    {
+      "id": "019a331e-0ea8-7871-9ff9-ada99cb7db45",
+      "paper_group_id": "019a331e-0ea8-7871-9ff9-ada99cb7db45",
+      "title": "Parallel Loop Transformer for Efficient Test-Time Computation Scaling",
+      "abstract": "大型语言模型（LLMs）功能强大，但在推理过程中往往太慢且成本高，不适合实际应用。循环变压器通过在多个计算步骤或“循环”中重用相同的权重来节省参数。然而，这种方法有一个主要缺陷：循环是依次运行的，每增加一个循环，推理延迟和内存需求就会增加。这使得它们在快速应用中变得不切实际。为了解决这个问题，我们提出了并行循环变压器（PLT）。PLT是一种新架构，能够提供深度循环模型的性能优势，同时具备标准非循环模型的低延迟。PLT通过两种关键技术实现。首先，交叉循环并行性（CLP）通过同时计算不同标记的不同循环打破了顺序依赖，全部在一次传递中完成。其次，为了防止内存成本增加，我们采用高效表示增强策略。该方法将第一个循环的内存（KV缓存）与所有其他循环共享。然后，它使用门控滑动窗口注意力（G-SWA）将这种共享的全局信息与局部信息结合，保持高准确性。我们的实验表明，PLT在与标准变压器比较时，几乎没有额外的延迟或内存成本，同时能够达到传统循环模型的高准确性。",
+      "paper_summary": {
+        "summary": "The Parallel Loop Transformer (PLT) from ByteDance Seed allows Large Language Models to leverage deep, looped computation for enhanced reasoning without incurring the traditional inference latency and memory overhead. This architecture achieves accuracy comparable to or exceeding larger vanilla models with up to 30% lower latency and reduced Key-Value cache memory.",
+        "originalProblem": [
+          "Large Language Models (LLMs) suffer from high inference latency and memory consumption, limiting their deployment in real-time or resource-constrained applications.",
+          "Existing looped transformer architectures, despite parameter efficiency, execute computational loops sequentially, causing per-token latency and KV-cache memory to scale linearly with the number of loops.",
+          "This inherent sequential dependency makes deeper, reasoning-capable looped models impractical due to prohibitive inference costs."
+        ],
+        "solution": [
+          "The Parallel Loop Transformer (PLT) employs Cross-Loop Parallelism (CLP) to reconfigure training dependencies, enabling the concurrent execution of multiple loop steps during inference.",
+          "It implements an Efficient Representation Enhancement strategy that shares the Key-Value (KV) cache from the first loop across all subsequent loops, drastically reducing memory footprint.",
+          "Non-first loops utilize Gated Sliding-Window Attention (G-SWA) to restore local context, adaptively fusing global shared information with a small, local sliding window."
+        ],
+        "keyInsights": [
+          "The inherent sequential bottleneck of looped transformers can be overcome by carefully shifting dependencies during training, enabling full parallelization of loop computation during inference.",
+          "Decoupling an LLM's effective computational depth and reasoning capability from its inference-time latency and memory footprint is feasible through innovative architectural design.",
+          "Efficiently managing memory in deep looped models can be achieved by sharing global KV-cache components while restoring fine-grained local context through gated sliding-window attention."
+        ],
+        "results": [
+          "PLT with two loops (PLT-2) matched the accuracy of a naive looped transformer while achieving latency within 2% and KV cache within 1.4% of a vanilla non-looped transformer.",
+          "A 1.7B parameter PLT-2 model outperformed a larger 2.5B parameter vanilla model in accuracy (62.6 vs 62.1), simultaneously reducing decoding latency by approximately 30% and significantly decreasing KV cache memory.",
+          "Scaling PLT to three loops (PLT-3) further improved average accuracy by 1.1 points with only marginal increases in latency (+2%) and KV cache (+1.1%), showcasing its efficient scalability."
+        ]
+      },
+      "image_url": "image/2510.24824v1.png",
+      "universal_paper_id": "2510.24824",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 63,
+          "last_7_days": 63
+        },
+        "public_total_votes": 13
+      },
+      "first_publication_date": "2025-10-28T15:35:50.000Z",
+      "publication_date": "2025-10-28T15:35:50.000Z",
+      "updated_at": "2025-10-30T03:16:39.208Z",
+      "topics": [
+        "attention-mechanisms",
+        "Computer Science",
+        "cs.CL",
+        "efficient-transformers",
+        "inference-optimization",
+        "lightweight-models",
+        "model-compression",
+        "parameter-efficient-training",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "ByteDance",
+          "image": "images/organizations/bytedance.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
       "id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
       "paper_group_id": "019a28ef-c275-7d0f-b273-32eaa4d8e277",
       "title": "Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations",
-      "abstract": "人类通过多感官的协同作用学习抽象概念，一旦形成，这种表征通常可以通过单一模态回忆起来。受到这一原则的启发，我们提出了Concerto，这是一种简约的空间认知人类概念学习模拟，结合了3D同模自蒸馏与2D-3D跨模态联合嵌入。尽管其简单，Concerto却学习到了更连贯和信息量更丰富的空间特征，通过零样本可视化得到了验证。它在3D场景感知的线性探测中，分别比单独的最先进2D和3D自我监督模型提升了14.2%和4.8%，以及比它们的特征连接效果更佳。在完全微调后，Concerto在多个场景理解基准测试中设立了新的最先进结果（例如，ScanNet上的80.7% mIoU）。我们还展示了一个为视频提升点云空间理解量身定制的Concerto变体，以及一个将Concerto表征线性投影到CLIP语言空间的转换器，从而实现开放世界感知。这些结果凸显了Concerto在空间表征中展现了卓越的细粒度几何和语义一致性。",
+      "abstract": "人类通过多感官的协同作用学习抽象概念，一旦形成，这种表征通常可以通过单一模态进行回忆。受到这一原理的启发，我们推出了Concerto，这是一个极简的空间认知人类概念学习模拟，结合了3D内模态自蒸馏和2D-3D跨模态联合嵌入。尽管其简单，Concerto仍能学习到更连贯和信息量更大的空间特征，零-shot可视化证明了这一点。在3D场景感知的线性探测中，它分别比独立的SOTA 2D和3D自监督模型提高了14.2%和4.8%，以及它们的特征拼接。通过全面微调，Concerto在多个场景理解基准上创下了新的SOTA结果（例如，ScanNet上的80.7% mIoU）。我们进一步展示了一个针对视频提升点云空间理解的Concerto变体，以及一个将Concerto表示线性投影到CLIP语言空间的转换器，实现开放世界感知。这些结果突出了Concerto在空间表征中展现出优越的细粒度几何和语义一致性。",
       "paper_summary": {
         "summary": "Concerto, a joint 2D-3D self-supervised learning framework developed by researchers from The University of Hong Kong, The Chinese University of Hong Kong, and Harbin Institute of Technology, synergistically combines intra-modal 3D self-distillation and cross-modal 2D-3D joint embedding prediction. This approach learns unified spatial representations, achieving 80.7% mIoU for 3D semantic segmentation on ScanNet and demonstrating robust data efficiency.",
         "originalProblem": [
@@ -926,12 +1726,12 @@ const papersData = {
       "image_url": "image/2510.23607v1.png",
       "universal_paper_id": "2510.23607",
       "metrics": {
-        "total_votes": 3,
+        "total_votes": 4,
         "visits_count": {
-          "all": 182,
-          "last_7_days": 182
+          "all": 212,
+          "last_7_days": 212
         },
-        "public_total_votes": 23
+        "public_total_votes": 29
       },
       "first_publication_date": "2025-10-27T17:59:59.000Z",
       "publication_date": "2025-10-27T17:59:59.000Z",
@@ -969,650 +1769,58 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
-      "paper_group_id": "019a2f07-80f6-71fb-8975-9bf5a2d94747",
-      "title": "Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents",
-      "abstract": "我们提出了Game-TARS，一个通用游戏代理，使用与人类对齐的原生键盘鼠标输入建立的统一、可扩展的动作空间进行训练。与基于API或GUI的方法不同，这种范式允许在异构领域（包括操作系统、网络和模拟游戏）进行大规模的连续预训练。Game-TARS在超过500B的多样轨迹和多模态数据上进行了预训练。关键技术包括逐渐减小的连续损失，以减少因果混淆，以及一种高效的稀疏思维策略，平衡推理深度和推理成本。实验表明，Game-TARS在开放世界Minecraft任务上实现了约2倍于之前最佳模型的成功率，在未见过的网络3D游戏中接近新手人类的普遍性，并在FPS基准测试中超越了GPT-5、Gemini-2.5-Pro和Claude-4-Sonnet。在训练和测试时间的扩展结果中，证实了统一动作空间在跨游戏和多模态数据的扩展中持续保持改善。我们的结果表明，简单、可扩展的动作表示与大规模预训练相结合，为具有广泛计算机使用能力的通用代理提供了一个有希望的路径。",
+      "id": "019a330e-e61d-7672-97ca-c751585d6abc",
+      "paper_group_id": "019a330e-e61d-7672-97ca-c751585d6abc",
+      "title": "Ming-Flash-Omni: A Sparse, Unified Architecture for Multimodal Perception and Generation",
+      "abstract": "我们提出了Ming-Flash-Omni，这是Ming-Omni的升级版，基于稀疏的专家混合（MoE）变体Ling-Flash-2.0构建，拥有1000亿总参数，每个token仅激活61亿。这种架构实现了高效的扩展（显著提高了计算效率，同时大幅扩大了模型容量），并赋予了跨视觉、语音和语言的更强大的统一多模态智能，代表了向人工通用智能（AGI）迈出的重要一步。与其前身相比，升级版在多模态理解和生成方面表现出显著改善。我们在语音识别能力上有了重大进展，在上下文自适应语音识别（ASR）中取得了行业领先的表现，并在方言感知ASR中表现出高度竞争力。在图像生成方面，Ming-Flash-Omni引入了高保真文本渲染，并在图像编辑过程中展示了场景一致性和身份保持的显著提升。此外，Ming-Flash-Omni引入了生成分割，这一能力不仅实现了强大的独立分割性能，还增强了图像生成中的空间控制，改善了编辑一致性。值得注意的是，Ming-Flash-Omni在文本到图像生成和生成分割方面达到了行业领先的结果，并在所有12个上下文ASR基准测试中创下新纪录，所有这些都在一个统一的架构中实现。",
       "paper_summary": {
-        "summary": "Game-TARS develops a generalist multimodal game agent using a human-native keyboard-mouse interaction paradigm for scalable, continual pre-training. The agent achieves superior performance in diverse unseen game environments like Minecraft, web 3D games, and FPS benchmarks, often outperforming existing specialized and general-purpose models.",
+        "summary": "Ming-Flash-Omni, from Inclusion AI, Ant Group, presents a sparse Mixture-of-Experts architecture with 100 billion total parameters and only 6.1 billion active per token, unifying multimodal perception and generation across vision, speech, and language. The model achieves state-of-the-art performance in contextual ASR and generative segmentation while demonstrating quality comparable to specialized models in text-to-image generation and significant improvements over its predecessor across various multimodal understanding tasks.",
         "originalProblem": [
-          "Traditional game AI agents suffer from highly customized, environment-specific action spaces that severely limit their generalization to new domains.",
-          "Existing generalist agents often rely on environment-specific APIs or Graphical User Interface elements, creating a semantic gap and hindering true universality across digital environments.",
-          "Integrating sophisticated reasoning efficiently into agent behavior without incurring prohibitively high computational costs remains a challenge."
+          "Effectively integrating comprehension and generation across multiple modalities into a unified model remains challenging due to representational disparities and modality imbalances.",
+          "Scaling large language models for multimodal tasks typically leads to prohibitive computational and memory costs, hindering real-world deployment and practical applications.",
+          "Existing multimodal AI systems often struggle with specialized real-world scenarios, such as highly accurate contextual ASR, dialect-aware recognition, and fine-grained spatial control in image generation."
         ],
         "solution": [
-          "Introduces a \"Human-Native Interaction paradigm\" that defines a universal, low-level action space based on keyboard and mouse inputs, enabling massive cross-domain pre-training.",
-          "Employs \"native Sparse ReAct pretraining\" using an online \"think-aloud\" protocol and visual anchors for causal alignment, generating reasoning only at critical decision points.",
-          "Utilizes a history-aware decaying loss function during continual pre-training to re-weight repetitive actions, compelling the model to focus on high-entropy decision boundaries."
+          "The system utilizes a sparse Mixture-of-Experts (MoE) architecture (Ling-Flash-2.0) with 100 billion total parameters, activating only 6.1 billion per token for computational efficiency.",
+          "A unified two-stage pipeline integrates a perception stage for multimodal understanding (with VideoRoPE and context-aware ASR) and a generation stage for speech and image synthesis (using continuous acoustic representations and generative segmentation).",
+          "Novel training paradigms, including 'generative segmentation as an editing task,' advanced identity preservation, and high-fidelity text rendering, are introduced to bridge understanding and generation and enhance control."
         ],
         "keyInsights": [
-          "A universal, low-level keyboard-mouse action space provides a scalable foundation for generalist agents, confirming that simple, general representations effectively scale with data and compute.",
-          "Selectively incorporating reasoning through a Sparse Thinking strategy significantly improves efficiency and performance in complex tasks by balancing deliberation with action.",
-          "Mitigating imbalanced action distributions with a decaying loss function during pre-training yields more robust and diverse learned behaviors by preventing the model from exploiting dataset biases."
+          "Sparse MoE architectures allow for a dramatic expansion of model capacity (100 billion parameters) while maintaining high computational efficiency (6.1 billion active parameters per token), making powerful multimodal models practical.",
+          "Reformulating segmentation as a 'generative editing task' unifies perception and generation objectives by requiring the model to understand object boundaries as a prerequisite for semantic editing, leading to improved spatio-semantic control.",
+          "Employing continuous acoustic representations for speech generation, rather than discrete tokens, significantly improves the naturalness, expressiveness, and overall fidelity of synthesized speech."
         ],
         "results": [
-          "Game-TARS-MoE-mini achieved success rates of 72.0% in Embodied, 55.4% in GUI, and 66.1% in Combat tasks on the unseen Minecraft MCU benchmark, substantially outperforming state-of-the-art baselines.",
-          "Demonstrated competitive generalization against human players and surpassed GPT-5 in unseen web 3D games, also outperforming GPT-5, Claude-4-Sonnet, and Gemini-2.5-Pro in the FPS Vizdoom benchmark.",
-          "The Sparse Thinking strategy improved Minecraft success rate to 63% while reducing average token consumption by 45% compared to greedy thinking, optimizing reasoning efficiency."
+          "Achieved state-of-the-art performance across all 12 contextual ASR benchmarks and set new SOTA records in generative segmentation, significantly outperforming other unified MLLMs.",
+          "Delivered state-of-the-art results in text-to-image generation on GenEval with exceptional controllability (particularly in 'Position' and 'Color') and quality comparable to specialized image generation models like SD3-Medium.",
+          "Demonstrated highly competitive or leading performance across a broad spectrum of multimodal understanding benchmarks, including SOTA on MVBench for video reasoning and strong results in audio QA, visual-text understanding, and OCR."
         ]
       },
-      "image_url": "image/2510.23691v1.png",
-      "universal_paper_id": "2510.23691",
+      "image_url": "image/2510.24821v1.png",
+      "universal_paper_id": "2510.24821",
       "metrics": {
-        "total_votes": 0,
+        "total_votes": 2,
         "visits_count": {
-          "all": 78,
-          "last_7_days": 78
+          "all": 53,
+          "last_7_days": 53
         },
         "public_total_votes": 10
       },
-      "first_publication_date": "2025-10-27T17:43:51.000Z",
-      "publication_date": "2025-10-27T17:43:51.000Z",
-      "updated_at": "2025-10-29T08:13:32.278Z",
+      "first_publication_date": "2025-10-28T15:24:13.000Z",
+      "publication_date": "2025-10-28T15:24:13.000Z",
+      "updated_at": "2025-10-30T03:00:05.789Z",
       "topics": [
-        "agents",
-        "Computer Science",
-        "continual-learning",
-        "cs.AI",
-        "deep-reinforcement-learning",
-        "imitation-learning",
-        "inference-optimization",
-        "multi-modal-learning",
-        "tool-use",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
-      "paper_group_id": "019a16fc-ffec-7205-bcf2-e9fe4b378109",
-      "title": "Real Deep Research for AI, Robotics and Beyond",
-      "abstract": "随着人工智能和机器人研究的快速增长，每年产生超过一万篇论文，研究人员保持更新变得越来越困难。快速发展的趋势、跨学科工作的兴起以及探索超出自身专业领域的必要性都加剧了这一挑战。为了解决这些问题，我们提出了一种通用的流程，能够系统地分析任何研究领域：识别新兴趋势、发掘跨领域机会，并为新研究提供具体的起点。在这项工作中，我们提出了“真实深度研究”（RDR），这是一个应用于人工智能和机器人领域的综合框架，特别关注基础模型和机器人技术的进展。我们还简要扩展了对其他科学领域的分析。主要论文详细介绍了RDR流程的构建，而附录则提供了每个分析主题的广泛结果。我们希望这项工作能为在人工智能及相关领域工作的研究人员提供启示。",
-      "paper_summary": {
-        "summary": "Researchers from UC San Diego, NVIDIA, META, UW-Madison, and UNC developed Real Deep Research (RDR), a generalizable pipeline that systematically analyzes scientific literature using off-the-shelf large language and multimodal models. This framework creates high-quality, structured surveys, identifies research trends, and uncovers cross-domain opportunities, consistently outperforming commercial LLMs in expert evaluations.",
-        "originalProblem": [
-          "The exponential growth of scientific literature, particularly in AI and robotics, leads to information overload, making it difficult for researchers to stay informed and identify new directions.",
-          "Traditional expert-written survey papers are resource-intensive and quickly become outdated, while existing automated LLM-based tools often lack the necessary domain expertise and can produce superficial or hallucinated analyses.",
-          "Researchers struggle to efficiently identify emerging trends, recognize interdisciplinary connections, and quickly grasp new topics outside their immediate expertise."
-        ],
-        "solution": [
-          "The Real Deep Research (RDR) pipeline was developed, utilizing off-the-shelf LLMs/LMMs (e.g., Doubao, o3, NV-Embed-v2) in a four-stage process: Data Preparation, Content Reasoning, Content Projection, and Embedding Analysis.",
-          "Domain experts define specific perspectives (e.g., Input, Modeling, Output for Foundation Models) to guide LMMs in extracting structured, granular information from papers.",
-          "Extracted natural language descriptions are projected into an informative latent embedding space, which is then clustered to group similar papers and generate descriptive keywords for survey construction and advanced analysis."
-        ],
-        "keyInsights": [
-          "Integrating expert-defined analytical perspectives with the reasoning capabilities of LMMs allows for deep, structured understanding of scientific literature, reducing hallucination and improving survey quality.",
-          "Transforming detailed paper information into a semantic embedding space enables robust clustering, visualization of research trends over time, and the discovery of cross-domain connections through knowledge graphs.",
-          "A modular pipeline approach, relying on high-performing, pre-trained foundation models without additional training, provides a scalable and generalizable solution for comprehensive scientific literature analysis across diverse research areas."
-        ],
-        "results": [
-          "RDR achieved the highest overall performance in expert evaluations for survey quality, with an average rank of 1.30, consistently outperforming commercial LLMs such as GPT5 and Gemini in most categories.",
-          "The framework's underlying `nvidia/NV-Embed-v2` embeddings demonstrated state-of-the-art unsupervised clustering performance, achieving 84.86% accuracy on AG News and 52.91% on 20 News Groups, validating the quality of its latent space representation.",
-          "RDR successfully identified and visualized emerging research trends (e.g., \"teleoperation\" and \"dexterous manipulation\" in robotics) and mapped cross-domain knowledge graphs, effectively highlighting interdisciplinary opportunities and high-impact papers."
-        ]
-      },
-      "image_url": "image/2510.20809v1.png",
-      "universal_paper_id": "2510.20809",
-      "metrics": {
-        "total_votes": 29,
-        "visits_count": {
-          "all": 1716,
-          "last_7_days": 1716
-        },
-        "public_total_votes": 117
-      },
-      "first_publication_date": "2025-10-23T17:59:05.000Z",
-      "publication_date": "2025-10-23T17:59:05.000Z",
-      "updated_at": "2025-10-24T16:11:10.700Z",
-      "topics": [
-        "clustering-algorithms",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV",
-        "cs.LG",
-        "human-ai-interaction",
-        "information-extraction",
-        "ml-systems",
-        "recommender-systems",
-        "text-classification"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 1,
-      "github_url": "https://github.com/realdeepresearch/realdeepresearch.github.io",
-      "distance": 1
-    },
-    {
-      "id": "019a330f-ab28-7eba-9849-ff7b835837c9",
-      "paper_group_id": "019a330f-ab28-7eba-9849-ff7b835837c9",
-      "title": "The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic, and Long-Horizon Task Execution",
-      "abstract": "现实世界中的语言代理必须处理跨多个应用程序的复杂多步骤工作流。例如，一个代理可能通过与日历和文件系统协调来管理电子邮件，或者监控生产数据库以检测异常并生成遵循操作手册的报告。然而，现有的语言代理基准通常侧重于狭窄的领域或简化的任务，缺乏评估代理在现实世界表现所需的多样性、真实性和长期复杂性。为了解决这一问题，我们推出了工具十项全能赛（称为Toolathlon），这是一个为语言代理提供多样化应用和工具、真实环境设置以及可靠执行评估的基准。Toolathlon涵盖32个软件应用和604个工具，范围从Google日历和Notion等日常平台到WooCommerce、Kubernetes和BigQuery等专业平台。大多数工具都是基于我们可能已修订或自实施的高质量模型上下文协议（MCP）服务器。与之前的工作主要确保功能真实性但环境状态多样性有限不同，我们提供了来自真实软件的真实初始环境状态，例如有数十名学生的Canvas课程或真实的财务电子表格。该基准总共包括108个手动来源或制作的任务，平均需要与多个应用程序交互约20轮才能完成。每个任务都可以通过专门的评估脚本严格验证。对最先进模型的综合评估突出显示了它们的显著不足：表现最好的模型Claude-4.5-Sonnet的成功率仅为38.6%，平均调用工具的轮次为20.2，而顶级开放权重模型DeepSeek-V3.2-Exp的成功率达到20.1%。我们期望Toolathlon能够推动更强大的语言代理的发展，以执行现实世界中的长期任务。",
-      "paper_summary": {
-        "summary": "A new benchmark, TOOLATHLON, has been introduced to rigorously evaluate language agents on their ability to execute diverse, realistic, and long-horizon tasks across 32 real-world applications. Evaluations using this benchmark reveal that even leading state-of-the-art models achieve low success rates, with the top-performing Claude-4.5-Sonnet reaching only 38.6% Pass@1.",
-        "originalProblem": [
-          "Existing language agent benchmarks often use narrow domains, simplified tasks, or artificial environments, failing to capture real-world complexity.",
-          "Many benchmarks rely on synthetic data, mocked tools, or subjective LLM judges, leading to unreliable and unreproducible evaluations.",
-          "Current evaluation methodologies do not adequately test agents' capabilities in long-horizon tasks requiring multi-step planning and cross-application orchestration."
-        ],
-        "solution": [
-          "Developed TOOLATHLON, a comprehensive benchmark with 108 tasks across 32 real-world applications and 604 tools, spanning seven diverse domains.",
-          "Designed tasks to be long-horizon (average 20 interaction turns), multi-application, and featuring realistic initial environment states and \"fuzzy\" instructions.",
-          "Implemented a strictly verifiable, execution-based evaluation framework using deterministic scripts to check final environment states within isolated containerized or remote real-world environments."
-        ],
-        "keyInsights": [
-          "Current state-of-the-art language agents, including top proprietary models, demonstrate significant limitations in reliably executing complex, real-world, long-horizon tasks.",
-          "Agents struggle with long-context scenarios, particularly processing and extracting information from overlong tool outputs, leading to reduced success rates.",
-          "There is a notable disparity between models' occasional success (Pass@3) and consistent performance (Pass^3), highlighting a lack of robustness and reliability."
-        ],
-        "results": [
-          "The best-performing proprietary model, Claude-4.5-Sonnet, achieved only a 38.6% Pass@1 success rate across all tasks.",
-          "Leading open-source models showed a noticeable performance gap, with DeepSeek-V3.2-Exp reaching a 20.1% Pass@1 success rate.",
-          "Hallucinating non-existent tool names proved more detrimental to task success than tool execution errors that provided feedback for agent adjustment."
-        ]
-      },
-      "image_url": "image/2510.25726v1.png",
-      "universal_paper_id": "2510.25726",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 39,
-          "last_7_days": 39
-        },
-        "public_total_votes": 6
-      },
-      "first_publication_date": "2025-10-29T17:32:49.000Z",
-      "publication_date": "2025-10-29T17:32:49.000Z",
-      "updated_at": "2025-10-30T03:00:56.232Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "multi-task-learning",
-        "reasoning",
-        "tool-use"
-      ],
-      "organization_info": [
-        {
-          "name": "Carnegie Mellon University",
-          "image": "images/organizations/cmu.jpg"
-        },
-        {
-          "name": "Duke University",
-          "image": "images/organizations/duke-university.jpeg"
-        },
-        {
-          "name": "HKUST",
-          "image": "images/organizations/hkust.jpg"
-        },
-        {
-          "name": "All Hands AI",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 17,
-      "github_url": "https://github.com/hkust-nlp/Toolathlon",
-      "distance": 1
-    },
-    {
-      "id": "019a2ebc-20e5-784d-83f2-c72225fc1637",
-      "paper_group_id": "019a2ebc-20e5-784d-83f2-c72225fc1637",
-      "title": "WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich Seeking",
-      "abstract": "基于大型语言模型（LLM）的智能体已经成为解决开放性问题的一种变革性方法，其中信息获取（IS）是一项核心能力，能够实现自主推理和决策。尽管以往的研究主要集中在提高检索深度上，我们观察到当前的IS智能体往往存在搜索效率低下的问题，这反过来限制了整体表现。导致这种低效率的一个关键因素是训练任务中目标实体的稀疏性，这限制了智能体学习和推广高效搜索行为的机会。为了解决这些挑战，我们提出了WebLeaper，一个构建高覆盖率IS任务和生成高效解决方案轨迹的框架。我们将IS形式化为一个树形结构的推理问题，使得在有限上下文中可以嵌入更大规模的目标实体。利用精心整理的维基百科表格，我们提出了三种合成IS任务的变体：基础型、联合型和反联合型，旨在系统性地提高IS的效率和有效性。最后，我们通过保留那些同时准确且高效的训练轨迹来策划训练过程，确保模型在正确性和搜索性能上都得到优化。在五个IS基准测试（BrowserComp、GAIA、xbench-DeepSearch、WideSearch和Seal-0）上进行的基础和综合设置的广泛实验表明，我们的方法在有效性和效率上始终优于强大的基线。",
-      "paper_summary": {
-        "summary": "Alibaba Group's Tongyi Lab developed WebLeaper, a framework that enhances the efficiency and efficacy of LLM-based web agents in information seeking by synthesizing entity-intensive tasks and guiding trajectory construction. The system consistently achieved state-of-the-art results among open-source agents, delivering performance comparable to proprietary models like Claude-4-Sonnet on challenging benchmarks, including a 73.2 score on GAIA and 38.8 on BrowseComp.",
-        "originalProblem": [
-          "LLM-based information-seeking agents often exhibit low search efficiency, characterized by redundant queries and retrieval of irrelevant information, leading to inflated computational and time costs.",
-          "This inefficiency largely stems from the sparsity of target entities in conventional training tasks, which provides insufficient opportunities for agents to learn and generalize efficient search behaviors within a constrained context.",
-          "Existing research primarily focused on improving retrieval depth or correctness, often overlooking the critical aspect of search efficiency in agent performance."
-        ],
-        "solution": [
-          "WebLeaper introduces a novel data synthesis framework for creating \"entity-intensive\" information-seeking tasks that contain a significantly larger number of target entities, modeled as tree-structured reasoning problems from curated Wikipedia tables.",
-          "It employs an information-guided trajectory construction process that filters agent-generated solutions based on both Information-Seeking Rate (completeness) and Information-Seeking Efficiency (minimal actions per entity) to ensure high-quality, optimal training sequences.",
-          "A hybrid reward system, incorporating a granular F-score for entity-intensive tasks, is integrated for reinforcement learning fine-tuning to provide stable and nuanced training signals for both efficacy and efficiency."
-        ],
-        "keyInsights": [
-          "Training agents with entity-intensive tasks, particularly those leveraging \"Union\" and \"Reverse-Union\" structures to combine or reverse reasoning flows across multiple sources, significantly enhances agents' planning and decision-making capabilities for complex information gathering.",
-          "Simultaneously optimizing for both information completeness (ISR) and efficiency (ISE) during trajectory generation is crucial for curating high-quality, concise, and goal-directed solution paths for complex web browsing tasks.",
-          "A hybrid reward system, capable of providing granular feedback on entity retrieval, effectively guides reinforcement learning to achieve joint gains in both agent effectiveness and search efficiency, demonstrating their complementary nature."
-        ],
-        "results": [
-          "WebLeaper consistently achieved state-of-the-art performance among open-source agents, with its comprehensive training setting reaching scores such as 73.2 on GAIA, 38.8 on BrowseComp, and 72.0 on xbench-DeepSearch.",
-          "The \"Reverse-Union\" task synthesis variant yielded the strongest performance improvements, averaging +4.34 over the \"Union\" variant, by enhancing an agent's planning and multi-step reasoning capabilities.",
-          "The framework demonstrated joint improvements in both effectiveness (higher accuracy/scores) and efficiency (fewer average action rounds) across all evaluated benchmarks, validating the core hypothesis that efficient search leads to better overall performance with reduced operational costs."
-        ]
-      },
-      "image_url": "image/2510.24697v1.png",
-      "universal_paper_id": "2510.24697",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 45,
-          "last_7_days": 45
-        },
-        "public_total_votes": 8
-      },
-      "first_publication_date": "2025-10-28T17:51:42.000Z",
-      "publication_date": "2025-10-28T17:51:42.000Z",
-      "updated_at": "2025-10-29T06:51:12.485Z",
-      "topics": [
-        "agentic-frameworks",
-        "agents",
-        "Computer Science",
-        "cs.CL",
-        "data-curation",
-        "fine-tuning",
-        "reasoning",
-        "tool-use",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Alibaba Group",
-          "image": "images/organizations/alibaba.png"
-        },
-        {
-          "name": "Peking University",
-          "image": "images/organizations/peking.png"
-        },
-        {
-          "name": "Tongyi Lab",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
-      "distance": 1
-    },
-    {
-      "id": "019a32af-ef69-779e-a3cd-c0e8197ca80e",
-      "paper_group_id": "019a32af-ef69-779e-a3cd-c0e8197ca80e",
-      "title": "RegionE: Adaptive Region-Aware Generation for Efficient Image Editing",
-      "abstract": "最近，基于指令的图像编辑（IIE）受到了广泛关注。在实际应用中，IIE往往只修改图像的特定区域，而其余区域基本保持不变。尽管这两种区域在生成难度和计算冗余性上有显著差异，但现有的IIE模型并未考虑这种区别，而是在整个图像上应用统一的生成过程。这激励我们提出了RegionE，一个自适应的、区域感知的生成框架，可以在不额外训练的情况下加速IIE任务。具体而言，RegionE框架由三个主要组成部分构成：1）自适应区域划分。我们观察到未编辑区域的轨迹是直的，允许在一次步骤中推断出多步去噪预测。因此，在去噪的早期阶段，我们根据最终估计结果与参考图像之间的差异，将图像划分为编辑和未编辑区域。2）区域感知生成。区分区域后，我们将未编辑区域的多步去噪替换为一步预测。对于编辑区域，轨迹是弯曲的，需要局部迭代去噪。为了提高局部迭代生成的效率和质量，我们提出了区域指令KV缓存，它在结合全局信息的同时降低计算成本。3）自适应速度衰减缓存。我们观察到编辑区域的相邻时间步表现出强烈的速度相似性，因此进一步提出了自适应速度衰减缓存，以加速局部去噪过程。我们将RegionE应用于最先进的IIE基础模型，包括Step1X-Edit、FLUX.1 Kontext和Qwen-Image-Edit。RegionE实现了2.57、2.41和2.06的加速因子。通过GPT-4o的评估证实，语义和感知的保真度得到了良好保持。",
-      "paper_summary": {
-        "summary": "RegionE is a training-free framework that accelerates instruction-based image editing (IIE) models by exploiting spatial and temporal redundancies. It achieves end-to-end speedups of 2-2.5x on state-of-the-art IIE models like Step1X-Edit, FLUX.1 Kontext, and Qwen-Image-Edit, while maintaining high image quality with PSNR values above 30dB and extremely low perceptual differences (LPIPS around 0.05).",
-        "originalProblem": [
-          "Existing Instruction-Based Image Editing (IIE) models incur high computational costs and inference latency, limiting real-time applications.",
-          "Current IIE models process entire images uniformly, applying the same computationally intensive denoising steps to both edited and unedited regions, leading to spatial redundancy.",
-          "Diffusion models exhibit temporal redundancy in attention layer Key/Value pairs and velocity outputs between adjacent timesteps, particularly in the denoising-only paradigm of IIE."
-        ],
-        "solution": [
-          "RegionE introduces a three-stage, training-free framework: Stabilization Stage (STS), Region-Aware Generation Stage (RAGS), and Smooth Stage (SMS).",
-          "An Adaptive Region Partition (ARP) identifies edited and unedited regions based on one-step image estimation, allowing for differential processing.",
-          "Region-Instruction KV Cache (RIKVCache) optimizes edited region processing by reusing cached global context, and Adaptive Velocity Decay Cache (AVDCache) predicts velocities for temporal efficiency using learned decay factors."
-        ],
-        "keyInsights": [
-          "Edited regions and unedited regions in IIE tasks exhibit fundamentally different generation trajectories during denoising, allowing for region-specific acceleration strategies.",
-          "Key and Value pairs in Diffusion Transformer (DiT) attention layers, particularly for unedited and instruction tokens, remain highly stable across diffusion timesteps and can be effectively cached.",
-          "Denoising velocities between consecutive timesteps in edited regions are highly similar in direction and exhibit predictable decay in magnitude, enabling adaptive velocity prediction."
-        ],
-        "results": [
-          "RegionE demonstrated end-to-end speedups of 2.57x for Step1X-Edit, 2.41x for FLUX.1 Kontext, and 2.06x for Qwen-Image-Edit, significantly reducing inference latency.",
-          "The framework maintained superior image quality, achieving high PSNR (e.g., 30.520 dB on Step1X-Edit) and low LPIPS scores (e.g., 0.054 on Step1X-Edit), consistently outperforming other acceleration methods by substantial margins.",
-          "GPT-4o evaluations confirmed high semantic consistency and perceptual quality, with RegionE's outputs closely matching or slightly exceeding vanilla model performance, validating human-perceptible fidelity."
-        ]
-      },
-      "image_url": "image/2510.25590v1.png",
-      "universal_paper_id": "2510.25590",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 35,
-          "last_7_days": 35
-        },
-        "public_total_votes": 5
-      },
-      "first_publication_date": "2025-10-29T14:58:37.000Z",
-      "publication_date": "2025-10-29T14:58:37.000Z",
-      "updated_at": "2025-10-30T01:16:22.249Z",
-      "topics": [
-        "attention-mechanisms",
         "Computer Science",
         "cs.AI",
         "cs.CV",
+        "efficient-transformers",
         "generative-models",
         "image-generation",
-        "inference-optimization",
+        "image-segmentation",
+        "multi-modal-learning",
+        "speech-recognition",
         "transformers",
         "vision-language-models"
-      ],
-      "organization_info": [
-        {
-          "name": "Imperial College London",
-          "image": "images/organizations/imperial-college-london.jpeg"
-        },
-        {
-          "name": "Fudan University",
-          "image": "images/organizations/fudan-university.png"
-        },
-        {
-          "name": "StepFun",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 6,
-      "github_url": "https://github.com/Peyton-Chen/RegionE",
-      "distance": 1
-    },
-    {
-      "id": "019a2b6f-87f8-7da1-ae0b-feb3c5f7f47e",
-      "paper_group_id": "019a2b6f-87f8-7da1-ae0b-feb3c5f7f47e",
-      "title": "IGGT: Instance-Grounded Geometry Transformer for Semantic 3D Reconstruction",
-      "abstract": "人类自然地将三维世界的几何结构和语义内容视为交织在一起的维度，从而能够对复杂场景进行连贯和准确的理解。然而，大多数先前的方法优先训练用于低级三维重建的大型几何模型，将高级空间理解孤立处理，忽视了这两种三维场景分析基本方面之间的重要相互作用，从而限制了推广性，并导致在下游三维理解任务中的表现不佳。最近的尝试通过简单地将三维模型与特定语言模型对齐来缓解这一问题，从而将感知限制在对齐模型的能力范围内，限制了对下游任务的适应性。在本文中，我们提出了实例基础几何变换器（InstanceGrounded Geometry Transformer，IGGT），这是一个端到端的大型统一变换器，用于统一空间重建和实例级上下文理解的知识。具体而言，我们设计了一种三维一致性对比学习策略，指导IGGT通过仅使用二维视觉输入来编码具有几何结构和实例基础聚类的统一表示。该表示支持将二维视觉输入一致地提升为具有明确不同对象实例的连贯三维场景。为便于完成这一任务，我们进一步构建了InsScene-15K，这是一个大型数据集，包含高质量的RGB图像、姿态、深度图以及三维一致性的实例级掩膜注释，并采用了新颖的数据整理流程。",
-      "paper_summary": {
-        "summary": "IGGT introduces an end-to-end framework for unified 3D reconstruction and instance-level contextual understanding, leveraging a large unified transformer and a new 3D-consistent dataset, InsScene-15K. The framework establishes new benchmarks across instance spatial tracking, open-vocabulary semantic segmentation, and QA scene grounding.",
-        "originalProblem": [
-          "Traditional 3D scene understanding approaches suffered from fragmented pipelines, leading to error propagation and neglected mutual context between geometry and semantics.",
-          "Prior VLM-aligned methods faced issues like geometric detail over-smoothing, VLM vendor lock-in, and limited capability for fine-grained instance-level differentiation.",
-          "A scarcity of large-scale, high-quality, 3D-consistent, instance-level annotated datasets hindered the training of robust foundation models."
-        ],
-        "solution": [
-          "An Instance-Grounded Geometry Transformer (IGGT) unifies spatial reconstruction and instance-level understanding using a 1-billion parameter transformer with DINOv2 features and cross-modal fusion.",
-          "3D-consistent contrastive supervision, combined with geometry supervision, encourages mutual enhancement between geometric and instance semantic learning.",
-          "A new large-scale dataset, InsScene-15K, was created, featuring 3D-consistent instance-level masks across 15,000 scenes and 200 million images, to address data scarcity.",
-          "An instance-grounded understanding paradigm uses generated 3D-consistent instance masks as a flexible 'plug-and-play' interface for various off-the-shelf Vision-Language Models (VLMs) and Large Multimodal Models (LMMs)."
-        ],
-        "keyInsights": [
-          "Joint training of geometry and instance-level semantics within a unified transformer allows for mutual enhancement, leading to more coherent and accurate 3D scene understanding.",
-          "Generating 3D-consistent instance masks provides a universal, flexible interface that decouples the 3D perception model from specific Vision-Language Models (VLMs), enabling 'plug-and-play' adaptability.",
-          "The cross-modal fusion block is crucial for embedding fine-grained geometric awareness directly into instance representations, improving boundary precision and spatial sensitivity."
-        ],
-        "results": [
-          "Achieved state-of-the-art performance in instance spatial tracking, with 69.41% Temporal mIoU on ScanNet and 73.02% Temporal mIoU on ScanNet++.",
-          "Demonstrated leading capabilities in open-vocabulary semantic segmentation, outperforming prior methods by 8.34% mIoU in 2D and 4.97% mIoU in 3D on ScanNet++.",
-          "Enabled accurate QA scene grounding by leveraging instance-grounded querying with Large Multimodal Models, showing superior multi-view consistency for complex prompts compared to vanilla LMMs."
-        ]
-      },
-      "image_url": "image/2510.22706v1.png",
-      "universal_paper_id": "2510.22706",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 79,
-          "last_7_days": 79
-        },
-        "public_total_votes": 7
-      },
-      "first_publication_date": "2025-10-26T14:57:44.000Z",
-      "publication_date": "2025-10-26T14:57:44.000Z",
-      "updated_at": "2025-10-28T15:28:40.952Z",
-      "topics": [
-        "Computer Science",
-        "contrastive-learning",
-        "cs.CV",
-        "geometric-deep-learning",
-        "image-segmentation",
-        "neural-rendering",
-        "representation-learning",
-        "robotics-perception",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Northwestern Polytechnical University",
-          "image": null
-        },
-        {
-          "name": "Tsinghua University",
-          "image": "images/organizations/tsinghua.png"
-        },
-        {
-          "name": "The Chinese University of Hong Kong",
-          "image": "images/organizations/chinesehongkong.png"
-        },
-        {
-          "name": "Nanyang Technological University",
-          "image": "images/organizations/nanyang-technological-university.png"
-        },
-        {
-          "name": "StepFun, Inc.",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a3258-ba90-763b-b54f-f9819b50e6d9",
-      "paper_group_id": "019a3258-ba90-763b-b54f-f9819b50e6d9",
-      "title": "Generating Creative Chess Puzzles",
-      "abstract": "尽管生成性人工智能在各个领域快速发展，但生成真正具有创意、美学和反直觉的输出仍然是一大挑战。本文提出了一种解决国际象棋难题领域相关困难的方法。我们首先对生成性人工智能架构进行基准测试，然后引入一个基于国际象棋引擎搜索统计的具有新颖奖励的强化学习框架，以克服一些不足。这些奖励旨在增强难题的独特性、反直觉性、多样性和现实感。我们的强化学习方法使反直觉难题的生成提高了10倍，从0.22%（监督学习）增至2.5%，超越了现有数据集的比率（2.1%）和最佳Lichess训练模型（0.4%）。我们的难题满足新颖性和多样性的基准，保持了美学主题，并且被人类专家评定为比现成书籍难题更具创意、趣味和反直觉性，甚至接近经典作品。我们最终的成果是一本策划的AI生成难题的小册子，得到了三位世界知名专家的创意认可。",
-      "paper_summary": {
-        "summary": "Google DeepMind, University of Oxford, and Mila researchers developed an AI system that generates creative and counter-intuitive chess puzzles by formalizing creativity metrics and employing a reinforcement learning framework. The system increased the generation rate of counter-intuitive puzzles to 2.5%, surpassing human-derived datasets, and produced puzzles rated by human experts as more creative and enjoyable than typical Lichess puzzles.",
-        "originalProblem": [
-          "Generating truly creative, aesthetic, and counter-intuitive content remains a significant challenge for AI, especially in domains requiring abstract reasoning.",
-          "Existing chess puzzle datasets, like Lichess Puzzler, contain a scarcity of truly 'creative' or counter-intuitive puzzles, with only 2.1% meeting rigorous criteria.",
-          "Traditional AI in games focuses primarily on performance, overlooking subjective qualities such as counter-intuitiveness and aesthetics, which are crucial for human enjoyment of puzzles."
-        ],
-        "solution": [
-          "Formalized chess puzzle creativity by proposing computational metrics for uniqueness, novelty, and a novel measure of 'counter-intuitiveness' based on comparing shallow vs. deep chess engine evaluations.",
-          "Utilized a reinforcement learning (RL) framework with a pre-trained generative AI model (auto-regressive transformer) to optimize directly for these newly defined creative attributes.",
-          "Introduced diversity-filtering mechanisms, including KL divergence constraints, piece regularization, and intra/inter-batch novelty tests, to prevent 'entropy collapse' and ensure realism and diversity in generated puzzles."
-        ],
-        "keyInsights": [
-          "Subjective creative attributes like 'counter-intuitiveness' can be effectively quantified through computational metrics, such as comparing chess engine evaluations at different search depths, enabling AI optimization.",
-          "Reinforcement Learning, when combined with robust pre-training and mechanisms to promote diversity, can successfully guide generative models to produce complex and subjectively creative outputs, even when high-quality training data is scarce.",
-          "Human expert evaluation plays a critical role in validating AI-generated creative content, demonstrating that AI can produce artifacts that resonate with human aesthetic appreciation and rival human compositions."
-        ],
-        "results": [
-          "The RL framework dramatically increased the generation rate of counter-intuitive puzzles from a baseline of 0.22% (supervised transformer) to 2.5%, exceeding the 2.1% rate found in the Lichess training data.",
-          "Implemented diversity filtering mechanisms successfully prevented 'entropy collapse,' leading to the continuous generation of novel and diverse puzzles, confirmed by board and principal variation distance metrics.",
-          "Human chess experts rated the AI-generated puzzles as more creative, enjoyable, and counter-intuitive than typical Lichess puzzles, and comparable to human-composed book puzzles."
-        ]
-      },
-      "image_url": "image/2510.23881v1.png",
-      "universal_paper_id": "2510.23881",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 31,
-          "last_7_days": 31
-        },
-        "public_total_votes": 6
-      },
-      "first_publication_date": "2025-10-27T21:43:39.000Z",
-      "publication_date": "2025-10-27T21:43:39.000Z",
-      "updated_at": "2025-10-29T23:41:07.088Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "deep-reinforcement-learning",
-        "fine-tuning",
-        "generative-models",
-        "human-ai-interaction",
-        "optimization-methods",
-        "reinforcement-learning",
-        "synthetic-data",
-        "tool-use"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a331e-0ea8-7871-9ff9-ada99cb7db45",
-      "paper_group_id": "019a331e-0ea8-7871-9ff9-ada99cb7db45",
-      "title": "Parallel Loop Transformer for Efficient Test-Time Computation Scaling",
-      "abstract": "大型语言模型（LLMs）功能强大，但在推理时通常速度太慢且成本太高，无法满足实际应用需求。循环变压器通过在多个计算步骤或“循环”中重用相同权重来节省参数。然而，这种方法存在一个主要缺陷：循环依次运行，导致推理延迟和内存需求随着每个新增循环而增加。这使得它们不适合快速应用。为了解决这个问题，我们引入了并行循环变压器（PLT）。PLT是一种新架构，能够提供深度循环模型的性能优势，同时具备标准非循环模型的低延迟。PLT通过两项关键技术实现这一目标。首先，跨循环并行性（CLP）通过同时计算不同令牌的不同循环，打破了顺序依赖，所有操作在一次传递中完成。其次，为了防止内存成本增长，我们采用了一种高效表示增强策略。该方法将第一个循环的内存（KV缓存）与所有其他循环共享。然后，它使用门控滑动窗口注意力（G-SWA）将这一共享的全局信息与局部信息结合，维持高精度。我们的实验表明，PLT在与标准变压器相比几乎没有额外延迟或内存成本的情况下，达到了传统循环模型的高精度。",
-      "paper_summary": {
-        "summary": "The Parallel Loop Transformer (PLT) from ByteDance Seed allows Large Language Models to leverage deep, looped computation for enhanced reasoning without incurring the traditional inference latency and memory overhead. This architecture achieves accuracy comparable to or exceeding larger vanilla models with up to 30% lower latency and reduced Key-Value cache memory.",
-        "originalProblem": [
-          "Large Language Models (LLMs) suffer from high inference latency and memory consumption, limiting their deployment in real-time or resource-constrained applications.",
-          "Existing looped transformer architectures, despite parameter efficiency, execute computational loops sequentially, causing per-token latency and KV-cache memory to scale linearly with the number of loops.",
-          "This inherent sequential dependency makes deeper, reasoning-capable looped models impractical due to prohibitive inference costs."
-        ],
-        "solution": [
-          "The Parallel Loop Transformer (PLT) employs Cross-Loop Parallelism (CLP) to reconfigure training dependencies, enabling the concurrent execution of multiple loop steps during inference.",
-          "It implements an Efficient Representation Enhancement strategy that shares the Key-Value (KV) cache from the first loop across all subsequent loops, drastically reducing memory footprint.",
-          "Non-first loops utilize Gated Sliding-Window Attention (G-SWA) to restore local context, adaptively fusing global shared information with a small, local sliding window."
-        ],
-        "keyInsights": [
-          "The inherent sequential bottleneck of looped transformers can be overcome by carefully shifting dependencies during training, enabling full parallelization of loop computation during inference.",
-          "Decoupling an LLM's effective computational depth and reasoning capability from its inference-time latency and memory footprint is feasible through innovative architectural design.",
-          "Efficiently managing memory in deep looped models can be achieved by sharing global KV-cache components while restoring fine-grained local context through gated sliding-window attention."
-        ],
-        "results": [
-          "PLT with two loops (PLT-2) matched the accuracy of a naive looped transformer while achieving latency within 2% and KV cache within 1.4% of a vanilla non-looped transformer.",
-          "A 1.7B parameter PLT-2 model outperformed a larger 2.5B parameter vanilla model in accuracy (62.6 vs 62.1), simultaneously reducing decoding latency by approximately 30% and significantly decreasing KV cache memory.",
-          "Scaling PLT to three loops (PLT-3) further improved average accuracy by 1.1 points with only marginal increases in latency (+2%) and KV cache (+1.1%), showcasing its efficient scalability."
-        ]
-      },
-      "image_url": "image/2510.24824v1.png",
-      "universal_paper_id": "2510.24824",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 31,
-          "last_7_days": 31
-        },
-        "public_total_votes": 5
-      },
-      "first_publication_date": "2025-10-28T15:35:50.000Z",
-      "publication_date": "2025-10-28T15:35:50.000Z",
-      "updated_at": "2025-10-30T03:16:39.208Z",
-      "topics": [
-        "attention-mechanisms",
-        "Computer Science",
-        "cs.CL",
-        "efficient-transformers",
-        "inference-optimization",
-        "lightweight-models",
-        "model-compression",
-        "parameter-efficient-training",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "ByteDance",
-          "image": "images/organizations/bytedance.png"
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a3111-3414-7eea-aaee-8ec23cde4125",
-      "paper_group_id": "019a3111-3414-7eea-aaee-8ec23cde4125",
-      "title": "Transitive RL: Value Learning via Divide and Conquer",
-      "abstract": "在这项工作中，我们提出了传递强化学习（TRL），这是一种基于分治范式的新值学习算法。TRL旨在解决离线目标条件强化学习（GCRL）问题，其目标是找到一种策略，能够以最少的步骤从任何状态到达任何其他状态。TRL将GCRL中存在的三角不等式结构转化为实用的分治值更新规则。这与其他值学习范式相比具有几个优势。与时间差分（TD）方法相比，TRL在偏差积累方面的影响较小，因为原则上它只需要$O(\\log T)$的递归（相比于TD学习中的$O(T)$）来处理长度为$T$的轨迹。与蒙特卡罗方法不同，TRL由于执行动态规划，因此在高方差方面的影响较小。实验表明，TRL在高度具有挑战性、长时间跨度的基准任务中，相比于以前的离线GCRL算法实现了最佳性能。",
-      "paper_summary": {
-        "summary": "Researchers at UC Berkeley introduce Transitive RL (TRL), a divide-and-conquer value learning algorithm for offline goal-conditioned reinforcement learning, which mitigates the \"curse of horizon\" by employing a transitive Bellman update with in-trajectory subgoals and expectile regression. This method achieves leading performance on long-horizon robotic tasks and competitive results across various standard benchmarks.",
-        "originalProblem": [
-          "Traditional temporal difference (TD) learning in offline goal-conditioned RL suffers from severe bias accumulation, leading to the \"curse of horizon\" in long-horizon tasks.",
-          "Monte Carlo (MC) methods for value learning exhibit high variance, particularly for long trajectories, limiting their practicality.",
-          "Prior approaches leveraging the triangle inequality in goal-conditioned RL for value learning have not successfully scaled to complex, high-dimensional robotic environments without additional planning."
-        ],
-        "solution": [
-          "Develops Transitive RL (TRL), an algorithm leveraging a divide-and-conquer approach to value learning, specifically designed for offline goal-conditioned reinforcement learning.",
-          "Employs a transitive Bellman update rule that uses soft expectile regression to approximate maximization, and critically restricts intermediate subgoals to those observed within the training trajectories.",
-          "Utilizes distance-based re-weighting to stabilize training by prioritizing the learning of values for shorter trajectory segments."
-        ],
-        "keyInsights": [
-          "A divide-and-conquer approach to value learning can fundamentally address the \"curse of horizon\" by reducing recursive dependencies from O(T) to O(log T) steps, combining benefits of TD and MC methods.",
-          "Preventing value overestimation is critical for scaling transitive value updates; this is effectively achieved by restricting intermediate subgoals to only those present within observed dataset trajectories.",
-          "The inherent triangle inequality property of goal-conditioned reinforcement learning can be practically leveraged for complex tasks through careful algorithmic design, specifically using expectile regression and in-trajectory subgoals."
-        ],
-        "results": [
-          "TRL demonstrates state-of-the-art performance on demanding long-horizon robotic tasks like `humanoidmaze-giant` and `puzzle-4x6`, outperforming previous TD-based, MC-based, and other GCRL methods.",
-          "The algorithm achieves the best average performance across 10 standard OGBench environments and 50 evaluation tasks, showing strong general competitive capability.",
-          "Key components like expectile regression (with \n\n$\n\\kappa > 0.5\n$\n\n), restricting subgoals to in-trajectory states, and distance-based re-weighting were experimentally validated as crucial for TRL's stable and high performance."
-        ]
-      },
-      "image_url": "image/2510.22512v1.png",
-      "universal_paper_id": "2510.22512",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 63,
-          "last_7_days": 63
-        },
-        "public_total_votes": 7
-      },
-      "first_publication_date": "2025-10-26T03:32:31.000Z",
-      "publication_date": "2025-10-26T03:32:31.000Z",
-      "updated_at": "2025-10-29T17:43:22.388Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "deep-reinforcement-learning",
-        "optimization-methods",
-        "reinforcement-learning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 12,
-      "github_url": "https://github.com/aoberai/trl",
-      "distance": 1
-    },
-    {
-      "id": "019a2910-1cbe-74ec-aec4-2772a8f9483c",
-      "paper_group_id": "019a2910-1cbe-74ec-aec4-2772a8f9483c",
-      "title": "Knocking-Heads Attention",
-      "abstract": "多头注意力（MHA）已成为现代大型语言模型的基石，通过并行注意力头增强了表示能力。然而，增加头的数量本质上会削弱单个头的能力，而现有的注意力机制 - 无论是标准的MHA还是其变种如分组查询注意力（GQA）和分组绑定注意力（GTA） - 只是简单地连接孤立头的输出，而没有强有力的互动。为了解决这个限制，我们提出了一种“敲头注意力”（KHA），它使注意力头可以相互“敲击” - 在缩放的点积注意力之前促进跨头特征级别的互动。这是通过在所有头之间应用一个共享的对角初始化的投影矩阵来实现的。对角初始化在训练开始时保留了头特有的专业化，同时允许模型逐渐学习集成的跨头表示。KHA 仅增加了最少的参数和浮点运算，并且可以无缝地集成到 MHA、GQA、GTA 和其他注意力变种中。我们通过在 1T 高质量 token 上训练一个 61 亿参数的 MoE 模型（激活参数为 10.1 亿）来验证 KHA。与基线注意力机制相比，KHA 带来了更优越和更稳定的训练动态，在下游任务中实现了更好的性能。",
-      "paper_summary": {
-        "summary": "Knocking-Heads Attention (KHA) introduces shared, diagonally-initialized projection matrices to enable efficient cross-head feature-level interactions within multi-head attention mechanisms for large language models. This architectural enhancement significantly reduces loss spikes during pre-training and improves downstream task performance by an average of 1.26 points across various benchmarks, with minimal computational overhead.",
-        "originalProblem": [
-          "Standard Multi-Head Attention (MHA) operates with isolated heads, limiting expressive power and potentially creating redundancy.",
-          "Existing methods for inter-head interaction often introduce high computational overhead or are incompatible with efficient attention implementations like FlashAttention.",
-          "Large language model pre-training frequently encounters loss spikes, leading to training instability and wasted computational resources."
-        ],
-        "solution": [
-          "Knocking-Heads Attention (KHA) integrates shared, diagonally-initialized projection matrices into the Q, K, and V paths for feature-level inter-head communication.",
-          "KHA offers KHA-Linear (zero inference overhead via matrix absorption) and KHA-MLP (non-linear interaction with comparable parameter count) variants.",
-          "A diagonal initialization strategy ensures initial head specialization is preserved, allowing for adaptive learning of cross-head collaboration."
-        ],
-        "keyInsights": [
-          "Applying knocking-heads projections to the value (V) representations yields the most significant performance improvements among Q, K, and V.",
-          "Diagonal initialization of the shared projection matrices is critical for maintaining head specialization during early training and achieving stable convergence.",
-          "KHA effectively regularizes the training process, leading to a substantial reduction in the frequency and severity of loss spikes."
-        ],
-        "results": [
-          "A 6.1B parameter MoE model equipped with KHA achieved an average 1.26-point improvement across various downstream tasks, including a 4.32-point gain in Language Understanding.",
-          "KHA reduced the frequency and severity of loss spikes during 1T token pre-training, leading to a consistently lower training loss (approximately 0.015 points) in later stages.",
-          "The method demonstrated broad compatibility, enhancing MHA, GQA, MQA, and GTA across models ranging from 0.44B to 14.6B parameters with minimal computational overhead."
-        ]
-      },
-      "image_url": "image/2510.23052v1.png",
-      "universal_paper_id": "2510.23052",
-      "metrics": {
-        "total_votes": 3,
-        "visits_count": {
-          "all": 91,
-          "last_7_days": 91
-        },
-        "public_total_votes": 16
-      },
-      "first_publication_date": "2025-10-27T06:28:58.000Z",
-      "publication_date": "2025-10-27T06:28:58.000Z",
-      "updated_at": "2025-10-28T04:25:13.150Z",
-      "topics": [
-        "attention-mechanisms",
-        "Computer Science",
-        "cs.CL",
-        "efficient-transformers",
-        "generative-models",
-        "parameter-efficient-training",
-        "representation-learning",
-        "sequence-modeling",
-        "transformers"
       ],
       "organization_info": [
         {
@@ -1620,427 +1828,213 @@ const papersData = {
           "image": null
         },
         {
-          "name": "Zhejiang University",
-          "image": "images/organizations/zhejiang.png"
-        },
-        {
-          "name": "Westlake University",
-          "image": "images/organizations/westlake-university.jpeg"
-        },
-        {
-          "name": "Renmin University of China",
-          "image": "images/organizations/renmin.png"
+          "name": "Inclusion AI",
+          "image": null
         }
       ],
       "author_info": [],
-      "github_stars": null,
-      "github_url": null,
+      "github_stars": 499,
+      "github_url": "https://github.com/inclusionAI/Ming",
       "distance": 1
     },
     {
-      "id": "019a2a0f-9f19-7ded-a883-dcc175b197fc",
-      "paper_group_id": "019a2a0f-9f19-7ded-a883-dcc175b197fc",
-      "title": "Towards Stable and Effective Reinforcement Learning for Mixture-of-Experts",
-      "abstract": "最近在强化学习（RL）方面的进展大幅提升了大规模语言模型的训练，带来了生成质量和推理能力的显著提高。然而，现有研究大多集中于密集模型，而对混合专家（MoE）架构的RL训练仍然探索不足。为了应对MoE训练中常见的不稳定性，我们提出了一种新颖的路由感知方法，旨在优化离策略RL中的重要性采样（IS）权重。具体而言，我们设计了一种由路由逻辑指导的重新缩放策略，有效降低了梯度方差并减轻了训练发散。实验结果表明，我们的方法显著提高了MoE模型的收敛稳定性和最终性能，突显了针对MoE架构的RL算法创新的潜力，并为大规模专家模型的高效训练提供了有前景的方向。",
+      "id": "019a2e12-fcf3-7eff-849d-a4ee1116b394",
+      "paper_group_id": "019a2e12-fcf3-7eff-849d-a4ee1116b394",
+      "title": "Video-Thinker: Sparking \"Thinking with Videos\" via Reinforcement Learning",
+      "abstract": "最近在图像推理方法方面的进展，特别是“以图像思考”，在多模态大型语言模型（MLLM）中取得了显著成功；然而，这种动态推理范式尚未扩展到视频推理任务。在本文中，我们提出了Video-Thinker，使MLLM能够通过自主利用其固有的“基础”与“字幕”能力，在推理过程中生成推理线索。为了激发这一能力，我们构建了Video-Thinker-10K，这是一个策划的数据集，展示了在思维链推理序列中自主工具使用。我们的训练策略首先是监督微调（SFT），以学习推理格式，然后通过群体相对策略优化（GRPO）来增强这一推理能力。通过这种方法，Video-Thinker使得MLLM能够自主处理视频推理中的基础和字幕任务，无需构建和调用外部工具。大量实验表明，Video-Thinker在领域内任务和具有挑战性的领域外视频推理基准（包括Video-Holmes、CG-Bench-Reasoning和VRBench）上都获得了显著的性能提升。我们的Video-Thinker-7B大幅超过现有基线如Video-R1，并在7B规模的MLLM中树立了最先进的性能。",
       "paper_summary": {
-        "summary": "A new reinforcement learning algorithm, Router-Shift Policy Optimization (RSPO), enables stable and effective training of Mixture-of-Experts (MoE) models, particularly for mathematical reasoning in large language models. The method achieves an average Pass@1 score of 77.1 on five reasoning benchmarks, surpassing prior baselines and exhibiting robust training convergence.",
+        "summary": "VIDEO-THINKER, a new framework, empowers Multimodal Large Language Models to reason with videos by intrinsically developing temporal grounding and captioning abilities. The model establishes new state-of-the-art performance on various video reasoning benchmarks, achieving up to an 11.44% improvement on the VRBench out-of-domain dataset, while showcasing enhanced temporal localization (48.22% mIoU) and descriptive captioning.",
         "originalProblem": [
-          "Applying reinforcement learning (RL) to Mixture-of-Experts (MoE) models for large language models (LLMs) suffers from training instability.",
-          "Dynamic 'router fluctuation' in MoE architectures causes volatility in importance sampling (IS) ratios and can lead to training divergence.",
-          "The mismatch between token-level IS ratios and sequence-level rewards is amplified in MoE settings, further contributing to training instability."
+          "Extending the 'Thinking with Images' paradigm to videos poses challenges due to inherent temporal dependencies and dynamic content.",
+          "Existing MLLMs often treat videos as static inputs or rely on rigid, pre-designed prompting strategies, limiting dynamic manipulation and reasoning over temporal sequences.",
+          "Many video reasoning models struggle to seamlessly integrate temporal grounding into the full chain-of-thought process and typically demand extensive datasets."
         ],
         "solution": [
-          "Introduces Router-Shift Policy Optimization (RSPO), an off-policy RL algorithm that incorporates a 'router shift ratio' ($\\gamma_{i,t}$) to adaptively reweight importance sampling ratios.",
-          "The $\\gamma_{i,t}$ term quantifies the deviation in expert routing decisions between old and current policies, down-weighting updates for tokens with larger shifts; gradient flow through $\\gamma_{i,t}$ is explicitly stopped to maintain stability.",
-          "Utilizes sequence-level importance ratios with token-level clipping to mitigate variance mismatch while preserving granular control over token updates."
+          "A Hindsight-Curation Reasoning pipeline synthesizes the Video-Thinker-10K dataset, providing structured reasoning traces with explicit temporal (`<time>`), captioning (`<caption>`), and thinking (`<think>`) tags.",
+          "A two-stage training strategy is employed, beginning with Supervised Fine-Tuning (SFT) to teach the MLLM to generate reasoning in the specified format.",
+          "The SFT stage is followed by Group Relative Policy Optimization (GRPO), a reinforcement learning technique, to intrinsically strengthen grounding and captioning capabilities for autonomous temporal navigation and robust reasoning."
         ],
         "keyInsights": [
-          "Explicitly reweighting policy updates based on router shifts (router-aware importance sampling) is crucial for stabilizing RL training in MoE architectures.",
-          "Disabling gradient flow through the router shift ratio itself is essential to prevent early training collapse and ensure stable optimization.",
-          "Rigid router stabilization strategies like freezing the router or simple replay mechanisms are insufficient and can negatively impact model adaptability and performance."
+          "Empowering MLLMs with intrinsic temporal grounding and captioning allows them to autonomously 'think with videos,' moving beyond passive video processing to active, dynamic reasoning.",
+          "The hindsight-curation data synthesis, combined with the two-stage SFT and GRPO training, efficiently instills complex video reasoning abilities using a relatively small 10K sample dataset.",
+          "The GRPO stage is crucial for developing robust reasoning and out-of-domain generalization, transforming basic format-following into effective autonomous temporal navigation and understanding."
         ],
         "results": [
-          "RSPO achieved an average Pass@1 score of 77.1 on mathematical reasoning benchmarks (AIME24, AMC23, MATH500, Minerva, OlympiadBench) using a Qwen3-30B-A3B model, outperforming GRPO (71.5), GSPO (76.4), and GMPO (76.4).",
-          "Demonstrated superior training stability, exhibiting consistent high validation scores throughout training, unlike GRPO which showed pronounced performance collapse.",
-          "Ablation studies confirmed that applying `stop_grad` to the router shift ratio is critical for stable training, as allowing gradients through it led to early training collapse."
+          "Video-Thinker-7B achieves new state-of-the-art results among 7B-sized MLLMs across in-domain and challenging out-of-domain video reasoning benchmarks, with up to an 11.44% improvement on VRBench.",
+          "The model demonstrates superior intrinsic grounding abilities with an mIoU of 48.22% (a 75.5% relative improvement over Qwen2.5-VL-7B) and enhanced captioning, showing a 31.2% relative enhancement in overall captioning performance.",
+          "Video-Thinker exhibits emergent 'aha moments' and self-reflective behaviors during reasoning, suggesting dynamic internal feedback mechanisms and metacognitive capabilities acquired with high data efficiency."
         ]
       },
-      "image_url": "image/2510.23027v1.png",
-      "universal_paper_id": "2510.23027",
+      "image_url": "image/2510.23473v1.png",
+      "universal_paper_id": "2510.23473",
       "metrics": {
-        "total_votes": 1,
+        "total_votes": 5,
         "visits_count": {
-          "all": 89,
-          "last_7_days": 89
+          "all": 65,
+          "last_7_days": 65
         },
-        "public_total_votes": 13
+        "public_total_votes": 15
       },
-      "first_publication_date": "2025-10-27T05:47:48.000Z",
-      "publication_date": "2025-10-27T05:47:48.000Z",
-      "updated_at": "2025-10-28T09:04:18.201Z",
+      "first_publication_date": "2025-10-27T16:10:45.000Z",
+      "publication_date": "2025-10-27T16:10:45.000Z",
+      "updated_at": "2025-10-29T03:46:27.699Z",
       "topics": [
+        "agents",
+        "chain-of-thought",
         "Computer Science",
-        "cs.CL",
-        "cs.LG",
+        "cs.CV",
         "deep-reinforcement-learning",
-        "generative-models",
-        "optimization-methods",
-        "parameter-efficient-training",
-        "reinforcement-learning",
-        "transformers"
+        "fine-tuning",
+        "multi-modal-learning",
+        "tool-use",
+        "transformers",
+        "video-understanding",
+        "vision-language-models",
+        "visual-reasoning"
       ],
       "organization_info": [
         {
-          "name": "Peking University",
-          "image": "images/organizations/peking.png"
+          "name": "Monash University",
+          "image": "images/organizations/monash-university.png"
         },
         {
-          "name": "Microsoft",
-          "image": "images/organizations/microsoft.png"
+          "name": "University of Southern California",
+          "image": "images/organizations/usc.png"
+        },
+        {
+          "name": "Fudan University",
+          "image": "images/organizations/fudan-university.png"
+        },
+        {
+          "name": "Southeast University",
+          "image": null
+        },
+        {
+          "name": "Xiaohongshu Inc.",
+          "image": null
         }
       ],
       "author_info": [],
-      "github_stars": null,
-      "github_url": null,
+      "github_stars": 20,
+      "github_url": "https://github.com/shijian2001/Video-Thinker",
       "distance": 1
     },
     {
-      "id": "019a30aa-2711-7081-ac61-b28b48b9f2fa",
-      "paper_group_id": "019a30aa-2711-7081-ac61-b28b48b9f2fa",
-      "title": "HRM-Agent: Training a recurrent reasoning model in dynamic environments using reinforcement learning",
-      "abstract": "层次推理模型（HRM）在其小巧体积下展现了令人印象深刻的推理能力，但仅被应用于监督的、静态的、完全可观察的问题。HRM的一个优势是其能够根据问题的难度调整计算工作量。然而，在当前形式下，它无法在问题是动态的、不确定的或部分可观察的情况下整合和重用先前时间步的计算，或者在正确行动未定义的情况下应用，这些都是许多现实世界问题的特征。\n本文介绍了HRM-Agent，一个仅通过强化学习进行训练的HRM变体。我们展示了HRM能够在动态和不确定的迷宫环境中学习导航到目标。近期的研究表明，HRM的推理能力源于其递归推理过程。我们探讨了递归推理过程的动态性，并发现有证据表明它成功地重用了来自早期环境时间步的计算。",
+      "id": "019a34ca-6e21-70d7-9aae-8fe55a4b67a2",
+      "paper_group_id": "019a34ca-6e21-70d7-9aae-8fe55a4b67a2",
+      "title": "GAP: Graph-Based Agent Planning with Parallel Tool Use and Reinforcement Learning",
+      "abstract": "由大型语言模型（LLMs）驱动的自主智能体在复杂任务解决中的工具操控表现出了令人印象深刻的能力。然而，现有的范式如ReAct依赖顺序推理和执行，未能充分利用独立子任务之间固有的并行性。这一顺序瓶颈导致工具利用效率不高，在多步推理场景下表现不佳。我们提出了基于图的智能体规划（GAP），这一新型框架通过图形规划明确建模任务之间的依赖关系，以实现自适应的并行和串行工具执行。我们的方法训练智能体基础模型，将复杂任务分解为关注依赖关系的子任务图，自主确定哪些工具可以并行执行，哪些工具必须遵循顺序依赖。这种关注依赖关系的协调在执行效率和任务准确性上都取得了显著提升。为了训练GAP，我们构建了一个高质量的数据集，该数据集由多跳问答（MHQA）基准中的图基规划痕迹派生而来。我们采用两阶段的训练策略：在策划好的数据集上进行监督微调（SFT），然后在有战略性抽样查询的基础上，使用以正确性为基础的奖励函数进行强化学习（RL），其中基于工具的推理提供最大价值。在MHQA数据集上的实验结果表明，GAP显著优于传统的ReAct基线，特别是在多步检索任务中，同时通过智能并行化实现了工具调用效率的显著提高。项目页面可在此链接找到：这个 https URL。",
       "paper_summary": {
-        "summary": "Melbourne, Australia, and Cerenaut AI researchers adapted the Hierarchical Reasoning Model (HRM) for reinforcement learning in dynamic maze environments, demonstrating that its recurrent internal state can maintain and adapt learned plans across environmental changes. The HRM-Agent achieved approximately 99% success rates in navigation tasks while efficiently reusing prior computations through its carried-forward latent state.",
+        "summary": "The Graph-based Agent Planning (GAP) framework empowers large language model agents to construct and reason over graph-based task dependencies, facilitating parallel tool execution. This methodology significantly reduces LLM interaction turns by up to 33.8% and execution time by 32.3%, while also improving accuracy on complex multi-hop reasoning tasks.",
         "originalProblem": [
-          "Existing reasoning models like Large Language Models (LLMs) are often inefficient and struggle with adaptive, sustained reasoning in dynamic and partially observable environments.",
-          "The Hierarchical Reasoning Model (HRM) was previously limited to supervised, static, and fully-observable problems, restricting its real-world applicability.",
-          "Reinforcement learning agents require mechanisms to effectively handle hierarchical, long-horizon planning and maintain consistent internal states across dynamic environmental changes."
+          "Existing tool-augmented LLM agents, like ReAct, are limited by a sequential 'think-act-observe' execution model, preventing parallel tool use for independent sub-tasks.",
+          "The sequential bottleneck leads to inefficient tool utilization, increased waiting times, and higher computational overhead for complex multi-step reasoning.",
+          "Current approaches often rely on brittle prompt engineering or incur high communication costs in multi-agent systems, lacking inherent LLM capabilities for optimal coordination."
         ],
         "solution": [
-          "Adapted the Hierarchical Reasoning Model (HRM) by replacing its output head with a Deep Q-Network (DQN) head for action value prediction.",
-          "Trained the HRM-Agent entirely from scratch using reinforcement learning, without any supervised losses or human-defined problem decompositions.",
-          "Introduced a \"Carry Z\" mechanism where the agent's recurrent latent state from the previous environment step is carried forward to the next, promoting computational reuse."
+          "GAP introduces a graph-based planning paradigm where the LLM explicitly constructs a task dependency graph for sub-tasks, identifying opportunities for parallel execution.",
+          "A dependency-aware execution strategy is employed, topologically sorting the graph into levels, allowing all independent sub-tasks within a level to be executed in parallel.",
+          "The agent undergoes a two-stage training pipeline: Supervised Fine-Tuning (SFT) on synthesized graph-based planning traces, followed by Reinforcement Learning (RL) to optimize for efficiency and correctness."
         ],
         "keyInsights": [
-          "The intrinsic recurrent reasoning capabilities of HRM can be successfully leveraged within an RL framework to develop adaptive agents for dynamic and uncertain environments.",
-          "Carrying forward the recurrent latent state (z) allows the agent to efficiently reuse computations, accelerate internal plan convergence, and maintain consistency in its reasoning across environmental timesteps.",
-          "The agent's recurrent state appears to function as an internal \"plan\" or \"belief state\" that dynamically adapts to environmental changes without being reset."
+          "Explicitly training LLMs to model and reason about task dependencies using a graph representation allows for a more efficient and human-like planning capability.",
+          "Parallel execution of independent tool calls within a single agent significantly reduces interaction turns, execution time, and overall computational cost.",
+          "A combination of supervised learning to establish foundational planning and reinforcement learning to optimize execution strategy yields superior performance and cost-effectiveness for complex tasks."
         ],
         "results": [
-          "The HRM-Agent achieved a high success rate of approximately 99% in goal navigation within both dynamic Four-Rooms and random maze environments.",
-          "Demonstrated efficient path planning, with mean episode lengths approaching theoretical optimums, indicating learned deliberate reasoning.",
-          "The \"Carry Z\" variant consistently led to faster convergence of the recurrent latent state and exhibited greater consistency in internal plans compared to the \"Reset Z\" variant."
+          "GAP-3B achieved an average accuracy improvement of 0.9% on multi-hop QA datasets compared to the best baseline (AFM-RL-3B).",
+          "It reduced LLM interaction turns by 21.6% (HotpotQA) to 33.4% (2WikiMultiHopQA) and execution time by 32.3% (HotpotQA) to 21.4% (2WikiMultiHopQA) compared to baselines.",
+          "The framework lowered response length by 24.9% on HotpotQA, demonstrating a more efficient reasoning process and a superior performance-cost trade-off across various benchmarks."
         ]
       },
-      "image_url": "image/2510.22832v1.png",
-      "universal_paper_id": "2510.22832",
+      "image_url": "image/2510.25320v1.png",
+      "universal_paper_id": "2510.25320",
       "metrics": {
         "total_votes": 0,
         "visits_count": {
-          "all": 33,
-          "last_7_days": 33
+          "all": 27,
+          "last_7_days": 27
         },
         "public_total_votes": 4
       },
-      "first_publication_date": "2025-10-26T21:01:04.000Z",
-      "publication_date": "2025-10-26T21:01:04.000Z",
-      "updated_at": "2025-10-29T15:50:48.849Z",
+      "first_publication_date": "2025-10-29T09:35:55.000Z",
+      "publication_date": "2025-10-29T09:35:55.000Z",
+      "updated_at": "2025-10-30T11:04:33.057Z",
       "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.LG",
-        "online-learning",
-        "reasoning",
-        "reinforcement-learning",
-        "sequence-modeling",
-        "Statistics",
-        "stat.ML"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a29c7-fe4c-7929-8134-929a2bda71a9",
-      "paper_group_id": "019a29c7-fe4c-7929-8134-929a2bda71a9",
-      "title": "FARMER: Flow AutoRegressive Transformer over Pixels",
-      "abstract": "直接建模原始数据分布的显式似然性是机器学习领域的一个关键主题，通过自回归建模实现了大型语言模型的扩展成功。然而，针对视觉像素数据的连续自回归建模在处理极长序列和高维空间时面临困难。本文提出了FARMER，这是一种新颖的端到端生成框架，将归一化流（NF）和自回归（AR）模型统一起来，以便直接从原始像素进行可处理的似然估计和高质量图像合成。FARMER采用可逆自回归流将图像转换为潜在序列，其分布通过自回归模型隐式建模。为了解决像素级建模中的冗余和复杂性，我们提出了一种自监督维度降低方案，将NF潜在通道划分为信息性和冗余组，从而实现更有效率的AR建模。此外，我们设计了一种一步蒸馏方案，以显著加快推理速度，并引入了一种基于重采样的无分类器引导算法，以提升图像生成质量。大量实验证明，FARMER在提供精确似然性和可扩展训练的同时，与现有像素基础生成模型相比，表现出竞争力的性能。",
-      "paper_summary": {
-        "summary": "A generative framework named FARMER unifies invertible Autoregressive Flows with Autoregressive Transformers to directly model raw image pixels, providing explicit likelihood estimation. Developed by researchers from ByteDance and academic institutions, the model achieves a FID of 3.60 on ImageNet 256x256, outperforming JetFormer by 3.04 FID points, and accelerates inference by nearly 4x through a one-step distillation scheme.",
-        "originalProblem": [
-          "Existing state-of-the-art generative models for images (GANs, VAEs, diffusion models) often lack tractable, explicit likelihood estimation, essential for tasks like anomaly detection and principled model comparison.",
-          "Direct application of continuous autoregressive models to high-dimensional image pixels is computationally expensive and struggles with long-range dependencies, while Normalizing Flows often degrade image quality by forcing complex distributions onto simple priors.",
-          "Autoregressive Flows, despite their expressiveness, suffer from inherently slow sequential reverse inference, which hinders their practical applicability."
-        ],
-        "solution": [
-          "An end-to-end framework directly models raw image pixels by unifying an invertible Autoregressive Flow (AF) to transform images into a latent sequence, whose distribution is then modeled by an Autoregressive Transformer using Gaussian Mixture Models.",
-          "The framework incorporates a self-supervised dimension reduction method that partitions latent channels into informative and redundant parts, and utilizes a novel resampling-based Classifier-Free Guidance for improved generation quality.",
-          "To overcome slow sequential inference, a one-step distillation technique trains a student AF to perform the entire reverse transformation in a single, parallel step, significantly accelerating the process."
-        ],
-        "keyInsights": [
-          "A self-supervised dimension reduction technique effectively disentangles structural and fine-grained information in the latent space, critically improving image quality by managing redundancy in pixel-level autoregressive modeling.",
-          "Resampling-based Classifier-Free Guidance is essential for achieving high-fidelity image generation, significantly enhancing performance compared to naive guidance within the Autoregressive Flow framework.",
-          "One-step distillation dramatically accelerates the inherently slow sequential reverse inference of Autoregressive Flows, making them practical for real-world applications with minimal impact on generation quality."
-        ],
-        "results": [
-          "The FARMER 1.9B model achieved a Fréchet Inception Distance (FID) of 3.60 on ImageNet 256x256, outperforming the most comparable baseline, JetFormer, by a margin of 3.04 FID points.",
-          "The framework effectively synthesizes diverse, high-quality images, preserving fine-grained details that are often blurred by latent compression methods in other generative models.",
-          "Inference time per image was accelerated by nearly 4x, reducing from 0.2189 seconds to 0.0567 seconds, through one-step distillation, while maintaining comparable image quality (FID of 5.63 post-distillation versus 5.55 for the original)."
-        ]
-      },
-      "image_url": "image/2510.23588v1.png",
-      "universal_paper_id": "2510.23588",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 107,
-          "last_7_days": 107
-        },
-        "public_total_votes": 14
-      },
-      "first_publication_date": "2025-10-27T17:54:08.000Z",
-      "publication_date": "2025-10-27T17:54:08.000Z",
-      "updated_at": "2025-10-28T07:46:03.981Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV",
-        "generative-models",
-        "image-generation",
-        "inference-optimization",
-        "knowledge-distillation",
-        "representation-learning",
-        "self-supervised-learning",
-        "sequence-modeling",
-        "synthetic-data",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "NUS",
-          "image": null
-        },
-        {
-          "name": "USTC",
-          "image": null
-        },
-        {
-          "name": "ANU",
-          "image": null
-        },
-        {
-          "name": "ByteDance Seed China",
-          "image": null
-        },
-        {
-          "name": "ByteDance Seed Singapore",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a2e02-ce20-7df9-8ca9-ef60ea5853bb",
-      "paper_group_id": "019a2e02-ce20-7df9-8ca9-ef60ea5853bb",
-      "title": "Critique-RL: Training Language Models for Critiquing through Two-Stage Reinforcement Learning",
-      "abstract": "训练批评语言模型以评估和提供模型输出反馈是改善大型语言模型在复杂推理任务中的一种有前景的方法。然而，现有方法通常依赖于更强的监督者来标注批评数据。为了解决这一问题，我们提出了Critique-RL，一种在线强化学习方法，用于在没有较强监督的情况下开发批评语言模型。我们的方法采用双玩家范式：演员生成响应，评论者提供反馈，演员相应地完善响应。我们首先揭示，仅依赖演员输出的间接奖励信号进行强化学习优化通常导致不理想的评论者：尽管他们的有用性（即提供建设性反馈）有所改善，但区分能力（即判断响应是否高质量的能力）仍然较差，导致性能提升有限。为了解决这个问题，Critique-RL采用了两阶段优化策略。在第一阶段，它使用基于规则的直接奖励信号强化评论者的区分能力；在第二阶段，它引入基于演员优化的间接奖励，以提高评论者的有用性，同时通过适当的正则化维持其区分能力。针对各种任务和模型的大量实验表明，Critique-RL在性能上显著提升。例如，Qwen2.5-7B在领域内任务上获得了9.02%的提升，在领域外任务上获得了5.70%的提升，突显了其潜力。",
-      "paper_summary": {
-        "summary": "Critique-RL, developed by Fudan University and ByteDance Seed, introduces a two-stage reinforcement learning framework to train language models for critiquing other LLM outputs without strong supervision. This method jointly optimizes a critic's discriminability and helpfulness, leading to actor models achieving up to a 9.02% accuracy gain on in-domain tasks and 5.70% on out-of-domain tasks.",
-        "originalProblem": [
-          "Existing methods for training LLM critique models heavily depend on expensive, hard-to-scale human or oracle supervision for critique data annotation.",
-          "Prior reinforcement learning approaches for training critics using indirect reward signals often fail to jointly optimize both the critic's discriminability (accuracy in judging correctness) and helpfulness (quality of feedback).",
-          "Many prompt engineering methods for critiquing implicitly assume an external oracle verifier during testing, failing to address the critical need for a critic to autonomously determine output correctness."
-        ],
-        "solution": [
-          "Critique-RL employs a two-player actor-critic reinforcement learning framework where a critic model assesses an actor's response and guides its refinement.",
-          "A novel two-stage RL strategy is introduced: Stage I explicitly optimizes the critic's discriminability using direct, rule-based reward signals, and Stage II then enhances helpfulness using indirect rewards while maintaining discriminability with regularization terms.",
-          "The framework uses online RL to train the critic without stronger supervision and without requiring an oracle verifier at test time, addressing limitations of previous methods."
-        ],
-        "keyInsights": [
-          "Indirect reward signals, commonly used in prior RL-based critic training, are insufficient to jointly optimize a critic's discriminability and helpfulness, often leading to critics that are either overly conservative or aggressive.",
-          "Explicitly disentangling and sequentially optimizing discriminability before helpfulness, with appropriate regularization, is crucial for developing robust and effective critique models.",
-          "An autonomous critique-refinement loop trained through this two-stage RL can significantly improve actor LLM performance while also being more compute-efficient than parallel sampling methods."
-        ],
-        "results": [
-          "Critique-RL achieved up to a 9.02% average accuracy gain on in-domain reasoning tasks and 5.70% on out-of-domain tasks for Qwen2.5-7B actor models.",
-          "The method significantly outperformed other online RL baselines, showing an average improvement of 5.11 points in actor accuracy and 12.69 points in critic discriminability over Retroformer for Qwen2.5-7B.",
-          "Ablation studies confirmed the necessity of both RL stages and the direct discriminability reward, demonstrating that the two-stage design is critical for achieving high performance in both discriminability and helpfulness."
-        ]
-      },
-      "image_url": "image/2510.24320v1.png",
-      "universal_paper_id": "2510.24320",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 47,
-          "last_7_days": 47
-        },
-        "public_total_votes": 7
-      },
-      "first_publication_date": "2025-10-28T11:37:01.000Z",
-      "publication_date": "2025-10-28T11:37:01.000Z",
-      "updated_at": "2025-10-29T03:28:47.136Z",
-      "topics": [
+        "agentic-frameworks",
         "agents",
         "Computer Science",
         "cs.AI",
         "cs.CL",
-        "explainable-ai",
         "fine-tuning",
         "reasoning",
         "reinforcement-learning",
-        "transformers",
-        "weak-supervision"
+        "tool-use",
+        "transformers"
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/WooooDyy/Critique-RL",
-      "distance": 1
-    },
-    {
-      "id": "019a2ef4-7c24-718a-b604-4524ec8eb0ed",
-      "paper_group_id": "019a2ef4-7c24-718a-b604-4524ec8eb0ed",
-      "title": "Group Relative Attention Guidance for Image Editing",
-      "abstract": "最近，基于扩散变换器模型的图像编辑迅速发展。然而，现有的编辑方法往往缺乏对编辑程度的有效控制，限制了其实现更定制化结果的能力。为了解决这一限制，我们研究了DiT模型中的MM-注意力机制，并观察到查询和关键令牌共享一个仅依赖于层的偏置向量。我们将这个偏置解释为代表模型固有的编辑行为，而每个令牌与其对应偏置之间的增量编码了内容特定的编辑信号。基于这一洞察，我们提出了组相对注意力引导，这是一种简单但有效的方法，可以重加权不同令牌的增量值，以调节模型相对于编辑指令对输入图像的关注，使得在不进行任何调优的情况下实现持续和细粒度的编辑强度控制。在现有图像编辑框架上进行的大量实验表明，GRAG可以用少至四行代码进行集成，并且始终提高编辑质量。此外，与常用的无分类器引导相比，GRAG在编辑程度的控制上实现了更平滑和更精确的效果。我们的代码将会在这个网址发布。",
-      "paper_summary": {
-        "summary": "Researchers from Tianjin University and Kuaishou Technology introduced Group Relative Attention Guidance (GRAG), a plug-and-play mechanism for Diffusion Transformers that enables continuous and fine-grained control over editing intensity in text-driven image editing. GRAG leverages a newly identified bias vector within multi-modal attention layers to achieve a precise balance between source image fidelity and editing instruction adherence.",
-        "originalProblem": [
-          "Lack of fine-grained control over editing strength in text-driven image editing models.",
-          "Users struggle to balance source image fidelity with adherence to editing instructions.",
-          "Inefficiency due to reliance on tedious prompt engineering or multiple inference attempts for desired editing outcomes."
-        ],
-        "solution": [
-          "Proposes Group Relative Attention Guidance (GRAG), a lightweight, plug-and-play guidance mechanism for Diffusion Transformers (DiTs).",
-          "GRAG modulates the Multi-Modal Attention (MM-Attention) mechanism by reweighting content-specific delta values from a bias vector.",
-          "It uses a tunable parameter, \"δ\", to control the continuous intensity of the edit, specifically scaling the token-specific deviation component."
-        ],
-        "keyInsights": [
-          "Multi-Modal Attention (MM-Attention) in DiT models contains a shared, layer-dependent bias vector representing the model's inherent editing behavior.",
-          "Deviations from this bias vector (deltas) encode content-specific editing signals.",
-          "Modulating these content-specific delta values allows for precise control over the extent to which conditional signals (like edit instructions) influence the output."
-        ],
-        "results": [
-          "GRAG enables continuous and fine-grained control over editing strength, allowing smooth transitions between minimal and strong edits.",
-          "Quantitatively improved content preservation (lower LPIPS, higher SSIM) and overall EditScore for training-based models like Step1X-Edit and Qwen-Edit.",
-          "Ablation studies showed that the \"δ\" parameter alone provides the most effective and continuous control, outperforming Classifier-Free Guidance and other parameter combinations."
-        ]
-      },
-      "image_url": "image/2510.24657v1.png",
-      "universal_paper_id": "2510.24657",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 45,
-          "last_7_days": 45
-        },
-        "public_total_votes": 7
-      },
-      "first_publication_date": "2025-10-28T17:22:44.000Z",
-      "publication_date": "2025-10-28T17:22:44.000Z",
-      "updated_at": "2025-10-29T07:52:45.860Z",
-      "topics": [
-        "attention-mechanisms",
-        "Computer Science",
-        "cs.CV",
-        "generative-models",
-        "image-generation",
-        "inference-optimization",
-        "model-interpretation",
-        "multi-modal-learning",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Tianjin University",
-          "image": null
-        },
-        {
-          "name": "Kuaishou Technology",
-          "image": null
-        },
-        {
-          "name": "Kolors Team, Kuaishou Technology",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 6,
-      "github_url": "https://github.com/little-misfit/GRAG-Image-Editing",
-      "distance": 1
-    },
-    {
-      "id": "019a2db1-808e-7e30-87bc-cf62ab73dd1b",
-      "paper_group_id": "019a2db1-808e-7e30-87bc-cf62ab73dd1b",
-      "title": "SoulX-Podcast: Towards Realistic Long-form Podcasts with Dialectal and Paralinguistic Diversity",
-      "abstract": "近期文本到语音（TTS）合成的进展显著提高了语音的表现力和自然性。然而，大多数现有系统针对单一说话者合成进行了优化，无法生成连贯的多说话者对话语音。本技术报告介绍了SoulX-Podcast，这是一个旨在进行播客风格的多轮、多说话者对话语音生成的系统，同时在传统TTS任务中也达到了先进的性能。\n\n为了满足多轮口语对话对自然性的更高要求，SoulX-Podcast整合了一系列语用控制，并支持普通话和英语，以及多种中文方言，包括四川话、河南话和粤语，从而实现更个性化的播客风格语音生成。实验结果表明，SoulX-Podcast能够持续生成超过90分钟的对话，语音音色稳定，说话者之间的切换流畅。此外，发声者展示了上下文适应性的韵律，随着对话的发展反映出自然的节奏和语调变化。在多个评估指标上，SoulX-Podcast在单人独白TTS和多轮对话语音合成方面均达到了先进的性能。",
-      "paper_summary": {
-        "summary": "SoulX-Podcast introduces an LLM-driven generative framework for creating realistic, long-form, multi-speaker podcasts, incorporating diverse Chinese dialects and controllable paralinguistic cues. The system achieves state-of-the-art performance in multi-turn dialogue synthesis, exhibiting the lowest Character Error Rate (2.20) and highest cross-speaker consistency (0.599) on the Chinese ZipVoice-Dia benchmark, alongside strong zero-shot monologue capabilities.",
-        "originalProblem": [
-          "Current state-of-the-art Text-to-Speech (TTS) models are primarily optimized for single-speaker, monologue-style generation, failing to handle multi-speaker conversational complexities.",
-          "Existing dialogue TTS systems lack fine-grained control over paralinguistic cues (e.g., laughter, sighs) and offer limited support for linguistic diversity beyond standard languages, such as regional dialects.",
-          "Maintaining long-form coherence, stable speaker identities, and smooth transitions in continuous, extended conversational speech generation poses a significant challenge."
-        ],
-        "solution": [
-          "An LLM-driven two-stage generative framework, based on Qwen3-1.7B, is developed, extending its text codebook with speech, paralinguistic, and dialectal tokens.",
-          "A comprehensive data processing and annotation pipeline creates a massive 1.3 million-hour corpus, meticulously segmented, diarized, quality-filtered, and enriched with paralinguistic and dialectal labels.",
-          "A text-speech interleaved token organization facilitates multi-turn, multi-speaker dialogue, combined with a curriculum learning strategy and context regularization for long-form coherence.",
-          "A novel Dialect-Guided Prompting (DGP) strategy enables cross-dialectal zero-shot voice cloning by prepending dialect-typical sentences to input text during inference."
-        ],
-        "keyInsights": [
-          "Explicitly integrating paralinguistic and dialectal tokens within an LLM's extended text codebook, alongside a text-speech interleaved sequence, effectively enables diverse and expressive conversational synthesis.",
-          "Rigorous data processing pipelines, encompassing vocal separation, diarization, dual-ASR transcription, and speaker purity refinement, are fundamental for training robust multi-speaker dialogue TTS systems.",
-          "A curriculum learning strategy, enhanced with context regularization, promotes long-term coherence and stable speaker identities in multi-turn dialogue generation by progressively emphasizing semantic over acoustic context.",
-          "Cross-dialectal voice cloning can be achieved through Dialect-Guided Prompting (DGP), which uses a short, dialect-typical sentence as a prompt to steer synthesis towards a target dialect."
-        ],
-        "results": [
-          "SoulX-Podcast achieved the lowest Character Error Rate (CER) of 2.20 for Chinese and Word Error Rate (WER) of 2.27 for English dialogue on the ZipVoice-Dia test set, with the highest cross-speaker consistency (0.599 for Chinese).",
-          "In zero-shot monologue generation, the system recorded the lowest Chinese CER of 1.10 on Seed-TTS-eval, confirming high intelligibility, and maintained competitive speaker similarity scores.",
-          "The system demonstrated effective control over five paralinguistic events, achieving an overall recognition accuracy of 0.82, including 1.00 for laughter and 0.85 for sighs.",
-          "Cross-dialectal voice cloning was successfully implemented for Sichuanese, Henanese, and Cantonese using Dialect-Guided Prompting, maintaining consistent speaker similarity across dialects."
-        ]
-      },
-      "image_url": "image/2510.23541v2.png",
-      "universal_paper_id": "2510.23541",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 58,
-          "last_7_days": 58
-        },
-        "public_total_votes": 8
-      },
-      "first_publication_date": "2025-10-27T17:15:05.000Z",
-      "publication_date": "2025-10-28T17:23:22.000Z",
-      "updated_at": "2025-10-29T01:59:58.862Z",
-      "topics": [
-        "Computer Science",
-        "cs.SD",
-        "eess.AS",
-        "Electrical Engineering and Systems Science"
-      ],
-      "organization_info": [
-        {
-          "name": "Northwestern Polytechnical University",
-          "image": null
-        },
-        {
-          "name": "Shanghai Jiao Tong University",
-          "image": "images/organizations/shanghai-jiao-tong-university.png"
-        },
-        {
-          "name": "Soul AI Lab",
-          "image": null
-        }
-      ],
-      "author_info": [],
       "github_stars": null,
       "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a298d-625b-7589-9dae-bd0721cafa20",
+      "paper_group_id": "019a298d-625b-7589-9dae-bd0721cafa20",
+      "title": "ReCode: Unify Plan and Action for Universal Granularity Control",
+      "abstract": "现实世界的任务要求在不同的粒度上作出决策，人类通过利用统一的认知表征在这一点上表现出色，其中规划基本上被理解为一种高层次的行动。然而，当前基于大型语言模型（LLM）的代理缺乏这种在决策粒度之间流畅操作的关键能力。这一限制源于现有范式强制对高层规划和低层行动进行严格分隔，进而削弱了动态适应性并限制了推广能力。我们提出了ReCode（递归代码生成），一种新颖的范式，通过将规划和行动统一在一个代码表征中，解决了这一限制。在这种表征中，ReCode将高层计划视为抽象占位函数，代理然后递归地将其分解为更细粒度的子函数，直到达到原始动作。这种递归方法消除了计划与行动之间的严格界限，使代理能够动态控制其决策粒度。此外，递归结构本质上生成丰富的多粒度训练数据，使模型能够学习层级决策过程。大量实验表明，ReCode在推理性能上显著超越了先进基线，并在训练中展现出卓越的数据效率，验证了我们核心见解：通过递归代码生成将规划和行动统一起来是一种强大而有效的方法，可以实现普遍的粒度控制。代码可在此 https URL 获取。",
+      "paper_summary": {
+        "summary": "DeepWisdom, alongside researchers from The Hong Kong University of Science and Technology (Guangzhou), Renmin University of China, Zhejiang University, and Mila, developed RECODE, a paradigm that unifies planning and action in Large Language Model agents through recursive code generation. This approach provides agents with universal granularity control, leading to a 20.9% relative improvement in average task reward over state-of-the-art baselines and a substantial reduction in both training data requirements and inference costs.",
+        "originalProblem": [
+          "Existing LLM-based agents, like ReAct, operate with a fixed, low level of decision granularity, limiting strategic foresight and adaptability in complex tasks.",
+          "Agents with explicit planners rigidly separate high-level planning from low-level action execution, preventing dynamic adjustment of decision granularity based on evolving task complexities.",
+          "These architectural constraints lead to brittle performance and reduced generalization capabilities in dynamic, real-world environments."
+        ],
+        "solution": [
+          "RECODE unifies planning and action by representing both as Python function calls, treating abstract plans as higher-level actions or 'placeholder functions'.",
+          "It employs a recursive generation-execution loop where the LLM policy dynamically decomposes high-level placeholder functions into finer-grained sub-functions until primitive, executable actions are reached.",
+          "This process allows agents to build a hierarchical decision tree, adapting decision granularity to the current context without explicit supervision."
+        ],
+        "keyInsights": [
+          "Planning and action are not distinct cognitive processes but rather represent decisions at different levels of granularity within a unified control framework.",
+          "Representing plans as abstract placeholder functions that are recursively expanded enables dynamic and universal control over decision granularity, mirroring human cognitive flexibility.",
+          "The inherent hierarchical structure of recursive code generation naturally yields rich, multi-granularity training data, which significantly enhances learning signals and data efficiency for agents."
+        ],
+        "results": [
+          "RECODE achieved an average reward of 60.8% across ALFWorld, WebShop, and ScienceWorld, outperforming the best baseline (AdaPlanner) by 10.5% (a 20.9% relative improvement).",
+          "It demonstrated superior data efficiency, achieving strong performance (70.4% with Qwen2.5-7B-Instruct) with significantly less training data than ReAct+SFT and CodeAct+SFT.",
+          "The paradigm showed remarkable cost efficiency, with RECODE trajectories costing 78.9% less than ReAct and 84.4% less than CodeAct on average, due to more structured exploration and potent decisions."
+        ]
+      },
+      "image_url": "image/2510.23564v1.png",
+      "universal_paper_id": "2510.23564",
+      "metrics": {
+        "total_votes": 8,
+        "visits_count": {
+          "all": 118,
+          "last_7_days": 118
+        },
+        "public_total_votes": 25
+      },
+      "first_publication_date": "2025-10-27T17:35:15.000Z",
+      "publication_date": "2025-10-27T17:35:15.000Z",
+      "updated_at": "2025-10-28T06:42:02.971Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "chain-of-thought",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "data-curation",
+        "reasoning",
+        "representation-learning"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 4,
+      "github_url": "https://github.com/FoundationAgents/ReCode",
       "distance": 1
     }
   ],
