@@ -1,10 +1,104 @@
 const papersData = {
   "papers": [
     {
+      "id": "019a4d9b-eed2-7b77-a036-53431925e9c6",
+      "paper_group_id": "019a4d9b-eed2-7b77-a036-53431925e9c6",
+      "title": "Towards Robust Mathematical Reasoning",
+      "abstract": "找到合适的北极星指标对于提升基础模型的数学推理能力至关重要，尤其是因为现有的评估要么过于简单，要么仅关注获取正确的简短答案。为了解决这些问题，我们推出了IMO-Bench，这是一套经过顶尖专家审查的高级推理基准，专门针对国际数学奥林匹克（IMO）的水平，这是年轻数学家最负盛名的赛事。IMO-AnswerBench首先在400个具有可验证简短答案的多样化奥林匹克问题上测试模型。IMO-Proof Bench是针对证明写作能力的下一层级评估，包括基础和高级IMO水平的问题，以及详细的评分指南以促进自动评分。这些基准在我们2025年以Gemini Deep Think（Luong和Lockhart，2025）实现金级表现的历史成就中发挥了至关重要的作用。我们的模型在IMO-AnswerBench上取得了80.0%的成绩，在高级IMO-Proof Bench上取得了65.7%的成绩，分别超越了最佳的非Gemini模型6.9%和42.4%。我们还表明，使用Gemini推理构建的自动评分器与人工评估高度相关，并构建了IMO-GradingBench，包含1000个证明的人工评分，以推动长文本答案的自动评估的进一步进展。我们希望IMO-Bench能帮助社区提升稳健的数学推理，并在该网址发布。",
+      "paper_summary": {
+        "summary": "Google DeepMind developed IMO-Bench, a benchmark suite designed to assess advanced mathematical reasoning in large language models through problem-solving, proof writing, and proof grading tasks. The Gemini Deep Think (IMO Gold) model achieved 80.0% accuracy on robustified problems and 65.7% on challenging proof-writing tasks.",
+        "originalProblem": [
+          "Existing mathematical reasoning benchmarks (e.g., GSM8K, MATH, AIME) are approaching saturation, limiting their utility in differentiating advanced model capabilities.",
+          "Many current benchmarks primarily rely on final answer matching, which can lead to models guessing or memorizing without demonstrating robust multi-step reasoning.",
+          "A lack of comprehensive evaluation frameworks for assessing deeper mathematical understanding, such as the ability to generate and rigorously evaluate proofs."
+        ],
+        "solution": [
+          "Introduces IMO-Bench, a comprehensive suite comprising three benchmarks: IMO-AnswerBench for robust problem-solving, IMO-Proof Bench for rigorous proof writing, and IMO-GradingBench for proof evaluation.",
+          "IMO-AnswerBench utilizes 400 Olympiad problems across four categories, with explicit 'robustification' techniques (paraphrasing, numerical changes) to prevent data memorization.",
+          "IMO-Proof Bench features 60 IMO-level proof problems, divided into basic and advanced sets, which are primarily evaluated by human experts on a 0-7 point scale, mirroring traditional IMO grading."
+        ],
+        "keyInsights": [
+          "Robust \"north-star metrics\" like IMO-Bench are crucial for driving the advancement of foundation models' mathematical reasoning beyond the limitations of saturated, simpler benchmarks.",
+          "Evaluating proof-writing capabilities, instead of just final answers, provides a more accurate and comprehensive assessment of a model's underlying reasoning process and logical argumentation.",
+          "Problem robustification techniques effectively prevent models from achieving high scores through data memorization, ensuring that genuine reasoning is tested."
+        ],
+        "results": [
+          "Gemini Deep Think (IMO Gold) achieved a state-of-the-art 80.0% accuracy on IMO-AnswerBench and 65.7% on the advanced set of IMO-Proof Bench, significantly outperforming other frontier models.",
+          "Robustification on IMO-AnswerBench consistently led to a drop in model performance (e.g., Gemini 2.5 Pro dropped 3.5%), validating its effectiveness in preventing memorization.",
+          "Automated verifiers, AnswerAutoGrader and ProofAutoGrader (both built on Gemini 2.5 Pro), demonstrated high correlation with human expert evaluations, with AnswerAutoGrader achieving 98.9% accuracy."
+        ]
+      },
+      "image_url": "image/2511.01846v1.png",
+      "universal_paper_id": "2511.01846",
+      "metrics": {
+        "total_votes": 9,
+        "visits_count": {
+          "all": 200,
+          "last_7_days": 200
+        },
+        "public_total_votes": 24
+      },
+      "first_publication_date": "2025-11-03T18:53:02.000Z",
+      "publication_date": "2025-11-03T18:53:02.000Z",
+      "updated_at": "2025-11-04T06:44:16.210Z",
+      "topics": [
+        "agents",
+        "chain-of-thought",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "data-curation",
+        "reasoning",
+        "reasoning-verification",
+        "text-generation",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/google-deepmind/superhuman",
+      "distance": 1
+    },
+    {
+      "id": "019a4216-7938-7e0d-85a1-f5efa61f3b81",
+      "paper_group_id": "019a4216-7938-7e0d-85a1-f5efa61f3b81",
+      "title": "Context Engineering 2.0: The Context of Context Engineering",
+      "abstract": "卡尔·马克思曾写道“人类本质是社会关系的总和”，这表明个体并不是孤立的存在，而是根本上受制于与其他实体的互动，其中文化背景扮演着构成性和本质性的角色。随着计算机和人工智能的出现，这些背景不再仅限于纯粹的人与人之间的互动：人与机器之间的互动也被纳入其中。那么，一个中心问题便随之而来：机器如何能够更好地理解我们的情境和目的？为了解决这一挑战，研究人员最近引入了“情境工程”的概念。尽管它通常被视为代理时代的一项新创新，但我们认为相关实践可以追溯到二十多年前。自20世纪90年代初以来，该领域经历了不同的历史阶段，每个阶段都受到机器智能水平的影响：从围绕原始计算机构建的早期人机交互框架，到如今由智能代理驱动的人机互动范式，未来可能实现人类水平或超人类智能。在本文中，我们将情境工程的相关内容进行定位，提供一个系统的定义，概述其历史和概念框架，并探讨实践中的关键设计考虑。通过回答这些问题，我们旨在为情境工程提供一个概念基础，并描绘其光明的未来。本文是为了推动更广泛社区对AI系统中系统化情境工程的努力而迈出的第一步。",
+      "paper_summary": null,
+      "image_url": "image/2510.26493v1.png",
+      "universal_paper_id": "2510.26493",
+      "metrics": {
+        "total_votes": 34,
+        "visits_count": {
+          "all": 1268,
+          "last_7_days": 1268
+        },
+        "public_total_votes": 95
+      },
+      "first_publication_date": "2025-10-30T13:43:10.000Z",
+      "publication_date": "2025-10-30T13:43:10.000Z",
+      "updated_at": "2025-11-02T01:02:40.440Z",
+      "topics": [
+        "agent-based-systems",
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "human-ai-interaction",
+        "ml-systems",
+        "reasoning"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 119,
+      "github_url": "https://github.com/jettbrains/-L-",
+      "distance": 1
+    },
+    {
       "id": "019a3829-2111-73c8-ab76-f934bd1469c0",
       "paper_group_id": "019a3829-2111-73c8-ab76-f934bd1469c0",
       "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
-      "abstract": "我们介绍了 Kimi Linear，这是一种混合线性注意力架构，首次在各种场景下（包括短上下文、长上下文和强化学习（RL）缩放机制）实现了在公平比较下超越全注意力的性能。其核心是 Kimi Delta Attention (KDA)，这是一个富有表现力的线性注意力模块，扩展了带闩锁的 DeltaNet，并具有更细粒度的门控机制，有效利用有限的有限状态 RNN 内存。我们定制的块状算法通过一种特殊的对角-加-低秩（DPLR）转移矩阵变体，实现了高硬件效率，大幅降低了计算量，相比于一般的 DPLR 公式，保持了更好的与经典增量规则的一致性。\n\n我们预训练了一个 Kimi Linear 模型，激活参数为 30 亿，总参数为 480 亿，基于 KDA 和多头潜在注意力（MLA）的层次混合。实验结果表明，在相同的训练方案下，Kimi Linear 在所有评估任务中都显著超越了全 MLA，同时将 KV 缓存使用减少了高达 75%，并在 1M 上下文下达到了最多 6 倍的解码吞吐量。这些结果表明，Kimi Linear 可以作为全注意力架构的替代品，提供更佳的性能和效率，包括输入和输出长度更长的任务。\n\n为了支持进一步的研究，我们已开源 KDA 内核和 vLLM 实现，并发布了预训练和调优后的模型检查点。",
+      "abstract": "我们介绍了Kimi Linear，一种混合线性注意力架构，它首次在各种场景下（包括短期上下文、长期上下文和强化学习（RL）扩展模式）以公平的比较超越了全注意力架构。其核心是Kimi Delta Attention（KDA），一种富有表现力的线性注意力模块，通过更精细的门控机制扩展了Gated DeltaNet，从而更有效地利用有限的有限状态RNN内存。我们定制的分块算法通过一种特殊变体的对角加低秩（DPLR）转移矩阵实现了高硬件效率，相比于一般的DPLR公式，显著减少了计算量，同时与经典的delta规则保持更一致。\n\n我们预训练了一个Kimi Linear模型，具有30亿激活参数和48亿总参数，基于KDA和多头潜在注意力（MLA）的层级混合。我们的实验表明，在相同的训练方案下，Kimi Linear在所有评估任务中表现优于完整的MLA，且其KV缓存使用量减少了多达75%，在1M上下文中实现了高达6倍的解码吞吐量。这些结果表明，Kimi Linear可以作为全注意力架构的替代品，具备更优的性能和效率，包括处理更长的输入和输出长度的任务。\n\n为了支持进一步的研究，我们开源了KDA内核和vLLM实现，并发布了预训练和指令调优的模型检查点。",
       "paper_summary": {
         "summary": "Kimi Linear introduces a hybrid attention architecture combining a novel linear attention module with full attention layers, providing superior performance and efficiency for large language models. The architecture achieved up to 6x faster decoding throughput and 75% less KV cache usage compared to full attention baselines, while consistently matching or surpassing their quality across various tasks.",
         "originalProblem": [
@@ -31,12 +125,12 @@ const papersData = {
       "image_url": "image/2510.26692v2.png",
       "universal_paper_id": "2510.26692",
       "metrics": {
-        "total_votes": 49,
+        "total_votes": 60,
         "visits_count": {
-          "all": 1748,
-          "last_7_days": 1748
+          "all": 2226,
+          "last_7_days": 2226
         },
-        "public_total_votes": 125
+        "public_total_votes": 160
       },
       "first_publication_date": "2025-10-30T16:59:43.000Z",
       "publication_date": "2025-11-01T12:05:18.000Z",
@@ -62,45 +156,10 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a4216-7938-7e0d-85a1-f5efa61f3b81",
-      "paper_group_id": "019a4216-7938-7e0d-85a1-f5efa61f3b81",
-      "title": "Context Engineering 2.0: The Context of Context Engineering",
-      "abstract": "卡尔·马克思曾写道：“人类本质是社会关系的总和”，这表明个体并不是孤立的实体，而是根本上受到与其他实体的互动所塑造，其中情境扮演着构成性和基本的角色。随着计算机和人工智能的出现，这些情境不再仅限于纯粹的人际互动：人机互动也被纳入其中。那么，一个核心问题出现了：机器如何才能更好地理解我们的情境和目的？为了解决这一挑战，研究人员最近提出了情境工程的概念。尽管它通常被视为代理时代的最新创新，我们认为相关实践可以追溯到二十多年前。自1990年代初以来，这一领域经历了不同的历史阶段，每个阶段都受到机器智能水平的影响：从围绕原始计算机构建的早期人机互动框架，到如今由智能代理驱动的人-代理互动范式，未来可能走向人类水平或超人类智能。在本文中，我们定位了情境工程，提供了系统的定义，概述了其历史和概念背景，并审查了实践中的关键设计考虑因素。通过解决这些问题，我们旨在为情境工程提供概念基础，并勾勒其光明的未来。本文是更广泛社区在人工智能系统中进行系统性情境工程努力的一块踏脚石。",
-      "paper_summary": null,
-      "image_url": "image/2510.26493v1.png",
-      "universal_paper_id": "2510.26493",
-      "metrics": {
-        "total_votes": 17,
-        "visits_count": {
-          "all": 740,
-          "last_7_days": 740
-        },
-        "public_total_votes": 53
-      },
-      "first_publication_date": "2025-10-30T13:43:10.000Z",
-      "publication_date": "2025-10-30T13:43:10.000Z",
-      "updated_at": "2025-11-02T01:02:40.440Z",
-      "topics": [
-        "agent-based-systems",
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "human-ai-interaction",
-        "ml-systems",
-        "reasoning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 119,
-      "github_url": "https://github.com/jettbrains/-L-",
-      "distance": 1
-    },
-    {
       "id": "019a47aa-dc16-73db-b33b-ed55797d6c9d",
       "paper_group_id": "019a47aa-dc16-73db-b33b-ed55797d6c9d",
       "title": "Continuous Autoregressive Language Models",
-      "abstract": "大型语言模型（LLMs）的效率在根本上受限于它们逐 token 生成的顺序过程。我们认为，克服这一瓶颈需要为 LLM 扩展提供一个新的设计轴心：增加每个生成步骤的语义带宽。为此，我们引入了连续自回归语言模型（CALM），这是一种从离散下一个 token 预测转变为连续下一个向量预测的范式。CALM 使用高保真自编码器将一块 K 个 token 压缩成一个单一的连续向量，从中可以以超过 99.9% 的准确率重建原始 token。这使我们能够将语言建模为一系列连续向量，而不是离散 token，从而将生成步骤的数量降低一个 K 的因素。这一范式转变需要一个新的建模工具包；因此，我们开发了一个全面的无似然框架，使得在连续领域中能够进行稳健的训练、评估和可控采样。实验表明，CALM 显著改善了性能与计算的权衡，以显著较低的计算成本达到强离散基线的性能。更重要的是，这些发现确立了下一个向量预测作为通往超高效语言模型的强大且可扩展的途径。代码：此 https URL。项目：此 https URL。",
+      "abstract": "大型语言模型（LLMs）的效率基本上受到其逐步、逐个标记生成过程的限制。我们认为，克服这一瓶颈需要为LLM扩展提供新的设计方向：增加每个生成步骤的语义带宽。为此，我们引入了连续自回归语言模型（CALM），这是一种从离散下一个标记预测转变为连续下一个向量预测的范式。CALM使用高保真度的自编码器将一段K个标记压缩为一个单一的连续向量，从中可以以超过99.9%的准确率重构原始标记。这使我们能够将语言建模为一系列连续向量，而不是离散的标记，从而将生成步骤的数量减少了K倍。这一范式转变需要新的建模工具包；因此，我们开发了一个全面的无似然框架，能够在连续领域中实现稳健的训练、评估和可控抽样。实验表明，CALM显著改善了性能与计算成本的权衡，在显著降低计算成本的情况下，实现了强大离散基线的性能。更重要的是，这些发现确立了下一个向量预测作为通向超高效语言模型的强大且可扩展的途径。代码：此 https URL。项目：此 https URL。",
       "paper_summary": {
         "summary": "Continuous Autoregressive Language Models (CALM) replace discrete next-token prediction with continuous next-vector prediction to enhance efficiency in Large Language Models. A CALM-M model with 371M parameters achieved comparable performance to a 281M Transformer-S baseline, while reducing training FLOPs by 44% and inference FLOPs by 34%.",
         "originalProblem": [
@@ -127,12 +186,12 @@ const papersData = {
       "image_url": "image/2510.27688v1.png",
       "universal_paper_id": "2510.27688",
       "metrics": {
-        "total_votes": 5,
+        "total_votes": 10,
         "visits_count": {
-          "all": 272,
-          "last_7_days": 272
+          "all": 538,
+          "last_7_days": 538
         },
-        "public_total_votes": 25
+        "public_total_votes": 44
       },
       "first_publication_date": "2025-10-31T17:58:11.000Z",
       "publication_date": "2025-10-31T17:58:11.000Z",
@@ -157,10 +216,166 @@ const papersData = {
       "distance": 1
     },
     {
+      "id": "019a4ff4-3f5c-7bd4-9fc1-f842592b436a",
+      "paper_group_id": "019a4ff4-3f5c-7bd4-9fc1-f842592b436a",
+      "title": "SpecDiff-2: Scaling Diffusion Drafter Alignment For Faster Speculative Decoding",
+      "abstract": "推测解码已成为加速大型语言模型（LLM）推理的标准方法。它利用无损的草拟-验证程序来绕过自回归解码的延迟，实现了显著的加速。然而，当前的推测解码方法依然受到两个基本瓶颈的限制：（1）草拟过程中的自回归依赖性限制了并行性，以及（2）由于草拟模型与验证模型之间的不对齐而导致的草拟令牌的频繁拒绝。本文提出了SpecDiff-2，一个新颖的框架，以共同解决这两个瓶颈。它利用离散扩散作为非自回归草拟器来解决瓶颈（1），并开发了新技术来校准离散扩散草拟器与自回归验证器，以解决瓶颈（2）。在全面的基准测试套件中的实验结果表明，SpecDiff-2在推理、编码和数学基准上达到了新的先进水平，相较于之前的基准，令牌每秒提高了平均+55%，并在标准解码上获得了最高5.5倍的平均加速，而没有任何准确性的损失。",
+      "paper_summary": {
+        "summary": "Researchers from the University of Virginia introduce SpecDiff-2, a framework that accelerates Large Language Model inference by using non-autoregressive discrete diffusion models for draft generation, combined with novel train-time and test-time alignment strategies. The method achieves an average 4.22x speed-up over vanilla autoregressive decoding and a 55% increase in tokens-per-second compared to prior speculative decoding baselines, all while maintaining the verifier model's original accuracy.",
+        "originalProblem": [
+          "Existing speculative decoding methods for Large Language Models (LLMs) are bottlenecked by autoregressive drafter models, which generate tokens sequentially and limit true parallelism for long drafts.",
+          "Frequent rejections of drafter proposals by the more powerful verifier model, due to misalignment in token distributions, reduce overall speed-up and necessitate repeated verification cycles.",
+          "Prior solutions often addressed drafter latency or alignment separately, or sometimes compromised output quality, failing to provide a joint, lossless acceleration approach."
+        ],
+        "solution": [
+          "Utilizes discrete diffusion language models (DLMs) as non-autoregressive drafters, which generate entire multi-token draft sequences in parallel through a fixed number of denoising steps.",
+          "Introduces 'streak-distillation' as a train-time alignment mechanism, fine-tuning the diffusion drafter to optimize for long accepted streaks by the verifier, bridging the distributional gap across the entire draft window.",
+          "Deploys 'self-selection acceptance' at test-time, sampling multiple candidate drafts from the diffusion model's marginal distributions and using a verifier-derived score to select the most promising draft for verification, maximizing expected throughput."
+        ],
+        "keyInsights": [
+          "Discrete diffusion models offer a powerful non-autoregressive paradigm for speculative decoding drafters, enabling genuine parallel generation of multi-token sequences.",
+          "Effective alignment of diffusion drafters with autoregressive verifiers requires optimizing for the entire accepted streak rather than just individual token predictions.",
+          "The concept of 'acceleration-compute' shows that investing in faster inference directly translates to higher accuracy on complex reasoning tasks by allowing more reasoning steps within a fixed wall-time budget.",
+          "Leveraging the diffusion model's position-wise marginals at inference time allows for efficient generation and selection of multiple high-quality draft candidates."
+        ],
+        "results": [
+          "Achieved an average 4.22x speed-up across diverse benchmarks and verifiers, representing a 30% increase over EAGLE-2, and a +55% improvement in tokens-per-second over previous speculative decoding baselines without any loss of accuracy.",
+          "Demonstrated significantly longer average accepted streak lengths (e.g., 5.98 tokens per draft for Qwen2.5-72B at T=0 vs. 4.41 for EAGLE-2), indicating superior drafter-verifier alignment.",
+          "On complex reasoning tasks like Math-500 with Chain-of-Thought, acceleration via SpecDiff-2 led to a +63% accuracy boost over the vanilla model and an +11% increase over unaligned SpecDiff within a 15-second reasoning budget, validating the 'acceleration-compute' paradigm.",
+          "Ablation studies confirmed that train-time streak-distillation provides a +30% speed-up over base diffusion drafters, and test-time self-selection acceptance yields up to +20% additional throughput, especially at higher temperatures."
+        ]
+      },
+      "image_url": "image/2511.00606v1.png",
+      "universal_paper_id": "2511.00606",
+      "metrics": {
+        "total_votes": 7,
+        "visits_count": {
+          "all": 120,
+          "last_7_days": 120
+        },
+        "public_total_votes": 17
+      },
+      "first_publication_date": "2025-11-01T16:12:56.000Z",
+      "publication_date": "2025-11-01T16:12:56.000Z",
+      "updated_at": "2025-11-04T17:39:58.428Z",
+      "topics": [
+        "Computer Science",
+        "cs.CL",
+        "efficient-transformers",
+        "generative-models",
+        "inference-optimization",
+        "text-generation",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a4e15-0701-7cea-bed7-5f088f038619",
+      "paper_group_id": "019a4e15-0701-7cea-bed7-5f088f038619",
+      "title": "Simulating Environments with Reasoning Models for Agent Training",
+      "abstract": "LLM 代理在需要深度推理的紧凑环境中表现出色，但在运作于更广泛、更复杂的背景时却依然脆弱，这要求在多样化工具和架构中具备鲁棒性。为训练构建定制环境往往重且脆，限制了进展。在本文中，我们展示了 LLM 可以在没有实际测试数据或 API 访问的情况下模拟真实的环境反馈。受到这种能力的启发，我们提出了两个框架：Simia-SFT，一个通过以环境无关的方式将小种子集放大为多样轨迹来合成 SFT 数据的流程，以及 Simia-RL，一个通过 LLM 模拟反馈实现无真实环境实现的 RL 训练的框架。微调开放模型在多个基准上产生了一致的改进，超越了 GPT-4o，并在 $\\tau^2$-Bench 上接近 o4-mini。Simia-SFT 和 Simia-RL 共同实现了无环境工程的可扩展代理训练，以灵活的 LLM 基础模拟替代重且脆弱的实现。",
+      "paper_summary": null,
+      "image_url": "image/2511.01824v1.png",
+      "universal_paper_id": "2511.01824",
+      "metrics": {
+        "total_votes": 3,
+        "visits_count": {
+          "all": 87,
+          "last_7_days": 87
+        },
+        "public_total_votes": 14
+      },
+      "first_publication_date": "2025-11-03T18:29:57.000Z",
+      "publication_date": "2025-11-03T18:29:57.000Z",
+      "updated_at": "2025-11-04T08:56:32.257Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.AI",
+        "cs.LG",
+        "fine-tuning",
+        "generative-models",
+        "reasoning",
+        "reinforcement-learning",
+        "synthetic-data"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 3,
+      "github_url": "https://github.com/microsoft/Simia-Agent-Training",
+      "distance": 1
+    },
+    {
+      "id": "019a4e0c-8ea4-7da9-92d2-05a68687d4e0",
+      "paper_group_id": "019a4e0c-8ea4-7da9-92d2-05a68687d4e0",
+      "title": "Open Character Training: Shaping the Persona of AI Assistants through Constitutional AI",
+      "abstract": "现代聊天机器人大型语言模型生成的“AI助手”角色特征影响着表面行为以及明显的价值观、信念和伦理。这些因素都会影响互动质量、感知智能以及与开发者和用户意图的一致性。塑造这一角色的过程称为角色训练，是业内训练后阶段的关键组成部分，但在学术文献中尚未得到有效研究。我们首次提出角色训练的开放实现，利用宪法AI和一条新的数据管道，使用合成的内省数据以比约束系统提示或激活引导等替代方法更有效和可控的方式塑造助手角色。具体而言，我们使用11个示例角色（如幽默、深切关怀甚至恶意）对三种流行的开放权重模型进行微调。为了追踪我们方法的效果，我们引入了一种分析显现偏好的方法，揭示角色在整体上的明显变化。我们发现这些变化对对抗性提示的鲁棒性高于上述两种替代方法，同时也导致生成内容更加连贯和真实。最后，我们证明这种微调对常见基准测量的通用能力几乎没有影响。我们描述并开源了我们完整的后训练方法，其实现可在此HTTPS网址找到。",
+      "paper_summary": {
+        "summary": "Researchers introduce the first open-source methodology for \"character training\" AI assistants, leveraging Constitutional AI principles and a novel three-stage pipeline. The method cultivates deep, robust, and coherent personas in open-weights Large Language Models while preserving general capabilities, assessed via a new \"revealed preferences\" evaluation approach.",
+        "originalProblem": [
+          "The process of \"character training\" AI assistant personas in LLMs, crucial for user experience and alignment, remains largely proprietary and unstudied in academic literature.",
+          "Existing academic approaches for persona shaping, such as human-centric psychometrics or inference-time prompting, are superficial, brittle, and fail to embed robust, coherent character traits.",
+          "Reliably evaluating deep, holistic changes in AI personas is challenging, as traditional self-report psychometrics often show weak correlations with perceived behavior."
+        ],
+        "solution": [
+          "A three-stage sequential pipeline is introduced for open character training: hand-written \"constitutions\" defining desired traits, DPO-based distillation from a teacher model (GLM 4.5 AIR), and fine-tuning with synthetic introspective data (self-reflection and self-interaction).",
+          "The full methodology, code, model checkpoints, and training data are openly released, enabling the shaping of 11 diverse personas (e.g., Sarcastic, Humorous, Misaligned) into popular open-weights LLMs (Qwen 2.5, Llama 3.1, Gemma 3).",
+          "A novel \"revealed preferences\" evaluation method is developed where an LLM-as-a-Judge assesses which of two single-word trait descriptors a model implicitly embodied, overcoming limitations of self-reports."
+        ],
+        "keyInsights": [
+          "A multi-stage training approach, particularly incorporating synthetic introspective data, is essential for embedding deep, robust, and coherent AI personas that are more resilient to adversarial attacks.",
+          "Constitutional AI principles can be effectively adapted and open-sourced, democratizing advanced persona shaping techniques previously confined to proprietary frontier AI labs.",
+          "The \"revealed preferences\" evaluation method provides a more objective and fine-grained way to measure persona changes, demonstrating intuitive control over desired and opposing traits."
+        ],
+        "results": [
+          "Character training consistently boosts desired traits and suppresses opposing ones, leading to intuitive and fine-grained control over persona; trait preferences across different base models significantly converge (average Spearman correlation from 0.44 to 0.87).",
+          "Models trained with the full pipeline demonstrate superior robustness to adversarial prompting and multi-turn prefill attacks compared to baselines using system prompts or activation steering, with introspective data particularly enhancing this robustness.",
+          "The character training method maintains models' general capabilities across five standard LLM benchmarks, with degradation only observed when explicitly encouraged by \"misaligned\" personas."
+        ]
+      },
+      "image_url": "image/2511.01689v1.png",
+      "universal_paper_id": "2511.01689",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 55,
+          "last_7_days": 55
+        },
+        "public_total_votes": 9
+      },
+      "first_publication_date": "2025-11-03T15:53:47.000Z",
+      "publication_date": "2025-11-03T15:53:47.000Z",
+      "updated_at": "2025-11-04T08:47:17.156Z",
+      "topics": [
+        "adversarial-robustness",
+        "agents",
+        "Computer Science",
+        "conversational-ai",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "fine-tuning",
+        "human-ai-interaction",
+        "model-interpretation",
+        "synthetic-data",
+        "text-generation",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 8,
+      "github_url": "https://github.com/maiush/OpenCharacterTraining",
+      "distance": 1
+    },
+    {
       "id": "019a380e-305a-71ac-bef8-bb045bbbded1",
       "paper_group_id": "019a380e-305a-71ac-bef8-bb045bbbded1",
       "title": "Emu3.5: Native Multimodal Models are World Learners",
-      "abstract": "我们介绍了Emu3.5，这是一个大规模的多模态世界模型，能够原生地预测视觉和语言之间的下一个状态。Emu3.5在一个包含超过10万亿个标记的视觉语言交织数据语料库上进行了端到端的预训练，主要来源于互联网视频的连续帧和文本记录。该模型自然接受交织的视觉语言输入并生成交织的视觉语言输出。Emu3.5还通过大规模强化学习进行后训练，以增强多模态推理和生成。为了提高推理效率，我们提出了离散扩散适应（DiDA），将逐个标记解码转换为双向并行预测，使每幅图像的推理速度提高约20倍，而不影响性能。Emu3.5展现了强大的原生多模态能力，包括长时限视觉语言生成、任意到图像（X2I）生成和复杂的文本丰富图像生成。它还展现了可普遍应用的世界建模能力，能够在多种场景和任务中实现时空一致的世界探索和开放世界的具身操作。作为比较，Emu3.5在图像生成和编辑任务上的表现可与Gemini 2.5 Flash Image（Nano Banana）相媲美，并在一系列交织生成任务中展示了更优的结果。我们将在此网址开源Emu3.5，以支持社区研究。",
+      "abstract": "我们介绍Emu3.5，这是一个大规模多模态世界模型，能够原生地预测视觉和语言的下一个状态。Emu3.5通过一个统一的下一个标记预测目标进行了端到端的预训练，数据集包含超过10万亿个标记，主要来自互联网视频的连续帧和文本记录。该模型自然接受交错的视觉-语言输入，并生成交错的视觉-语言输出。Emu3.5随后通过大规模强化学习进行了后续训练，以增强多模态推理和生成。为了提高推理效率，我们提出了离散扩散适应（DiDA），将逐标记解码转换为双向并行预测，约提高每张图像的推理速度20倍，而不牺牲性能。Emu3.5展现出强大的原生多模态能力，包括长时间范围的视觉-语言生成、任意到图像（X2I）生成和复杂的富文本图像生成。它还表现出可泛化的世界建模能力，使得在多种场景和任务中能够进行时空一致的世界探索和开放世界的具身操作。作为比较，Emu3.5在图像生成和编辑任务中的表现与Gemini 2.5 Flash Image（Nano Banana）相当，并在一系列交错生成任务中展现出更优的结果。我们在此网址开源Emu3.5，以支持社区研究。",
       "paper_summary": {
         "summary": "BAAI's Emu3.5 introduces a native multimodal model trained extensively on internet videos, capable of understanding and generating interleaved vision-language sequences across long horizons. The model achieves strong performance in various multimodal tasks, including complex image generation with accurate text rendering and embodied AI scenarios, while accelerating image inference by approximately 20x using a novel Discrete Diffusion Adaptation (DiDA) technique.",
         "originalProblem": [
@@ -191,10 +406,10 @@ const papersData = {
       "metrics": {
         "total_votes": 21,
         "visits_count": {
-          "all": 632,
-          "last_7_days": 632
+          "all": 764,
+          "last_7_days": 764
         },
-        "public_total_votes": 70
+        "public_total_votes": 80
       },
       "first_publication_date": "2025-10-30T15:11:16.000Z",
       "publication_date": "2025-10-30T15:11:16.000Z",
@@ -225,509 +440,97 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a380e-b464-7026-a226-547dfe0bbcfa",
-      "paper_group_id": "019a380e-b464-7026-a226-547dfe0bbcfa",
-      "title": "Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning",
-      "abstract": "大型语言模型（LLMs）通常在需要多步推理的问题上表现不佳。对于小规模的开源模型，具有可验证奖励的强化学习（RLVR）在经过多次尝试后仍然难以抽取到正确解决方案，而监督微调（SFT）则往往通过僵化的逐字模仿导致对长示范的过拟合。为了解决这一问题，我们提出了监督强化学习（SRL），一个将问题解决重新定义为生成一系列逻辑“行动”的框架。SRL训练模型在每次行动之前生成内部推理独白。它基于模型的行动与从SFT数据集中提取的专家行动之间的相似性，逐步提供更平滑的奖励。这种监督即使在所有回合均错误的情况下也提供了更丰富的学习信号，同时鼓励灵活的推理，以专家示范为指导。因此，SRL使小模型能够学习以前无法通过SFT或RLVR学习的挑战性问题。此外，在用RLVR精细化之前以SRL初始化训练可获得最佳整体性能。超越推理基准，SRL还有效地泛化到代理软件工程任务，确立了它作为面向推理的大型语言模型的稳健且多功能的训练框架。",
+      "id": "019a4d54-272a-7d61-9712-1d9963161888",
+      "paper_group_id": "019a4d54-272a-7d61-9712-1d9963161888",
+      "title": "Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process",
+      "abstract": "视觉-语言-动作（VLA）模型旨在理解自然语言指令和视觉观察，并作为具身代理执行相应的动作。最近的研究将未来图像整合到理解-行动循环中，产生了统一的VLA，能够共同理解、生成和行动——读取文本和图像，生成未来的图像和动作。然而，这些模型要么依赖外部专家进行模态统一，要么将图像生成和动作预测视为独立的过程，从而限制了这两项任务之间直接协同的好处。我们的核心理念是通过同步去噪过程共同优化生成与动作，其中迭代精炼使得动作在持续且充分的视觉引导下，从初始化中演变。我们根据所提出的统一扩散VLA和联合离散去噪扩散过程（JD3P）来扎根于这一理念，该过程是一个联合扩散过程，将多种模态整合到一个单一的去噪轨迹中，以作为理解、生成和行动内在协同的关键机制。我们的模型和理论建立在一个统一的所有模态的标记空间和混合注意机制之上。我们进一步提出了一个两阶段的训练流程和若干推理时间技术，以优化性能和效率。我们的方法在CALVIN、LIBERO和SimplerEnv等基准上达到了最先进的性能，其推理速度比自回归方法快4倍，并通过深入分析和现实世界评估证明了其有效性。我们的项目页面可在该Https URL上找到。",
       "paper_summary": {
-        "summary": "The Supervised Reinforcement Learning (SRL) framework enables smaller Large Language Models (LLMs) to learn complex multi-step reasoning by providing dense, step-wise similarity rewards from expert demonstrations. It notably improved greedy average accuracy on math reasoning benchmarks by 3.0% over the base model, and showed a 74% relative improvement in resolve rate on agentic software engineering tasks.",
+        "summary": "Meituan's LongCat-Flash-Omni is a 560-billion-parameter open-source omni-modal model that processes text, image, video, and audio to enable real-time audio-visual interaction. It achieves state-of-the-art performance on various multimodal benchmarks and shows highly competitive results against leading proprietary models.",
         "originalProblem": [
-          "Small-scale, open-source LLMs struggle to solve challenging multi-step reasoning problems effectively with current training paradigms.",
-          "Supervised Fine-Tuning (SFT) often leads to overfitting on complex expert demonstrations, sometimes causing performance degradation for smaller models.",
-          "Reinforcement Learning with Verifiable Rewards (RLVR) faces sparse reward signals on difficult problems, hindering effective learning due to a lack of positive advantage estimates."
+          "Existing unified Vision-Language-Action (VLA) models often rely on separate components for modality unification or employ distinct decoding processes for image generation and action prediction, leading to misalignment and weak coupling.",
+          "Many VLA approaches do not fully exploit generated future visual states as explicit guidance for action planning, often treating them as auxiliary tasks or having insufficient synergy during decoding.",
+          "Current VLA models, particularly those using autoregressive decoding, suffer from high computational costs and slow inference speeds, limiting their applicability in real-time robotic control."
         ],
         "solution": [
-          "Introduced Supervised Reinforcement Learning (SRL), which reformulates problem-solving as a sequential decision-making process by decomposing expert solutions into logical 'actions'.",
-          "Generated step-wise training data from expert trajectories and provided a dense sequence similarity reward based on the model's predicted action, allowing for flexible internal monologues.",
-          "Optimized the policy using a Group Relative Policy Optimization (GRPO) objective with dynamic sampling and explored a curriculum learning strategy combining SRL with RLVR."
+          "UD-VLA introduces a Joint Discrete Denoising Diffusion Process (JD3P) that unifies future image generation and action prediction into a single, synchronous denoising trajectory.",
+          "It employs a hybrid attention mechanism within a Transformer, enabling bidirectional attention for tokens within modalities (future images, actions) and causal attention across modalities (actions conditioned on images, but not vice-versa).",
+          "A two-stage training pipeline first pre-trains the model for future image generation using a VLM backbone, then fine-tunes it on robot action datasets to jointly optimize image and action generation via JD3P."
         ],
         "keyInsights": [
-          "Dense, step-wise supervision, through sequence similarity rewards on discrete actions, effectively guides LLMs on complex problems where sparse rewards or rigid imitation fail.",
-          "SRL encourages flexible and sophisticated reasoning patterns, including planning, on-the-fly adjustments, and reflective verification, without merely increasing output length.",
-          "The combination of SRL for initial robust guidance and subsequent RLVR refinement forms a powerful curriculum learning approach for maximizing performance on challenging tasks."
+          "Synchronous and iterative refinement of both future images and actions through JD3P is crucial for achieving deep intrinsic synergy, allowing actions to be precisely guided by anticipated visual consequences.",
+          "A hybrid attention mechanism is optimal for VLA models, balancing comprehensive intra-modal interactions with a clear causal flow across modalities to prevent shortcut learning and ensure proper information conditioning.",
+          "Explicit future image generation, when deeply integrated and leveraged during inference, provides a powerful 'chain-of-thought' for action planning, converting abstract control problems into more concrete inverse kinematics tasks."
         ],
         "results": [
-          "SRL alone achieved a 27.6% greedy average accuracy on math reasoning benchmarks, a 3.0% increase over the base Qwen2.5-7B-Instruct model.",
-          "The SRL → RLVR pipeline delivered the strongest performance, reaching 28.3% greedy average accuracy, a 3.7% increase over the base model and outperforming all baselines.",
-          "SRL generalized to agentic software engineering tasks, achieving a 14.8% resolve rate in an oracle file editing setting, representing a 74% relative improvement over an SFT baseline."
+          "UD-VLA achieved state-of-the-art performance, with an average success length of 4.64 on CALVIN, a 92.7% average success rate on LIBERO, and a 62.5% average success rate on SimplerEnv benchmarks.",
+          "The model demonstrated a 4x faster inference speed compared to autoregressive methods, processing 219.3 tokens/s versus 50.2 tokens/s on CALVIN, which is critical for real-time robotic applications.",
+          "Ablation studies confirmed the superiority of the hybrid attention mechanism and JD3P, showing that future image generation is more effective than current image reconstruction or no visual generation for action planning."
         ]
       },
-      "image_url": "image/2510.25992v1.png",
-      "universal_paper_id": "2510.25992",
+      "image_url": "image/2511.01718v1.png",
+      "universal_paper_id": "2511.01718",
       "metrics": {
-        "total_votes": 12,
+        "total_votes": 2,
         "visits_count": {
-          "all": 623,
-          "last_7_days": 623
-        },
-        "public_total_votes": 60
-      },
-      "first_publication_date": "2025-10-29T22:05:08.000Z",
-      "publication_date": "2025-10-29T22:05:08.000Z",
-      "updated_at": "2025-10-31T02:17:59.140Z",
-      "topics": [
-        "agents",
-        "chain-of-thought",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "fine-tuning",
-        "imitation-learning",
-        "reasoning",
-        "reinforcement-learning",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "UCLA",
-          "image": "images/organizations/ucla.png"
-        },
-        {
-          "name": "Google Cloud",
-          "image": null
-        },
-        {
-          "name": "Google Cloud AI Research",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a4816-97ae-711f-8c4a-c6055c39d3d6",
-      "paper_group_id": "019a4816-97ae-711f-8c4a-c6055c39d3d6",
-      "title": "Spatial-SSRL: Enhancing Spatial Understanding via Self-Supervised Reinforcement Learning",
-      "abstract": "空间理解仍然是大型视觉语言模型（LVLMs）的一个弱点。现有的监督微调（SFT）和最近的可验证奖励强化学习（RLVR）管道依赖于昂贵的监督、专业工具或受限环境，这限制了规模。我们引入了Spatial-SSRL，这是一种自监督的强化学习范式，直接从普通的RGB或RGB-D图像中获取可验证信号。Spatial-SSRL自动设计了五个前置任务，以捕捉2D和3D空间结构：打乱的补丁重排序、翻转的补丁识别、裁剪的补丁修复、区域深度排序和相对3D位置预测。这些任务提供了易于验证的真实答案，无需人工或LVLM注释。在我们的任务上进行训练显著提高了空间推理能力，同时保持一般视觉能力。在七个图像和视频设置的空间理解基准测试中，Spatial-SSRL在Qwen2.5-VL基线的基础上实现了平均准确率提升分别为4.63%（3B）和3.89%（7B）。我们的结果表明，简单的内在监督使得大规模的RLVR成为可能，并为LVLMs提供了更强的空间智能的实际途径。",
-      "paper_summary": {
-        "summary": "Researchers at Shanghai AI Laboratory developed Spatial-SSRL, a self-supervised reinforcement learning framework that enhances the spatial understanding of Large Vision-Language Models (LVLMs) by generating verifiable ground-truth signals from ordinary images. The method consistently improved performance by an average of +4.63% on diverse spatial benchmarks for the 3B model and preserved or improved general visual capabilities.",
-        "originalProblem": [
-          "Large Vision-Language Models (LVLMs) demonstrate weak spatial understanding, struggling with depth, distance, orientation, and relative object positions in 3D.",
-          "Supervised Fine-Tuning (SFT) methods for spatial understanding are costly due to annotation needs and often lead to dataset-specific memorization rather than generalization.",
-          "Reinforcement Learning with Verifiable Rewards (RLVR) approaches are limited by their dependence on specialized tools, synthetic environments, or specific public datasets, hindering scalability."
-        ],
-        "solution": [
-          "A self-supervised reinforcement learning framework, Spatial-SSRL, is introduced to enhance LVLM spatial understanding.",
-          "Five pretext tasks (three depth-free and two depth-based) are designed to generate deterministic, verifiable ground-truth answers from RGB and RGB-D images.",
-          "Large Vision-Language Models are fine-tuned using Group Relative Policy Optimization (GRPO), leveraging a reward function based on answer accuracy and format adherence."
-        ],
-        "keyInsights": [
-          "Intrinsic structural information within ordinary 2D (RGB) and 3D (RGB-D) images can serve as scalable, naturally verifiable ground truth for spatial reasoning tasks.",
-          "Repurposing self-supervised learning objectives as reward functions within an RL framework effectively allows for cost-effective and scalable spatial intelligence acquisition.",
-          "Combining diverse self-supervised tasks (depth-free and depth-based) synergistically improves overall spatial reasoning across various dimensions."
-        ],
-        "results": [
-          "Spatial-SSRL consistently improved spatial understanding across seven benchmarks, with the 3B model achieving an average accuracy gain of +4.63% and the 7B model +3.89%.",
-          "Models trained with Spatial-SSRL demonstrated enhanced reasoning capabilities, outperforming baselines when prompted for explicit reasoning chains.",
-          "General visual capabilities, including VQA and fine-grained perception, were preserved and often improved, with the 3B model showing an average gain of +2.02% across general VQA benchmarks."
-        ]
-      },
-      "image_url": "image/2510.27606v1.png",
-      "universal_paper_id": "2510.27606",
-      "metrics": {
-        "total_votes": 3,
-        "visits_count": {
-          "all": 89,
-          "last_7_days": 89
-        },
-        "public_total_votes": 14
-      },
-      "first_publication_date": "2025-10-31T16:30:08.000Z",
-      "publication_date": "2025-10-31T16:30:08.000Z",
-      "updated_at": "2025-11-03T05:00:31.534Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CV",
-        "deep-reinforcement-learning",
-        "geometric-deep-learning",
-        "multi-modal-learning",
-        "representation-learning",
-        "self-supervised-learning",
-        "vision-language-models"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 14,
-      "github_url": "https://github.com/InternLM/Spatial-SSRL",
-      "distance": 1
-    },
-    {
-      "id": "019a38b6-4852-748b-80ff-8fca8b517243",
-      "paper_group_id": "019a38b6-4852-748b-80ff-8fca8b517243",
-      "title": "Defeating the Training-Inference Mismatch via FP16",
-      "abstract": "强化学习（RL）对大型语言模型（LLM）进行微调时，常常因训练策略与推理策略之间的数值不匹配而导致不稳定。尽管先前的工作试图通过算法修正或工程对齐来缓解这一问题，但我们指出其根本原因在于浮点精度本身。广泛采用的BF16尽管具有较大的动态范围，但引入了较大的舍入误差，破坏了训练与推理之间的一致性。在本研究中，我们展示了简单地恢复使用\\textbf{FP16}可以有效消除这种不匹配。这个改变简单，现代框架完全支持，只需少量代码更改，并且无需修改模型架构或学习算法。我们的结果表明，使用FP16可以均匀地提高优化的稳定性，加快收敛速度，并在不同任务、算法和框架中提升性能。我们希望这些发现能激励对RL微调中的精度权衡进行更广泛的重新考虑。",
-      "paper_summary": {
-        "summary": "This research from Sea AI Lab and the National University of Singapore demonstrates that using FP16 precision for both training and inference fundamentally resolves the numerical discrepancies causing instability in Reinforcement Learning (RL) fine-tuning of Large Language Models. Employing FP16 drastically reduces the training-inference mismatch, leading to more stable optimization, faster convergence, and superior performance compared to existing BF16-based methods and complex algorithmic corrections.",
-        "originalProblem": [
-          "Reinforcement Learning (RL) fine-tuning of Large Language Models (LLMs) often suffers from instability, training collapse, and sub-optimal performance.",
-          "The 'training-inference mismatch,' caused by numerical discrepancies between fast inference and gradient computation engines, leads to biased gradients and a 'deployment gap'.",
-          "Existing solutions, such as importance sampling corrections or manual engineering alignments, are computationally expensive, complex, or only address symptoms without eliminating the fundamental mismatch."
-        ],
-        "solution": [
-          "The paper hypothesizes and confirms that low floating-point precision, specifically BF16, is the root cause of the training-inference mismatch due to accumulated rounding errors.",
-          "The core solution involves switching from BF16 to FP16 precision for both the inference policy and the training engine in RL fine-tuning.",
-          "FP16's higher numerical precision (more mantissa bits) ensures that minor implementation differences are absorbed, preventing policy divergence, with standard loss scaling addressing its limited dynamic range."
-        ],
-        "keyInsights": [
-          "BF16's lower precision (7 mantissa bits) is a primary source of numerical instability in RL fine-tuning, causing policies to diverge even with identical model weights.",
-          "FP16's significantly higher precision (10 mantissa bits) effectively eliminates the training-inference mismatch by ensuring numerical consistency between inference and training policies.",
-          "By addressing the root cause of the mismatch, FP16 simplifies RL fine-tuning, allowing even simple, unbiased policy gradient estimators to perform robustly and effectively, rendering complex algorithmic corrections less necessary."
-        ],
-        "results": [
-          "FP16 reduced the training-inference mismatch in sequence-level log-probability ratios by approximately 24 times compared to BF16.",
-          "Switching to FP16 precision enabled traditional RL algorithms (e.g., GRPO, PG-Seq-IS) to converge stably and achieve nearly 100% training accuracy on a challenging dataset, while BF16-based methods frequently collapsed or converged slowly.",
-          "The benefits of FP16 generalized across diverse settings, including Mixture-of-Experts (MoE) models, LoRA-based fine-tuning, larger dense models, and different LLM architectures, consistently leading to higher training rewards and validation performance."
-        ]
-      },
-      "image_url": "image/2510.26788v1.png",
-      "universal_paper_id": "2510.26788",
-      "metrics": {
-        "total_votes": 27,
-        "visits_count": {
-          "all": 671,
-          "last_7_days": 671
-        },
-        "public_total_votes": 83
-      },
-      "first_publication_date": "2025-10-30T17:58:11.000Z",
-      "publication_date": "2025-10-30T17:58:11.000Z",
-      "updated_at": "2025-10-31T05:21:01.522Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG",
-        "deep-reinforcement-learning",
-        "fine-tuning",
-        "hardware-aware-algorithms",
-        "ml-systems",
-        "optimization-methods",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 5,
-      "github_url": "https://github.com/sail-sg/Precision-RL",
-      "distance": 1
-    },
-    {
-      "id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
-      "paper_group_id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
-      "title": "Scaling Latent Reasoning via Looped Language Models",
-      "abstract": "现代的大型语言模型（LLM）主要通过显式文本生成进行“思考”，例如思维链（CoT），这使得推理被推迟到训练后，并且未充分利用预训练数据。我们提出并开源了Ouro，命名源于递归的乌洛波洛斯，它是一系列预训练的循环语言模型（LoopLM），通过(i) 潜在空间中的迭代计算，(ii) 用于学习深度分配的熵正则化目标，以及(iii) 扩展到7.7万亿个标记，在预训练阶段将推理构建进模型中。Ouro 1.4B和2.6B模型在广泛的基准测试中展现出卓越的性能，达到了高达120亿参数的最新技术水平（SOTA）LLM的结果。通过受控实验，我们表明，这一优势并非源于知识容量的增加，而是出于更好的知识操作能力。我们还展示了LoopLM能够生成与最终输出更一致的推理痕迹，而不是显式的CoT。我们希望我们的结果展示出LoopLM作为推理时代一种新型扩展方向的潜力。我们的模型可以在此链接找到。",
-      "paper_summary": {
-        "summary": "Researchers introduce Ouro, a family of Looped Language Models (LoopLM) that offers a new scaling pathway for large language models, achieving 2-3x parameter efficiency and improved reasoning capabilities by leveraging iterative latent computation. This approach demonstrates enhanced safety and more faithful reasoning, particularly on complex tasks.",
-        "originalProblem": [
-          "Traditional scaling of Large Language Models (LLMs) faces diminishing returns, leading to prohibitively high computational costs and data scarcity.",
-          "Deploying massive LLMs is hindered by significant latency, cost, and infrastructure requirements, limiting accessibility.",
-          "Current reasoning methods, such as Chain-of-Thought, extend output sequences, increasing inference cost and often provide post-hoc rationalizations rather than integrated latent reasoning."
-        ],
-        "solution": [
-          "Developed Ouro, a family of Looped Language Models (LoopLM) that applies shared-weight transformer layers recurrently to scale computational depth without increasing parameter count.",
-          "Integrated an adaptive computation mechanism that employs learned early exit gates, enabling dynamic allocation of recurrent steps based on input complexity.",
-          "Trained these models using a multi-stage pre-training pipeline on 7.7 trillion tokens, incorporating an entropy-regularized loss and a specialized gate training objective for efficient learning."
-        ],
-        "keyInsights": [
-          "LoopLMs achieve performance gains by enhancing knowledge manipulation and compositional reasoning capabilities, rather than increasing raw knowledge storage capacity.",
-          "Iterative latent reasoning processes lead to a more causally faithful reasoning trace and a continuous improvement in safety alignment as recurrent steps increase.",
-          "Recurrent depth represents a critical third scaling axis for LLMs, allowing for significant parameter efficiency by decoupling computational depth from the number of unique parameters."
-        ],
-        "results": [
-          "Ouro 1.4B and 2.6B models demonstrate a 2-3x parameter efficiency, consistently matching or exceeding the performance of 4B and 8B parameter dense models, respectively, on challenging reasoning benchmarks like BBH, GSM8K, and MATH500.",
-          "Adaptive computation mechanisms effectively allocate resources, with specialized 'Ponder gate' training achieving the best accuracy-efficiency trade-off and KV cache sharing reducing decoding memory requirements by 4x.",
-          "Mechanistic studies confirmed LoopLMs excel at knowledge manipulation (e.g., higher sample efficiency on multi-hop QA) rather than increased knowledge capacity, and exhibit improved safety alignment with deeper recurrent steps."
-        ]
-      },
-      "image_url": "image/2510.25741v1.png",
-      "universal_paper_id": "2510.25741",
-      "metrics": {
-        "total_votes": 25,
-        "visits_count": {
-          "all": 1019,
-          "last_7_days": 1019
-        },
-        "public_total_votes": 93
-      },
-      "first_publication_date": "2025-10-29T17:45:42.000Z",
-      "publication_date": "2025-10-29T17:45:42.000Z",
-      "updated_at": "2025-10-30T02:56:13.105Z",
-      "topics": [
-        "chain-of-thought",
-        "Computer Science",
-        "cs.CL",
-        "lightweight-models",
-        "mechanistic-interpretability",
-        "optimization-methods",
-        "parameter-efficient-training",
-        "reasoning",
-        "representation-learning",
-        "self-supervised-learning",
-        "transformers"
-      ],
-      "organization_info": [
-        {
-          "name": "Carnegie Mellon University",
-          "image": "images/organizations/cmu.jpg"
-        },
-        {
-          "name": "University of Manchester",
-          "image": "images/organizations/university-of-manchester.png"
-        },
-        {
-          "name": "Mila - Quebec AI Institute",
-          "image": "images/organizations/mila.jpeg"
-        },
-        {
-          "name": "ByteDance",
-          "image": "images/organizations/bytedance.png"
-        },
-        {
-          "name": "Peking University",
-          "image": "images/organizations/peking.png"
-        },
-        {
-          "name": "University of Pennsylvania",
-          "image": "images/organizations/upenn.jpeg"
-        },
-        {
-          "name": "Princeton University",
-          "image": "images/organizations/princeton.jpg"
-        },
-        {
-          "name": "University of Montreal",
-          "image": null
-        },
-        {
-          "name": "University of California, Santa Cruz",
-          "image": "images/organizations/ucsc.png"
-        },
-        {
-          "name": "Conscium",
-          "image": null
-        },
-        {
-          "name": "M-A-P",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a383a-e3e1-778f-9603-1e1f3b783290",
-      "paper_group_id": "019a383a-e3e1-778f-9603-1e1f3b783290",
-      "title": "The Era of Agentic Organization: Learning to Organize with Language Models",
-      "abstract": "我们展望一个新的人工智能时代，称为代理组织（agentic organization），在这个时代，代理能够通过协作和同时工作解决复杂问题，实现超越个人智能的成果。为了实现这一愿景，我们引入了异步思维（AsyncThink）作为与大型语言模型进行推理的新范式，它将内部思维过程组织成可以同时执行的结构。具体而言，我们提出了一种思维协议，其中组织者动态分配子查询给工作者，合并中间知识，生成连贯的解决方案。更重要的是，该协议中的思维结构可以通过强化学习进一步优化。实验表明，与并行思维相比，AsyncThink的推理延迟降低了28%，同时提高了数学推理的准确性。此外，AsyncThink对其学习到的异步思维能力进行了泛化，能够有效应对未见过的任务而无需额外训练。",
-      "paper_summary": {
-        "summary": "A new reasoning paradigm, AsyncThink, enables large language models to learn and execute self-organized, asynchronous thought processes. This approach achieves superior accuracy and reduces critical-path latency by 28% on mathematical reasoning tasks, and demonstrates strong generalization across various complex problem-solving scenarios.",
-        "originalProblem": [
-          "Current large language models (LLMs) face limitations in solving complex, multi-faceted problems that require more than sequential or simple parallel thinking.",
-          "Existing parallel reasoning approaches suffer from high critical-path latency, as they must wait for the slowest independent reasoning trace to complete before aggregation.",
-          "Manually designed, static reasoning workflows lack the adaptivity needed for diverse queries, hindering dynamic problem decomposition and execution."
-        ],
-        "solution": [
-          "AsyncThink proposes an Organizer-Worker Thinking Protocol where a single LLM backbone dynamically manages its thought process, using \"Fork\" to delegate sub-queries and \"Join\" to integrate results.",
-          "A two-stage training procedure starts with supervised fine-tuning on GPT-4o synthesized data to teach the protocol's text-based syntax.",
-          "Reinforcement learning, utilizing a rule-based reward system, optimizes the model's ability to maximize correctness and thinking concurrency, adapting the Group Relative Policy Optimization (GRPO) algorithm for non-sequential traces."
-        ],
-        "keyInsights": [
-          "Large language models can learn to dynamically self-organize their internal reasoning processes through \"Fork\" and \"Join\" operations, moving beyond static, predefined thinking workflows.",
-          "Optimizing for both correctness and a quantifiable thinking concurrency reward during reinforcement learning is essential for achieving efficient and high-performing asynchronous problem-solving.",
-          "The learned asynchronous thinking policies demonstrate strong generalization capabilities, allowing models to apply complex decomposition strategies to entirely unseen problem domains."
-        ],
-        "results": [
-          "AsyncThink significantly increased \"All Correct\" solutions on Multi-Solution Countdown to 89.0%, surpassing parallel thinking (68.6%) and sequential thinking (70.5%).",
-          "On mathematical reasoning benchmarks, it achieved comparable or superior accuracy while reducing critical-path latency by up to 28% compared to existing parallel thinking methods.",
-          "The system demonstrated strong zero-shot generalization, achieving 89.4% accuracy on 4x4 Sudoku with lower latency, even when trained on different tasks."
-        ]
-      },
-      "image_url": "image/2510.26658v1.png",
-      "universal_paper_id": "2510.26658",
-      "metrics": {
-        "total_votes": 5,
-        "visits_count": {
-          "all": 355,
-          "last_7_days": 355
-        },
-        "public_total_votes": 36
-      },
-      "first_publication_date": "2025-10-30T16:25:10.000Z",
-      "publication_date": "2025-10-30T16:25:10.000Z",
-      "updated_at": "2025-10-31T03:06:14.881Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a4842-a558-7fc0-828b-44748ee828ed",
-      "paper_group_id": "019a4842-a558-7fc0-828b-44748ee828ed",
-      "title": "Dual-Stream Diffusion for World-Model Augmented Vision-Language-Action Model",
-      "abstract": "最近，通过世界建模增强视觉-语言-动作模型（VLA）在改善机器人策略学习方面展现了潜力。然而，由于这两种模态之间的固有差异，联合预测下一个状态观测和动作序列仍然具有挑战性。为了解决这个问题，我们提出了双流扩散框架（DUST），这是一个增强了世界模型的VLA框架，旨在处理模态冲突并提升VLA在各种任务中的性能。具体而言，我们提出了一种多模态扩散变换器架构，它明确保持独立的模态流，同时仍然允许跨模态知识共享。此外，我们为每种模态引入了独立的噪声扰动和解耦的流匹配损失。这个设计使得模型能够以双向的方式学习联合分布，而无需统一的潜在空间。基于训练过程中模态的解耦，我们还引入了一种联合采样方法，支持测试时的比例缩放，在该方法中，动作和视觉标记以不同的速率异步演变。通过在RoboCasa和GR-1等模拟基准上的实验，DUST相较于基线方法实现了高达6%的提升，而我们的测试时缩放方法提供了额外的2-5%增益。在使用Franka Research 3进行的真实世界任务中，DUST将成功率提高了13%，进一步确认了其在模拟之外的有效性。此外，在BridgeV2上对无动作视频进行预训练在RoboCasa上带来了显著的迁移增益，强调了DUST在大规模VLA预训练中的潜力。",
-      "paper_summary": {
-        "summary": "DUAL-STream diffusion (DUST), developed at KAIST, is a Vision-Language-Action (VLA) model that employs a dual-stream diffusion architecture to jointly predict future observations and actions, explicitly addressing modality conflicts for robotic control. The model achieves state-of-the-art performance across simulated and real-world tasks, showing a 13% average success rate improvement on real-world tasks and enhanced data efficiency through action-free video pre-training.",
-        "originalProblem": [
-          "Existing VLA models struggle with modality conflict when jointly predicting actions (low-dimensional) and future visual observations (high-dimensional), as unified approaches mix distinct data types and causal models limit bidirectional information flow.",
-          "Robot policy learning often lacks an explicit understanding of physical processes, hindering generalization and the ability to anticipate how actions affect the environment.",
-          "The high cost and labor-intensive nature of collecting expert robot demonstrations create a significant data scarcity bottleneck for training robust VLA models."
-        ],
-        "solution": [
-          "A dual-stream multimodal diffusion transformer (MMDiT) architecture processes action and vision tokens in separate pathways, only temporarily concatenating them during a shared cross-modal attention layer for rich, bidirectional information exchange.",
-          "A decoupled training algorithm applies independent noise levels and separate timesteps to action and future observation embeddings, enabling efficient joint optimization and learning of bidirectional causal dependencies.",
-          "An asynchronous joint sampling strategy during inference allows vision tokens to undergo more denoising steps than action tokens, optimizing the trade-off between inference speed and visual prediction accuracy."
-        ],
-        "keyInsights": [
-          "Maintaining separate processing streams for actions and vision while allowing deep, bidirectional cross-modal interaction effectively resolves modality conflicts, leading to improved VLA model performance and learning efficiency.",
-          "Decoupled noise scheduling during training is crucial for efficiently optimizing both action prediction and world modeling objectives and learning their bidirectional causal relationships.",
-          "Leveraging large-scale, action-free video data for pre-training significantly enhances data efficiency and generalization capabilities for downstream robotic policy learning tasks."
-        ],
-        "results": [
-          "DUST improved average success rates by 18% over GR00T-N1.5 and 5% over FLARE on RoboCasa simulated kitchen tasks with 100 demonstrations, demonstrating strong data efficiency.",
-          "The model achieved a 13% average success rate improvement over GR00T-N1.5 and 12% over FLARE on real-world Franka Research 3 pick-and-place tasks.",
-          "Pre-training DUST on action-free video data from BridgeV2 significantly enhanced transfer learning, boosting the average success rate on RoboCasa from 0.501 to 0.585 with limited robot demonstrations."
-        ]
-      },
-      "image_url": "image/2510.27607v1.png",
-      "universal_paper_id": "2510.27607",
-      "metrics": {
-        "total_votes": 3,
-        "visits_count": {
-          "all": 50,
-          "last_7_days": 50
+          "all": 56,
+          "last_7_days": 56
         },
         "public_total_votes": 11
       },
-      "first_publication_date": "2025-10-31T16:32:12.000Z",
-      "publication_date": "2025-10-31T16:32:12.000Z",
-      "updated_at": "2025-11-03T05:48:38.616Z",
+      "first_publication_date": "2025-11-03T16:26:54.000Z",
+      "publication_date": "2025-11-03T16:26:54.000Z",
+      "updated_at": "2025-11-04T05:25:52.042Z",
       "topics": [
         "Computer Science",
         "cs.CV",
         "cs.RO",
         "generative-models",
-        "inference-optimization",
+        "image-generation",
+        "imitation-learning",
         "multi-modal-learning",
-        "reinforcement-learning",
         "robotic-control",
         "robotics-perception",
-        "transfer-learning",
         "transformers",
         "vision-language-models"
       ],
       "organization_info": [
         {
-          "name": "KAIST",
-          "image": "images/organizations/kaist.png"
-        },
-        {
-          "name": "RLWRLD",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a47e0-5c4d-73b6-8c02-d5000852a3b2",
-      "paper_group_id": "019a47e0-5c4d-73b6-8c02-d5000852a3b2",
-      "title": "ThinkMorph: Emergent Properties in Multimodal Interleaved Chain-of-Thought Reasoning",
-      "abstract": "多模态推理需要语言和视觉之间的迭代协调，但目前尚不清楚什么构成有意义的交错思维链。我们认为，文本和图像的思维应该作为互为补充的模态，而不是同构的模态，彼此推动推理。基于这一原则，我们构建了ThinkMorph，这是一个统一模型，在24,000条高质量的交错推理轨迹上进行微调，涵盖了不同视觉参与度的任务。ThinkMorph学习生成渐进的文本-图像推理步骤，这些步骤具体操作视觉内容，同时保持一致的语言逻辑。它在以视觉为中心的基准测试中取得了显著提升（相较于基础模型平均提升34.7%），并对外部领域任务具有良好的泛化能力，能够与更大规模和专有的视觉语言模型相匹配或超越。除了性能，ThinkMorph展现出新兴的多模态智能，包括前所未见的视觉操作技能、推理模式的自适应切换，以及通过多样化的多模态测试时间扩展能力。以上发现为描述统一模型在多模态推理中涌现出的能力指明了有前景的方向。",
-      "paper_summary": {
-        "summary": "ThinkMorph, a unified model from an international team including researchers from the National University of Singapore and Stanford University, integrates language and vision to generate progressive text-image reasoning steps. The model achieves substantial performance gains on vision-centric tasks, outperforming its base model by 34.74% on average and rivaling larger models, while demonstrating emergent properties like unseen visual manipulations and autonomous mode switching.",
-        "originalProblem": [
-          "Existing multimodal reasoning models often treat visual input as supplementary to language or rely on indirect, brittle tool-augmented approaches.",
-          "Current unified multimodal Chain-of-Thought (CoT) models lack a generalizable method for text and image modalities to genuinely and mutually advance problem-solving.",
-          "Multimodal problems requiring active interrogation and manipulation of visual elements (e.g., spatial reasoning) are not adequately addressed by models primarily focused on textual descriptions."
-        ],
-        "solution": [
-          "ThinkMorph is developed as a unified model, fine-tuned from Bagel-7B, to generate seamlessly interleaved sequences of text and image tokens within a single reasoning trace.",
-          "A high-quality interleaved training dataset of approximately 24,000 reasoning traces is meticulously curated across four vision-centric tasks, ensuring text and visual manipulations are complementary and verifiable.",
-          "The model is trained using a dual-objective optimization with Mean Squared Error (MSE) for image tokens and negative log-likelihood for text tokens, fostering both contextual image generation and coherent verbal logic."
-        ],
-        "keyInsights": [
-          "Deep, interleaved training with complementary text-image data enables unified multimodal models to develop adaptive, human-like 'think-and-sketch' problem-solving strategies.",
-          "Interleaving modalities is crucial for tasks demanding precise visual grounding and manipulation, as visual 'thoughts' provide concrete, verifiable actions that textual reasoning alone cannot capture.",
-          "Such integrated training leads to emergent multimodal intelligence, including the ability to perform novel visual manipulations, autonomously switch reasoning modes, and achieve robust test-time scaling through diversified multimodal thoughts."
-        ],
-        "results": [
-          "ThinkMorph achieves an average performance gain of 34.74% over its base model (Bagel-7B) on vision-centric benchmarks, with specific increases of 85.84% on Spatial Navigation and 38.75% on Jigsaw Assembly.",
-          "The model consistently outperforms unimodal (text-only and vision-only) approaches by an average of 5.33% on vision-centric tasks and rivals or exceeds larger models, outperforming GPT-4o on SAT (52.67% vs. 28.00%).",
-          "ThinkMorph exhibits emergent properties: generating accurate, unseen visual manipulations, autonomously switching to text-only reasoning in 5.3% of cases with higher accuracy (81.25%), and achieving an 8.0% accuracy gain on BLINK-J through diversified test-time scaling."
-        ]
-      },
-      "image_url": "image/2510.27492v1.png",
-      "universal_paper_id": "2510.27492",
-      "metrics": {
-        "total_votes": 4,
-        "visits_count": {
-          "all": 129,
-          "last_7_days": 129
-        },
-        "public_total_votes": 17
-      },
-      "first_publication_date": "2025-10-30T17:51:38.000Z",
-      "publication_date": "2025-10-30T17:51:38.000Z",
-      "updated_at": "2025-11-03T04:01:17.389Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV"
-      ],
-      "organization_info": [
-        {
-          "name": "University of Washington",
-          "image": "images/organizations/uw.png"
-        },
-        {
-          "name": "National University of Singapore",
-          "image": "images/organizations/national-university-of-singapore.svg+xml"
-        },
-        {
-          "name": "Stanford University",
-          "image": "images/organizations/stanford.png"
+          "name": "Monash University",
+          "image": "images/organizations/monash-university.png"
         },
         {
           "name": "Zhejiang University",
           "image": "images/organizations/zhejiang.png"
         },
         {
-          "name": "The Chinese University of Hong Kong",
-          "image": "images/organizations/chinesehongkong.png"
+          "name": "Westlake University",
+          "image": "images/organizations/westlake-university.jpeg"
+        },
+        {
+          "name": "HKUST(GZ)",
+          "image": null
         }
       ],
       "author_info": [],
-      "github_stars": 9,
-      "github_url": "https://github.com/ThinkMorph/ThinkMorph",
+      "github_stars": 3,
+      "github_url": "https://github.com/OpenHelix-Team/UD-VLA",
       "distance": 1
     },
     {
       "id": "019a47ab-b12a-7771-a0dd-e19b18260bfe",
       "paper_group_id": "019a47ab-b12a-7771-a0dd-e19b18260bfe",
       "title": "The Denario project: Deep knowledge AI agents for scientific discovery",
-      "abstract": "我们介绍了Denario，一个旨在作为科学研究助手的人工智能多智能体系统。Denario可以执行许多不同的任务，例如生成创意、查阅文献、制定研究计划、编写和执行代码、制作图表以及撰写和审查科学论文。该系统具有模块化架构，能够处理特定任务，如生成创意或使用Cmbagent作为深度研究后端进行端到端的科学分析。在这项工作中，我们详细描述了Denario及其模块，并通过展示多个在天体物理学、生物学、生物物理学、生物医学信息学、化学、材料科学、数学物理、医学、神经科学和行星科学等不同科学领域生成的AI论文来说明其能力。Denario在结合不同学科的创意方面也表现出色，我们通过展示一篇将量子物理和机器学习方法应用于天体物理数据的论文来说明这一点。我们报告了领域专家对这些论文进行的评估，他们提供了数值评分和类似审稿的反馈。随后，我们强调了当前系统的优点、缺点和局限性。最后，我们讨论了人工智能驱动研究的伦理影响，并反思这种技术与科学哲学的关系。我们将在此https网址公开发布代码。Denario演示也可以直接在此https网址上运行，完整应用将部署在云上。",
+      "abstract": "我们介绍了Denario，一个旨在作为科学研究助手的AI多智能体系统。Denario可以执行多种不同的任务，比如生成创意、查阅文献、制定研究计划、编写和执行代码、制作图表，以及撰写和审阅科学论文。该系统采用模块化架构，可以处理特定任务，例如生成创意，或使用Cmbagent作为深度研究后端进行端到端的科学分析。在这项工作中，我们详细描述了Denario及其模块，并通过展示其在天体物理学、生物学、生物物理学、生物医学信息学、化学、材料科学、数学物理学、医学、神经科学和行星科学等多个科学领域生成的多篇AI论文来说明其能力。Denario还擅长于结合不同学科的想法，我们通过展示一篇将量子物理和机器学习方法应用于天体物理数据的论文来说明这一点。我们报告了领域专家对这些论文所进行的评估，专家提供了数值评分以及类似审稿的反馈意见。然后，我们强调了当前系统的优点、缺点和局限性。最后，我们讨论了AI驱动研究的伦理影响，并反思这种技术与科学哲学的关系。我们在这个HTTPS链接上公开发布了代码。Denario的演示也可以在这个HTTPS链接上直接运行，完整应用程序将部署在云端。",
       "paper_summary": null,
       "image_url": "image/2510.26887v1.png",
       "universal_paper_id": "2510.26887",
       "metrics": {
         "total_votes": 1,
         "visits_count": {
-          "all": 80,
-          "last_7_days": 80
+          "all": 197,
+          "last_7_days": 197
         },
-        "public_total_votes": 11
+        "public_total_votes": 22
       },
       "first_publication_date": "2025-10-30T18:00:12.000Z",
       "publication_date": "2025-10-30T18:00:12.000Z",
@@ -900,54 +703,725 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a390b-4669-7dae-925a-1140f1643bf9",
-      "paper_group_id": "019a390b-4669-7dae-925a-1140f1643bf9",
-      "title": "Encoder-Decoder or Decoder-Only? Revisiting Encoder-Decoder Large Language Model",
-      "abstract": "最近的大型语言模型（LLM）研究经历了从编码器-解码器建模到如今主流的仅解码器建模的结构转变。然而，这一迅速的转变并没有进行严格的比较分析，尤其是在“规模扩展的视角”上，引发了人们对编码器-解码器模型潜力可能被忽视的担忧。为填补这一空白，我们重新审视了编码器-解码器LLM（RedLLM），并结合了最近从仅解码器LLM（DecLLM）得来的新方法。我们在不同模型规模下，对RedLLM（使用前缀语言建模预训练）和DecLLM（使用因果语言建模预训练）进行了全面比较，模型规模范围从约150M到约8B。使用RedPajama V1（1.6T个token）进行预训练，并使用FLAN进行指令微调，我们的实验表明RedLLM展现出令人信服的规模扩展特性和意想不到的强大性能。尽管在预训练阶段，DecLLM整体上更具计算效率，但RedLLM显示出可比的规模扩展能力和上下文长度外推能力。在指令微调后，RedLLM在各种下游任务中取得了可比甚至更好的结果，同时享受了显著更好的推断效率。我们希望我们的发现能够激励更多人重新审视RedLLM，发掘其开发强大而高效的LLM的潜力。",
+      "id": "019a380e-b464-7026-a226-547dfe0bbcfa",
+      "paper_group_id": "019a380e-b464-7026-a226-547dfe0bbcfa",
+      "title": "Supervised Reinforcement Learning: From Expert Trajectories to Step-wise Reasoning",
+      "abstract": "大型语言模型（LLMs）常常在需要多步骤推理的问题上表现不佳。对于小规模的开源模型，基于可验证奖励的强化学习（RLVR）在正确解决方案很少被采样的情况下，即使经过多次尝试也会失败，而监督微调（SFT）则倾向于通过严格的逐 token 模仿来过拟合长示范。为了解决这个问题，我们提出了监督强化学习（SRL），这是一个将问题解决重新表述为生成一系列逻辑“动作”的框架。SRL 训练模型在执行每个动作之前生成内部推理独白。它根据模型的动作与从 SFT 数据集中提取的专家动作之间的相似性，以逐步的方式提供更平滑的奖励。这种监督即使在所有 rollout 均不正确的情况下，也提供了更丰富的学习信号，同时鼓励根据专家示范灵活推理。因此，SRL 使小模型能够学习以前无法通过 SFT 或 RLVR 学习的复杂问题。此外，在使用 RLVR 进行精细化之前，先使用 SRL 初始化训练能获得最强的整体性能。在推理基准之外，SRL 在自主软件工程任务中也表现出有效的迁移能力，确立了其作为面向推理的 LLMs 训练框架的稳健性和多样性。",
       "paper_summary": {
-        "summary": "Google DeepMind researchers systematically compared modernized encoder-decoder Large Language Models (RedLLM) against decoder-only models (DecLLM) up to 8 billion parameters, finding RedLLM achieves comparable or superior performance post-instruction tuning with significantly better training and inference efficiency. Its superior context length extrapolation also stands out.",
+        "summary": "The Supervised Reinforcement Learning (SRL) framework enables smaller Large Language Models (LLMs) to learn complex multi-step reasoning by providing dense, step-wise similarity rewards from expert demonstrations. It notably improved greedy average accuracy on math reasoning benchmarks by 3.0% over the base model, and showed a 74% relative improvement in resolve rate on agentic software engineering tasks.",
         "originalProblem": [
-          "The rapid architectural shift towards decoder-only LLMs lacked a comprehensive, scaling-perspective comparison against encoder-decoder models.",
-          "A rigorous analysis of how encoder-decoder architectures scale with increasing model size and computational resources was missing.",
-          "Potential benefits of encoder-decoder models regarding efficiency and adaptability for instruction tuning may have been overlooked."
+          "Small-scale, open-source LLMs struggle to solve challenging multi-step reasoning problems effectively with current training paradigms.",
+          "Supervised Fine-Tuning (SFT) often leads to overfitting on complex expert demonstrations, sometimes causing performance degradation for smaller models.",
+          "Reinforcement Learning with Verifiable Rewards (RLVR) faces sparse reward signals on difficult problems, hindering effective learning due to a lack of positive advantage estimates."
         ],
         "solution": [
-          "Developed RedLLM, an enhanced encoder-decoder architecture integrating modern architectural recipes (e.g., Rotary Positional Embedding, SwiGLU) common in successful decoder-only LLMs.",
-          "Conducted a systematic, large-scale comparative analysis of RedLLM and DecLLM across five model scales (150M to 8B parameters) on pretraining perplexity, zero-shot, and few-shot tasks.",
-          "Assessed adaptability through instruction tuning on the FLAN collection and measured empirical training and inference throughput."
+          "Introduced Supervised Reinforcement Learning (SRL), which reformulates problem-solving as a sequential decision-making process by decomposing expert solutions into logical 'actions'.",
+          "Generated step-wise training data from expert trajectories and provided a dense sequence similarity reward based on the model's predicted action, allowing for flexible internal monologues.",
+          "Optimized the policy using a Group Relative Policy Optimization (GRPO) objective with dynamic sampling and explored a curriculum learning strategy combining SRL with RLVR."
         ],
         "keyInsights": [
-          "RedLLM demonstrates remarkable adaptability post-instruction tuning, matching and often surpassing DecLLM's performance on downstream tasks, despite weaker initial pretraining zero/few-shot capabilities.",
-          "Encoder-decoder architectures offer substantial advantages in both training and inference efficiency, processing significantly more examples per second than decoder-only models.",
-          "RedLLM exhibits stronger context length extrapolation capabilities, showing a smoother and more stable perplexity increase for sequence lengths well beyond pretraining limits (e.g., up to 16K tokens)."
+          "Dense, step-wise supervision, through sequence similarity rewards on discrete actions, effectively guides LLMs on complex problems where sparse rewards or rigid imitation fail.",
+          "SRL encourages flexible and sophisticated reasoning patterns, including planning, on-the-fly adjustments, and reflective verification, without merely increasing output length.",
+          "The combination of SRL for initial robust guidance and subsequent RLVR refinement forms a powerful curriculum learning approach for maximizing performance on challenging tasks."
         ],
         "results": [
-          "RedLLM's zero-shot and few-shot performance after instruction tuning matched or surpassed DecLLM, particularly when normalized by inference FLOPs.",
-          "Empirical efficiency measurements showed RedLLM processed significantly more examples per second during both training and inference across all model sizes.",
-          "RedLLM maintained a smoother perplexity curve at extended context lengths (e.g., up to 16K tokens) compared to DecLLM, indicating better generalization to longer sequences."
+          "SRL alone achieved a 27.6% greedy average accuracy on math reasoning benchmarks, a 3.0% increase over the base Qwen2.5-7B-Instruct model.",
+          "The SRL → RLVR pipeline delivered the strongest performance, reaching 28.3% greedy average accuracy, a 3.7% increase over the base model and outperforming all baselines.",
+          "SRL generalized to agentic software engineering tasks, achieving a 14.8% resolve rate in an oracle file editing setting, representing a 74% relative improvement over an SFT baseline."
         ]
       },
-      "image_url": "image/2510.26622v1.png",
-      "universal_paper_id": "2510.26622",
+      "image_url": "image/2510.25992v1.png",
+      "universal_paper_id": "2510.25992",
+      "metrics": {
+        "total_votes": 16,
+        "visits_count": {
+          "all": 781,
+          "last_7_days": 781
+        },
+        "public_total_votes": 75
+      },
+      "first_publication_date": "2025-10-29T22:05:08.000Z",
+      "publication_date": "2025-10-29T22:05:08.000Z",
+      "updated_at": "2025-10-31T02:17:59.140Z",
+      "topics": [
+        "agents",
+        "chain-of-thought",
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "fine-tuning",
+        "imitation-learning",
+        "reasoning",
+        "reinforcement-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "UCLA",
+          "image": "images/organizations/ucla.png"
+        },
+        {
+          "name": "Google Cloud",
+          "image": null
+        },
+        {
+          "name": "Google Cloud AI Research",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a4faa-3a91-7dfb-a787-186de6f8b564",
+      "paper_group_id": "019a4faa-3a91-7dfb-a787-186de6f8b564",
+      "title": "MotionStream: Real-Time Video Generation with Interactive Motion Controls",
+      "abstract": "当前运动条件视频生成方法存在过高的延迟（每个视频数分钟）和非因果处理，无法实现实时交互。我们提出了MotionStream，使得在单个GPU上能够实现亚秒级延迟，达到每秒最多29帧的流生成。我们的方法首先通过运动控制增强了文本到视频模型，该模型生成遵循全局文本提示和局部运动指导的高质量视频，但不进行即时推断。因此，我们通过分布匹配蒸馏的自我强迫，将这种双向教师蒸馏为因果学生，从而实现实时流推断。在生成长时间（可能是无限）视频时，出现了几个关键挑战：（1）弥合在有限长度上训练与外推到无限视域之间的领域差距，（2）通过防止错误积累来保持高质量，以及（3）维持快速推断，而不因上下文窗口的增加而导致计算成本增长。我们方法的关键是引入精心设计的滑动窗口因果注意力，并结合注意力汇聚。通过在训练期间结合具有注意力汇聚的自回滚和KV缓存滚动，我们能够在固定上下文窗口下适当模拟推断时的外推，使得可以以恒定速度生成任意长度的视频。我们的模型在运动跟随和视频质量方面达到了最先进的结果，同时速度快了两个数量级，独特地支持无限长度的流媒体生成。通过MotionStream，用户可以绘制轨迹、控制摄像机或转移运动，并实时看到结果展开，提供真正的互动体验。",
+      "paper_summary": {
+        "summary": "MotionStream, developed by researchers from Adobe Research, Carnegie Mellon University, and Seoul National University, introduces a framework for real-time, interactive, and infinite-length video generation with motion controls. It achieves up to 29.5 FPS with 0.39s latency on a single H100 GPU, enabling users to continuously guide photorealistic video generation with immediate results.",
+        "originalProblem": [
+          "Existing motion-controlled video generation methods are offline and non-causal, requiring full motion input upfront and resulting in prohibitive latency (e.g., minutes for a 5-second clip).",
+          "Prior autoregressive video models struggle with maintaining long-term consistency and generating high-quality content over extended durations, often exhibiting issues like color drifts.",
+          "Interactive video world models often demand substantial computational resources for inference or are limited to closed-domain or synthetic environments."
+        ],
+        "solution": [
+          "A two-stage pipeline is used: first, a bidirectional motion-controlled teacher model is trained with a lightweight sinusoidal positional encoding for track representation and joint text-motion guidance.",
+          "This high-quality teacher is then distilled into a fast, causal student model for streaming generation, employing autoregressive roll-out with rolling Key-Value (KV) caches and attention sinks.",
+          "An optimized 'Tiny VAE' decoder is integrated to significantly reduce video decoding time, further boosting overall frame rates and reducing latency for real-time performance."
+        ],
+        "keyInsights": [
+          "A lightweight track representation using sinusoidal positional embeddings and a learnable track head proves two orders of magnitude faster (24.8ms) than VAE-based RGB encoding while maintaining motion accuracy.",
+          "The 'attention sink' mechanism, adapted from StreamingLLMs, is critical for preventing quality degradation and drift during long-video extrapolation, with a minimal single-chunk sink proving most effective.",
+          "Explicitly simulating autoregressive inference dynamics, including self-rollout with rolling KV caches and attention sinks, during student training is crucial for a perfect train-test match and stable long-term generation."
+        ],
+        "results": [
+          "Achieves up to 29.5 FPS with 0.39s latency on a single H100 GPU for 480P video, outperforming prior methods in speed by two orders of magnitude while demonstrating better motion accuracy (e.g., EPE of 7.80 on DAVIS).",
+          "The track-conditioned causal model significantly outperforms specialized 3D novel view synthesis baselines in visual fidelity (PSNR, SSIM, LPIPS) on the LLFF dataset at 16.7 FPS.",
+          "Effectively supports real-time interactive applications, including online motion transfer, user drag operations, and 3D camera control, allowing continuous guidance and immediate visual feedback."
+        ]
+      },
+      "image_url": "image/2511.01266v1.png",
+      "universal_paper_id": "2511.01266",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 34,
+          "last_7_days": 34
+        },
+        "public_total_votes": 5
+      },
+      "first_publication_date": "2025-11-03T06:37:53.000Z",
+      "publication_date": "2025-11-03T06:37:53.000Z",
+      "updated_at": "2025-11-04T16:19:07.537Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "cs.LG",
+        "efficient-transformers",
+        "generative-models",
+        "human-ai-interaction",
+        "inference-optimization",
+        "knowledge-distillation",
+        "sequence-modeling",
+        "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a383a-e3e1-778f-9603-1e1f3b783290",
+      "paper_group_id": "019a383a-e3e1-778f-9603-1e1f3b783290",
+      "title": "The Era of Agentic Organization: Learning to Organize with Language Models",
+      "abstract": "我们设想一个新的人工智能时代，称为代理组织，在这个时代，代理通过协作和并行工作解决复杂问题，从而实现超越个体智慧的结果。为了实现这一愿景，我们引入了异步思维（AsyncThink），作为一种新的推理范式，与大型语言模型结合，组织内部思维过程为可并行执行的结构。具体来说，我们提出了一种思维协议，其中组织者动态地将子查询分配给工作者，合并中间知识，并生成连贯的解决方案。更重要的是，这种思维结构可以通过强化学习进一步优化。实验表明，与并行思维相比，AsyncThink 的推理延迟降低了 28%，同时提高了数学推理的准确性。此外，AsyncThink 还将其学习到的异步思维能力进行了泛化，能够有效应对未见过的任务，而无须额外的训练。",
+      "paper_summary": {
+        "summary": "A new reasoning paradigm, AsyncThink, enables large language models to learn and execute self-organized, asynchronous thought processes. This approach achieves superior accuracy and reduces critical-path latency by 28% on mathematical reasoning tasks, and demonstrates strong generalization across various complex problem-solving scenarios.",
+        "originalProblem": [
+          "Current large language models (LLMs) face limitations in solving complex, multi-faceted problems that require more than sequential or simple parallel thinking.",
+          "Existing parallel reasoning approaches suffer from high critical-path latency, as they must wait for the slowest independent reasoning trace to complete before aggregation.",
+          "Manually designed, static reasoning workflows lack the adaptivity needed for diverse queries, hindering dynamic problem decomposition and execution."
+        ],
+        "solution": [
+          "AsyncThink proposes an Organizer-Worker Thinking Protocol where a single LLM backbone dynamically manages its thought process, using \"Fork\" to delegate sub-queries and \"Join\" to integrate results.",
+          "A two-stage training procedure starts with supervised fine-tuning on GPT-4o synthesized data to teach the protocol's text-based syntax.",
+          "Reinforcement learning, utilizing a rule-based reward system, optimizes the model's ability to maximize correctness and thinking concurrency, adapting the Group Relative Policy Optimization (GRPO) algorithm for non-sequential traces."
+        ],
+        "keyInsights": [
+          "Large language models can learn to dynamically self-organize their internal reasoning processes through \"Fork\" and \"Join\" operations, moving beyond static, predefined thinking workflows.",
+          "Optimizing for both correctness and a quantifiable thinking concurrency reward during reinforcement learning is essential for achieving efficient and high-performing asynchronous problem-solving.",
+          "The learned asynchronous thinking policies demonstrate strong generalization capabilities, allowing models to apply complex decomposition strategies to entirely unseen problem domains."
+        ],
+        "results": [
+          "AsyncThink significantly increased \"All Correct\" solutions on Multi-Solution Countdown to 89.0%, surpassing parallel thinking (68.6%) and sequential thinking (70.5%).",
+          "On mathematical reasoning benchmarks, it achieved comparable or superior accuracy while reducing critical-path latency by up to 28% compared to existing parallel thinking methods.",
+          "The system demonstrated strong zero-shot generalization, achieving 89.4% accuracy on 4x4 Sudoku with lower latency, even when trained on different tasks."
+        ]
+      },
+      "image_url": "image/2510.26658v1.png",
+      "universal_paper_id": "2510.26658",
+      "metrics": {
+        "total_votes": 8,
+        "visits_count": {
+          "all": 442,
+          "last_7_days": 442
+        },
+        "public_total_votes": 46
+      },
+      "first_publication_date": "2025-10-30T16:25:10.000Z",
+      "publication_date": "2025-10-30T16:25:10.000Z",
+      "updated_at": "2025-10-31T03:06:14.881Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
+      "paper_group_id": "019a330b-5931-7217-bd0d-53a1f43c09bd",
+      "title": "Scaling Latent Reasoning via Looped Language Models",
+      "abstract": "现代大型语言模型（LLM）主要通过显式文本生成的方式“思考”，例如链式推理（CoT），这将推理推迟到训练后，并未充分利用预训练数据。我们提出并开源了Ouro，命名源自递归的乌鲁波罗斯，它是一系列预训练的循环语言模型（LoopLM），通过（i）在潜在空间中进行迭代计算，（ii）用于学习深度分配的熵正则化目标，以及（iii）扩展到7.7万亿个标记，将推理构建到预训练阶段。Ouro 1.4B和2.6B模型在广泛的基准测试中表现优越，达到了高达12B的最新技术水平大型语言模型的结果。通过控制实验，我们表明这一优势并非来源于知识容量的提升，而是优越的知识操控能力。我们还表明，LoopLM产生的推理痕迹与最终输出的对齐程度高于显式的CoT。我们希望我们的结果展示了LoopLM在推理时代作为一种新兴扩展方向的潜力。我们的模型可以在：这个HTTP网址中找到。",
+      "paper_summary": {
+        "summary": "Researchers introduce Ouro, a family of Looped Language Models (LoopLM) that offers a new scaling pathway for large language models, achieving 2-3x parameter efficiency and improved reasoning capabilities by leveraging iterative latent computation. This approach demonstrates enhanced safety and more faithful reasoning, particularly on complex tasks.",
+        "originalProblem": [
+          "Traditional scaling of Large Language Models (LLMs) faces diminishing returns, leading to prohibitively high computational costs and data scarcity.",
+          "Deploying massive LLMs is hindered by significant latency, cost, and infrastructure requirements, limiting accessibility.",
+          "Current reasoning methods, such as Chain-of-Thought, extend output sequences, increasing inference cost and often provide post-hoc rationalizations rather than integrated latent reasoning."
+        ],
+        "solution": [
+          "Developed Ouro, a family of Looped Language Models (LoopLM) that applies shared-weight transformer layers recurrently to scale computational depth without increasing parameter count.",
+          "Integrated an adaptive computation mechanism that employs learned early exit gates, enabling dynamic allocation of recurrent steps based on input complexity.",
+          "Trained these models using a multi-stage pre-training pipeline on 7.7 trillion tokens, incorporating an entropy-regularized loss and a specialized gate training objective for efficient learning."
+        ],
+        "keyInsights": [
+          "LoopLMs achieve performance gains by enhancing knowledge manipulation and compositional reasoning capabilities, rather than increasing raw knowledge storage capacity.",
+          "Iterative latent reasoning processes lead to a more causally faithful reasoning trace and a continuous improvement in safety alignment as recurrent steps increase.",
+          "Recurrent depth represents a critical third scaling axis for LLMs, allowing for significant parameter efficiency by decoupling computational depth from the number of unique parameters."
+        ],
+        "results": [
+          "Ouro 1.4B and 2.6B models demonstrate a 2-3x parameter efficiency, consistently matching or exceeding the performance of 4B and 8B parameter dense models, respectively, on challenging reasoning benchmarks like BBH, GSM8K, and MATH500.",
+          "Adaptive computation mechanisms effectively allocate resources, with specialized 'Ponder gate' training achieving the best accuracy-efficiency trade-off and KV cache sharing reducing decoding memory requirements by 4x.",
+          "Mechanistic studies confirmed LoopLMs excel at knowledge manipulation (e.g., higher sample efficiency on multi-hop QA) rather than increased knowledge capacity, and exhibit improved safety alignment with deeper recurrent steps."
+        ]
+      },
+      "image_url": "image/2510.25741v1.png",
+      "universal_paper_id": "2510.25741",
+      "metrics": {
+        "total_votes": 27,
+        "visits_count": {
+          "all": 1142,
+          "last_7_days": 1142
+        },
+        "public_total_votes": 106
+      },
+      "first_publication_date": "2025-10-29T17:45:42.000Z",
+      "publication_date": "2025-10-29T17:45:42.000Z",
+      "updated_at": "2025-10-30T02:56:13.105Z",
+      "topics": [
+        "chain-of-thought",
+        "Computer Science",
+        "cs.CL",
+        "lightweight-models",
+        "mechanistic-interpretability",
+        "optimization-methods",
+        "parameter-efficient-training",
+        "reasoning",
+        "representation-learning",
+        "self-supervised-learning",
+        "transformers"
+      ],
+      "organization_info": [
+        {
+          "name": "Carnegie Mellon University",
+          "image": "images/organizations/cmu.jpg"
+        },
+        {
+          "name": "University of Manchester",
+          "image": "images/organizations/university-of-manchester.png"
+        },
+        {
+          "name": "Mila - Quebec AI Institute",
+          "image": "images/organizations/mila.jpeg"
+        },
+        {
+          "name": "ByteDance",
+          "image": "images/organizations/bytedance.png"
+        },
+        {
+          "name": "Peking University",
+          "image": "images/organizations/peking.png"
+        },
+        {
+          "name": "University of Pennsylvania",
+          "image": "images/organizations/upenn.jpeg"
+        },
+        {
+          "name": "Princeton University",
+          "image": "images/organizations/princeton.jpg"
+        },
+        {
+          "name": "University of Montreal",
+          "image": null
+        },
+        {
+          "name": "University of California, Santa Cruz",
+          "image": "images/organizations/ucsc.png"
+        },
+        {
+          "name": "Conscium",
+          "image": null
+        },
+        {
+          "name": "M-A-P",
+          "image": null
+        }
+      ],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a47e0-5c4d-73b6-8c02-d5000852a3b2",
+      "paper_group_id": "019a47e0-5c4d-73b6-8c02-d5000852a3b2",
+      "title": "ThinkMorph: Emergent Properties in Multimodal Interleaved Chain-of-Thought Reasoning",
+      "abstract": "多模态推理需要语言和视觉之间的迭代协调，但尚不清楚什么构成了有意义的交织思维链。我们认为，文本和图像思维应作为互补而非同构的模态，相互促进推理。在这一原则指导下，我们构建了ThinkMorph，这是一个统一模型，经过约24,000个高质量交织推理痕迹的精细调优，涵盖了不同视觉参与度的任务。ThinkMorph学习生成逐步的文本-图像推理步骤，具体操作视觉内容的同时保持连贯的语言逻辑。它在以视觉为中心的基准测试上取得了显著的提升（相较于基础模型平均提高34.7%），并能够推广到领域外的任务，达到或超过更大且专有的视觉语言模型（VLM）。除了性能之外，ThinkMorph还展现了新兴的多模态智能，包括未见的视觉操作技能、在推理模式之间自适应切换的能力，以及通过多样化多模态思维实现更好的测试时间扩展。这些发现为表征统一模型在多模态推理中的新兴能力提出了有前景的方向。",
+      "paper_summary": null,
+      "image_url": "image/2510.27492v2.png",
+      "universal_paper_id": "2510.27492",
       "metrics": {
         "total_votes": 4,
         "visits_count": {
-          "all": 144,
-          "last_7_days": 144
+          "all": 210,
+          "last_7_days": 210
         },
-        "public_total_votes": 25
+        "public_total_votes": 26
       },
-      "first_publication_date": "2025-10-30T15:48:28.000Z",
-      "publication_date": "2025-10-30T15:48:28.000Z",
-      "updated_at": "2025-10-31T06:53:51.593Z",
+      "first_publication_date": "2025-10-30T17:51:38.000Z",
+      "publication_date": "2025-11-04T13:29:38.000Z",
+      "updated_at": "2025-11-03T04:01:17.389Z",
       "topics": [
         "Computer Science",
-        "cs.CL",
+        "cs.CV"
+      ],
+      "organization_info": [
+        {
+          "name": "University of Washington",
+          "image": "images/organizations/uw.png"
+        },
+        {
+          "name": "National University of Singapore",
+          "image": "images/organizations/national-university-of-singapore.svg+xml"
+        },
+        {
+          "name": "Stanford University",
+          "image": "images/organizations/stanford.png"
+        },
+        {
+          "name": "Zhejiang University",
+          "image": "images/organizations/zhejiang.png"
+        },
+        {
+          "name": "The Chinese University of Hong Kong",
+          "image": "images/organizations/chinesehongkong.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 9,
+      "github_url": "https://github.com/ThinkMorph/ThinkMorph",
+      "distance": 1
+    },
+    {
+      "id": "019a4d56-ae23-7d39-8e43-a906e66140b1",
+      "paper_group_id": "019a4d56-ae23-7d39-8e43-a906e66140b1",
+      "title": "PixelVLA: Advancing Pixel-level Understanding in Vision-Language-Action Model",
+      "abstract": "视觉-语言-动作模型（VLA）正作为学习可推广的视觉运动控制策略的强大工具而兴起。然而，目前的 VLA 在两方面仍然有限：（i）它们在像素级场景理解上存在困难，(ii) 它们过于依赖文本提示，这降低了在现实世界环境中的灵活性。为了解决这些挑战，我们推出了 PixelVLA，这是首个旨在支持像素级推理和文本及视觉输入多模态提示的 VLA 模型。我们的方法基于一个新的视觉运动指令调优框架，将多尺度像素感知编码器与视觉提示编码器相结合。为了有效训练 PixelVLA，我们进一步提出了一个两阶段自动注释管道，生成 Pixel-160K，这是一个大规模数据集，包含来自现有机器人数据的像素级注释。在三个标准 VLA 基准和两个 VLA 模型变体上的实验证明，PixelVLA 相较于 OpenVLA 提高了 10.1%-17.8% 的操作成功率，同时只需 1.5% 的预训练成本。这些结果表明，PixelVLA 可以集成到现有 VLA 中，从而在复杂环境中实现更准确、高效和多功能的机器人控制。数据集和代码将作为开源发布。",
+      "paper_summary": null,
+      "image_url": "image/2511.01571v1.png",
+      "universal_paper_id": "2511.01571",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 31,
+          "last_7_days": 31
+        },
+        "public_total_votes": 5
+      },
+      "first_publication_date": "2025-11-03T13:39:37.000Z",
+      "publication_date": "2025-11-03T13:39:37.000Z",
+      "updated_at": "2025-11-04T05:28:37.667Z",
+      "topics": [
+        "Computer Science",
+        "cs.CV",
+        "cs.RO",
+        "data-curation",
         "fine-tuning",
-        "inference-optimization",
+        "image-segmentation",
+        "imitation-learning",
+        "multi-modal-learning",
+        "robotic-control",
+        "robotics-perception",
+        "vision-language-models"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a4816-97ae-711f-8c4a-c6055c39d3d6",
+      "paper_group_id": "019a4816-97ae-711f-8c4a-c6055c39d3d6",
+      "title": "Spatial-SSRL: Enhancing Spatial Understanding via Self-Supervised Reinforcement Learning",
+      "abstract": "空间理解仍然是大型视觉语言模型（LVLMs）的一个弱点。现有的监督微调（SFT）和最近的可验证奖励强化学习（RLVR）流程依赖于昂贵的监督、专业工具或受限环境，这限制了规模。我们推出了Spatial-SSRL，这是一种自监督的强化学习范例，直接从普通的RGB或RGB-D图像中获取可验证信号。Spatial-SSRL自动 formulates 了五个前置任务，以捕捉二维和三维空间结构：打乱的补丁重排序、翻转补丁识别、裁剪补丁修复、区域深度排序以及相对三维位置预测。这些任务提供了易于验证的真实答案，且不需要人工或LVLM的标注。在我们的任务上训练显著提高了空间推理能力，同时保留了通用的视觉能力。在图像和视频设置的七个空间理解基准上，Spatial-SSRL相较于Qwen2.5-VL基线平均提升了4.63%（3B）和3.89%（7B）的准确率。我们的结果表明，简单的内在监督使得大型RLVR成为可能，并为LVLMs提供了一条实现更强空间智能的实用路径。",
+      "paper_summary": {
+        "summary": "Researchers at Shanghai AI Laboratory developed Spatial-SSRL, a self-supervised reinforcement learning framework that enhances the spatial understanding of Large Vision-Language Models (LVLMs) by generating verifiable ground-truth signals from ordinary images. The method consistently improved performance by an average of +4.63% on diverse spatial benchmarks for the 3B model and preserved or improved general visual capabilities.",
+        "originalProblem": [
+          "Large Vision-Language Models (LVLMs) demonstrate weak spatial understanding, struggling with depth, distance, orientation, and relative object positions in 3D.",
+          "Supervised Fine-Tuning (SFT) methods for spatial understanding are costly due to annotation needs and often lead to dataset-specific memorization rather than generalization.",
+          "Reinforcement Learning with Verifiable Rewards (RLVR) approaches are limited by their dependence on specialized tools, synthetic environments, or specific public datasets, hindering scalability."
+        ],
+        "solution": [
+          "A self-supervised reinforcement learning framework, Spatial-SSRL, is introduced to enhance LVLM spatial understanding.",
+          "Five pretext tasks (three depth-free and two depth-based) are designed to generate deterministic, verifiable ground-truth answers from RGB and RGB-D images.",
+          "Large Vision-Language Models are fine-tuned using Group Relative Policy Optimization (GRPO), leveraging a reward function based on answer accuracy and format adherence."
+        ],
+        "keyInsights": [
+          "Intrinsic structural information within ordinary 2D (RGB) and 3D (RGB-D) images can serve as scalable, naturally verifiable ground truth for spatial reasoning tasks.",
+          "Repurposing self-supervised learning objectives as reward functions within an RL framework effectively allows for cost-effective and scalable spatial intelligence acquisition.",
+          "Combining diverse self-supervised tasks (depth-free and depth-based) synergistically improves overall spatial reasoning across various dimensions."
+        ],
+        "results": [
+          "Spatial-SSRL consistently improved spatial understanding across seven benchmarks, with the 3B model achieving an average accuracy gain of +4.63% and the 7B model +3.89%.",
+          "Models trained with Spatial-SSRL demonstrated enhanced reasoning capabilities, outperforming baselines when prompted for explicit reasoning chains.",
+          "General visual capabilities, including VQA and fine-grained perception, were preserved and often improved, with the 3B model showing an average gain of +2.02% across general VQA benchmarks."
+        ]
+      },
+      "image_url": "image/2510.27606v1.png",
+      "universal_paper_id": "2510.27606",
+      "metrics": {
+        "total_votes": 5,
+        "visits_count": {
+          "all": 140,
+          "last_7_days": 140
+        },
+        "public_total_votes": 22
+      },
+      "first_publication_date": "2025-10-31T16:30:08.000Z",
+      "publication_date": "2025-10-31T16:30:08.000Z",
+      "updated_at": "2025-11-03T05:00:31.534Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.CV",
+        "deep-reinforcement-learning",
+        "geometric-deep-learning",
+        "multi-modal-learning",
         "representation-learning",
-        "sequence-modeling",
+        "self-supervised-learning",
+        "vision-language-models"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 14,
+      "github_url": "https://github.com/InternLM/Spatial-SSRL",
+      "distance": 1
+    },
+    {
+      "id": "019a38b6-4852-748b-80ff-8fca8b517243",
+      "paper_group_id": "019a38b6-4852-748b-80ff-8fca8b517243",
+      "title": "Defeating the Training-Inference Mismatch via FP16",
+      "abstract": "强化学习（RL）对大型语言模型（LLM）进行微调时常常面临不稳定性问题，这主要是因为训练和推理策略之间的数值不匹配。虽然之前的工作尝试通过算法修正或工程对齐来缓解这一问题，但我们展示了其根本原因在于浮点精度本身。尽管广泛采用的BF16具有较大的动态范围，但它会引入较大的舍入误差，从而破坏训练和推理之间的一致性。在本研究中，我们证明简单恢复使用\\textbf{FP16}可以有效消除这种不匹配。这一变化简单，现代框架完全支持，只需修改几行代码，并且不需要对模型架构或学习算法进行任何修改。我们的结果表明，均匀使用FP16可以实现更稳定的优化、更快的收敛速度以及在各种任务、算法和框架下更强的性能。我们希望这些发现能够激励人们更广泛地重新考虑RL微调中的精度权衡问题。",
+      "paper_summary": {
+        "summary": "This research from Sea AI Lab and the National University of Singapore demonstrates that using FP16 precision for both training and inference fundamentally resolves the numerical discrepancies causing instability in Reinforcement Learning (RL) fine-tuning of Large Language Models. Employing FP16 drastically reduces the training-inference mismatch, leading to more stable optimization, faster convergence, and superior performance compared to existing BF16-based methods and complex algorithmic corrections.",
+        "originalProblem": [
+          "Reinforcement Learning (RL) fine-tuning of Large Language Models (LLMs) often suffers from instability, training collapse, and sub-optimal performance.",
+          "The 'training-inference mismatch,' caused by numerical discrepancies between fast inference and gradient computation engines, leads to biased gradients and a 'deployment gap'.",
+          "Existing solutions, such as importance sampling corrections or manual engineering alignments, are computationally expensive, complex, or only address symptoms without eliminating the fundamental mismatch."
+        ],
+        "solution": [
+          "The paper hypothesizes and confirms that low floating-point precision, specifically BF16, is the root cause of the training-inference mismatch due to accumulated rounding errors.",
+          "The core solution involves switching from BF16 to FP16 precision for both the inference policy and the training engine in RL fine-tuning.",
+          "FP16's higher numerical precision (more mantissa bits) ensures that minor implementation differences are absorbed, preventing policy divergence, with standard loss scaling addressing its limited dynamic range."
+        ],
+        "keyInsights": [
+          "BF16's lower precision (7 mantissa bits) is a primary source of numerical instability in RL fine-tuning, causing policies to diverge even with identical model weights.",
+          "FP16's significantly higher precision (10 mantissa bits) effectively eliminates the training-inference mismatch by ensuring numerical consistency between inference and training policies.",
+          "By addressing the root cause of the mismatch, FP16 simplifies RL fine-tuning, allowing even simple, unbiased policy gradient estimators to perform robustly and effectively, rendering complex algorithmic corrections less necessary."
+        ],
+        "results": [
+          "FP16 reduced the training-inference mismatch in sequence-level log-probability ratios by approximately 24 times compared to BF16.",
+          "Switching to FP16 precision enabled traditional RL algorithms (e.g., GRPO, PG-Seq-IS) to converge stably and achieve nearly 100% training accuracy on a challenging dataset, while BF16-based methods frequently collapsed or converged slowly.",
+          "The benefits of FP16 generalized across diverse settings, including Mixture-of-Experts (MoE) models, LoRA-based fine-tuning, larger dense models, and different LLM architectures, consistently leading to higher training rewards and validation performance."
+        ]
+      },
+      "image_url": "image/2510.26788v1.png",
+      "universal_paper_id": "2510.26788",
+      "metrics": {
+        "total_votes": 28,
+        "visits_count": {
+          "all": 741,
+          "last_7_days": 741
+        },
+        "public_total_votes": 92
+      },
+      "first_publication_date": "2025-10-30T17:58:11.000Z",
+      "publication_date": "2025-10-30T17:58:11.000Z",
+      "updated_at": "2025-10-31T05:21:01.522Z",
+      "topics": [
+        "Computer Science",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "deep-reinforcement-learning",
+        "fine-tuning",
+        "hardware-aware-algorithms",
+        "ml-systems",
+        "optimization-methods",
         "transformers"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 5,
+      "github_url": "https://github.com/sail-sg/Precision-RL",
+      "distance": 1
+    },
+    {
+      "id": "019a52d6-c209-7788-8f67-88c7d50e50b1",
+      "paper_group_id": "019a52d6-c209-7788-8f67-88c7d50e50b1",
+      "title": "VCode: a Multimodal Coding Benchmark with SVG as Symbolic Visual Representation",
+      "abstract": "代码已成为智能体时代推理和行动的精确可执行媒介。然而，迄今为止，发展主要集中在语言驱动的任务上，如程序合成和调试，而视觉驱动的编码却未得到充分探讨。受到人类如何对草图进行推理的启发，我们提倡使用SVG代码作为一种紧凑、可解释和可执行的视觉表达方式。我们引入了VCode，一个将多模态理解重构为代码生成的基准：给定一张图像，模型必须生成保持符号意义的SVG，以便于后续推理。VCode涵盖三个领域——一般常识（MM-Vet）、专业学科（MMMU）和视觉驱动的感知（CV-Bench）。为了评估符号的保真度，我们提出了CodeVQA，一种新的评估协议，其中策略模型针对渲染的SVG回答问题；正确答案表明符号得到了忠实保留。在实证中，前沿的视觉语言模型在生成忠实的SVG方面仍存在困难，揭示了语言驱动编码与视觉驱动编码之间的持续差距。为缩小这一差距，我们引入了VCoder，一个在两个方向上增强视觉语言模型的智能框架：（i）通过修订进行思考，迭代分析差异并完善SVG代码；以及（ii）使用视觉工具进行行动，其中探测器和解析器提供结构化线索，如物体、形状和文本，超出了模型的内在能力。在各项基准测试中，具有强大推理能力的前沿视觉语言模型整体得分良好，但在专业知识和3D推理方面仍然有限。VCoder在顶级的Claude-4-Opus上提供了12.3分的整体提升。人类研究表明，无论是人类还是视觉语言模型在渲染的SVG上表现都较差，他们的一致性揭示了符号视觉表现的潜力。该基准和代码可在此HTTPS链接获取。",
+      "paper_summary": {
+        "summary": "The VCode project introduces a multimodal coding benchmark that requires Vision-Language Models to translate natural images into Scalable Vector Graphics (SVG) code, providing a symbolic and executable visual representation. The proposed VCoder framework, which employs iterative revision and external visual tools, improves state-of-the-art VLMs by 12.3 CodeVQA points on this challenging task.",
+        "originalProblem": [
+          "Existing coding benchmarks primarily evaluate language models on textual code without visual input.",
+          "Multimodal understanding benchmarks typically rely on natural language responses rather than generating symbolic visual representations in code.",
+          "Current pixel-based image representations offer limited symbolic abstraction, which is crucial for human-like visual reasoning and agentic action."
+        ],
+        "solution": [
+          "Introduces VCode, a benchmark that redefines multimodal understanding as a code generation task, requiring models to produce SVG from natural images that preserves symbolic meaning.",
+          "Proposes CodeVQA, a novel evaluation protocol that assesses the symbolic fidelity of generated SVG by having a policy model answer questions about the original image using only the rendered SVG.",
+          "Develops VCoder, an agentic framework that enhances VLMs through 'Thinking with Revision' (iterative refinement with rendering feedback) and 'Acting with Visual Tools' (integration of object detection, segmentation, and OCR)."
+        ],
+        "keyInsights": [
+          "A substantial gap persists between current state-of-the-art VLMs' language-centric and visual-centric coding capabilities, even for frontier models like GPT-5.",
+          "Models with stronger general reasoning consistently achieve better visual coding scores, and a positive correlation exists between semantic similarity and symbolic fidelity (CodeVQA performance).",
+          "Long-context code generation is a critical bottleneck, as models producing longer, more detailed SVG sequences tend to perform better."
+        ],
+        "results": [
+          "Frontier VLMs like GPT-5 achieve a CodeVQA score of 46.8, notably below the 61.7 score obtained by reasoning directly over raw images.",
+          "The VCoder framework, built on Claude-4-Opus, delivers an overall gain of 12.3 CodeVQA points, improving its score from 41.7 to 54.0 across diverse domains.",
+          "The ensemble of visual tools (category, location, shape, text) provides a significant 16.6-point improvement in CodeVQA over the base VLM, demonstrating the power of structured visual cues."
+        ]
+      },
+      "image_url": "image/2511.02778v1.png",
+      "universal_paper_id": "2511.02778",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 22,
+          "last_7_days": 22
+        },
+        "public_total_votes": 4
+      },
+      "first_publication_date": "2025-11-04T18:00:18.000Z",
+      "publication_date": "2025-11-04T18:00:18.000Z",
+      "updated_at": "2025-11-05T07:06:37.449Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.CL",
+        "cs.CV",
+        "image-generation",
+        "multi-modal-learning",
+        "reasoning",
+        "representation-learning",
+        "tool-use",
+        "vision-language-models",
+        "visual-qa"
+      ],
+      "organization_info": [
+        {
+          "name": "University of Oxford",
+          "image": "images/organizations/oxford.jpg"
+        },
+        {
+          "name": "University of Science and Technology of China",
+          "image": "images/organizations/university-of-science-and-technology-of-china.svg+xml"
+        },
+        {
+          "name": "Central South University",
+          "image": null
+        },
+        {
+          "name": "Microsoft",
+          "image": "images/organizations/microsoft.png"
+        }
+      ],
+      "author_info": [],
+      "github_stars": 29,
+      "github_url": "https://github.com/CSU-JPG/VCode",
+      "distance": 1
+    },
+    {
+      "id": "019a503d-c90c-77af-89dd-6eb6c4e45419",
+      "paper_group_id": "019a503d-c90c-77af-89dd-6eb6c4e45419",
+      "title": "ROVER: Benchmarking Reciprocal Cross-Modal Reasoning for Omnimodal Generation",
+      "abstract": "统一多模态模型（UMMs）作为一种强大的范式，已迅速发展成为无缝统一文本与图像理解和生成的工具。然而，现有的评估方法将这些能力孤立看待，使得涉及多模态输入和输出的任务主要通过单模态推理进行评分，即文本基准强调以语言为基础的推理，而视觉基准则强调以像素体现的推理结果。我们推出了ROVER，以应对测试互惠交叉模态推理这一迫切需求，即一种利用一种模态来指导、验证或完善另一种模态的输出的能力，这是统一多模态智能愿景的核心。ROVER是一个经过人工标注的基准，专门针对互惠交叉模态推理，其中包含1312个基于1876张图像的任务，涵盖了两种互补的设置。用于视觉生成的口头增强推理评估模型是否可以使用口头提示和推理链来指导忠实的图像合成。用于口头生成的视觉增强推理评估模型是否可以生成中间可视化，以加强其自身的推理过程以解答问题。在17个统一模型上的实验揭示了两个关键发现：（i）交叉模态推理决定视觉生成的质量，交错模型显著优于非交错模型；值得注意的是，简单结合强大的单模态模型并未达到可比的推理效果。（ii）模型在物理推理和象征推理之间存在解离：它们成功地对感知概念进行字面解释，但在构建象征性任务的视觉抽象时失败，错误的推理影响了性能。这些结果突显了互惠交叉模态推理作为实现真正全模态生成的关键前沿。",
+      "paper_summary": {
+        "summary": "The ROVER benchmark evaluates the reciprocal cross-modal reasoning abilities of unified multimodal models across visual and verbal generation tasks. It identified a clear dissociation in models' capabilities, showing proficiency in physical reasoning but significant struggles with abstract and symbolic visual reasoning.",
+        "originalProblem": [
+          "Unified Multimodal Models (UMMs) lacked benchmarks to assess their reciprocal cross-modal reasoning, where one modality guides or refines the other.",
+          "Prior evaluations primarily assessed unimodal abilities in isolation, failing to capture the synergistic intelligence needed for seamless understanding and generation across text and images.",
+          "Existing methods often overlooked the logical coherence of the reasoning process, focusing instead on output-level metrics."
+        ],
+        "solution": [
+          "Introduced ROVER, a human-annotated benchmark with 1,312 tasks across two settings: verbally-augmented reasoning for visual generation (ROVER-IG) and visually-augmented reasoning for verbal generation (ROVER-TG).",
+          "Designed a principled task taxonomy covering various conceptual domains and reasoning subtasks, ensuring visual outputs actively aid reasoning.",
+          "Developed a multi-dimensional evaluation protocol utilizing GPT-4.1 as an automated VLM-as-judge, assessing reasoning process quality, cross-modal alignment, and content consistency."
+        ],
+        "keyInsights": [
+          "Cross-modal reasoning capabilities directly determine the quality of visual generation, with better reasoning leading to superior visual outputs.",
+          "Current UMMs exhibit a notable dissociation: they perform well on physical world and visual perception tasks but struggle fundamentally with abstract and symbolic visual reasoning (e.g., in logic and mathematics).",
+          "Interleaved image-text generation significantly enhances visual generation performance, suggesting benefits from integrating reasoning steps across modalities."
+        ],
+        "results": [
+          "Closed-source models demonstrated ~38% higher verbal reasoning and ~31% better alignment scores, resulting in ~39% improved visual generation compared to open-source models.",
+          "Unified models showed limited capacity for meaningful visual reasoning steps on ROVER-TG, achieving only 38.8% average Interleaved Reasoning Quality.",
+          "Visual augmentation improved accuracy on physical world and visual perception tasks (by 3.5% to 3.8%) but degraded performance on logic and math tasks (by 1.4%) when visual reasoning was of low quality."
+        ]
+      },
+      "image_url": "image/2511.01163v1.png",
+      "universal_paper_id": "2511.01163",
+      "metrics": {
+        "total_votes": 1,
+        "visits_count": {
+          "all": 22,
+          "last_7_days": 22
+        },
+        "public_total_votes": 4
+      },
+      "first_publication_date": "2025-11-03T02:27:46.000Z",
+      "publication_date": "2025-11-03T02:27:46.000Z",
+      "updated_at": "2025-11-04T19:00:17.804Z",
+      "topics": [
+        "chain-of-thought",
+        "Computer Science",
+        "cs.CV",
+        "generative-models",
+        "image-generation",
+        "multi-modal-learning",
+        "reasoning",
+        "text-generation",
+        "vision-language-models",
+        "visual-qa"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": 0,
+      "github_url": "https://github.com/cheryyunl/ROVER",
+      "distance": 1
+    },
+    {
+      "id": "019a530b-216e-74d8-9f83-552c9844e288",
+      "paper_group_id": "019a530b-216e-74d8-9f83-552c9844e288",
+      "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
+      "abstract": "大规模数据推动了机器人技术的突破，从语言模型到双手操作中的视觉-语言-行动模型。然而，人形机器人在数据收集框架方面缺乏同样有效的方案。现有的人形遥操系统要么使用解耦控制，要么依赖昂贵的动作捕捉设备。我们介绍了TWIST2，一个便携式的无动作捕捉人形遥操与数据收集系统，它在推进可扩展性的同时保持了全身的完全控制。我们的系统利用PICO4U VR实时获取全身的人类动作，并配备一个自定义的2自由度机器人颈部（成本约为250美元）用于自我中心的视觉，实现了整体人类与人形的控制。我们展示了长时间的灵巧和移动人形技能，并且能够在15分钟内收集100个示范，成功率几乎达到100%。在此基础上，我们提出了一个自给自足的分层视觉运动策略框架，可以基于自我中心视觉自主控制整个模拟人类的身体。我们的视觉运动策略成功演示了全身灵巧操作和动态踢球任务。整个系统是完全可复制的，并已在此网址开源。我们收集的数据集也已在此网址开源。",
+      "paper_summary": {
+        "summary": "TWIST2 provides a scalable and portable system for collecting holistic humanoid data, leveraging affordable VR and a custom robot neck for whole-body teleoperation with active egocentric vision. This approach allows efficient generation of diverse human demonstrations, exemplified by collecting 100 bimanual pick & place demonstrations in 18.5 minutes, and enables training real-world autonomous policies.",
+        "originalProblem": [
+          "Humanoid robotics research faces a scarcity of high-quality, large-scale demonstration data, limiting the application of data-driven learning methods.",
+          "Existing full whole-body teleoperation systems for humanoids depend on expensive, non-portable motion capture setups, restricting data collection to specialized lab environments.",
+          "Developing general visuomotor policies for humanoids is challenging due to the need for coordinated whole-body control and integrated egocentric vision for complex tasks."
+        ],
+        "solution": [
+          "Developed TWIST2, a portable, low-cost human data source that replaces traditional MoCap by using a PICO 4U VR headset and ankle trackers for real-time full human body pose estimation.",
+          "Designed and integrated a custom, low-cost 2-DoF neck module for the Unitree G1 humanoid robot, equipped with a ZED Mini stereo camera to provide active egocentric stereo vision.",
+          "Implemented a two-level hierarchical control framework comprising a low-level reinforcement learning-trained motion tracker and a high-level command generator, either from human teleoperation or a visuomotor policy."
+        ],
+        "keyInsights": [
+          "Combining consumer-grade VR hardware with a custom active vision module enables highly effective, portable, and scalable whole-body teleoperation for humanoid robots.",
+          "Egocentric active perception and smooth whole-body tracking are crucial for allowing humanoids to execute natural, long-horizon, and mobile manipulation tasks efficiently.",
+          "Hierarchical visuomotor policies, trained on holistically collected data, can achieve vision-based autonomous control for diverse and complex whole-body humanoid tasks in real-world scenarios."
+        ],
+        "results": [
+          "TWIST2 successfully demonstrated teleoperation of complex, long-horizon whole-body dexterous tasks, such as folding towels and mobile object transport through doors.",
+          "The system achieved high data collection efficiency, with an expert teleoperator collecting approximately 100 bimanual pick & place demonstrations in 18.5 minutes (11 seconds/episode) with a 100% success rate.",
+          "Autonomous policies, trained on data collected via TWIST2, successfully performed real-world tasks like whole-body dexterous pick & place and kicking a T-shaped box to a target, demonstrating robust autonomous capabilities."
+        ]
+      },
+      "image_url": "image/2511.02832v1.png",
+      "universal_paper_id": "2511.02832",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 20,
+          "last_7_days": 20
+        },
+        "public_total_votes": 3
+      },
+      "first_publication_date": "2025-11-04T18:58:35.000Z",
+      "publication_date": "2025-11-04T18:58:35.000Z",
+      "updated_at": "2025-11-05T08:03:49.742Z",
+      "topics": [
+        "agents",
+        "Computer Science",
+        "cs.CV",
+        "cs.LG",
+        "cs.RO",
+        "data-curation",
+        "deep-reinforcement-learning",
+        "human-ai-interaction",
+        "imitation-learning",
+        "multi-modal-learning",
+        "robotic-control",
+        "robotics-perception"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
+      "distance": 1
+    },
+    {
+      "id": "019a51a1-893a-73b2-af52-16b3948d7168",
+      "paper_group_id": "019a51a1-893a-73b2-af52-16b3948d7168",
+      "title": "Tool-to-Agent Retrieval: Bridging Tools and Agents for Scalable LLM Multi-Agent Systems",
+      "abstract": "最近在大型语言模型多智能体系统（LLM Multi-Agent Systems）方面的进展，使得对子智能体的可扩展协调成为可能，每个智能体可以协调数百或数千个工具或模型上下文协议（MCP）服务器。然而，现有的检索方法通常在路由之前将查询与粗略的智能体级描述进行匹配，这模糊了细粒度工具功能，并经常导致次优的智能体选择。我们引入了工具到智能体检索（Tool-to-Agent Retrieval），这是一个统一框架，它将工具及其父智能体嵌入到共享的向量空间中，并通过元数据关系将它们连接起来。通过明确表示工具的能力并遍历元数据到达智能体级别，工具到智能体检索实现了细粒度的工具级或智能体级检索，确保智能体及其底层工具或MCP服务器得到平等的表示，而不会由于将许多工具归为一类而导致上下文稀释。我们在八个嵌入模型上评估工具到智能体检索的方法，结果显示，在LiveMCPBench基准上，相较于以前的最先进智能体检索器，我们的方法在Recall@5上 consistently 提高了19.4%，在nDCG@5上提高了17.7%。",
+      "paper_summary": null,
+      "image_url": "image/2511.01854v1.png",
+      "universal_paper_id": "2511.01854",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 18,
+          "last_7_days": 18
+        },
+        "public_total_votes": 3
+      },
+      "first_publication_date": "2025-11-03T18:58:28.000Z",
+      "publication_date": "2025-11-03T18:58:28.000Z",
+      "updated_at": "2025-11-05T01:28:52.282Z",
+      "topics": [
+        "agentic-frameworks",
+        "agents",
+        "Computer Science",
+        "cs.CL",
+        "embedding-methods",
+        "ml-systems",
+        "optimization-methods",
+        "representation-learning",
+        "tool-use"
       ],
       "organization_info": [],
       "author_info": [],
@@ -959,7 +1433,7 @@ const papersData = {
       "id": "019a3a21-a8fc-7107-a577-1dfa3427e6f7",
       "paper_group_id": "019a3a21-a8fc-7107-a577-1dfa3427e6f7",
       "title": "Deep sequence models tend to memorize geometrically; it is unclear why",
-      "abstract": "在序列建模中，原子事实的参数化记忆主要被抽象为实体之间共现的暴力查找。我们将这种关联视角与记忆存储的几何视角进行对比。我们首先隔离一个干净且可分析的Transformer推理实例，该实例与将记忆严格视为训练期间指定的局部共现的存储方式不相容。相反，模型必须以某种方式合成其自身的原子事实几何，在所有实体之间编码全球关系，包括那些未共现的实体。这反过来简化了一个涉及$\\ell$-重组合的困难推理任务，使其变为一个易于学习的1步几何任务。\n\n从这一现象中，我们提取出神经嵌入几何的基本方面，这些方面难以解释。我们认为，尽管仅在局部关联上进行优化，这种几何的出现不能简单归因于典型的架构或优化压力。反直觉的是，即使这种几何并不比关联的暴力查找更简洁，它依然被优雅地学习到了。\n\n随后，通过分析与Node2Vec的联系，我们展示了这种几何源于一种谱偏差——与现有理论相反，这种偏差确实是在缺乏各种压力的情况下自然产生的。这一分析还指出了实践者在使Transformer记忆更具几何性的明显空间。我们希望参数化记忆的几何视角能鼓励研究人员重新审视在知识获取、容量、发现和遗忘等领域指导他们的默认直觉。",
+      "abstract": "在序列建模中，原子事实的参数化记忆主要被抽象为实体之间共现的蛮力查找。我们将这种关联视角与记忆存储的几何视角进行对比。我们首先隔离出一个干净且可分析的 Transformer 推理实例，这与记忆仅仅是训练期间指定的局部共现的存储是不兼容的。相反，模型必须以某种方式合成其自身的原子事实几何，编码所有实体之间的全局关系，包括不共现的实体。这反过来将一个涉及 $\\ell$ 次组合的困难推理任务简化为一个容易学习的一步几何任务。\n\n从这一现象中，我们提取出神经嵌入几何中难以解释的基本方面。我们认为，这种几何的兴起，尽管仅优化局部关联，却不能简单地归因于典型的架构或优化压力。出人意料的是，即使在其表达并不比蛮力查找关联更简洁的情况下，优雅的几何也被学习到了。\n\n然后，通过分析与 Node2Vec 的联系，我们展示了几何是如何源于一种谱偏差——与现有理论相对立——实际上在缺乏多种压力的情况下自然而然地产生。这一分析还为从业者指明了如何使 Transformer 记忆更具几何性质的明显空间。我们希望参数化记忆的几何视角能鼓励重新审视指导研究者在知识获取、容量、发现和遗忘等领域的默认直觉。",
       "paper_summary": {
         "summary": "Researchers from CMU and Google Research demonstrate that deep sequence models, including Transformers and Mamba, organize their parametric memory geometrically to encode global relationships for multi-hop reasoning, rather than relying solely on associative lookup. The models achieved high accuracy on an adversarially-designed in-weights path-finding task, revealing that this geometric structuring emerges from local supervision and is not primarily driven by memory capacity constraints or succinctness benefits.",
         "originalProblem": [
@@ -988,10 +1462,10 @@ const papersData = {
       "metrics": {
         "total_votes": 7,
         "visits_count": {
-          "all": 239,
-          "last_7_days": 239
+          "all": 293,
+          "last_7_days": 293
         },
-        "public_total_votes": 35
+        "public_total_votes": 42
       },
       "first_publication_date": "2025-10-30T17:40:22.000Z",
       "publication_date": "2025-10-30T17:40:22.000Z",
@@ -1018,89 +1492,83 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
-      "paper_group_id": "019a2db7-e53e-7e68-8b5d-5ce882a28d48",
-      "title": "Tongyi DeepResearch Technical Report",
-      "abstract": "我们推出了Tongyi DeepResearch，一个具有主动性的规模化语言模型，专门设计用于长时间、深入的信息探索研究任务。为了激励自主深入研究能力，Tongyi DeepResearch通过一个端到端的训练框架开发，该框架结合了主动性的中期训练和主动性的后期训练，能够在复杂任务中实现可扩展的推理和信息查找。我们设计了一个高度可扩展的数据合成管道，该管道完全自动化，不依赖于昂贵的人力标注，并支持所有训练阶段。通过为每个阶段构建定制化环境，我们的系统实现了稳定和一致的交互。Tongyi DeepResearch具有305亿个参数，每个token仅激活33亿个参数，在多项主动深度研究基准测试中表现出色，包括人类的最后考试、BrowseComp、BrowseComp-ZH、WebWalkerQA、xbench-DeepSearch、FRAMES和xbench-DeepSearch-2510。我们开源了模型、框架和完整解决方案，以助力社区发展。",
+      "id": "019a4d61-3d65-7239-87e3-f41e9e98d86f",
+      "paper_group_id": "019a4d61-3d65-7239-87e3-f41e9e98d86f",
+      "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail",
+      "abstract": "通过模仿学习训练的端到端架构在自动驾驶领域取得了进展，扩大了模型规模和数据，但在安全关键的长尾场景中，性能仍然脆弱，因为监督稀缺且因果理解有限。为此，我们引入了Alpamayo-R1（AR1），这是一个视觉-语言-动作模型（VLA），它结合了因果链推理与轨迹规划，以增强复杂驾驶场景中的决策能力。我们的方法具有三个关键创新点：(1) 因果链（CoC）数据集，通过混合自动标注和人机协作的流程构建，生成与驾驶行为对齐的，基于决策的因果推理轨迹；(2) 模块化的VLA架构，将为物理人工智能应用预训练的视觉-语言模型Cosmos-Reason与基于扩散的轨迹解码器结合，实时生成动态可行的规划；(3) 多阶段训练策略，采用监督微调以引导推理，并通过强化学习（RL）优化推理质量，借助大型推理模型反馈并强化推理-动作一致性。评估显示，与仅使用轨迹的基线相比，AR1在具有挑战性的案例中实现了高达12%的规划准确率提升，同时在闭环模拟中，越界率降低了35%，近距离碰撞率降低了25%。RL后训练通过大型推理模型评估，推理质量提升了45%，推理-动作一致性提升了37%。模型参数从0.5B扩展到7B显示出一致的改进。车载道路测试确认了实时性能（延迟99毫秒）和成功的城市部署。通过将可解释的推理与精确控制结合起来，AR1展示了通往4级自动驾驶的实际路径。我们计划在未来的更新中发布AR1模型和部分CoC数据集。",
       "paper_summary": {
-        "summary": "The Tongyi DeepResearch Team from Alibaba Group introduced an open-source model and an end-to-end agentic training framework for autonomous deep research agents, integrating agentic mid-training and post-training with a fully automated data synthesis pipeline. This approach achieves state-of-the-art performance on various benchmarks, including 32.9 on Humanity's Last Exam and 70.9 on GAIA, while activating only 3.3 billion parameters.",
+        "summary": "NVIDIA's Alpamayo-R1 (AR1) introduces a vision-language-action model that integrates causally-grounded reasoning with trajectory planning for autonomous driving. This approach enhances performance and safety in complex long-tail scenarios, achieving real-time inference and improved decision-making consistency.",
         "originalProblem": [
-          "Most frontier Deep Research AI systems are proprietary and closed-source, hindering scientific transparency, reproducibility, and collaborative development.",
-          "Developing Deep Research agents faces challenges in scalable training, data scarcity for multi-step reasoning, and managing complex environmental interactions efficiently.",
-          "Traditional LLM training lacks agentic inductive bias, making it difficult to effectively cultivate deep reasoning and information-seeking behaviors for complex tasks."
+          "End-to-end autonomous driving systems often lack the explicit high-level reasoning needed to robustly handle complex and safety-critical \"long-tail\" scenarios.",
+          "Existing vision-language-action (VLA) models for autonomous driving frequently suffer from a lack of explicit, causally-grounded reasoning or inconsistencies between their generated explanations and actual driving actions.",
+          "Achieving strong generalization, interpretability, and verifiable decision-making remains a challenge for current autonomous driving systems aiming for Level 4 autonomy."
         ],
         "solution": [
-          "Developed an end-to-end agentic training framework that includes two stages: agentic mid-training (for foundational agentic bias) and agentic post-training (for refinement via RL).",
-          "Implemented a fully automated, highly scalable data synthesis pipeline to generate research-level questions, agentic behaviors, and function-calling data, eliminating reliance on human annotation.",
-          "Designed stage-specific, customized environments (Prior World, Simulated, Real-world) to provide stable and consistent interactions throughout the training process, balancing fidelity, cost, and scalability."
+          "Alpamayo-R1 (AR1) is a modular VLA architecture that integrates a structured Chain of Causation (CoC) reasoning framework with trajectory planning.",
+          "A novel CoC dataset, generated via a hybrid auto-labeling and human-in-the-loop pipeline, provides decision-grounded and causally-linked reasoning traces.",
+          "A multi-stage training strategy is employed, involving action modality injection, supervised fine-tuning on the CoC dataset, and RL-based post-training to refine reasoning and enforce consistency."
         ],
         "keyInsights": [
-          "Agentic mid-training serves as a crucial bridge, effectively transitioning LLMs from general pre-training to specialized agentic tasks by cultivating inherent agentic biases.",
-          "Synthetic data generation can produce 'super-human' level agent trajectories at scale, overcoming data scarcity and enabling efficient training without human annotation.",
-          "A stable reinforcement learning framework, coupled with novel environment designs and algorithmic modifications, ensures robust policy learning and prevents issues like policy collapse."
+          "Causally-grounded and structurally aligned reasoning is critical for robust autonomous driving, enabling better utilization of contextual information and improved handling of ambiguous long-tail scenarios.",
+          "A multi-stage training approach, particularly with Reinforcement Learning (RL) post-training guided by reasoning quality and consistency rewards, is effective in aligning high-level reasoning with low-level control actions.",
+          "Combining a powerful, domain-specific VLM backbone (like NVIDIA's Cosmos-Reason) with an efficient continuous action decoder (e.g., flow-matching) facilitates real-time, physically feasible, and generalizable autonomous driving."
         ],
         "results": [
-          "Achieved state-of-the-art performance across numerous benchmarks, including 32.9 on Humanity's Last Exam (Avg@3), 70.9 on GAIA (Avg@3), and 75.0 on xbench-DeepSearch (Avg@3).",
-          "The model, based on Qwen3-30B, demonstrates remarkable efficiency by activating only 3.3 billion parameters per token, allowing for practical deployment.",
-          "The 'Heavy Mode' inference strategy further boosts performance, achieving 38.3% on Humanity's Last Exam and 58.3% on BrowseComp (Pass@1) by deploying parallel agents and an integrative synthesis model."
+          "AR1 achieved a 12% reduction in minADE₆@6s (0.868m) in challenging scenarios and improved the overall AlpaSim score from 0.38 to 0.50, demonstrating enhanced safety and robustness in simulations.",
+          "RL post-training improved reasoning quality by approximately 45% and increased reasoning-action consistency by 37%, ensuring generated explanations accurately reflect predicted actions.",
+          "The model demonstrated real-time inference with a latency of 99ms on NVIDIA RTX 6000 Pro Blackwell hardware and successfully navigated complex urban environments in on-vehicle road tests."
         ]
       },
-      "image_url": "image/2510.24701v1.png",
-      "universal_paper_id": "2510.24701",
+      "image_url": "image/2511.00088v1.png",
+      "universal_paper_id": "2511.00088",
       "metrics": {
-        "total_votes": 54,
+        "total_votes": 2,
         "visits_count": {
-          "all": 1927,
-          "last_7_days": 1927
+          "all": 78,
+          "last_7_days": 78
         },
-        "public_total_votes": 158
+        "public_total_votes": 10
       },
-      "first_publication_date": "2025-10-28T17:53:02.000Z",
-      "publication_date": "2025-10-28T17:53:02.000Z",
-      "updated_at": "2025-10-29T02:06:57.854Z",
+      "first_publication_date": "2025-10-30T01:25:34.000Z",
+      "publication_date": "2025-10-30T01:25:34.000Z",
+      "updated_at": "2025-11-04T05:40:09.701Z",
       "topics": [
-        "agentic-frameworks",
         "agents",
+        "autonomous-vehicles",
+        "causal-inference",
+        "chain-of-thought",
         "Computer Science",
         "cs.AI",
-        "cs.CL",
-        "cs.IR",
         "cs.LG",
-        "cs.MA",
-        "data-curation",
-        "fine-tuning",
-        "information-extraction",
-        "lightweight-models",
+        "cs.RO",
+        "deep-reinforcement-learning",
+        "generative-models",
+        "imitation-learning",
         "reasoning",
-        "synthetic-data",
-        "transformers"
+        "robotic-control",
+        "vision-language-models"
       ],
-      "organization_info": [
-        {
-          "name": "Alibaba Group",
-          "image": "images/organizations/alibaba.png"
-        }
-      ],
+      "organization_info": [],
       "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
+      "github_stars": null,
+      "github_url": null,
       "distance": 1
     },
     {
       "id": "019a48b7-d9c3-7625-97a0-47bac9e7457d",
       "paper_group_id": "019a48b7-d9c3-7625-97a0-47bac9e7457d",
       "title": "Higher-order Linear Attention",
-      "abstract": "缩放的点积注意力的二次成本是将自回归语言模型扩展到长上下文的主要障碍。线性时间注意力和状态空间模型（SSM）提供了可扩展的替代方案，但通常受到一阶或基于核的近似的限制，这可能限制表达能力。我们引入了高阶线性注意力（HLA），这是一种因果流机制，通过紧凑的前缀充分统计实现更高的交互。在二阶情况下，HLA 维护一个恒定大小的状态，并在不显现任何 $n \\times n$ 矩阵的情况下以线性时间计算每个标记的输出。我们给出了闭合形式的流身份、使用两个额外摘要的严格因果掩蔽变体，以及基于关联扫描的分块并行训练方案，该方案能准确重现串行递归的激活。我们还概述了对三阶及更高阶的扩展。总的来说，这些结果将 HLA 定位为一个原则上可扩展的构建块，结合了类注意力的、数据依赖的混合与现代递归架构的效率。项目页面：这个 https URL。",
+      "abstract": "二次成本的缩放点积注意力是将自回归语言模型扩展到长上下文的一个主要障碍。线性时间的注意力和状态空间模型（SSM）提供了可扩展的替代方案，但通常限制于一阶或基于核的近似方法，这可能限制了表现力。我们介绍了高阶线性注意力（HLA），这是一种因果流机制，通过紧凑的前缀充要统计量实现更高层次的交互。在二阶情况下，HLA 维护一个恒定大小的状态，并在不实际化任何 $n \\times n$ 矩阵的情况下以线性时间计算每个标记的输出。我们给出了封闭形式的流标识、使用两个额外摘要的严格因果掩码变体，以及基于关联扫描的块并行训练方案，准确重现串行递归的激活。我们还概述了对三阶及更高阶的扩展。总体而言，这些结果将 HLA 定位为一个有原则的、可扩展的构建模块，结合了类似注意力的、数据依赖的混合与现代递归架构的效率。项目页面：此链接。",
       "paper_summary": null,
       "image_url": "image/2510.27258v1.png",
       "universal_paper_id": "2510.27258",
       "metrics": {
         "total_votes": 1,
         "visits_count": {
-          "all": 56,
-          "last_7_days": 56
+          "all": 93,
+          "last_7_days": 93
         },
-        "public_total_votes": 10
+        "public_total_votes": 15
       },
       "first_publication_date": "2025-10-31T07:54:37.000Z",
       "publication_date": "2025-10-31T07:54:37.000Z",
@@ -1124,106 +1592,24 @@ const papersData = {
       "distance": 1
     },
     {
-      "id": "019a3841-c010-7c80-8d07-18a2a86bde4a",
-      "paper_group_id": "019a3841-c010-7c80-8d07-18a2a86bde4a",
-      "title": "$π_\\texttt{RL}$: Online RL Fine-tuning for Flow-based Vision-Language-Action Models",
-      "abstract": "视觉-语言-行动（VLA）模型使得机器人能够从多模态输入中理解并执行复杂任务。尽管近期的工作探讨了使用强化学习（RL）来自动化在扩展监督微调（SFT）中的繁琐数据收集过程，但将大规模RL应用于基于流的VLA（例如，$\\pi_0$，$\\pi_{0.5}$）仍然面临挑战，因为迭代去噪中产生的不可处理的动作对数似然性。我们通过 $\\pi_{\\text{RL}}$ 来解决这个挑战，这是一个用于并行仿真训练基于流的VLA的开源框架。$\\pi_{\\text{RL}}$ 实现了两种RL算法：（1）{Flow-Noise} 将去噪过程建模为具有可学习噪声网络的离散时间马尔可夫决策过程（MDP），以便精确计算对数似然性。（2）{Flow-SDE} 将去噪与智能体-环境交互相结合，形成一个两层的MDP，采用常微分方程（ODE）到随机微分方程（SDE）的转换以实现高效的RL探索。我们在LIBERO和ManiSkill基准上评估了$\\pi_{\\text{RL}}$。在LIBERO上，$\\pi_{\\text{RL}}$ 提升了少样本SFT模型$\\pi_0$和$\\pi_{0.5}$的性能，分别从57.6%提升到97.6%和从77.1%提升到98.3%。在ManiSkill中，我们在320个并行环境中训练$\\pi_{\\text{RL}}$，使$\\pi_0$从41.6%提升到85.7%，而$\\pi_{0.5}$从40.0%提升到84.8%，涵盖了4352个取放任务，展示了在异构仿真下可扩展的多任务RL。总体而言，$\\pi_{\\text{RL}}$ 实现了显著的性能提升和对SFT模型的更强泛化能力，验证了在线RL在基于流的VLA中的有效性。",
-      "paper_summary": {
-        "summary": "πRL introduces an open-source framework that enables online reinforcement learning (RL) for flow-based Vision-Language-Action (VLA) models, a class previously incompatible with policy gradient methods due to technical challenges. The framework achieves substantial performance gains over supervised fine-tuning baselines, improving success rates on benchmarks like LIBERO and ManiSkill, particularly in few-shot and multi-task scenarios.",
-        "originalProblem": [
-          "Supervised Fine-Tuning (SFT) for VLA models relies on labor-intensive, costly human demonstration datasets, leading to overfitting and limited generalization.",
-          "Existing online Reinforcement Learning (RL) methods are largely incompatible with flow-based VLA architectures.",
-          "Flow-based models face challenges with intractable action log-likelihood computation and deterministic action generation, hindering their use with policy gradient RL algorithms like PPO."
-        ],
-        "solution": [
-          "πRL introduces two methods, Flow-Noise and Flow-SDE, to inject stochasticity and enable tractable action log-likelihood computation in flow-based VLAs.",
-          "Flow-Noise incorporates a learnable noise network into the denoising process and models it as a one-layer MDP for exact log-likelihood computation with PPO.",
-          "Flow-SDE converts the deterministic ODE denoising process into a Stochastic Differential Equation (SDE) and formulates a two-layer MDP with a hybrid ODE-SDE sampling strategy to approximate log-likelihoods."
-        ],
-        "keyInsights": [
-          "The proposed methods effectively bridge the gap between flow-based generative models and online policy gradient RL, making a powerful class of VLAs amenable to environmental interaction.",
-          "Flow-Noise, with its learnable noise network and one-layer MDP, slightly outperforms Flow-SDE due to finer control over stochasticity and more efficient data utilization.",
-          "Online RL fine-tuning yields substantial benefits for VLA models in few-shot learning and multi-task generalization, often surpassing full-dataset SFT performance by learning from active environmental interaction."
-        ],
-        "results": [
-          "On the LIBERO benchmark, πRL improved π0's average success rate from 57.6% (few-shot SFT) to 97.6% (Flow-Noise) and π0.5's from 77.1% to 98.3%.",
-          "For the challenging LIBERO-Long task, πRL boosted π0.5's performance from 43.9% (few-shot SFT) to 94.0%, exceeding the 92.4% achieved by the all-trajectories SFT model.",
-          "Demonstrated scalability on ManiSkill MultiTask, increasing π0's success rate from 41.6% to 85.7% and π0.5's from 40.1% to 84.8% on in-distribution tasks involving thousands of combinations."
-        ]
-      },
-      "image_url": "image/2510.25889v1.png",
-      "universal_paper_id": "2510.25889",
+      "id": "019a4d5f-1c61-767e-a36d-7673ef03b2d4",
+      "paper_group_id": "019a4d5f-1c61-767e-a36d-7673ef03b2d4",
+      "title": "Self-Harmony: Learning to Harmonize Self-Supervision and Self-Play in Test-Time Reinforcement Learning",
+      "abstract": "测试时强化学习（TTRL）提供了一种无标签的范式，仅在推理时使用合成信号来适应模型，但其成功取决于构造可靠的学习信号。标准的方法如多数投票常常会崩溃到虚假的但流行的答案。我们介绍了自我和谐（Self-Harmony），这是一个建立在简单直觉上的框架：正确的答案在原始问题和其意译之间应该保持稳定。自我和谐通过在两个互补角色中使用单一模型来实现这一点：解答者（Solver）生成答案，重述者（Reframer）对输入进行改写。在此基础上，我们进一步提出了一种伪标签方法：它不是采用多数投票，而是通过使用调和平均数来汇总这些原始和重述视图中的答案频率。这一过程自然选择了在重述下稳定的解决方案，从而避免了偏向于依赖视图的虚假答案的常见陷阱。至关重要的是，这不需要人类监督或辅助模型。在各种推理基准测试中，自我和谐在无标签的测试时设置中实现了最先进的结果，在多种方法中在30个设置中的28个中排名第一。除了准确性外，它还表现出前所未有的稳健性，在所有实验中都没有出现训练失败，强调了其稳定性和可靠性。",
+      "paper_summary": null,
+      "image_url": "image/2511.01191v1.png",
+      "universal_paper_id": "2511.01191",
       "metrics": {
-        "total_votes": 3,
+        "total_votes": 0,
         "visits_count": {
-          "all": 159,
-          "last_7_days": 159
+          "all": 20,
+          "last_7_days": 20
         },
-        "public_total_votes": 22
+        "public_total_votes": 3
       },
-      "first_publication_date": "2025-10-29T18:37:39.000Z",
-      "publication_date": "2025-10-29T18:37:39.000Z",
-      "updated_at": "2025-10-31T03:13:44.464Z",
-      "topics": [
-        "Computer Science",
-        "cs.LG",
-        "deep-reinforcement-learning",
-        "distributed-learning",
-        "few-shot-learning",
-        "fine-tuning",
-        "generative-models",
-        "multi-task-learning",
-        "reinforcement-learning",
-        "robotic-control",
-        "vision-language-models"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 890,
-      "github_url": "https://github.com/RLinf/RLinf",
-      "distance": 1
-    },
-    {
-      "id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
-      "paper_group_id": "019a2e55-6f09-751e-bf5e-a4102946f29e",
-      "title": "AgentFold: Long-Horizon Web Agents with Proactive Context Management",
-      "abstract": "基于大型语言模型的网络代理在信息获取方面展现出巨大的潜力，但它们在长期任务中的有效性受到上下文管理的基本权衡的限制。现有的基于ReAct的代理由于积累了嘈杂的原始历史而遭遇上下文饱和，而每一步固定总结完整历史的方法则可能导致关键信息的不可逆丧失。为了解决这些问题，我们引入了AgentFold，一个以主动上下文管理为中心的新型代理范式，灵感来源于人类认知过程中的回顾性整合。AgentFold将其上下文视为一个动态的认知工作空间，应该积极塑造，而不是一个被动的日志。在每一步中，它学习执行一种“折叠”操作，以在多个层面上管理其历史轨迹：它可以进行细致的压缩，以保留重要的细粒度细节，或进行深入的整合，以抽象出整个多步骤的子任务。它在重要基准测试中的表现令人瞩目：通过简单的监督微调（无需持续预训练或强化学习），我们的AgentFold-30B-A3B代理在BrowseComp上达到了36.2%的成绩，在BrowseComp-ZH上达到了47.3%。值得注意的是，这一表现不仅超过或匹配了规模显著更大的开源模型，如DeepSeek-V3.1-671B-A37B，还超越了诸如OpenAI的o4-mini等领先的专有代理。",
-      "paper_summary": {
-        "summary": "AgentFold presents a novel web agent architecture that employs proactive, multi-scale context management to enable effective reasoning over long-horizon web tasks by dynamically folding interaction histories. This approach achieved state-of-the-art performance for open-source agents on benchmarks like BrowseComp (36.2%) and WideSearch (62.1%), while maintaining a context size 92% smaller than ReAct agents after 100 turns.",
-        "originalProblem": [
-          "Traditional ReAct agents suffer from context saturation on long-horizon tasks due to their verbose, append-only history, hindering effective reasoning.",
-          "Fixed-summarization methods, while concise, risk irreversible loss of crucial fine-grained details during context summarization.",
-          "A fundamental trade-off exists between maintaining comprehensive detail and achieving context conciseness, limiting LLM-based web agents' ability to handle complex, prolonged tasks."
-        ],
-        "solution": [
-          "AgentFold introduces a dynamic cognitive workspace partitioning context into user question, tools, multi-scale state summaries, and the latest interaction.",
-          "It implements a \"fold\" operation, guided by a learned folding directive, to either granularly condense the latest interaction or deeply consolidate multiple past steps into abstract summaries.",
-          "A \"Fold-Generator\" data collection pipeline, utilizing rejection sampling and supervised fine-tuning, trains LLMs (Qwen3-30B-A3B) to perform this explicit context curation."
-        ],
-        "keyInsights": [
-          "Human-inspired retrospective consolidation and active memory sculpting can overcome the context management trade-off in LLM agents.",
-          "Explicit, learned context folding directives allow agents to dynamically adapt context granularity, preserving critical details while abstracting irrelevant information.",
-          "Training a smaller LLM to perform strategic context management can lead to performance competitive with or superior to much larger models that rely solely on raw context window size."
-        ],
-        "results": [
-          "AgentFold-30B-A3B achieved state-of-the-art performance for open-source agents, scoring 36.2% on BrowseComp (outperforming a 20x larger model) and 62.1% on WideSearch.",
-          "Context token count grew sub-linearly, remaining exceptionally concise, with an average context 92% smaller than ReAct agents after 100 turns, yielding significant memory savings.",
-          "Demonstrated enhanced long-horizon capabilities, with accuracy continuing to improve up to 256 turns, unlike baselines that saturated and failed due to context overflow."
-        ]
-      },
-      "image_url": "image/2510.24699v1.png",
-      "universal_paper_id": "2510.24699",
-      "metrics": {
-        "total_votes": 10,
-        "visits_count": {
-          "all": 497,
-          "last_7_days": 497
-        },
-        "public_total_votes": 60
-      },
-      "first_publication_date": "2025-10-28T17:51:50.000Z",
-      "publication_date": "2025-10-28T17:51:50.000Z",
-      "updated_at": "2025-10-29T04:59:02.281Z",
+      "first_publication_date": "2025-11-03T03:34:34.000Z",
+      "publication_date": "2025-11-03T03:34:34.000Z",
+      "updated_at": "2025-11-04T05:37:50.177Z",
       "topics": [
         "agentic-frameworks",
         "agents",
@@ -1231,211 +1617,145 @@ const papersData = {
         "cs.AI",
         "cs.CL",
         "cs.LG",
-        "fine-tuning",
         "reasoning",
-        "tool-use"
+        "reinforcement-learning",
+        "self-supervised-learning",
+        "test-time-inference"
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/Alibaba-NLP/DeepResearch",
+      "github_stars": null,
+      "github_url": null,
       "distance": 1
     },
     {
-      "id": "019a4d54-272a-7d61-9712-1d9963161888",
-      "paper_group_id": "019a4d54-272a-7d61-9712-1d9963161888",
-      "title": "Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process",
-      "abstract": "视觉语言行动（VLA）模型旨在理解自然语言指令和视觉观察，并作为具身代理执行相应的行动。最近的研究将未来图像纳入理解-行动循环中，产生了统一的VLA，能够共同理解、生成和行动——阅读文本和图像，生成未来图像和行动。然而，这些模型要么依赖外部专家进行模态统一，要么将图像生成和行动预测视为独立的过程，从而限制了这些任务之间直接协同的好处。我们的核心理念是通过同步去噪过程共同优化生成和行动，其中迭代精化使得行动在不断且充分的视觉指导下，从初始化演变。我们在提出的统一扩散VLA和联合离散去噪扩散过程（JD3P）中将这一理念付诸实践，这是一个将多模态整合为单一去噪轨迹的联合扩散过程，作为实现理解、生成和行动内在协同的关键机制。我们的模型和理论建立在所有模态的统一标记空间和混合注意力机制之上。我们进一步提出了一个两阶段的训练流程和若干推理时间技术，以优化性能和效率。我们的方法在CALVIN、LIBERO和SimplerEnv等基准上达到最先进的性能，推理速度比自回归方法快4倍，并通过深入的分析和现实世界评估展示了其有效性。我们的项目页面可在此网址找到。",
+      "id": "019a4f7f-4789-7eec-a646-5d4b67231260",
+      "paper_group_id": "019a4f7f-4789-7eec-a646-5d4b67231260",
+      "title": "TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning",
+      "abstract": "视觉推理的前沿正在转向像OpenAI o3这样的模型，这些模型能够智能地创建和操作工具，以图像转换为问题解决方案，这也被称为链式思维中的“以图像思维”。然而，现有的基准测试未能完全捕捉到这一先进能力。即使是视觉搜索，当前以图像思维方法最常用的基准，只测试基础操作，如定位和裁剪，几乎无法提供对更复杂、动态和依赖工具的推理的深入洞察。我们引入了\\textbf{TIR-Bench}，这是一个全面的基准，旨在评估在13个不同任务中进行的代理性以图像思维的能力，每个任务都需要在链式思维中对图像处理和操作的新工具使用。我们评估了22个多模态大型语言模型（MLLM），从领先的开源模型到明确增强工具使用的专有模型。结果表明，TIR-Bench普遍具有挑战性，强大的表现需要真正的以图像思维能力。最后，我们呈现了一项比较直接微调与代理性微调的初步研究。",
       "paper_summary": {
-        "summary": "Meituan's LongCat-Flash-Omni is a 560-billion-parameter open-source omni-modal model that processes text, image, video, and audio to enable real-time audio-visual interaction. It achieves state-of-the-art performance on various multimodal benchmarks and shows highly competitive results against leading proprietary models.",
+        "summary": "TIR-Bench introduces a comprehensive benchmark to evaluate advanced agentic visual reasoning in multimodal large language models (MLLMs). It comprises 13 diverse tasks requiring active image manipulation and programmatic tool use, revealing that state-of-the-art MLLMs achieve only up to 46% accuracy and underscoring the necessity of agentic capabilities.",
         "originalProblem": [
-          "Existing unified Vision-Language-Action (VLA) models often rely on separate components for modality unification or employ distinct decoding processes for image generation and action prediction, leading to misalignment and weak coupling.",
-          "Many VLA approaches do not fully exploit generated future visual states as explicit guidance for action planning, often treating them as auxiliary tasks or having insufficient synergy during decoding.",
-          "Current VLA models, particularly those using autoregressive decoding, suffer from high computational costs and slow inference speeds, limiting their applicability in real-time robotic control."
+          "Existing MLLM evaluation benchmarks are primarily confined to textual reasoning or static visual understanding, failing to assess active interaction with visual information.",
+          "Current benchmarks for agentic MLLMs offer a narrow view, focusing mostly on visual search tasks and overlooking complex, dynamic, and tool-dependent visual manipulations like image rotation, contrast enhancement, or object reassembly.",
+          "A lack of comprehensive benchmarks exists to properly evaluate MLLMs capable of 'thinking-with-images,' where models actively manipulate and modify visual data as part of their problem-solving chain-of-thought."
         ],
         "solution": [
-          "UD-VLA introduces a Joint Discrete Denoising Diffusion Process (JD3P) that unifies future image generation and action prediction into a single, synchronous denoising trajectory.",
-          "It employs a hybrid attention mechanism within a Transformer, enabling bidirectional attention for tokens within modalities (future images, actions) and causal attention across modalities (actions conditioned on images, but not vice-versa).",
-          "A two-stage training pipeline first pre-trains the model for future image generation using a VLM backbone, then fine-tunes it on robot action datasets to jointly optimize image and action generation via JD3P."
+          "Introduces TIR-Bench, a comprehensive benchmark featuring 13 diverse tasks specifically designed to necessitate active, tool-based visual reasoning and image manipulation beyond static analysis.",
+          "Compiles a dataset of 1215 examples, generated through a hybrid approach of new creation/annotation, curation from existing datasets, and programmatic generation, to ensure task diversity and minimize data contamination.",
+          "Evaluates 22 leading MLLMs, including open-source, proprietary, and agentic tool-using models, in a zero-shot setting to assess their capabilities in agentic visual reasoning.",
+          "Conducts specific experiments to assess function-calling proficiency and compares the efficacy of direct supervised fine-tuning versus agentic fine-tuning for visual operation tasks."
         ],
         "keyInsights": [
-          "Synchronous and iterative refinement of both future images and actions through JD3P is crucial for achieving deep intrinsic synergy, allowing actions to be precisely guided by anticipated visual consequences.",
-          "A hybrid attention mechanism is optimal for VLA models, balancing comprehensive intra-modal interactions with a clear causal flow across modalities to prevent shortcut learning and ensure proper information conditioning.",
-          "Explicit future image generation, when deeply integrated and leveraged during inference, provides a powerful 'chain-of-thought' for action planning, converting abstract control problems into more concrete inverse kinematics tasks."
+          "TIR-Bench is exceptionally challenging for all evaluated models, with the highest average performance being only 46%, indicating significant room for improvement in MLLM visual reasoning.",
+          "Agentic tool-using capabilities are crucial for complex visual reasoning, as models without explicit tool integration perform substantially worse than those that can actively manipulate images.",
+          "Current agentic MLLMs still exhibit limitations in the depth of tool integration, particularly in calling sophisticated external specialized tools beyond basic image processing primitives for tasks like object segmentation.",
+          "Agentic fine-tuning, which trains models on full problem-solving trajectories including intermediate image manipulations, is more effective than direct supervised fine-tuning for tasks requiring visual operations."
         ],
         "results": [
-          "UD-VLA achieved state-of-the-art performance, with an average success length of 4.64 on CALVIN, a 92.7% average success rate on LIBERO, and a 62.5% average success rate on SimplerEnv benchmarks.",
-          "The model demonstrated a 4x faster inference speed compared to autoregressive methods, processing 219.3 tokens/s versus 50.2 tokens/s on CALVIN, which is critical for real-time robotic applications.",
-          "Ablation studies confirmed the superiority of the hybrid attention mechanism and JD3P, showing that future image generation is more effective than current image reconstruction or no visual generation for action planning."
+          "The top-performing model, o3-TU, achieved an average accuracy of 46% on TIR-Bench, outperforming the best non-tool-using MLLM (Gemini-2.5-pro) by nearly 17% and its non-tool-using counterpart (o3) by 19%.",
+          "Traditional, non-agentic MLLMs performed poorly, often scoring slightly above random guess levels, confirming that static visual analysis is insufficient for TIR-Bench tasks.",
+          "A pilot study on fine-tuning showed that Tool-Use SFT consistently and significantly outperformed Direct SFT on the Rotated Image OCR task, with Direct SFT showing no positive performance scaling with increased data size.",
+          "Function-calling experiments demonstrated that explicit prompting strategies significantly improve MLLM performance in utilizing function-calling capabilities, and newer models like o3 make more iterative function calls per problem."
         ]
       },
-      "image_url": "image/2511.01718v1.png",
-      "universal_paper_id": "2511.01718",
+      "image_url": "image/2511.01833v1.png",
+      "universal_paper_id": "2511.01833",
       "metrics": {
         "total_votes": 0,
         "visits_count": {
-          "all": 17,
-          "last_7_days": 17
+          "all": 15,
+          "last_7_days": 15
         },
-        "public_total_votes": 4
+        "public_total_votes": 3
       },
-      "first_publication_date": "2025-11-03T16:26:54.000Z",
-      "publication_date": "2025-11-03T16:26:54.000Z",
-      "updated_at": "2025-11-04T05:25:52.042Z",
+      "first_publication_date": "2025-11-03T18:40:17.000Z",
+      "publication_date": "2025-11-03T18:40:17.000Z",
+      "updated_at": "2025-11-04T15:32:12.809Z",
       "topics": [
+        "agentic-frameworks",
+        "agents",
+        "chain-of-thought",
         "Computer Science",
         "cs.CV",
-        "cs.RO",
-        "generative-models",
-        "image-generation",
-        "imitation-learning",
+        "fine-tuning",
         "multi-modal-learning",
-        "robotic-control",
-        "robotics-perception",
-        "transformers",
-        "vision-language-models"
-      ],
-      "organization_info": [
-        {
-          "name": "Monash University",
-          "image": "images/organizations/monash-university.png"
-        },
-        {
-          "name": "Zhejiang University",
-          "image": "images/organizations/zhejiang.png"
-        },
-        {
-          "name": "Westlake University",
-          "image": "images/organizations/westlake-university.jpeg"
-        },
-        {
-          "name": "HKUST(GZ)",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": 3,
-      "github_url": "https://github.com/OpenHelix-Team/UD-VLA",
-      "distance": 1
-    },
-    {
-      "id": "019a4a47-a458-7a84-9c58-9518130326e8",
-      "paper_group_id": "019a4a47-a458-7a84-9c58-9518130326e8",
-      "title": "Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs",
-      "abstract": "评估大型语言模型（LLMs）在需要长期记忆和长上下文推理的任务（例如对话场景中的任务）能力的过程受到现有基准的限制，这些基准往往缺乏叙事连贯性、覆盖范围狭窄，仅测试简单的回忆导向任务。本文提出了一种全面解决这些挑战的方法。首先，我们提出了一种新颖的框架，用于自动生成长达 1000 万个标记、连贯且主题多样的对话，同时附带针对广泛记忆能力的探测问题。基于此，我们构建了 BEAM，一个新基准，包括 100 个对话和 2000 个经过验证的问题。其次，为了提升模型性能，我们提出了 LIGHT——一个受到人类认知启发的框架，为 LLMs 提供三个互补的记忆系统：长期情节记忆、短期工作记忆和一个用于积累突出事实的临时记事本。我们在 BEAM 上的实验表明，即使是具有 100 万标记上下文窗口的 LLM（无论是否增强检索）在对话变长时也面临困难。相反，LIGHT 在各种模型中始终提升性能，攻击基线的平均提升幅度为 3.5%-12.69%，具体取决于基础 LLM。消融研究进一步确认了每个记忆组件的贡献。",
-      "paper_summary": {
-        "summary": "Researchers from the University of Alberta and UMass Amherst introduce BEAM, a novel benchmark for evaluating long-term memory in large language models through extremely long, coherent conversations. They also propose LIGHT, a cognitive-inspired framework that consistently enhances LLM performance, yielding average improvements of 3.5% to 12.69% and dramatic gains of over 100% on 10M token dialogues compared to baselines.",
-        "originalProblem": [
-          "Existing benchmarks for LLM long-term memory lack narrative coherence, cover narrow domains, and primarily test simple recall, making it hard to assess real-world complex reasoning.",
-          "Even LLMs with large context windows struggle to maintain performance and effectively reason as dialogue length increases significantly.",
-          "Current approaches often focus solely on expanding context length, which is insufficient for truly intelligent information management across extended interactions."
-        ],
-        "solution": [
-          "**BEAM Benchmark**: A scalable, automatic framework to generate long (up to 10 million tokens), coherent, and topically diverse conversations, accompanied by probing questions for ten distinct memory abilities.",
-          "**LIGHT Framework**: An LLM-agnostic, cognitively-inspired system integrating episodic memory (long-term retrieval), short-term working memory, and a compressed scratchpad for salient facts.",
-          "LIGHT's hybrid approach intelligently manages and utilizes information from extensive conversational histories to enhance LLM reasoning capabilities."
-        ],
-        "keyInsights": [
-          "LLMs, even with large context windows, struggle significantly with long-term memory and reasoning in extended, coherent dialogues, indicating that raw token capacity is not a complete solution.",
-          "A cognitively-inspired, hybrid memory system like LIGHT can consistently and substantially improve LLM performance on long-context tasks, especially for complex reasoning and extreme dialogue lengths.",
-          "The high-quality, comprehensive BEAM benchmark provides a more rigorous tool for evaluating LLM long-term memory, revealing specific strengths and weaknesses across different memory abilities."
-        ],
-        "results": [
-          "State-of-the-art LLMs experienced substantial performance degradation on BEAM as conversation length increased, with performance plummeting in 10 million token scenarios.",
-          "The LIGHT framework consistently improved LLM performance, showing average gains of 3.5% to 12.69% over baselines, and dramatic improvements of over 100% for 10M token dialogues.",
-          "LIGHT demonstrated the largest relative gains in Summarization (+160.6%), Multi-hop Reasoning (+27.2%), and Preference Following (+76.5%), while Contradiction Resolution remained a challenging task for all models."
-        ]
-      },
-      "image_url": "image/2510.27246v1.png",
-      "universal_paper_id": "2510.27246",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 28,
-          "last_7_days": 28
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-31T07:29:52.000Z",
-      "publication_date": "2025-10-31T07:29:52.000Z",
-      "updated_at": "2025-11-03T15:13:20.472Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "conversational-ai",
-        "cs.AI",
-        "cs.CL",
-        "cs.IR",
-        "human-ai-interaction",
-        "representation-learning",
-        "sequence-modeling",
-        "synthetic-data",
-        "transformers"
+        "tool-use",
+        "vision-language-models",
+        "visual-reasoning"
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/mohammadtavakoli78/BEAM",
+      "github_stars": 13,
+      "github_url": "https://github.com/agents-x-project/TIR-Bench",
       "distance": 1
     },
     {
-      "id": "019a383a-6720-7f94-9278-16f8e0ab57e9",
-      "paper_group_id": "019a383a-6720-7f94-9278-16f8e0ab57e9",
-      "title": "Running VLAs at Real-time Speed",
-      "abstract": "在本文中，我们展示了如何使用单个消费级GPU以30Hz帧率和最多480Hz轨迹频率运行pi0级多视角VLA。这使得动态和实时任务成为可能，而这些任务之前被认为是大型VLA模型无法实现的。为了实现这一目标，我们引入了一系列策略来消除模型推理中的开销。现实世界的实验表明，使用我们策略的pi0策略在抓取掉落的钢笔任务中取得了100%的成功率。基于这些结果，我们进一步提出了一个用于VLA实时机器人控制的全流式推理框架。代码可在此https URL获得。",
-      "paper_summary": {
-        "summary": "Researchers from Dexmal and StepFun developed comprehensive optimization strategies enabling state-of-the-art Vision-Language-Action (VLA) models to operate in real-time on a single consumer-grade GPU. Their approach reduced inference latency for a two-view \nlive\n \nlive\n model from 106.5 ms to 27.3 ms, achieving a 100% success rate in a falling pen grasping task with sub-200 ms reaction times.",
-        "originalProblem": [
-          "Large Vision-Language-Action (VLA) models like \nlive\n \nlive\n suffered from high inference latency (hundreds of milliseconds), making them too slow for dynamic, real-time robotic tasks.",
-          "Typical VLA inference speeds necessitated dropping frames from 30 FPS camera streams, impeding a robot's ability to react quickly and precisely to rapidly changing environments.",
-          "The inherent latency created a gap between the strong generalization capabilities of large VLA models and their practical deployability in time-sensitive robotic applications."
-        ],
-        "solution": [
-          "Implemented a multi-stage optimization strategy, including CUDA graph mechanisms and computational graph simplification (e.g., QKV projection fusion) to drastically reduce CPU and architectural overheads.",
-          "Performed in-depth kernel optimization by manually tuning GEMM tile parameters, fusing gated linear layers, and integrating scalar operations and RMS normalization directly into kernels.",
-          "Addressed system-level latencies through optimized image resizing, pinned memory for data transfer, and static CPU buffers, minimizing non-GPU related overheads."
-        ],
-        "keyInsights": [
-          "Systematically tackling both high-level software overheads (e.g., Python interpreter, graph complexity) and low-level hardware utilization (e.g., kernel efficiency) is crucial for pushing large VLA models into real-time performance on consumer GPUs.",
-          "Significant performance gains can be achieved through a combination of CUDA graphs, computational graph transformations, and fine-grained kernel tuning via tools like Triton.",
-          "The optimized inference enables a ",
-          "Full Streaming Inference",
-          " paradigm for future hierarchical control systems, allowing concurrent execution of VLM and Action Expert (AE) components at different frequencies."
-        ],
-        "results": [
-          "Reduced inference time for a two-view \nlive\n \nlive\n model on an RTX 4090 GPU from 106.5 ms to 27.3 ms, representing a nearly 4x speedup and successfully meeting the sub-33 ms real-time threshold.",
-          "Achieved a 100% success rate over 10 consecutive trials in a real-world falling pen grasping task, with the end-to-end reaction time of the robotic system measured at less than 200 ms.",
-          "Demonstrated that the optimized two-view \nlive\n \nlive\n inference at 27.3 ms is remarkably close to the theoretical lower bound of 20.6 ms, indicating high efficiency."
-        ]
-      },
-      "image_url": "image/2510.26742v1.png",
-      "universal_paper_id": "2510.26742",
+      "id": "019a4efc-66cb-77e4-8048-875970ee585a",
+      "paper_group_id": "019a4efc-66cb-77e4-8048-875970ee585a",
+      "title": "Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning",
+      "abstract": "最近，先进的大型语言模型（LLM）以越来越快的速度出现。然而，当面临复杂问题时，大多数用户往往无法提供准确有效的提示来与LLM互动，从而限制了LLM的性能。为了解决这一挑战，我们提出了Prompt-R1，这是一种端到端的强化学习框架，利用小规模的LLM与大规模LLM协作，替代用户互动以更好地解决问题。这种协作被视为多轮提示互动，小规模LLM进行思考并生成提示，而大规模LLM则执行复杂推理。设计了一种双重约束奖励，以优化正确性、生成质量和推理准确性。Prompt-R1提供了一个即插即用的框架，支持与各种大规模LLM的推理和训练。对多个公开数据集的实验表明，Prompt-R1在各项任务中显著优于基线模型。我们的代码可以在此https URL上公开获取。",
+      "paper_summary": null,
+      "image_url": "image/2511.01016v1.png",
+      "universal_paper_id": "2511.01016",
       "metrics": {
         "total_votes": 1,
         "visits_count": {
-          "all": 129,
-          "last_7_days": 129
+          "all": 14,
+          "last_7_days": 14
         },
-        "public_total_votes": 22
+        "public_total_votes": 4
       },
-      "first_publication_date": "2025-10-30T17:38:14.000Z",
-      "publication_date": "2025-10-30T17:38:14.000Z",
-      "updated_at": "2025-10-31T03:05:42.944Z",
+      "first_publication_date": "2025-11-02T17:11:03.000Z",
+      "publication_date": "2025-11-02T17:11:03.000Z",
+      "updated_at": "2025-11-04T13:09:15.595Z",
       "topics": [
         "Computer Science",
-        "cs.RO"
+        "cs.CL"
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": 94,
-      "github_url": "https://github.com/Dexmal/realtime-vla",
+      "github_stars": 10,
+      "github_url": "https://github.com/QwenQKing/Prompt-R1",
+      "distance": 1
+    },
+    {
+      "id": "019a4d2d-6f03-7507-864d-832d78690de2",
+      "paper_group_id": "019a4d2d-6f03-7507-864d-832d78690de2",
+      "title": "Information-theoretic minimax and submodular optimization algorithms for multivariate Markov chains",
+      "abstract": "我们研究了有限的多元马尔可夫链在 $d$ 维乘积态空间上的信息论最小极大问题。给定一组 $\\mathcal B=\\{P_1,\\ldots,P_n\\}$ 的 $\\pi$-平稳转移矩阵和一类由坐标集 $[d]$ 的分割 $\\mathbf S$ 所诱导的可分解模型 $\\mathcal F = \\mathcal{F}(\\mathbf{S})$，我们试图通过分析 $$\\min_{Q\\in\\mathcal F}\\max_{P\\in\\mathcal B} D_{\\mathrm{KL}}^{\\pi}(P\\|Q),$$ 来最小化最坏情况下的信息损失，其中 $D_{\\mathrm{KL}}^{\\pi}(P\\|Q)$ 是从 $Q$ 到 $P$ 的 $\\pi$ 加权 KL 散度。我们通过强对偶性和我们推导的毕达哥拉斯恒等式，将上述最小极大问题重新表述为对 $n$-概率单纯形的凹最大化。这使我们能够构造一个信息论博弈，并证明混合策略纳什均衡总是存在；并提出一种投影子梯度算法来近似解决该最小极大问题，并提供可验证的保证。通过将最小极大问题转化为 $\\mathbf{S}$ 中的象限次模函数，这激励我们考虑一个最大最小最大次模优化问题，并研究一种两层子梯度贪婪过程以近似解决这一广义问题。对于库里-韦斯和伯努利-拉普拉斯模型的马尔可夫链的数值实验展示了这些提出的算法的实用性，并揭示了这些例子中的稀疏最优结构。",
+      "paper_summary": null,
+      "image_url": "image/2511.00769v1.png",
+      "universal_paper_id": "2511.00769",
+      "metrics": {
+        "total_votes": 0,
+        "visits_count": {
+          "all": 18,
+          "last_7_days": 18
+        },
+        "public_total_votes": 4
+      },
+      "first_publication_date": "2025-11-02T02:33:55.000Z",
+      "publication_date": "2025-11-02T02:33:55.000Z",
+      "updated_at": "2025-11-04T04:43:34.531Z",
+      "topics": [
+        "Mathematics",
+        "math.OC",
+        "math.PR",
+        "stat.CO",
+        "Statistics"
+      ],
+      "organization_info": [],
+      "author_info": [],
+      "github_stars": null,
+      "github_url": null,
       "distance": 1
     },
     {
       "id": "019a4d92-4bb5-702b-9c3f-1adb3d571e87",
       "paper_group_id": "019a4d92-4bb5-702b-9c3f-1adb3d571e87",
       "title": "LongCat-Flash-Omni Technical Report",
-      "abstract": "我们引入了LongCat-Flash-Omni，这是一款先进的开源全模态模型，具有5600亿个参数，擅长实时音视频交互。通过采用一种受课程启发的逐步训练策略，从简单到越来越复杂的模态序列建模任务，LongCat-Flash-Omni实现了全面的多模态能力，同时保持了强大的单模态能力。LongCat-Flash基于高性能的快捷连接混合专家（MoE）架构，并配备零计算专家，LongCat-Flash-Omni集成了高效的多模态感知和语音重建模块。尽管规模巨大，达到5600亿参数（其中27亿已激活），LongCat-Flash-Omni仍实现了低延迟的实时音视频交互。为了训练基础设施，我们开发了一种模态解耦的并行方案，专门设计用于管理大型多模态训练中固有的数据和模型异质性。这种创新的方法通过保持超过90%的文本训练所实现的吞吐量，展现了卓越的效率。广泛的评估显示，LongCat-Flash-Omni在开源模型中达到了全模态基准的最先进性能。此外，它在包括文本、图像和视频理解，以及音频理解和生成等广泛的模态特定任务上也交付了高度竞争的结果。我们提供了模型架构设计、训练程序和数据策略的全面概述，并将模型开源，以促进社区未来的研究和发展。",
+      "abstract": "我们推出了LongCat-Flash-Omni，这是一款具有5600亿参数的先进开源全模态模型，在实时音视频互动中表现出色。通过采用一种灵感来自课程的渐进式训练策略，逐步过渡到从简单到越来越复杂的模态序列建模任务，LongCat-Flash-Omni在保持强大单模态能力的同时，达到了全面的多模态能力。在此基础上，LongCat-Flash采用了高性能的Shortcut连接混合专家（MoE）架构，具备零计算专家，LongCat-Flash-Omni集成了高效的多模态感知和语音重建模块。尽管具有560亿参数的庞大规模（其中27亿被激活），LongCat-Flash-Omni仍然实现了低延迟的实时音视频互动。为了训练基础设施，我们开发了一种模态解耦并行方案，专门设计用于管理大规模多模态训练中固有的数据和模型异构性。这种创新方法通过维持超过90%的文本训练吞吐量，表现出卓越的效率。广泛的评估表明，LongCat-Flash-Omni在开源模型中的全模态基准测试中取得了最先进的性能。此外，它在文本、图像和视频理解以及音频理解和生成等多种模态特定任务中也实现了具有高度竞争力的结果。我们提供了模型架构设计、训练过程和数据策略的全面概述，并将模型开源，以促进社区未来的研究和发展。",
       "paper_summary": {
         "summary": "Meituan's LongCat-Flash-Omni is a 560-billion-parameter open-source omni-modal model that processes text, image, video, and audio to enable real-time audio-visual interaction. It achieves state-of-the-art performance on various multimodal benchmarks and shows highly competitive results against leading proprietary models.",
         "originalProblem": [
@@ -1459,15 +1779,15 @@ const papersData = {
           "Provides robust real-time audio-visual interaction, achieving the third-highest quantitative score for naturalness and fluency in end-to-end scenarios, excelling in paralinguistic understanding, relevance, and memory."
         ]
       },
-      "image_url": null,
+      "image_url": "image/2511.00279v1.png",
       "universal_paper_id": "2511.00279",
       "metrics": {
-        "total_votes": 0,
+        "total_votes": 1,
         "visits_count": {
-          "all": 16,
-          "last_7_days": 16
+          "all": 41,
+          "last_7_days": 41
         },
-        "public_total_votes": 4
+        "public_total_votes": 9
       },
       "first_publication_date": "2025-10-31T21:58:15.000Z",
       "publication_date": "2025-10-31T21:58:15.000Z",
@@ -1483,536 +1803,8 @@ const papersData = {
       ],
       "organization_info": [],
       "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a4d7d-e502-7d9e-8226-ada9b3fb2b11",
-      "paper_group_id": "019a4d7d-e502-7d9e-8226-ada9b3fb2b11",
-      "title": "End-to-End Dexterous Arm-Hand VLA Policies via Shared Autonomy: VR Teleoperation Augmented by Autonomous Hand VLA Policy for Efficient Data Collection",
-      "abstract": "实现类人灵巧操作仍然是通用机器人面临的一大挑战。尽管视觉-语言-动作（VLA）模型在从演示中学习技能方面展现出潜力，但其可扩展性受限于稀缺的高质量训练数据。现有的数据收集方法存在固有的局限性：手动遥操作对人类操作者造成过载，而自动规划往往产生不自然的动作。我们提出了一种共享自主框架，将控制分为宏观和微观动作。人类操作者通过直观的虚拟现实遥操作引导机器人的手臂姿态，而自主的DexGrasp-VLA策略则利用实时触觉和视觉反馈进行精细的手部控制。这种分工显著减少了认知负担，并有效收集高质量的协调手臂-手部演示。利用这些数据，我们训练了一个增强了我们新型手臂-手部特征增强模块的端到端VLA策略，该模块捕捉宏观和微观运动的独特和共享表征，以实现更自然的协调。我们的纠正遥操作系统通过人机互动循环中的故障恢复实现了持续政策改进。实验表明，我们的框架以最小的人力生成高质量数据，并在包括未见实例在内的多种物体上实现了90%的成功率。全面评估验证了该系统在开发灵巧操作能力方面的有效性。",
-      "paper_summary": {
-        "summary": "ByteDance Seed researchers introduce a framework for dexterous arm-hand control, combining human VR teleoperation with an autonomous hand VLA policy to efficiently collect data for complex tasks. The system achieves an 88.7% success rate in pick-and-place tasks with diverse objects by employing an Arm-Hand Feature Enhancement module and allows for continuous policy refinement through human-in-the-loop corrections.",
-        "originalProblem": [
-          "Scarcity of high-quality, large-scale demonstration data for high-Degree-of-Freedom dexterous hands in VLA models.",
-          "High cognitive load on human operators during manual teleoperation, leading to inefficient and unscalable data collection.",
-          "Automated methods often generate unnatural or suboptimal robot motions, failing to capture nuanced human expert behaviors."
-        ],
-        "solution": [
-          "A Shared Autonomy framework that couples human VR teleoperation for arm control with an autonomous, force-adaptive VLA policy (DexGrasp-VLA) for the hand.",
-          "An Arm-Hand Feature Enhancement module within the end-to-end VLA policy that explicitly models distinct arm and hand roles for improved coordination.",
-          "A Corrective Human-in-the-Loop Teleoperation system for iterative policy refinement, using failure demonstrations to enhance robustness and adaptation."
-        ],
-        "keyInsights": [
-          "Shared autonomy significantly boosts data collection efficiency (110 trajectories/hour, 25% increase) by reducing human cognitive load while capturing natural human-robot coordinated motions.",
-          "Explicitly modeling limb-specific dynamics with the Arm-Hand Feature Enhancement module yields more robust and resilient VLA policies, especially under sensory challenges like visual occlusion.",
-          "Tactile sensing, specifically dual-feature integration, is crucial for achieving high success rates (90%) in robust, contact-rich dexterous grasping, enabling compliance and preventing slippage."
-        ],
-        "results": [
-          "Achieved an 88.7% average success rate on pick-and-place tasks across 50 diverse objects, including 85.6% on unseen objects.",
-          "The Shared Autonomy framework increased data collection efficiency to 110 trajectories per hour, a 25% improvement over full manual teleoperation.",
-          "The Arm-Hand Feature Enhancement module boosted success rates from 88% to 95% on the primary platform and demonstrated greater robustness under visual occlusion (58% vs. 19%)."
-        ]
-      },
-      "image_url": null,
-      "universal_paper_id": "2511.00139",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 16,
-          "last_7_days": 16
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-31T16:12:02.000Z",
-      "publication_date": "2025-10-31T16:12:02.000Z",
-      "updated_at": "2025-11-04T06:11:27.618Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 4028,
-      "github_url": "https://github.com/eliahuhorwitz/Academic-project-page-template",
-      "distance": 1
-    },
-    {
-      "id": "019a2dc8-3214-77f5-8ba1-95cbcf79d717",
-      "paper_group_id": "019a2dc8-3214-77f5-8ba1-95cbcf79d717",
-      "title": "SPICE: Self-Play In Corpus Environments Improves Reasoning",
-      "abstract": "自我改善系统需要与环境互动以实现持续适应。我们介绍了SPICE（自我对弈语料库环境），这是一个强化学习框架，其中单个模型扮演两个角色：挑战者从大语料库中提取文档以生成多样化的推理任务，和推理者解决这些任务。通过对抗动态，挑战者在推理者能力的前沿创建了一个自动课程，而语料库的基础提供了丰富而几乎取之不尽的外部信号，这是持续改进所必需的。与现有的无基础自我对弈方法相比，后者提供的好处更为有限，SPICE在多个模型家族的数学（+8.9%）和一般推理（+9.8%）基准测试中实现了持续的提升。我们的分析揭示了文档基础在SPICE中是一个关键成分，它能够不断生成自身日益具有挑战性的目标并实现这些目标，从而实现持续的自我改进。",
-      "paper_summary": {
-        "summary": "A research team from FAIR at Meta and NUS developed SPICE, a reinforcement learning framework that enables large language models to continuously enhance their reasoning abilities through adversarial self-play grounded in a vast external document corpus. The method consistently improved performance on mathematical and general reasoning benchmarks by up to 11.9% compared to base models.",
-        "originalProblem": [
-          "Existing reinforcement learning methods for large language models (LLMs) often rely on human supervision, curated datasets, or domain-specific reward engineering, limiting scalability and generalizability.",
-          "Ungrounded self-play techniques (e.g., R-Zero) suffer from hallucination amplification, where factual errors compound, degrading performance over time.",
-          "These methods also face information symmetry, making it difficult to create genuinely challenging and diverse tasks when both the problem generator and solver share the same internalized knowledge."
-        ],
-        "solution": [
-          "SPICE employs a single LLM that dynamically switches between two adversarial roles: a Challenger that generates tasks and a Reasoner that solves them, both grounded in an external document corpus.",
-          "The Challenger samples passages from a vast corpus to create diverse, multi-format tasks (multiple-choice or free-form) with verifiable gold answers, ensuring factual accuracy.",
-          "A variance-based curriculum reward guides the Challenger to generate tasks at an optimal difficulty level, specifically targeting a 50% Reasoner success rate, to drive continuous learning."
-        ],
-        "keyInsights": [
-          "Corpus grounding is critical for sustained self-improvement in LLMs, effectively addressing hallucination amplification and providing an inexhaustible, verifiable knowledge source.",
-          "The adversarial co-evolution of the Challenger and Reasoner components creates an automatic and adaptive curriculum that continuously pushes the Reasoner's capabilities.",
-          "Establishing information asymmetry, where the Reasoner solves tasks without access to the source document, ensures genuine challenge and fosters authentic reasoning development.",
-          "The variance-based reward mechanism for the Challenger is crucial for calibrating task difficulty, optimizing the learning rate for the Reasoner across various tasks."
-        ],
-        "results": [
-          "SPICE consistently outperformed state-of-the-art self-play methods and strong supervised baselines, achieving average performance gains from +5.7% to +11.9% across multiple base models (Qwen3, OctoThinker families).",
-          "The framework demonstrated broad applicability, improving mathematical reasoning benchmarks by an average of +8.9% and general reasoning tasks by +9.8%, indicating generalizable skill development.",
-          "Ablation studies confirmed the critical role of corpus grounding and adversarial co-training, showing that their absence leads to significantly lower performance (e.g., 40.7% vs. 43.9% on Qwen3-4B-Base without grounding).",
-          "Qualitative analysis revealed that Challengers evolved to generate complex, multi-step tasks from the same documents, while Reasoners developed highly structured and sophisticated problem-solving patterns."
-        ]
-      },
-      "image_url": "image/2510.24684v1.png",
-      "universal_paper_id": "2510.24684",
-      "metrics": {
-        "total_votes": 12,
-        "visits_count": {
-          "all": 424,
-          "last_7_days": 424
-        },
-        "public_total_votes": 59
-      },
-      "first_publication_date": "2025-10-28T17:46:16.000Z",
-      "publication_date": "2025-10-28T17:46:16.000Z",
-      "updated_at": "2025-10-29T02:24:46.100Z",
-      "topics": [
-        "Computer Science",
-        "continual-learning",
-        "cs.CL",
-        "generative-models",
-        "information-extraction",
-        "multi-agent-learning",
-        "reasoning",
-        "reinforcement-learning",
-        "self-supervised-learning",
-        "text-generation"
-      ],
-      "organization_info": [
-        {
-          "name": "National University of Singapore",
-          "image": "images/organizations/national-university-of-singapore.svg+xml"
-        },
-        {
-          "name": "Meta",
-          "image": "images/organizations/meta.png"
-        },
-        {
-          "name": "FAIR at Meta",
-          "image": null
-        }
-      ],
-      "author_info": [
-        {
-          "id": "01975168-d67a-7df4-9b30-a27d352bdb39",
-          "username": "chuanyang-jin",
-          "realName": "Chuanyang Jin",
-          "avatar": null,
-          "institution": "New York University",
-          "googleScholarId": "OZeqpLIAAAAJ",
-          "reputation": 15,
-          "weeklyReputation": 0,
-          "verified": false,
-          "role": "user",
-          "orcidId": null,
-          "githubUsername": null,
-          "xUsername": null,
-          "linkedinUsername": null,
-          "blueskyUsername": null,
-          "publicEmail": null
-        }
-      ],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a390a-6398-7cfc-8161-edd680691708",
-      "paper_group_id": "019a390a-6398-7cfc-8161-edd680691708",
-      "title": "The End of Manual Decoding: Towards Truly End-to-End Language Models",
-      "abstract": "“端到端”标签对于大型语言模型（LLMs）是一个误称。实际上，它们依赖于一个不可微分的解码过程，这需要对温度和top-p等超参数进行繁琐的手动调整。本文介绍了AutoDeco，这是一种新颖的架构，通过学习控制自己的解码策略，实现真正的“端到端”生成。我们在标准变换器上增加了轻量级头部，在每一个步骤中动态预测上下文特定的温度和top-p值，并与下一个token的概率值一同输出。这一方法将解码转变为一个参数化的token级过程，使模型能够在一次前向传播中自我调节其采样策略。\n\n通过在八个基准上的广泛实验，我们展示了AutoDeco不仅显著优于默认的解码策略，而且性能达到了基于“破解测试集”方法的oracle调优基线的水平——这是任何静态方法的实际上限。重要的是，我们发现了一种基于指令的解码控制的突出现能力：模型学会理解自然语言命令（例如，“以低随机性生成”），并在每个token的基础上调整其预测的温度和top-p，为可引导和交互式的LLM解码开辟了新的范式。",
-      "paper_summary": {
-        "summary": "AutoDeco introduces an augmented language model architecture that dynamically predicts decoding parameters such as temperature and top-p at each generation step, achieving truly end-to-end text generation. This framework demonstrates superior performance across diverse benchmarks with minimal computational overhead and exhibits an emergent capability for natural language-based control over output style.",
-        "originalProblem": [
-          "Existing \"end-to-end\" Large Language Models (LLMs) rely on non-differentiable, manual decoding processes with static, pre-defined hyperparameters.",
-          "Optimal decoding parameter settings are highly task-dependent and require laborious, costly manual tuning, hindering efficient development.",
-          "Static decoding methods cannot adapt to dynamic, token-level requirements within a single generation, leading to inherently suboptimal outputs."
-        ],
-        "solution": [
-          "AutoDeco augments standard transformer architectures with lightweight prediction heads that dynamically determine optimal temperature and top-p values from the model's hidden state at each decoding step.",
-          "A novel, differentiable \"soft\" top-p mechanism is introduced during training to enable end-to-end optimization by overcoming the non-differentiable nature of standard top-p sampling.",
-          "The AutoDeco heads are trained efficiently on top of pre-trained LLMs, freezing the base model parameters, using standard cross-entropy loss and de-biasing operations for robustness."
-        ],
-        "keyInsights": [
-          "Integrating decoding parameter prediction directly into the model's differentiable forward pass allows the LLM to self-regulate its generation, realizing a truly end-to-end pipeline.",
-          "The \"soft\" top-p mechanism provides a trainable pathway for adapting sampling strategies, eliminating the need for external, heuristic control.",
-          "AutoDeco learns a fundamental \"meta-skill\" for adaptive text generation, exhibiting strong zero-shot generalization across diverse tasks despite being trained on specific domains."
-        ],
-        "results": [
-          "AutoDeco consistently outperforms static decoding strategies (Greedy Search, Default Sampling) across eight diverse benchmarks, achieving performance comparable to or exceeding an oracle-tuned baseline.",
-          "The proposed architecture adds negligible computational overhead, with only a 1-2% increase in inference latency and minimal memory footprint, making it highly practical.",
-          "A groundbreaking emergent capability allows AutoDeco to interpret high-level natural language commands (e.g., \"more innovative\") and spontaneously adjust its token-level decoding parameters accordingly, a behavior solidified through targeted training."
-        ]
-      },
-      "image_url": "image/2510.26697v1.png",
-      "universal_paper_id": "2510.26697",
-      "metrics": {
-        "total_votes": 6,
-        "visits_count": {
-          "all": 183,
-          "last_7_days": 183
-        },
-        "public_total_votes": 29
-      },
-      "first_publication_date": "2025-10-30T17:01:43.000Z",
-      "publication_date": "2025-10-30T17:01:43.000Z",
-      "updated_at": "2025-10-31T06:52:53.528Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "fine-tuning",
-        "generative-models",
-        "human-ai-interaction",
-        "instruction-tuning",
-        "meta-learning",
-        "test-time-inference",
-        "text-generation",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 3,
-      "github_url": "https://github.com/Zacks917/AutoDeco",
-      "distance": 1
-    },
-    {
-      "id": "019a4921-1f51-7775-b01b-ead888f87ea2",
-      "paper_group_id": "019a4921-1f51-7775-b01b-ead888f87ea2",
-      "title": "Phased DMD: Few-step Distribution Matching Distillation via Score Matching within Subintervals",
-      "abstract": "分布匹配蒸馏（DMD）将基于评分的生成模型蒸馏为高效的一步生成器，而无需与其教师的采样轨迹进行一一对应。然而，有限的模型容量导致一步蒸馏模型在复杂生成任务中表现不佳，例如在文本到视频生成中合成复杂的物体运动。直接将DMD扩展到多步蒸馏会增加内存使用和计算深度，导致不稳定和效率降低。尽管前人工作提出了随机梯度截断作为潜在解决方案，我们观察到这显著降低了多步蒸馏模型的生成多样性，使其降至一步模型的水平。为了解决这些限制，我们提出了分阶段DMD，这是一种将阶段性蒸馏与专家混合（MoE）理念结合的多步蒸馏框架，降低学习难度，同时增强模型容量。分阶段DMD建立在两个关键理念之上：渐进式分布匹配和子区间内的评分匹配。首先，我们的模型将信噪比（SNR）范围划分为子区间，逐步将模型精炼到更高的SNR水平，以更好地捕捉复杂分布。接下来，为了确保每个子区间内的训练目标准确，我们进行了严格的数学推导。我们通过蒸馏最先进的图像和视频生成模型验证了分阶段DMD，包括Qwen-Image（200亿参数）和Wan2.2（280亿参数）。实验结果表明，分阶段DMD在保持关键生成能力的同时，比DMD更好地保留了输出多样性。我们将发布我们的代码和模型。",
-      "paper_summary": {
-        "summary": "Phased DMD introduces a few-step distillation framework for accelerating large diffusion models, leveraging a phase-wise approach with a novel subinterval score matching objective. The method effectively preserves generative diversity and core capabilities of multi-billion parameter models like Qwen-Image and Wan2.2, reducing inference steps without compromising quality.",
-        "originalProblem": [
-          "One-step diffusion model distillation methods offer speed but lack the capacity for complex generative tasks, often yielding low-quality outputs.",
-          "Directly extending Distribution Matching Distillation (DMD) to multiple steps leads to training instability, high memory usage, and deep computational graphs.",
-          "The Stochastic Gradient Truncation Strategy (SGTS), while improving stability, severely compromises the generative diversity of multi-step distilled models."
-        ],
-        "solution": [
-          "A progressive distribution matching framework partitions the diffusion process into 'k' phases, training a specialized expert generator for each phase, naturally forming a Mixture-of-Experts (MoE) architecture.",
-          "A novel, theoretically derived score matching objective is used within subintervals, addressing the challenge of unavailable clean data samples (x_0) during intermediate distillation steps.",
-          "The method employs reverse nested SNR intervals for sampling, which empirically improves generation quality and robustness during phase-wise training."
-        ],
-        "keyInsights": [
-          "Decomposing the diffusion process into distinct phases, each handled by a specialized 'expert,' enhances model capacity and stability, aligning with the temporal dynamics of diffusion models across SNR levels.",
-          "A mathematically rigorous score matching objective can be derived for subintervals, allowing for effective distribution matching even when the original clean data is not directly accessible.",
-          "Utilizing reverse nested intervals for noise injection during training is critical for maintaining high generation quality and structural integrity, outperforming disjoint interval approaches."
-        ],
-        "results": [
-          "Phased DMD achieved superior generative diversity, with DINOv3 Cosine Similarity scores of 0.782 for Wan2.1-T2V-14B (vs. 0.826 for SGTS) and LPIPS distances of 0.544 (vs. 0.521 for SGTS).",
-          "The distilled models effectively retained motion dynamics and camera control capabilities in video generation, with Phased DMD scoring 7.57 in Optical Flow (T2V) compared to 3.23 for SGTS.",
-          "Phased DMD successfully preserved prompt adherence and high-quality text rendering capabilities from the Qwen-Image model."
-        ]
-      },
-      "image_url": "image/2510.27684v1.png",
-      "universal_paper_id": "2510.27684",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 19,
-          "last_7_days": 19
-        },
-        "public_total_votes": 4
-      },
-      "first_publication_date": "2025-10-31T17:55:10.000Z",
-      "publication_date": "2025-10-31T17:55:10.000Z",
-      "updated_at": "2025-11-03T09:51:38.834Z",
-      "topics": [
-        "Computer Science",
-        "cs.CV",
-        "ensemble-methods",
-        "generative-models",
-        "image-generation",
-        "inference-optimization",
-        "knowledge-distillation",
-        "lightweight-models",
-        "model-compression",
-        "optimization-methods",
-        "video-understanding"
-      ],
-      "organization_info": [
-        {
-          "name": "Beihang University",
-          "image": "images/organizations/beihang-university.png"
-        },
-        {
-          "name": "SenseTime Research",
-          "image": null
-        }
-      ],
-      "author_info": [],
-      "github_stars": null,
-      "github_url": null,
-      "distance": 1
-    },
-    {
-      "id": "019a4d9b-eed2-7b77-a036-53431925e9c6",
-      "paper_group_id": "019a4d9b-eed2-7b77-a036-53431925e9c6",
-      "title": "Towards Robust Mathematical Reasoning",
-      "abstract": "找到合适的北极星指标对于推动基础模型的数学推理能力至关重要，尤其是考虑到现有的评估要么过于简单，要么仅专注于获得正确的短答案。为了解决这些问题，我们提出了IMO-Bench，这是一个经过顶尖专家小组审核的高级推理基准套件，专门针对国际数学奥林匹克（IMO）的水平，这是年轻数学家的最负盛名的赛事。IMO-AnswerBench首先在400个多样化的奥林匹克问题上对模型进行测试，这些问题具有可验证的短答案。IMO-Proof Bench是下一阶段对证明写作能力的评估，涵盖了基本和高级的IMO级别问题，并提供详细的评分指南以促进自动评分。这些基准在我们在2025年IMO上与Gemini Deep Think（Luong和Lockhart，2025）取得金牌级别的历史成就中发挥了关键作用。我们的模型在IMO-AnswerBench上取得了80.0%的得分，在高级IMO-Proof Bench上获得了65.7%的得分，分别比最佳的非Gemini模型高出6.9%和42.4%。我们还展示了使用Gemini推理构建的自动评分器与人类评估之间的良好相关性，并构建了IMO-GradingBench，其包含1000个关于证明的人类评分，以推动长答案的自动评估的进一步发展。我们希望IMO-Bench能帮助社区推动稳健的数学推理，并在这个URL上发布。",
-      "paper_summary": {
-        "summary": "Google DeepMind developed IMO-Bench, a benchmark suite designed to assess advanced mathematical reasoning in large language models through problem-solving, proof writing, and proof grading tasks. The Gemini Deep Think (IMO Gold) model achieved 80.0% accuracy on robustified problems and 65.7% on challenging proof-writing tasks.",
-        "originalProblem": [
-          "Existing mathematical reasoning benchmarks (e.g., GSM8K, MATH, AIME) are approaching saturation, limiting their utility in differentiating advanced model capabilities.",
-          "Many current benchmarks primarily rely on final answer matching, which can lead to models guessing or memorizing without demonstrating robust multi-step reasoning.",
-          "A lack of comprehensive evaluation frameworks for assessing deeper mathematical understanding, such as the ability to generate and rigorously evaluate proofs."
-        ],
-        "solution": [
-          "Introduces IMO-Bench, a comprehensive suite comprising three benchmarks: IMO-AnswerBench for robust problem-solving, IMO-Proof Bench for rigorous proof writing, and IMO-GradingBench for proof evaluation.",
-          "IMO-AnswerBench utilizes 400 Olympiad problems across four categories, with explicit 'robustification' techniques (paraphrasing, numerical changes) to prevent data memorization.",
-          "IMO-Proof Bench features 60 IMO-level proof problems, divided into basic and advanced sets, which are primarily evaluated by human experts on a 0-7 point scale, mirroring traditional IMO grading."
-        ],
-        "keyInsights": [
-          "Robust \"north-star metrics\" like IMO-Bench are crucial for driving the advancement of foundation models' mathematical reasoning beyond the limitations of saturated, simpler benchmarks.",
-          "Evaluating proof-writing capabilities, instead of just final answers, provides a more accurate and comprehensive assessment of a model's underlying reasoning process and logical argumentation.",
-          "Problem robustification techniques effectively prevent models from achieving high scores through data memorization, ensuring that genuine reasoning is tested."
-        ],
-        "results": [
-          "Gemini Deep Think (IMO Gold) achieved a state-of-the-art 80.0% accuracy on IMO-AnswerBench and 65.7% on the advanced set of IMO-Proof Bench, significantly outperforming other frontier models.",
-          "Robustification on IMO-AnswerBench consistently led to a drop in model performance (e.g., Gemini 2.5 Pro dropped 3.5%), validating its effectiveness in preventing memorization.",
-          "Automated verifiers, AnswerAutoGrader and ProofAutoGrader (both built on Gemini 2.5 Pro), demonstrated high correlation with human expert evaluations, with AnswerAutoGrader achieving 98.9% accuracy."
-        ]
-      },
-      "image_url": "image/2511.01846v1.png",
-      "universal_paper_id": "2511.01846",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 14,
-          "last_7_days": 14
-        },
-        "public_total_votes": 2
-      },
-      "first_publication_date": "2025-11-03T18:53:02.000Z",
-      "publication_date": "2025-11-03T18:53:02.000Z",
-      "updated_at": "2025-11-04T06:44:16.210Z",
-      "topics": [
-        "agents",
-        "chain-of-thought",
-        "Computer Science",
-        "cs.AI",
-        "cs.CL",
-        "data-curation",
-        "reasoning",
-        "reasoning-verification",
-        "text-generation",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/google-deepmind/superhuman",
-      "distance": 1
-    },
-    {
-      "id": "019a4782-1d96-7c98-8bc1-843eaa2fdb30",
-      "paper_group_id": "019a4782-1d96-7c98-8bc1-843eaa2fdb30",
-      "title": "Chain-of-Thought Hijacking",
-      "abstract": "大型推理模型（LRMs）通过在推理时分配更多计算资源来实现更高的任务表现，先前的研究表明这种规模化推理也可能通过改善拒绝能力来增强安全性。然而，我们发现情况正好相反：相同的推理可以被用来绕过安全防护。我们引入了思维链劫持，这是对推理模型的一种越狱攻击。该攻击通过用长序列的无害解谜推理填充有害请求。在HarmBench中，思维链劫持在Gemini 2.5 Pro、GPT o4 mini、Grok 3 mini和Claude 4 Sonnet上的攻击成功率分别达到了99%、94%、100%和94%——远远超过了以往针对LRMs的越狱方法。为了理解我们攻击的有效性，我们进行了机制分析，结果显示中间层编码了安全检查的强度，而后期层编码了验证结果。长的无害思维链通过将注意力转移 away from harmful tokens 稀释了这两个信号。通过这项分析识别的注意力头的定向消融因果性地降低了拒绝，确认了它们在安全子网络中的作用。这些结果表明，最易于解释的推理形式——显式思维链——在与最终答案提示结合时本身也可以成为越狱的媒介。我们发布了提示、输出和评判决策，以促进复制研究。",
-      "paper_summary": {
-        "summary": "Researchers uncovered \"Chain-of-Thought Hijacking,\" a new vulnerability in Large Reasoning Models where long, benign reasoning sequences weaken internal safety mechanisms. The attack achieves near-perfect success rates on leading proprietary models by diluting refusal signals and shifting attention away from malicious payloads.",
-        "originalProblem": [
-          "A prevalent assumption in LRM research suggests that long reasoning sequences, like Chain-of-Thought (CoT), inherently enhance model safety and robustness against harmful prompts.",
-          "Existing jailbreak attacks primarily focus on prompt rewriting or encoding, overlooking CoT as a potential attack surface that could systematically weaken safety mechanisms.",
-          "There was a lack of mechanistic understanding of how advanced reasoning processes like CoT might interact with and potentially undermine LLM safety protocols."
-        ],
-        "solution": [
-          "Introduced \"Chain-of-Thought Hijacking\" (CoT Hijacking), a black-box, prompt-based jailbreak attack that embeds malicious instructions within extensive, benign reasoning prefaces.",
-          "Developed \"Seduction,\" an automated pipeline for generating and iteratively refining these CoT Hijacking prompts to optimize attack success.",
-          "Employed mechanistic interpretability techniques, including refusal direction analysis, activation interventions, refusal component quantification, and attention pattern analysis, to diagnose the attack's internal mechanisms."
-        ],
-        "keyInsights": [
-          "Contrary to expectations, longer Chain-of-Thought sequences can weaken, rather than strengthen, Large Reasoning Model safety mechanisms, creating a systematic vulnerability.",
-          "Refusal behavior in LRMs is governed by a fragile, low-dimensional \"refusal direction\" in the activation space, which can be diluted.",
-          "CoT Hijacking operates by \"refusal dilution,\" where extended benign reasoning shifts attention away from harmful payloads and weakens the safety signal in the model's deeper layers."
-        ],
-        "results": [
-          "CoT Hijacking achieved exceptional Attack Success Rates (ASR) of 94-100% on frontier proprietary models, including Gemini 2.5 Pro (99%), ChatGPT o4 mini (94%), Grok 3 mini (100%), and Claude 4 Sonnet (94%).",
-          "Experiments demonstrated a direct correlation between the length of benign CoT sequences and increased ASR, with longer reasoning leading to higher attack success.",
-          "Mechanistic analysis showed that removing the identified \"refusal direction\" increased ASR to 91%, while adding it drastically reduced ASR to 1%, confirming its causal role in safety."
-        ]
-      },
-      "image_url": null,
-      "universal_paper_id": "2510.26418",
-      "metrics": {
-        "total_votes": 1,
-        "visits_count": {
-          "all": 55,
-          "last_7_days": 55
-        },
-        "public_total_votes": 9
-      },
-      "first_publication_date": "2025-10-30T12:10:03.000Z",
-      "publication_date": "2025-10-30T12:10:03.000Z",
-      "updated_at": "2025-11-03T02:18:20.950Z",
-      "topics": [
-        "adversarial-attacks",
-        "adversarial-robustness",
-        "attention-mechanisms",
-        "chain-of-thought",
-        "Computer Science",
-        "cs.AI",
-        "cybersecurity",
-        "explainable-ai",
-        "mechanistic-interpretability",
-        "reasoning"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 0,
-      "github_url": "https://github.com/gentlyzhao/Hijacking",
-      "distance": 1
-    },
-    {
-      "id": "019a2c20-a499-781f-b895-e0c2dc989b15",
-      "paper_group_id": "019a2c20-a499-781f-b895-e0c2dc989b15",
-      "title": "Multi-Agent Evolve: LLM Self-Improve through Co-evolution",
-      "abstract": "强化学习（RL）在提升大型语言模型（LLM）的推理能力方面展现了显著的潜力。然而，RL 在 LLM 上的成功很大程度上依赖于人工策划的数据集和可验证的奖励，这限制了其可扩展性和普适性。近期的自我对弈 RL 方法受到游戏和围棋范式成功的启发，旨在无需人工标注数据就提高 LLM 的推理能力。然而，他们的方法主要依赖于有反馈的具体环境（例如，Python 解释器或游戏引擎）；将其扩展到一般领域仍然具有挑战性。为了解决这些挑战，我们提出了多智能体演变（MAE），这是一个能够使 LLM 在解决数学、推理和一般知识问答等多样任务中自我演化的框架。MAE 的核心设计基于一个由单个 LLM 实例化的三元相互作用的智能体（提议者、求解者、评估者），并应用强化学习来优化他们的行为。提议者生成问题，求解者尝试解决方案，评估者在共同演化的过程中对两者进行评估。在 Qwen2.5-3B-Instruct 上的实验表明，MAE 在多个基准上实现了平均提升 4.54%。这些结果突显了 MAE 作为一种可扩展、高效利用数据的方法，能够在最小依赖人工策划监督的情况下增强 LLM 的一般推理能力。",
-      "paper_summary": {
-        "summary": "A framework called Multi-Agent Evolve (MAE) enables large language models (LLMs) to improve their reasoning abilities through a co-evolutionary process involving self-generated questions, answers, and evaluations, eliminating the need for human-curated data or external verifiable rewards. The method significantly outperforms existing baselines, with the MAE (half reference) setting achieving an overall average score of 59.87 on diverse benchmarks using a Qwen2.5-3B-Instruct model.",
-        "originalProblem": [
-          "Current reinforcement learning methods for LLMs rely heavily on expensive human-curated datasets and domain-specific verifiable rewards, limiting their scalability and generality.",
-          "Self-play paradigms for LLMs often require 'grounded environments' that provide objective feedback, which is difficult to apply in open-ended, general reasoning domains.",
-          "Integrating LLM-as-a-Judge mechanisms into robust, general self-improvement loops for continuous training has faced challenges in stability and implementation complexity."
-        ],
-        "solution": [
-          "MAE instantiates three interacting roles (Proposer, Solver, Judge) from a single, shared LLM backbone, forming a closed self-improving loop for generating training data and reward signals.",
-          "The Proposer generates questions, the Solver answers them, and the Judge evaluates both questions and answers, providing numerical reward signals without human ground truth.",
-          "All three roles are trained simultaneously using Task-Relative REINFORCE++, performing synchronized parameter updates on the uniform shared model to foster co-evolution and stable learning."
-        ],
-        "keyInsights": [
-          "A 'beyond-zero-sum' reward design, incentivizing the Proposer to generate challenging yet solvable questions for the Solver while ensuring intrinsic question quality, is crucial for stable and effective co-evolution.",
-          "Maintaining high-quality training data through a Judge-based question quality filtering mechanism is essential to prevent degradation of the question dataset and ensure sustained learning.",
-          "A balanced approach that combines exploring novel self-generated questions with referencing an existing, diverse distribution of unlabeled seed questions (MAE (half reference)) is most effective for general reasoning improvement."
-        ],
-        "results": [
-          "MAE (zero), starting with only 16 self-generated questions, improved the base model's overall average score from 55.33 to 58.51, surpassing the strong AZR baseline (57.72) without relying on verifiable environments.",
-          "All MAE variants, which do not use ground-truth answers, consistently outperformed Supervised Fine-Tuning (SFT) on the same seed dataset, demonstrating the framework's data efficiency and robustness.",
-          "The MAE (half reference) setting achieved the highest overall average score of 59.87, showing strong performance on both in-distribution (68.95) and out-of-distribution (43.96) benchmarks."
-        ]
-      },
-      "image_url": "image/2510.23595v3.png",
-      "universal_paper_id": "2510.23595",
-      "metrics": {
-        "total_votes": 21,
-        "visits_count": {
-          "all": 890,
-          "last_7_days": 884
-        },
-        "public_total_votes": 92
-      },
-      "first_publication_date": "2025-10-27T17:58:02.000Z",
-      "publication_date": "2025-10-30T04:45:55.000Z",
-      "updated_at": "2025-10-28T18:42:08.153Z",
-      "topics": [
-        "agents",
-        "Computer Science",
-        "cs.AI",
-        "fine-tuning",
-        "multi-agent-learning",
-        "reasoning",
-        "reinforcement-learning",
-        "self-supervised-learning",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [
-        {
-          "id": "0199c19a-427b-7683-a107-dc0d38a7f05b",
-          "username": "siqi-zhu",
-          "realName": "Siqi Zhu",
-          "avatar": null,
-          "institution": "UIUC",
-          "googleScholarId": "eYBAyoIAAAAJ",
-          "reputation": 15,
-          "weeklyReputation": 0,
-          "verified": false,
-          "role": "user",
-          "orcidId": "0009-0008-7709-0311",
-          "githubUsername": "",
-          "xUsername": "realagi25",
-          "linkedinUsername": "",
-          "blueskyUsername": "",
-          "publicEmail": "siqizhu4@illinois.edu"
-        }
-      ],
-      "github_stars": 0,
-      "github_url": "https://github.com/ulab-uiuc/Multi-agent-Evolve",
-      "distance": 1
-    },
-    {
-      "id": "019a4cb1-35ce-7b94-b9ef-59267ca6f51c",
-      "paper_group_id": "019a4cb1-35ce-7b94-b9ef-59267ca6f51c",
-      "title": "Sketch-to-Layout: Sketch-Guided Multimodal Layout Generation",
-      "abstract": "图形布局生成是一个日益增长的研究领域，重点在于生成审美愉悦的布局，从海报设计到文档等多种形式。虽然近期的研究探索了如何结合用户约束来指导布局生成，但这些约束通常需要复杂的规范，从而降低了可用性。我们提出了一种创新的方法，利用用户提供的草图作为直观约束，并通过实证研究展示了这种新指导方法的有效性，将草图到布局的问题确立为一个有前景的研究方向，目前这一方向尚未得到充分探索。为了解决草图到布局的问题，我们提出了一种基于多模态变压器的解决方案，将草图和内容资产作为输入来生成高质量的布局。由于从人工注释者那里收集草图训练数据以训练我们的模型是非常昂贵的，我们引入了一种新颖且高效的方法，以大规模合成生成训练草图。我们在三个公开可用的数据集上训练和评估我们的模型：PubLayNet、DocLayNet和SlidesVQA，结果表明其性能优于最先进的基于约束的方法，同时提供了更直观的设计体验。为了促进未来草图到布局的研究，我们为上述公共数据集发布了约20万个合成生成的草图。数据集可在此URL获取。",
-      "paper_summary": {
-        "summary": "Researchers at Google DeepMind and EPFL developed a system that generates graphic layouts guided by user sketches and multimodal content, achieving over 40% higher Maximum IoU compared to prior methods. Their approach leverages a fine-tuned Vision-Language Model, trained using a novel method for synthetically generating large-scale sketch-layout datasets.",
-        "originalProblem": [
-          "Existing layout generation methods often rely on complex and unintuitive user constraints like precise numerical inputs or verbose textual descriptions.",
-          "There is a scarcity of large-scale, paired sketch-layout datasets needed to train Vision-Language Models for sketch-guided layout generation.",
-          "Applying sketch-based guidance to general, multimodal graphic layouts using advanced VLMs was under-explored due to data limitations."
-        ],
-        "solution": [
-          "The problem is formulated as a code generation task, where layouts are encoded as structured protocol buffer strings, ensuring interpretable and editable outputs.",
-          "A multimodal Vision-Language Model (PaLIGemma 3B) is fine-tuned to accept both visual inputs (hand-drawn sketches, image assets) and textual inputs (prompts, text content) for layout generation.",
-          "A scalable, two-step synthetic sketch generation pipeline is introduced to compose vast datasets of sketch-layout pairs from existing ground-truth layouts and a small collection of human-drawn primitives."
-        ],
-        "keyInsights": [
-          "Sketches offer a superior time-performance trade-off for guiding layout generation compared to other constraint methods, demonstrating their intuitiveness and efficiency.",
-          "Synthetically generated sketches are effective proxies for human-drawn sketches in VLM training, validated by comparable model performance on both synthetic and human inputs.",
-          "Content-awareness, achieved by incorporating actual image and text assets, is crucial for improving layout quality and semantic coherence, outperforming content-agnostic models."
-        ],
-        "results": [
-          "The method achieved over 40% improvement in Maximum IoU compared to state-of-the-art constraint-based baselines (e.g., LayoutPrompter) across PubLayNet, DocLayNet, and SlidesVQA datasets.",
-          "Models trained on synthetic sketches showed a minimal distribution shift, with comparable mIoU on synthetic (0.592) and human-produced (0.590) sketches on DocLayNet.",
-          "A new Content Ordering Score (COS) was introduced, with the content-aware model achieving higher scores (e.g., 0.69 on PubLayNet), indicating improved preservation of narrative flow."
-        ]
-      },
-      "image_url": "image/2510.27632v1.png",
-      "universal_paper_id": "2510.27632",
-      "metrics": {
-        "total_votes": 0,
-        "visits_count": {
-          "all": 12,
-          "last_7_days": 12
-        },
-        "public_total_votes": 3
-      },
-      "first_publication_date": "2025-10-31T17:05:10.000Z",
-      "publication_date": "2025-10-31T17:05:10.000Z",
-      "updated_at": "2025-11-04T02:27:53.422Z",
-      "topics": [
-        "Computer Science",
-        "cs.AI",
-        "cs.CV",
-        "generative-models",
-        "human-ai-interaction",
-        "image-generation",
-        "multi-modal-learning",
-        "representation-learning",
-        "synthetic-data",
-        "transformers"
-      ],
-      "organization_info": [],
-      "author_info": [],
-      "github_stars": 4,
-      "github_url": "https://github.com/google-deepmind/sketch_to_layout",
+      "github_stars": 317,
+      "github_url": "https://github.com/meituan-longcat/LongCat-Flash-Omni",
       "distance": 1
     }
   ],
